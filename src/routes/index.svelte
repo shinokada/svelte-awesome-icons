@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import {
+    ToiletsPortableSolid,
+    StarHalfRegular,
+    StackExchangeBrands,
+  } from "$lib/index";
+</script>
+
+<ToiletsPortableSolid size="100" color="#ff0000" />
+<StarHalfRegular size="100" />
+<StackExchangeBrands size="100" />

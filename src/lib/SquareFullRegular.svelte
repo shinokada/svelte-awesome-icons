@@ -1,0 +1,2 @@
+<script>export let size="24"; export let color="currentColor";</script><svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill={color} class={$$props.class} viewBox="0 0 512 512">
+<path d="M512 0V512H0V0H512zM464 48H48V464H464V48z"/></svg>
