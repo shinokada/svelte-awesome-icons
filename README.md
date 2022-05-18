@@ -3,7 +3,7 @@
 [![npm version](https://badgen.net/npm/v/svelte-awesome-icons)](https://www.npmjs.com/package/svelte-awesome-icons)
 [![license](https://badgen.net/npm/license/svelte-awesome-icons)](https://github.com/shinokada/svelte-awesome-icons/blob/main/LICENSE)
 
-Font Awesome SVG icon components for Svelte
+Font Awesome SVG icon components for Svelte. Svelte-Awesome-Icons support major CSS frameworks using the `class` props.
 
 ## Icon name list
 
@@ -57,9 +57,11 @@ Use the `color` prop to change colors with HEX color code.
 <AppleBrand color="#3fe537" />
 ```
 
-## Tailwind CSS suport
+## CSS framworks suport
 
 Use the `class` prop to change size, colors and add additional css.
+
+Tailwind CSS example:
 
 ```html
 <ToiletsPortableSolid class="h-24 w-24 text-blue-700 mr-4" />
@@ -67,9 +69,15 @@ Use the `class` prop to change size, colors and add additional css.
 <AppleBrand class="h-24 w-24 text-green-500" />
 ```
 
-## Dark mode with Tailwind CSS
+Bootstrap examples:
 
-If you use the dark mode on your website with Tailwind CSS, add your dark mode class to the `class` prop.
+```html
+<ToiletsPortableSolid class="position-absolute top-0 px-1" />
+```
+
+## Dark mode
+
+If you are using the dark mode on your website with Tailwind CSS, add your dark mode class to the `class` prop.
 
 Let's use `dark` for the dark mode class as an example.
 
