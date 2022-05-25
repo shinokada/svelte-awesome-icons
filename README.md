@@ -87,6 +87,24 @@ Let's use `dark` for the dark mode class as an example.
 <AppleBrand class="text-green-500 dark:text-blue-500" />
 ```
 
+
+## aria-label
+
+All icons have aria-label. For example `ToiletsPortableSolid` has `aria-label="toilets portable"`. 
+Use `ariaLabel` prop to modify the `aria-label` value. 
+
+```html
+<ToiletsPortableSolid ariaLabel="Toilet">
+```
+
+## Passing down other attributes
+
+You can pass other attibutes as well.
+
+```html
+<ToiletsPortableSolid tabindex="0">
+```
+
 ## Import all
 
 [REPL](https://svelte.dev/repl/c0045886b264408fba13f1de70c42932?version=3.48.0)
@@ -116,8 +134,9 @@ Use `import * as Icon from 'svelte-awesome-icons`.
 ## Other icons
 
 - [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
-- [Svelte-Ionicons](https://www.npmjs.com/package/svelte-ionicons)
 - [Svelte-Awesome-Icons](https://www.npmjs.com/package/svelte-awesome-icons)
+- [Svelte-materialdesign-icons](https://www.npmjs.com/package/svelte-materialdesign-icons)
+- [Svelte-Ionicons](https://www.npmjs.com/package/svelte-ionicons)
 - [Svelte-heros](https://github.com/shinokada/svelte-heros)
 - [Svelte-lucide](https://github.com/shinokada/svelte-lucide)
 - [Svelte-flags](https://www.npmjs.com/package/svelte-flags)
