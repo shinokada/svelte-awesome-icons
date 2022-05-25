@@ -1,2 +1,2 @@
-<script>export let size="24"; export let color="currentColor";</script><svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill={color} class={$$props.class} viewBox="0 0 384 512">
+<script>export let size="24"; export let color="currentColor";export let ariaLabel="v" </script><svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill={color} class={$$props.class} {...$$restProps} aria-label={ariaLabel} viewBox="0 0 384 512">
 <path d="M381.5 76.33l-160 384C216.6 472.2 204.9 480 192 480s-24.56-7.757-29.53-19.68l-160-384c-6.797-16.31 .9062-35.05 17.22-41.84c16.38-6.859 35.08 .9219 41.84 17.22L192 364.8l130.5-313.1c6.766-16.3 25.47-24.09 41.84-17.22C380.6 41.28 388.3 60.01 381.5 76.33z"/></svg>
