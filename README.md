@@ -5,6 +5,10 @@
 
 Font Awesome SVG icon components for Svelte. Svelte-Awesome-Icons support major CSS frameworks using the `class` props.
 
+## Original source
+
+[FortAwesome/Font-Awesome](https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs)
+
 ## Icon name list
 
 [Icon list](https://github.com/shinokada/svelte-awesome-icons/blob/main/icon-list.md)
@@ -86,7 +90,6 @@ Let's use `dark` for the dark mode class as an example.
 <StarHalfRegular class="text-red-700 dark:text-green-500" />
 <AppleBrand class="text-green-500 dark:text-blue-500" />
 ```
-
 
 ## aria-label
 
