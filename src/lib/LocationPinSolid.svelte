@@ -1,2 +1,19 @@
-<script>export let size="24"; export let color="currentColor";export let ariaLabel="location pin" </script><svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill={color} class={$$props.class} {...$$restProps} aria-label={ariaLabel} viewBox="0 0 384 512">
-<path d="M384 192C384 279.4 267 435 215.7 499.2C203.4 514.5 180.6 514.5 168.3 499.2C116.1 435 0 279.4 0 192C0 85.96 85.96 0 192 0C298 0 384 85.96 384 192H384z"/></svg>
+<script>
+	export let size = '24';
+	export let color = 'currentColor';
+	export let ariaLabel = 'location pin';
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	{...$$restProps}
+	width={size}
+	height={size}
+	fill={color}
+	class={$$props.class}
+	aria-label={ariaLabel}
+	viewBox="0 0 384 512"
+	><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path
+		d="M384 192c0 87.4-117 243-168.3 307.2c-12.3 15.3-35.1 15.3-47.4 0C117 435 0 279.4 0 192C0 86 86 0 192 0S384 86 384 192z"
+	/></svg
+>

@@ -29,11 +29,7 @@ In a svelte file:
 
 ```html
 <script>
-    import {
-    ToiletsPortableSolid,
-    StarHalfRegular,
-    AppleBrand,
-  } from "svelte-awesome-icons";
+	import { ToiletsPortableSolid, StarHalfRegular, AppleBrand } from 'svelte-awesome-icons';
 </script>
 
 <ToiletsPortableSolid />
@@ -93,11 +89,11 @@ Let's use `dark` for the dark mode class as an example.
 
 ## aria-label
 
-All icons have aria-label. For example `ToiletsPortableSolid` has `aria-label="toilets portable"`. 
-Use `ariaLabel` prop to modify the `aria-label` value. 
+All icons have aria-label. For example `ToiletsPortableSolid` has `aria-label="toilets portable"`.
+Use `ariaLabel` prop to modify the `aria-label` value.
 
 ```html
-<ToiletsPortableSolid ariaLabel="Toilet">
+<ToiletsPortableSolid ariaLabel="Toilet"></ToiletsPortableSolid>
 ```
 
 ## Passing down other attributes
@@ -105,7 +101,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 You can pass other attibutes as well.
 
 ```html
-<ToiletsPortableSolid tabindex="0">
+<ToiletsPortableSolid tabindex="0"></ToiletsPortableSolid>
 ```
 
 ## Import all
@@ -116,18 +112,18 @@ Use `import * as Icon from 'svelte-awesome-icons`.
 
 ```html
 <script>
-	import * as Icon from 'svelte-awesome-icons'
+	import * as Icon from 'svelte-awesome-icons';
 </script>
 
 <Icon.AppStoreBrand />
 <Icon.ArrowRightToBracketSolid />
 
 <h1>Size</h1>
-<Icon.AppStoreBrand size="30"/>
-<Icon.ArrowRightToBracketSolid size="40"/>
+<Icon.AppStoreBrand size="30" />
+<Icon.ArrowRightToBracketSolid size="40" />
 
 <h1>CSS HEX color</h1>
-<Icon.ArrowRightToBracketSolid color="#c61515" size="40"/>
+<Icon.ArrowRightToBracketSolid color="#c61515" size="40" />
 
 <h1>Tailwind CSS</h1>
 <Icon.AppStoreBrand class="text-blue-500" />

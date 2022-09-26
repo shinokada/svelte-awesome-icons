@@ -1,2 +1,19 @@
-<script>export let size="24"; export let color="currentColor";export let ariaLabel="square full" </script><svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} fill={color} class={$$props.class} {...$$restProps} aria-label={ariaLabel} viewBox="0 0 512 512">
-<path d="M512 0V512H0V0H512zM464 48H48V464H464V48z"/></svg>
+<script>
+	export let size = '24';
+	export let color = 'currentColor';
+	export let ariaLabel = 'square full';
+</script>
+
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	{...$$restProps}
+	width={size}
+	height={size}
+	fill={color}
+	class={$$props.class}
+	aria-label={ariaLabel}
+	viewBox="0 0 512 512"
+	><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path
+		d="M512 0V512H0V0H512zM464 48H48V464H464V48z"
+	/></svg
+>
