@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.5](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.4...v0.2.5) (2022-09-27)
+
+
+### Bug Fixes
+
+* remove paydevs from package.json ([afaf36c](https://github.com/shinokada/svelte-awesome-icons/commit/afaf36c035bf995508b57cd967deb7ae4aa728dc))
+
 ### [0.2.4](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.3...v0.2.4) (2022-09-27)
 
 
