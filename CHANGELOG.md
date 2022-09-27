@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.2.3](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.2...v0.2.3) (2022-09-26)
 
-
 ### Features
 
-* change restProp position, update SvelteKit ([81d62fe](https://github.com/shinokada/svelte-awesome-icons/commit/81d62fe2eaffb0384b64866d32f82be7b2292ebb))
+- change restProp position, update SvelteKit ([81d62fe](https://github.com/shinokada/svelte-awesome-icons/commit/81d62fe2eaffb0384b64866d32f82be7b2292ebb))
 
 ### [0.2.2](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.1...v0.2.2) (2022-06-01)
 

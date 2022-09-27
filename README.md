@@ -29,7 +29,7 @@ In a svelte file:
 
 ```html
 <script>
-	import { ToiletsPortableSolid, StarHalfRegular, AppleBrand } from 'svelte-awesome-icons';
+  import { ToiletsPortableSolid, StarHalfRegular, AppleBrand } from 'svelte-awesome-icons';
 </script>
 
 <ToiletsPortableSolid />
@@ -112,7 +112,7 @@ Use `import * as Icon from 'svelte-awesome-icons`.
 
 ```html
 <script>
-	import * as Icon from 'svelte-awesome-icons';
+  import * as Icon from 'svelte-awesome-icons';
 </script>
 
 <Icon.AppStoreBrand />
