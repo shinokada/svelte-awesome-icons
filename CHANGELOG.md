@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.4](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.3...v0.2.4) (2022-09-27)
+
+
+### Bug Fixes
+
+* change from tab to space for indentation ([fc75ace](https://github.com/shinokada/svelte-awesome-icons/commit/fc75ace3c7cdd527cf6cb7b9f1faab02315a8fcf))
+
 ### [0.2.3](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.2...v0.2.3) (2022-09-26)
 
 ### Features
