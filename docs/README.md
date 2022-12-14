@@ -19,7 +19,7 @@ npm i -D svelte-awesome-icons
 
 ## Icon name list
 
-[Icon list](icon-list.md)
+[Icon list](./icon-list.md)
 
 ## Usages
 
