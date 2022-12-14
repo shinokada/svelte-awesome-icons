@@ -1,9 +1,14 @@
 # Svelte-Awesome-Icons
 
+<p align="center">
+[https://shinokada.github.io/svelte-awesome-icons/](https://shinokada.github.io/svelte-awesome-icons/)
+</p>
+
+<p align="center">
 [![npm version](https://badgen.net/npm/v/svelte-awesome-icons)](https://www.npmjs.com/package/svelte-awesome-icons)
 [![license](https://badgen.net/npm/license/svelte-awesome-icons)](https://github.com/shinokada/svelte-awesome-icons/blob/main/LICENSE)
+</p>
 
-[Docs](https://shinokada.github.io/svelte-awesome-icons/)
 
 Font Awesome SVG icon components for Svelte. Svelte-Awesome-Icons support major CSS frameworks using the `class` props.
 
@@ -19,7 +24,7 @@ npm i -D svelte-awesome-icons
 
 ## Icon name list
 
-[Icon list](./icon-list.md)
+[Icon list](https://github.com/shinokada/svelte-awesome-icons/blob/main/docs/icon-list.md)
 
 ## Usages
 
