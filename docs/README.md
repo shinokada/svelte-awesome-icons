@@ -3,15 +3,9 @@
 [![npm version](https://badgen.net/npm/v/svelte-awesome-icons)](https://www.npmjs.com/package/svelte-awesome-icons)
 [![license](https://badgen.net/npm/license/svelte-awesome-icons)](https://github.com/shinokada/svelte-awesome-icons/blob/main/LICENSE)
 
+[Docs](https://shinokada.github.io/svelte-awesome-icons/)
+
 Font Awesome SVG icon components for Svelte. Svelte-Awesome-Icons support major CSS frameworks using the `class` props.
-
-## Original source
-
-[FortAwesome/Font-Awesome](https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs)
-
-## Icon name list
-
-[Icon list](https://github.com/shinokada/svelte-awesome-icons/blob/main/icon-list.md)
 
 ## Installation
 
@@ -22,6 +16,10 @@ npm i -D svelte-awesome-icons
 ## REPL
 
 [Demo 1](https://svelte.dev/repl/901754e21a0a4c97ab49832fce77619d?version=3.48.0)
+
+## Icon name list
+
+[Icon list](icon-list.md)
 
 ## Usages
 
@@ -129,6 +127,10 @@ Use `import * as Icon from 'svelte-awesome-icons`.
 <Icon.AppStoreBrand class="text-blue-500" />
 <Icon.ArrowRightToBracketSolid class="text-pink-700" />
 ```
+
+## Original source
+
+[FortAwesome/Font-Awesome](https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs)
 
 ## Other icons
 
