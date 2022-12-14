@@ -1,12 +1,14 @@
 # Svelte-Awesome-Icons
 
 <p align="center">
-[https://shinokada.github.io/svelte-awesome-icons/](https://shinokada.github.io/svelte-awesome-icons/)
+<a href="https://shinokada.github.io/svelte-awesome-icons/" rel="nofollow">Svelte-Awesome-Icons</a>
 </p>
 
 <p align="center">
-[![npm version](https://badgen.net/npm/v/svelte-awesome-icons)](https://www.npmjs.com/package/svelte-awesome-icons)
-[![license](https://badgen.net/npm/license/svelte-awesome-icons)](https://github.com/shinokada/svelte-awesome-icons/blob/main/LICENSE)
+<a href="https://www.npmjs.com/package/svelte-awesome-icons" rel="nofollow"><img src="https://img.shields.io/npm/v/svelte-awesome-icons" alt="npm"></a>
+<a href="https://twitter.com/shinokada" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada"></a>
+<a href="http://www.apache.org/licenses/" rel="nofollow"><img src="https://img.shields.io/github/license/shinokada/svelte-awesome-icons" alt="License"></a>
+<a href="https://www.npmjs.com/package/svelte-awesome-icons" rel="nofollow"><img src="https://img.shields.io/npm/dw/svelte-awesome-icons.svg" alt="npm"></a>
 </p>
 
 
