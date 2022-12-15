@@ -1,5 +1,5 @@
 <p align="center">
-<h1>Svelte-Awesome-Icons</h1>
+<h1 align="center">Svelte-Awesome-Icons</h1>
 <a href="https://shinokada.github.io/svelte-awesome-icons/" rel="nofollow">Svelte-Awesome-Icons</a>
 </p>
 
