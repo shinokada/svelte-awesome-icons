@@ -1,5 +1,7 @@
 <h1 align="center">Svelte-Awesome-Icons</h1>
-<a align="center" href="https://shinokada.github.io/svelte-awesome-icons/" rel="nofollow">Svelte-Awesome-Icons</a>
+<p align="center">
+<a href="https://shinokada.github.io/svelte-awesome-icons/" rel="nofollow">Svelte-Awesome-Icons</a>
+</p>
 
 <p align="center">
 <a href="https://www.npmjs.com/package/svelte-awesome-icons" rel="nofollow"><img src="https://img.shields.io/npm/v/svelte-awesome-icons" alt="npm"></a>
