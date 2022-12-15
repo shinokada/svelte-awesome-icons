@@ -1,10 +1,6 @@
-# Svelte-Awesome-Icons
-
 <p align="center">
+<h1>Svelte-Awesome-Icons</h1>
 <a href="https://shinokada.github.io/svelte-awesome-icons/" rel="nofollow">Svelte-Awesome-Icons</a>
-</p>
-
-<p align="center">
 <a href="https://www.npmjs.com/package/svelte-awesome-icons" rel="nofollow"><img src="https://img.shields.io/npm/v/svelte-awesome-icons" alt="npm"></a>
 <a href="https://twitter.com/shinokada" rel="nofollow"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada"></a>
 <a href="https://opensource.org/licenses/MIT" rel="nofollow"><img src="https://img.shields.io/github/license/shinokada/svelte-awesome-icons" alt="License"></a>
