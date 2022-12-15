@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.6](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.5...v0.2.6) (2022-12-15)
+
+
+### Features
+
+* add docs ([59d01a6](https://github.com/shinokada/svelte-awesome-icons/commit/59d01a6ace3784fddb6cb4532ae23ac2da5db19c))
+
+
+### Bug Fixes
+
+* add crossOriginLinks ([e93ec1f](https://github.com/shinokada/svelte-awesome-icons/commit/e93ec1fabb0fc1b9a82b1716da77ef6249cfa76e))
+* icon-list link ([34abdad](https://github.com/shinokada/svelte-awesome-icons/commit/34abdad86e980d98897a3868135209d3660d0275))
+* links ([cc2e21c](https://github.com/shinokada/svelte-awesome-icons/commit/cc2e21cc6be84d779fbb6186ff538fe4622a2968))
+* move README and index to docs dir ([2f46f4f](https://github.com/shinokada/svelte-awesome-icons/commit/2f46f4f457fb5289886ae7ecbb8c93f41ed29d69))
+
 ### [0.2.5](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.4...v0.2.5) (2022-09-27)
 
 
