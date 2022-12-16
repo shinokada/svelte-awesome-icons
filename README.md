@@ -21,7 +21,7 @@ npm i -D svelte-awesome-icons
 
 ## REPL
 
-[Demo 1](https://svelte.dev/repl/901754e21a0a4c97ab49832fce77619d?version=3.55.0)
+[Demo 1](https://svelte.dev/repl/901754e21a0a4c97ab49832fce77619d)
 
 ## Icon name list
 
