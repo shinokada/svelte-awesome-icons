@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.8](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.7...v0.2.8) (2022-12-16)
+
+
+### Bug Fixes
+
+* add .nojekyll file ([a918484](https://github.com/shinokada/svelte-awesome-icons/commit/a91848460367cc4b741fb4b8a6972f4660a49b4b))
+* change from docs to root in github and remove .nojekyll file ([cc2a9e8](https://github.com/shinokada/svelte-awesome-icons/commit/cc2a9e80a66769eef9bdb0cf6a50a30ccaaf68a6))
+* update repl version ([8741295](https://github.com/shinokada/svelte-awesome-icons/commit/874129594b69ada31827cfc1dc8128300d6ba712))
+
 ### [0.2.7](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.6...v0.2.7) (2022-12-16)
 
 
