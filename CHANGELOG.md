@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.7](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.6...v0.2.7) (2022-12-16)
+
+
+### Bug Fixes
+
+* move files from docs to root since npmjs does not show README ([0479029](https://github.com/shinokada/svelte-awesome-icons/commit/0479029b65bb3eff6a75b7b30d6ea9d7dadd21fa))
+
 ### [0.2.6](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.5...v0.2.6) (2022-12-15)
 
 
