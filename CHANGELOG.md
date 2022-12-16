@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.9](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.8...v0.2.9) (2022-12-16)
+
+
+### Bug Fixes
+
+* remove version from REPL ([d4d7dba](https://github.com/shinokada/svelte-awesome-icons/commit/d4d7dba90e9caf7b3c0d798b61462b2c8827c76e))
+
 ### [0.2.8](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.7...v0.2.8) (2022-12-16)
 
 
