@@ -136,7 +136,7 @@ Use `import * as Icon from 'svelte-awesome-icons`.
 
 ## Original source
 
-[FortAwesome/Font-Awesome](https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs)
+[FortAwesome/Font-Awesome v6.2.1](https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs)
 
 ## Other icons
 
