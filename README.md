@@ -1,6 +1,6 @@
 <h1 align="center">Svelte-Awesome-Icons</h1>
 <p align="center">
-<a href="https://shinokada.github.io/svelte-awesome-icons/" rel="nofollow">Svelte-Awesome-Icons</a>
+<a href="https://svelte-awesome-icons.codewithshin.com/" rel="nofollow">Svelte-Awesome-Icons</a>
 </p>
 
 <p align="center">
