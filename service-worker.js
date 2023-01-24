@@ -1,5 +1,5 @@
 // Change this to your repository name
-const GHPATH = '/svelte-awesome-icons';
+const GHPATH = 'https://svelte-awesome-icons.codewithshin.com/';
 
 // Choose a different app prefix name
 const APP_PREFIX = 'svelte_awesome_icons_';
