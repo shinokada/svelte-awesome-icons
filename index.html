@@ -88,18 +88,18 @@
       ]
     };
     // PWA
-    // if (navigator.serviceWorker) {
-    //   navigator.serviceWorker.register(
-    //     '/github-page-pwa/sw.js', {
-    //       scope: '/github-page-pwa/'
-    //     }
-    //   )
-    // }
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/service-worker.js');
-      });
+      navigator.serviceWorker.register(
+        '/service-worker.js', {
+          scope: '.'
+        }
+      )
     }
+    // if ('serviceWorker' in navigator) {
+    //   window.addEventListener('load', function() {
+    //     navigator.serviceWorker.register('/service-worker.js');
+    //   });
+    // }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 </body>
