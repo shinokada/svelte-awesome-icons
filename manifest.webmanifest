@@ -2,7 +2,7 @@
 	"name": "Svelte-Awesome-Icons",
 	"short_name": "Svelte-Awesome-Icons",
 	"scope": "/",
-	"start_url": "/",
+	"start_url": ".",
 	"icons": [
 		{
 			"src": "static/apple-touch-icon.png",
