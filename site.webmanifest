@@ -1,5 +1,4 @@
 {
-	"$schema": "https://json.schemastore.org/web-manifest-combined.json",
 	"name": "Svelte-Awesome-Icons",
 	"short_name": "Svelte-Awesome-Icons",
 	"start_url": ".",
