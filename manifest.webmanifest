@@ -1,7 +1,7 @@
 {
 	"name": "Svelte-Awesome-Icons",
 	"short_name": "Svelte-Awesome-Icons",
-	"scope": "/svelte-awesome-icons/",
+	"scope": "/",
 	"start_url": ".",
 	"icons": [
 		{
