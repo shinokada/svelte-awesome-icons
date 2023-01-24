@@ -8,7 +8,8 @@
   <meta name="description" content="Font Awesome SVG icon components for Svelte. Svelte-Awesome-Icons support major CSS frameworks using the class props." />
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css" />
-  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="canonical" href="https://shinokada.github.io/svelte-awesome-icons/" />
+  <link rel="manifest" href="/svelte-awesome-icons/manifest.webmanifest">
   <meta name="theme-color" content="#ffffff" />
   <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
   <link rel="icon" href="static/favicon.ico" type="image/x-icon">
@@ -90,8 +91,8 @@
     // PWA
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register(
-        '/service-worker.js', {
-          scope: '.'
+        '/svelte-awesome-icons/service-worker.js', {
+          scope: '/svelte-awesome-icons/'
         }
       )
     }
