@@ -15,7 +15,7 @@ Font Awesome SVG icon components for Svelte. Svelte-Awesome-Icons support major 
 
 ## Installation
 
-```
+```bash
 npm i -D svelte-awesome-icons
 ```
 
