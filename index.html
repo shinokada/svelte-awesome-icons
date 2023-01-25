@@ -86,7 +86,22 @@
         'https://opensource.org/licenses/MIT',
         'https://www.npmjs.com/package/svelte-awesome-icons',
         'https://svelte-awesome-icons.codewithshin.com/'
-      ]
+      ],
+      search: 'auto',
+      search: [
+        '/README.md',
+      ],
+
+      // complete configuration parameters
+      search: {
+        maxAge: 180000,
+        paths: 'auto',
+        placeholder: 'Type to search',
+        noData: 'No Results!',
+        // Headline depth, 1 - 6
+        depth: 3,
+        hideOtherSidebarContent: false, // whether or not to hide other sidebar content
+      },
     };
     // PWA
     if ('serviceWorker' in navigator) {
@@ -103,6 +118,7 @@
     // }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 </body>
 
 </html>
