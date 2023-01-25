@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono|Source+Sans+Pro:300,400,600");
 
+:root {
+  --theme-color: #AA55FF;
+  --white: #ffffff;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -webkit-overflow-scrolling: touch;
@@ -45,8 +50,8 @@ span.emoji {
 }
 
 .progress {
-  background-color: #AA55FF;
-  background-color: var(--theme-color, #AA55FF);
+
+  background-color: var(--theme-color);
   height: 2px;
   left: 0;
   position: fixed;
@@ -59,8 +64,7 @@ span.emoji {
 
 .search .search-keyword,
 .search a:hover {
-  color: #AA55FF;
-  color: var(--theme-color, #AA55FF)
+  color: var(--theme-color)
 }
 
 .search .search-keyword {
@@ -146,13 +150,11 @@ li input[type=checkbox] {
 
 .app-nav a.active,
 .app-nav a:hover {
-  color: #AA55FF;
-  color: var(--theme-color, #AA55FF)
+  color: var(--theme-color)
 }
 
 .app-nav a.active {
-  border-bottom: 2px solid #AA55FF;
-  border-bottom: 2px solid var(--theme-color, #AA55FF)
+  border-bottom: 2px solid var(--theme-color)
 }
 
 .app-nav li {
@@ -164,7 +166,7 @@ li input[type=checkbox] {
 }
 
 .app-nav li ul {
-  background-color: #fff;
+  background-color: var(--white);
   border: 1px solid;
   border-color: #ddd #ddd #ccc;
   border-radius: 4px;
@@ -217,9 +219,8 @@ li input[type=checkbox] {
 }
 
 .github-corner svg {
-  color: #fff;
-  fill: #AA55FF;
-  fill: var(--theme-color, #AA55FF);
+  color: var(--white);
+  fill: var(--theme-color);
   height: 80px;
   width: 80px
 }
@@ -351,8 +352,8 @@ main.hidden {
 }
 
 .sidebar-toggle span {
-  background-color: #AA55FF;
-  background-color: var(--theme-color, #AA55FF);
+
+  background-color: var(--theme-color);
   display: block;
   margin-bottom: 4px;
   width: 32px;
@@ -442,7 +443,7 @@ body.sticky .sidebar-toggle {
 .markdown-section p.tip:before {
   background-color: #f66;
   border-radius: 100%;
-  color: #fff;
+  color: var(--white);
   content: "!";
   font-family: Dosis, Source Sans Pro, Helvetica Neue, Arial, sans-serif;
   font-size: 14px;
@@ -605,7 +606,7 @@ section.cover.show {
 }
 
 section.cover.has-mask .mask {
-  background-color: #fff;
+  background-color: var(--white);
   opacity: .8;
   position: absolute;
   top: 0;
@@ -668,11 +669,10 @@ section.cover ul {
 
 section.cover .cover-main>p:last-child a {
   border-radius: 2rem;
-  border: 1px solid #AA55FF;
-  border-color: var(--theme-color, #AA55FF);
+  border: 1px solid var(--theme-color);
+  border-color: var(--theme-color);
   box-sizing: border-box;
-  color: #AA55FF;
-  color: var(--theme-color, #AA55FF);
+  color: var(--theme-color);
   display: inline-block;
   font-size: 1.05rem;
   letter-spacing: .1rem;
@@ -683,9 +683,9 @@ section.cover .cover-main>p:last-child a {
 }
 
 section.cover .cover-main>p:last-child a:last-child {
-  background-color: #AA55FF;
-  background-color: var(--theme-color, #AA55FF);
-  color: #fff
+
+  background-color: var(--theme-color);
+  color: var(--white)
 }
 
 section.cover .cover-main>p:last-child a:last-child:hover {
@@ -698,19 +698,18 @@ section.cover .cover-main>p:last-child a:hover {
 }
 
 section.cover blockquote>p>a {
-  border-bottom: 2px solid #AA55FF;
-  border-bottom: 2px solid var(--theme-color, #AA55FF);
+  border-bottom: 2px solid var(--theme-color);
   transition: color .3s
 }
 
 section.cover blockquote>p>a:hover {
-  color: #AA55FF;
-  color: var(--theme-color, #AA55FF)
+
+  color: var(--theme-color)
 }
 
 .sidebar,
 body {
-  background-color: #fff
+  background-color: var(--white)
 }
 
 .sidebar {
@@ -741,8 +740,8 @@ body {
 
 .sidebar ul li.active>a {
   border-right: 2px solid;
-  color: #AA55FF;
-  color: var(--theme-color, #AA55FF);
+
+  color: var(--theme-color);
   font-weight: 600
 }
 
@@ -762,8 +761,8 @@ body {
 }
 
 .markdown-section a {
-  color: #AA55FF;
-  color: var(--theme-color, #AA55FF);
+
+  color: var(--theme-color);
   font-weight: 600
 }
 
@@ -817,8 +816,7 @@ body {
 }
 
 .markdown-section blockquote {
-  border-left: 4px solid #AA55FF;
-  border-left: 4px solid var(--theme-color, #AA55FF);
+  border-left: 4px solid var(--theme-color);
   color: #858585;
   margin: 2em 0;
   padding-left: 20px
@@ -960,8 +958,8 @@ body {
 }
 
 .token.string {
-  color: #AA55FF;
-  color: var(--theme-color, #AA55FF)
+
+  color: var(--theme-color)
 }
 
 .token.selector {
@@ -983,8 +981,7 @@ body {
 .token.control,
 .token.directive,
 .token.unit {
-  color: #AA55FF;
-  color: var(--theme-color, #AA55FF)
+  color: var(--theme-color)
 }
 
 .token.function,
