@@ -38,6 +38,8 @@
   <meta property="og:image:alt" content="Svelte Awesome Icons" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta name="pwa-capable" content="yes">
+
   <!-- Google Tag Manager -->
   <script>
     (function(w, d, s, l, i) {
@@ -111,11 +113,15 @@
         }
       )
     }
-    // if ('serviceWorker' in navigator) {
-    //   window.addEventListener('load', function() {
-    //     navigator.serviceWorker.register('/service-worker.js');
-    //   });
-    // }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "pwaCapable": "true",
+      "@type": "SoftwareApplication",
+      "pwaCapable": "true"
+    }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>

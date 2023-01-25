@@ -141,3 +141,13 @@ Use `import * as Icon from 'svelte-awesome-icons`.
 ## Other icons
 
 - [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
+
+
+## Experience lightning-fast browsing and offline access with Our PWA
+
+Experience lightning-fast browsing and offline access with our Progressive Web App (PWA). Add it to your home screen for easy access and a native-like feel.
+
+1. Open the website on your mobile device.
+2. Click on the three dots on the top right corner of your browser.
+3. Click on "Add to Home screen" or "Install".
+4. Follow the prompts to install the PWA on your home screen.
