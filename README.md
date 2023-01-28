@@ -13,6 +13,15 @@
 
 Font Awesome SVG icon components for Svelte. Svelte-Awesome-Icons support major CSS frameworks using the `class` props.
 
+<p align="center">
+<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-awesome-icons/main/static/images/awesome-1.webp" />
+<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-awesome-icons/main/static/images/awesome-2.webp" />
+<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-awesome-icons/main/static/images/awesome-3.webp" />
+<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-awesome-icons/main/static/images/awesome-4.webp" />
+<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-awesome-icons/main/static/images/awesome-5.webp" />
+</p>
+
+
 ## Installation
 
 ```bash

@@ -1,5 +1,3 @@
-# Icon names
-
 - A0Solid
 - A1Solid
 - A2Solid
