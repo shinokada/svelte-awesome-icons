@@ -2,6 +2,45 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.12](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.11...v0.2.12) (2023-01-28)
+
+
+### Features
+
+* add schema, pwa meta tag, add PWA helper section in README at the end ([d02a093](https://github.com/shinokada/svelte-awesome-icons/commit/d02a09391b8bd7c78d287029487718cbcda4baea))
+* add search ([dadfa45](https://github.com/shinokada/svelte-awesome-icons/commit/dadfa4592396059acdfdbc6f09d328d2671a6241))
+* add site.webmanifest and favicons ([692f7fd](https://github.com/shinokada/svelte-awesome-icons/commit/692f7fd07095e07d9a4900fe6092fdd980b6b8ed))
+
+
+### Bug Fixes
+
+* [@type](https://github.com/type) and pwaCapable duplicate ([0330e99](https://github.com/shinokada/svelte-awesome-icons/commit/0330e99f020742485a4564ee6056a07c56850129))
+* add _headers for site.webmanifest ([8784a94](https://github.com/shinokada/svelte-awesome-icons/commit/8784a94620785a2995f50e457f88fa4edea8b0bc))
+* add images to README ([3fb4649](https://github.com/shinokada/svelte-awesome-icons/commit/3fb464959dfa09960b17141a2eff7c9123d958f0))
+* add maskable icon ([c9c1e27](https://github.com/shinokada/svelte-awesome-icons/commit/c9c1e277ae48b6bc32f6dbdcf8b93c599b0020fc))
+* add scope parameter ([fec0854](https://github.com/shinokada/svelte-awesome-icons/commit/fec085487c804d16e0264afea02d9008e21fefc7))
+* add sw.js, change to mainifest.webmanifest, add script to index ([79a9ea0](https://github.com/shinokada/svelte-awesome-icons/commit/79a9ea0f8796dc03ed0da705efe27b9a28802ec3))
+* change to relatedLink from pwaCapable ([9adcc09](https://github.com/shinokada/svelte-awesome-icons/commit/9adcc097b6a2db4694327d2e7f35673468aa1e33))
+* css to local css ([2b78e2a](https://github.com/shinokada/svelte-awesome-icons/commit/2b78e2aed79980e21ffd2df61ddb30f610803928))
+* file name and update service-worker.js ([51fa834](https://github.com/shinokada/svelte-awesome-icons/commit/51fa83467c4a25a72a52bc58180c211119a74166))
+* index fontsizes ([f9058ee](https://github.com/shinokada/svelte-awesome-icons/commit/f9058ee2e02fdda8cb591d21b79530809fcee433))
+* link to manifest ([f9860ed](https://github.com/shinokada/svelte-awesome-icons/commit/f9860edab4a96673fe1cabbed8695569ea866b66))
+* link to site.webmanifest in index.html ([e844598](https://github.com/shinokada/svelte-awesome-icons/commit/e84459809293f3593874cfd2498e0ba9932b5938))
+* manifest link ([7193200](https://github.com/shinokada/svelte-awesome-icons/commit/71932008ca370cf2660ae64ed36e5112f98aefa1))
+* relatedLink update ([ccdca2a](https://github.com/shinokada/svelte-awesome-icons/commit/ccdca2a13ed6f5da5bc7501d35f243125f997702))
+* remove , ([4305e6a](https://github.com/shinokada/svelte-awesome-icons/commit/4305e6a12525611afded8a5213fe859b9c942a93))
+* schema ([b22a032](https://github.com/shinokada/svelte-awesome-icons/commit/b22a032d379cfdec7acd15b6b31746ece51ab3c2))
+* schema update ([38b5afc](https://github.com/shinokada/svelte-awesome-icons/commit/38b5afc462f75f1759f02931298cace6878224b9))
+* service-worker.js to es6 ([9820d6f](https://github.com/shinokada/svelte-awesome-icons/commit/9820d6f40ba8fb17f35bc8f16310bd1770e6133d))
+* sidebar-toggle span size ([63936f6](https://github.com/shinokada/svelte-awesome-icons/commit/63936f684d4fdef28142b095b2c07e4bb24af98d))
+* site.webmanifest ([be02a33](https://github.com/shinokada/svelte-awesome-icons/commit/be02a337c4abaa77b4c92934eb97744e0c58885b))
+* start_url to . ([30bead4](https://github.com/shinokada/svelte-awesome-icons/commit/30bead4a8d05d455c8d6df9374788a91947ae621))
+* update scope and start_url ([9c7621e](https://github.com/shinokada/svelte-awesome-icons/commit/9c7621ea4be90c8e21c21ed81727c32aa222aff6))
+* update service-worker.js and add svelte-awesome-icons to manifest ([8ca69c9](https://github.com/shinokada/svelte-awesome-icons/commit/8ca69c994e51c35e89b6230e1786ef4c32af22f8))
+* update version in service-worker.js ([5cac62a](https://github.com/shinokada/svelte-awesome-icons/commit/5cac62af7dd336dd2932819e9c925f9e88f89735))
+* URL ([8d6c0ff](https://github.com/shinokada/svelte-awesome-icons/commit/8d6c0fff2ece62202bba31cd51128a0cc554f422))
+* use variables in css ([19291e2](https://github.com/shinokada/svelte-awesome-icons/commit/19291e2e41ed0f09e72f62a8d8cfb83fd24f0304))
+
 ### [0.2.11](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.10...v0.2.11) (2022-12-25)
 
 
