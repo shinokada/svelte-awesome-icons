@@ -1,4 +1,4 @@
-<h1 align="center">Svelte-Awesome-Icons</h1>
+<h1 align="center">Svelte Awesome Icons</h1>
 <p align="center">
 <a href="https://svelte-awesome-icons.codewithshin.com/" rel="nofollow">Svelte-Awesome-Icons</a>
 </p>
