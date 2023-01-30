@@ -35,7 +35,7 @@ npm i -D svelte-awesome-icons
 
 ## Icon name list
 
-[Icon list](https://github.com/shinokada/svelte-awesome-icons/blob/main/icon-list.md)
+[Icon list](/icon-list.md)
 
 ## Usages
 
