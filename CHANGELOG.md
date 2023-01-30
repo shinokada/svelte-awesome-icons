@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.13](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.12...v0.2.13) (2023-01-30)
+
+
+### Bug Fixes
+
+* add pwa badge and remove .github funding to use organization-wide FUNDING.yml ([b568d1f](https://github.com/shinokada/svelte-awesome-icons/commit/b568d1f22dce14436106a589c1a07f34a5ffeb9f))
+* FUNDING ([76d0a01](https://github.com/shinokada/svelte-awesome-icons/commit/76d0a0155665c437f262c877781dd9c349235a3e))
+* icon list link and verion update ([4bb4439](https://github.com/shinokada/svelte-awesome-icons/commit/4bb4439b28869a6441af763d36164a846ac29033))
+* service-worker version update ([1032db2](https://github.com/shinokada/svelte-awesome-icons/commit/1032db21817a252e96c946e2cc1f0a2522f1a727))
+
 ### [0.2.12](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.11...v0.2.12) (2023-01-28)
 
 
