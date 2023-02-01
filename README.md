@@ -15,11 +15,7 @@
 Font Awesome SVG icon components for Svelte. Svelte-Awesome-Icons support major CSS frameworks using the `class` props.
 
 <p align="center">
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-awesome-icons/main/static/images/awesome-1.webp" />
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-awesome-icons/main/static/images/awesome-2.webp" />
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-awesome-icons/main/static/images/awesome-3.webp" />
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-awesome-icons/main/static/images/awesome-4.webp" />
-<img width="450" src="https://raw.githubusercontent.com/shinokada/svelte-awesome-icons/main/static/images/awesome-5.webp" />
+<img width="650" src="/static/images/awesome-optimized-650-1050.png" />
 </p>
 
 
@@ -33,9 +29,13 @@ npm i -D svelte-awesome-icons
 
 [Demo 1](https://svelte.dev/repl/901754e21a0a4c97ab49832fce77619d)
 
-## Icon name list
+## Icon names
 
-[Icon list](/icon-list.md)
+[Icon names](/icon-list.md)
+
+## Icon images
+
+[Icon images](/icon-images.md)
 
 ## Usages
 
@@ -152,12 +152,8 @@ Use `import * as Icon from 'svelte-awesome-icons`.
 
 - [Svelte-Icon-Sets](https://svelte-svg-icons.vercel.app/)
 
+## PWA: Fast & Offline
 
-## Experience lightning-fast browsing and offline access with Our PWA
+This website can be downloaded and installed on your device for offline access as a Progressive Web App.
 
-Experience lightning-fast browsing and offline access with our Progressive Web App (PWA). Add it to your home screen for easy access and a native-like feel.
-
-1. Open the website on your mobile device.
-2. Click on the three dots on the top right corner of your browser.
-3. Click on "Add to Home screen" or "Install".
-4. Follow the prompts to install the PWA on your home screen.
+To install a PWA, look for the "Add to Home Screen" option in the browser's menu or settings. On most mobile devices, this option can be found by visiting the website, then selecting the "Options" or "Menu" button in the browser, and looking for the "Add to Home Screen" option. On some desktop browsers, right-click on the page and select "Install".
