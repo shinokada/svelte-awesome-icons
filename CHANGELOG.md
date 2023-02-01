@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.15](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.14...v0.2.15) (2023-02-01)
+
+
+### Bug Fixes
+
+* badges target, height, and add links to crossOriginLinks ([ab4415a](https://github.com/shinokada/svelte-awesome-icons/commit/ab4415ac13ad3206a770063722cf34f743021914))
+* update short_name ([86f89a5](https://github.com/shinokada/svelte-awesome-icons/commit/86f89a599f994dae371784dcdc0e6a53f0eea14e))
+
 ### [0.2.14](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.13...v0.2.14) (2023-02-01)
 
 
