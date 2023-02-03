@@ -14,7 +14,7 @@
 </p>
 
 
-Font Awesome SVG icon components for Svelte. Svelte-Awesome-Icons support major CSS frameworks using the `class` props.
+2010+ Font Awesome SVG icon components for Svelte. Svelte-Awesome-Icons support major CSS frameworks using the `class` props.
 
 <p align="center">
 <img width="650" src="/static/images/awesome-optimized-650-1050.png" />

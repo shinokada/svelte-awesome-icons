@@ -1,5 +1,3 @@
-# Icon names
-
 - A0Solid
 - A1Solid
 - A2Solid
@@ -2019,7 +2017,3 @@
 - YoutubeBrand
 - ZSolid
 - ZhihuBrand
-
-## Back to Home
-
-[Back to Home](/)
