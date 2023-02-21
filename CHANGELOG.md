@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.1](https://github.com/shinokada/svelte-awesome-icons/compare/v0.3.0...v0.3.1) (2023-02-21)
+
+
+### Features
+
+* add scripts/package-json-writer.js ([30c2849](https://github.com/shinokada/svelte-awesome-icons/commit/30c2849d00c554f9403902e986dfe3e5684f6a12))
+
 ## [0.3.0](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.16...v0.3.0) (2023-02-21)
 
 
