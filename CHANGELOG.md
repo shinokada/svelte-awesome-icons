@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.16...v0.3.0) (2023-02-21)
+
+
+### Features
+
+* add microsoft webmaster tools meta tag ([0bac4b0](https://github.com/shinokada/svelte-awesome-icons/commit/0bac4b00a18cc497372dfe2cd5fb615b1b5028aa))
+* svelte new package system ([bcd7f1e](https://github.com/shinokada/svelte-awesome-icons/commit/bcd7f1e9f93d3f0077c350d225c7f352227a2243))
+
+
+### Bug Fixes
+
+* update index.html ([863ec99](https://github.com/shinokada/svelte-awesome-icons/commit/863ec993affe2e7cddfd11c8aee8376b1656a9ed))
+
 ### [0.2.16](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.15...v0.2.16) (2023-02-03)
 
 ### [0.2.15](https://github.com/shinokada/svelte-awesome-icons/compare/v0.2.14...v0.2.15) (2023-02-01)
