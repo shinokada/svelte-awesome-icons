@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.3.2](https://github.com/shinokada/svelte-awesome-icons/compare/v0.3.1...v0.3.2) (2023-02-22)
+
+
+### Bug Fixes
+
+* remove main: index.js ([4454c1a](https://github.com/shinokada/svelte-awesome-icons/commit/4454c1a6760f310d501826a9eb2b17b9e998b035))
+
 ### [0.3.1](https://github.com/shinokada/svelte-awesome-icons/compare/v0.3.0...v0.3.1) (2023-02-21)
 
 
