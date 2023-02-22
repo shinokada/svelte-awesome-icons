@@ -2,7 +2,6 @@
 	"name": "svelte-awesome-icons",
 	"version": "0.3.1",
 	"description": "Font Awesome SVG Icon components for Svelte",
-	"main": "index.js",
 	"author": {
 		"name": "Shinichi Okada",
 		"email": "connect@codewithshin.com",
