@@ -53,6 +53,20 @@ In a svelte file:
 <AppleBrand />
 ```
 
+## Faster compiling
+
+**This require `"typescript": "^5.0.0"`.**
+
+For faster compilation, you can import the icon directly.
+
+```html
+<script>
+  import AppleBrand from 'svelte-awesome-icons/AppleBrand.svelte'
+</script>
+
+  <AppleBrand />
+```
+
 ## Size
 
 Use the `size` prop to change the size of icons.
