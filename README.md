@@ -134,6 +134,15 @@ You can pass other attibutes as well.
 <ToiletsPortableSolid tabindex="0"></ToiletsPortableSolid>
 ```
 
+## Unfocusable icon
+
+If you want to make an icon unfocusable, add `tabindex="-1"`.
+
+```html
+<ToiletsPortableSolid tabindex="-1" />
+```
+
+
 ## Import all
 
 [REPL](https://svelte.dev/repl/c0045886b264408fba13f1de70c42932?version=3.48.0)
