@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.3](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.2...v0.4.3) (2023-03-07)
+
 ### [0.4.2](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.1...v0.4.2) (2023-03-06)
 
 ### [0.4.1](https://github.com/shinokada/svelte-awesome-icons/compare/v0.3.2...v0.4.1) (2023-03-06)
