@@ -5135,6 +5135,10 @@
       "types": "./dist/OdnoklassnikiBrand.svelte.d.ts",
       "svelte": "./dist/OdnoklassnikiBrand.svelte"
     },
+    "./OdyseeBrand.svelte": {
+      "types": "./dist/OdyseeBrand.svelte.d.ts",
+      "svelte": "./dist/OdyseeBrand.svelte"
+    },
     "./OilCanSolid.svelte": {
       "types": "./dist/OilCanSolid.svelte.d.ts",
       "svelte": "./dist/OilCanSolid.svelte"
@@ -6898,6 +6902,10 @@
     "./StroopwafelSolid.svelte": {
       "types": "./dist/StroopwafelSolid.svelte.d.ts",
       "svelte": "./dist/StroopwafelSolid.svelte"
+    },
+    "./StubberBrand.svelte": {
+      "types": "./dist/StubberBrand.svelte.d.ts",
+      "svelte": "./dist/StubberBrand.svelte"
     },
     "./StudiovinariBrand.svelte": {
       "types": "./dist/StudiovinariBrand.svelte.d.ts",
