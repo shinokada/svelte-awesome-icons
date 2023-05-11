@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.4](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.3...v0.4.4) (2023-05-11)
+
+
+### Features
+
+* add events ([2c23170](https://github.com/shinokada/svelte-awesome-icons/commit/2c2317033b8657c86e4ac8bb012db2280696d7ae))
+
+
+### Bug Fixes
+
+* run pnpm i ([64076e9](https://github.com/shinokada/svelte-awesome-icons/commit/64076e9be7bd8fd62a902380b301e6d5d9e6cbc0))
+
 ### [0.4.3](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.2...v0.4.3) (2023-03-07)
 
 ### [0.4.2](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.1...v0.4.2) (2023-03-06)
