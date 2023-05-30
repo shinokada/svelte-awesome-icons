@@ -28,7 +28,7 @@
 >
 <!--
 @component
-[Go to Document](https://svelte-ant-design-icons.codewithshin.com/)
+[Go to Document](https://svelte-awesome-icons.codewithshin.com/)
 ## Props
 @prop size = '24';
 @prop color = 'currentColor';

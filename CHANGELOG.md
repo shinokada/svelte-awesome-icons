@@ -6,10 +6,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.4.6](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.5...v0.4.6) (2023-05-30)
 
-
 ### Features
 
-* event update ([bd96213](https://github.com/shinokada/svelte-awesome-icons/commit/bd962136a852faa2f2446cfa818d432bcd485c98))
+- event update ([bd96213](https://github.com/shinokada/svelte-awesome-icons/commit/bd962136a852faa2f2446cfa818d432bcd485c98))
 
 ### [0.4.5](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.4...v0.4.5) (2023-05-30)
 
