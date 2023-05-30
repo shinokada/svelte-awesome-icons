@@ -13,7 +13,6 @@
 <a href="https://www.npmjs.com/package/svelte-awesome-icons" rel="nofollow" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-awesome-icons.svg" alt="npm" height="25"></a>
 </p>
 
-
 2020+ Font Awesome SVG icon components for Svelte. Svelte-Awesome-Icons support major CSS frameworks using the `class` props.
 
 Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
@@ -21,7 +20,6 @@ Thank you for considering my open-source package. If you use it in a commercial 
 <p align="center">
 <img width="650" src="/static/images/awesome-optimized-650-1050.png" />
 </p>
-
 
 ## Installation
 
@@ -61,7 +59,7 @@ If you need only a few icons from this library in your Svelte app, import them d
 
 ```html
 <script>
-  import AppleBrand from 'svelte-awesome-icons/AppleBrand.svelte'
+  import AppleBrand from 'svelte-awesome-icons/AppleBrand.svelte';
 </script>
 
 <AppleBrand />
