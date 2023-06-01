@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.9](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.8...v0.4.9) (2023-06-01)
+
+
+### Features
+
+* add || ^4.0.0 to peerDependencies ([da4435c](https://github.com/shinokada/svelte-awesome-icons/commit/da4435c224cfbb16a9286b368452c7c1172ec0df))
+
 ### [0.4.8](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.7...v0.4.8) (2023-05-30)
 
 
