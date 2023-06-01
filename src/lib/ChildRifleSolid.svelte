@@ -72,3 +72,43 @@
 - on:mouseover
 - on:mouseout
 -->
+
+<!--
+@component
+[Go to Document](https://svelte-awesome-icons.codewithshin.com/)
+## Props
+@prop size = '24';
+@prop role = 'img';
+@prop color = 'currentColor';
+@prop ariaLabel = 'icon name';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->
+
+<!--
+@component
+[Go to Document](https://svelte-awesome-icons.codewithshin.com/)
+## Props
+@prop size = '24';
+@prop role = 'img';
+@prop color = 'currentColor';
+@prop ariaLabel = 'icon name';
+## Event
+- on:click
+- on:keydown
+- on:keyup
+- on:focus
+- on:blur
+- on:mouseenter
+- on:mouseleave
+- on:mouseover
+- on:mouseout
+-->

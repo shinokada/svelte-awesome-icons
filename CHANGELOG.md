@@ -4,17 +4,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.4.9](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.8...v0.4.9) (2023-06-01)
 
-
 ### Features
 
-* add || ^4.0.0 to peerDependencies ([da4435c](https://github.com/shinokada/svelte-awesome-icons/commit/da4435c224cfbb16a9286b368452c7c1172ec0df))
+- add || ^4.0.0 to peerDependencies ([da4435c](https://github.com/shinokada/svelte-awesome-icons/commit/da4435c224cfbb16a9286b368452c7c1172ec0df))
 
 ### [0.4.8](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.7...v0.4.8) (2023-05-30)
 
-
 ### Bug Fixes
 
-* doc link ([bba4dc5](https://github.com/shinokada/svelte-awesome-icons/commit/bba4dc5af45401e77c4919b91d9c0e1f6035bef7))
+- doc link ([bba4dc5](https://github.com/shinokada/svelte-awesome-icons/commit/bba4dc5af45401e77c4919b91d9c0e1f6035bef7))
 
 ### [0.4.7](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.6...v0.4.7) (2023-05-30)
 

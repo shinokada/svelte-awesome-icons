@@ -1,5 +1,6 @@
 <script>
   export let size = '24';
+  export let role = 'img';
   export let color = 'currentColor';
   export let ariaLabel = 'neos';
 </script>
@@ -7,6 +8,7 @@
 <svg
   xmlns="http://www.w3.org/2000/svg"
   {...$$restProps}
+  {role}
   width={size}
   height={size}
   fill={color}
@@ -22,6 +24,7 @@
 [Go to Document](https://svelte-awesome-icons.codewithshin.com/)
 ## Props
 @prop size = '24';
+@prop role = 'img';
 @prop color = 'currentColor';
 @prop ariaLabel = 'icon name';
 ## Event
