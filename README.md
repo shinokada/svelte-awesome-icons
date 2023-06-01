@@ -88,6 +88,7 @@ To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleRe
 ## Props
 
 - size = '24';
+- role = 'img';
 - color = 'currentColor';
 - ariaLabel = 'window minimize';
 
