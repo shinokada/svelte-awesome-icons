@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.12](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.3...v0.4.12) (2023-06-15)
+
+
+### Features
+
+* add || ^4.0.0 to peerDependencies ([da4435c](https://github.com/shinokada/svelte-awesome-icons/commit/da4435c224cfbb16a9286b368452c7c1172ec0df))
+* add component docs ([3489a2a](https://github.com/shinokada/svelte-awesome-icons/commit/3489a2a593de0040664bd4967b7226fdba95e5c4))
+* add events ([2c23170](https://github.com/shinokada/svelte-awesome-icons/commit/2c2317033b8657c86e4ac8bb012db2280696d7ae))
+* add prop role="img" ([5942838](https://github.com/shinokada/svelte-awesome-icons/commit/5942838355efee8e06cc6eefec8071a791bd658c))
+* event update ([bd96213](https://github.com/shinokada/svelte-awesome-icons/commit/bd962136a852faa2f2446cfa818d432bcd485c98))
+
+
+### Bug Fixes
+
+* doc link ([bba4dc5](https://github.com/shinokada/svelte-awesome-icons/commit/bba4dc5af45401e77c4919b91d9c0e1f6035bef7))
+* run pnpm i ([64076e9](https://github.com/shinokada/svelte-awesome-icons/commit/64076e9be7bd8fd62a902380b301e6d5d9e6cbc0))
+
 ### [0.4.11](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.10...v0.4.11) (2023-06-01)
 
 ### [0.4.10](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.9...v0.4.10) (2023-06-01)
