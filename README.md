@@ -16,6 +16,16 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 [GitHub Repo](https://github.com/shinokada/svelte-awesome-icons)
 
+## Original source
+
+[FontAwesome/Font-Awesome v6.2.1](https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs)
+
+## License
+
+[Svelte-Awesome-Icons License](https://github.com/shinokada/svelte-awesome-icons/LICENSE)
+
+[Font-Awesome LICENSE](https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt)
+
 ## Installation
 
 ```bash
@@ -49,8 +59,6 @@ If you need only a few icons from this library in your Svelte app, import them d
 ```
 
 If you are a TypeScript user, **install typescript version 5.0.0 or above.**
-
-As of March 2023, the `typescript@beta` version is now available:
 
 ```sh
 pnpm i -D typescript@beta
@@ -174,9 +182,33 @@ You can pass other attibutes as well.
 <ToiletsPortableSolid tabindex="0" />
 ```
 
-## Import all
+# Using svelte:component
 
-[REPL](https://svelte.dev/repl/c0045886b264408fba13f1de70c42932?version=3.48.0)
+```html
+<script>
+  import { ToiletsPortableSolid } from 'svelte-awesome-icons';
+</script>
+
+<svelte:component this="{ToiletsPortableSolid}" />
+```
+
+# Using onMount
+
+```html
+<script>
+  import { ToiletsPortableSolid } from 'svelte-awesome-icons';
+  import { onMount } from 'svelte';
+  const props = {
+    size: '50',
+    color: '#ff0000'
+  };
+  onMount(() => {
+    const icon = new ToiletsPortableSolid({ target: document.body, props });
+  });
+</script>
+```
+
+## Import all
 
 Use `import * as Icon from 'svelte-awesome-icons`.
 
@@ -199,10 +231,6 @@ Use `import * as Icon from 'svelte-awesome-icons`.
 <Icon.AppStoreBrand class="text-blue-500" />
 <Icon.ArrowRightToBracketSolid class="text-pink-700" />
 ```
-
-## Original source
-
-[FortAwesome/Font-Awesome v6.2.1](https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs)
 
 ## Other icons
 
