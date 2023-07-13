@@ -36,9 +36,9 @@
     imageAlt: "Svelte Awesome Icons"
   }} />
   
-<Navbar let:hidden let:toggle class="dark:bg-teal-950">
+<Navbar let:hidden let:toggle class="dark:dark:bg-stone-800">
   <NavBrand href="/">
-    <span class="self-center whitespace-nowrap text-xl font-semibold text-primary-700 dark:text-primary-500">
+    <span class="self-center whitespace-nowrap text-2xl font-semibold text-primary-700 dark:text-primary-500">
       Svelte Awesome Icons
     </span>
   </NavBrand>
@@ -58,7 +58,7 @@
   <slot />
 </div>
 
-<Footer footerType="logo" class="dark:bg-teal-950 mx-8">
+<Footer footerType="logo" class="dark:dark:bg-stone-800 mx-8">
   <div class="sm:flex sm:items-center sm:justify-between">
   <FooterBrand
   href="https://svelte-awesome-icons.vercel.app/"
@@ -66,7 +66,10 @@
   classSpan="text-primary-700 dark:text-primary-500"
 />
   <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
-    <FooterLink href="/docs">Docs</FooterLink>
+    <FooterLink href="/">Home</FooterLink>
+    <FooterLink href="/brand">Brand</FooterLink>
+    <FooterLink href="/regular">Regular</FooterLink>
+    <FooterLink href="/solid">Solid</FooterLink>
     <FooterLink href="https://github.com/shinokada/svelte-awesome-icons/blob/main/LICENSE">Licensing</FooterLink>
     <FooterLink href="https://github.com/shinokada/svelte-awesome-icons/">GitHub</FooterLink>
   </FooterLinkGroup>
