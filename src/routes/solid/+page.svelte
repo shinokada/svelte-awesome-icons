@@ -26,6 +26,7 @@
   });
   let size="24";
 </script>
+<h1>Svelte Awesome Icons: Solid</h1>
 
 <TableSearch
   placeholder="Search by icon name"
