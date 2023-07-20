@@ -8,7 +8,7 @@
     "url": "https://blog.codewithshin.com"
   },
   "bugs": "https://github.com/shinokada/svelte-awesome-icons/issues",
-  "homepage": "https://svelte-awesome-icons.codewithshin.com",
+  "homepage": "https://svelte-awesome-icons.vercel.app",
   "license": "MIT",
   "scripts": {
     "dev": "vite dev",
