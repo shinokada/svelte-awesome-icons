@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.12](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.11...v0.4.12) (2023-07-20)
+
+
+### Features
+
+* add size range ([977fe88](https://github.com/shinokada/svelte-awesome-icons/commit/977fe886226fe5f290ce65cd0a4e53f2fc26951d))
+
+
+### Bug Fixes
+
+* image sizes ([0f5c932](https://github.com/shinokada/svelte-awesome-icons/commit/0f5c932f984ca0b4d6fb72248aae7378d811bfe4))
+* update flowbite-svelte v0.40.1, add @floating-ui/dom remove flowbite and popper, add tests ([a8df733](https://github.com/shinokada/svelte-awesome-icons/commit/a8df733c5ba2e79885a3e54b46b7bae11a8f5ff3))
+* update homepage ([17835b2](https://github.com/shinokada/svelte-awesome-icons/commit/17835b2706136aff2dda5cdcfd1428a6c10b492e))
+* update range ([7f6822f](https://github.com/shinokada/svelte-awesome-icons/commit/7f6822fbd4902e788e2ca2698821a475b97126dc))
+* update range ([37e3794](https://github.com/shinokada/svelte-awesome-icons/commit/37e37945a97d364354eddd03e19c3d264b4b5884))
+
 ### [0.4.11](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.10...v0.4.11) (2023-06-01)
 
 ### [0.4.10](https://github.com/shinokada/svelte-awesome-icons/compare/v0.4.9...v0.4.10) (2023-06-01)
