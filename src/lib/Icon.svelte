@@ -35,7 +35,7 @@ viewBox="0 0 {displayIcon.width} {displayIcon.height}"
 
 <!--
 @component
-[Go to Document](https://svelte-oct.vercel.app/)
+[Go to Document](https://svelte-awesome-icons.vercel.app/)
 ## Props
 @prop name;
 @prop width = "24";
