@@ -6,10 +6,10 @@
   import TableSearch from 'flowbite-svelte/TableSearch.svelte';
   import Icon from '$lib/Icon.svelte';
   import icons from '$lib/icons.js';
-  import { filterIconsByKeyword, random_tailwind_color, random_hex_color_code} from '../utils.js'
-  
-  const keyIcons = filterIconsByKeyword(icons, '-solid');
-  
+  import { excludeItemsByKeywords, random_tailwind_color, random_hex_color_code} from '../utils.js'
+  const keywordsToExclude = ['-regular', '-solid'];
+  const keyIcons = excludeItemsByKeywords(icons, keywordsToExclude);
+
   const contentClass = 'rounded-lg dark:bg-stone-800 mt-4';
   let searchTerm = '';
 
@@ -18,7 +18,7 @@
   });
   let size="20"
 </script>
-<h1>Svelte Awesome Icons: Solid</h1>
+<h1>Svelte Awesome Icons: Brands</h1>
 <TableSearch
   placeholder="Search by icon name"
   hoverable={true}

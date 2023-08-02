@@ -50,10 +50,9 @@
       activeClass="md:!pl-3 md:!py-2 lg:!pl-0 lg:text-primary-700 text-white dark:text-white dark:lg:text-primary-500 bg-primary-700 lg:bg-transparent dark:bg-primary-600 lg:dark:bg-transparent cursor-default"
       >
     <NavLi href="/" active={activeUrl === '/'}>Home</NavLi>
-    <NavLi href="/brand" active={activeUrl === '/brand'}>Brand</NavLi>
+    <NavLi href="/brands" active={activeUrl === '/brands'}>Brands</NavLi>
     <NavLi href="/regular" active={activeUrl === '/regular'}>Regular</NavLi>
     <NavLi href="/solid" active={activeUrl === '/solid'}>Solid</NavLi>
-    <NavLi href="/all" active={activeUrl === '/all'}>All</NavLi>
     <NavLi href="https://github.com/shinokada/svelte-awesome-icons">GitHub</NavLi>
     <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
   </NavUl>
@@ -76,7 +75,7 @@
 />
   <FooterLinkGroup ulClass="flex flex-wrap items-center mt-3 text-sm text-gray-500 dark:text-gray-400 sm:mt-0">
     <FooterLink href="/">Home</FooterLink>
-    <FooterLink href="/brand">Brand</FooterLink>
+    <FooterLink href="/brands">Brands</FooterLink>
     <FooterLink href="/regular">Regular</FooterLink>
     <FooterLink href="/solid">Solid</FooterLink>
     <FooterLink href="https://github.com/shinokada/svelte-awesome-icons/blob/main/LICENSE">Licensing</FooterLink>

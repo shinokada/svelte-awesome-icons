@@ -5,14 +5,9 @@ test('index page has expected h1', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Svelte Awesome Icons' })).toBeVisible();
 });
 
-test('All icons page has expected h1', async ({ page }) => {
-  await page.goto('/all');
-  await expect(page.getByRole('heading', { name: 'Svelte Awesome Icons: All icons' })).toBeVisible();
-});
-
 test('Brand page has expected h1', async ({ page }) => {
-  await page.goto('/brand');
-  await expect(page.getByRole('heading', { name: 'Svelte Awesome Icons: Brand' })).toBeVisible();
+  await page.goto('/brands');
+  await expect(page.getByRole('heading', { name: 'Svelte Awesome Icons: Brands' })).toBeVisible();
 });
 
 test('Regular page has expected h1', async ({ page }) => {
