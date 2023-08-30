@@ -111,7 +111,7 @@ The `Icon` component serves as a wrapper for svelte:component, allowing you to e
 
 To create a default global icon setting, follow these steps:
 
-1. Configuration File
+### Configuration File
 
 Start by creating a configuration file named `/src/lib/icon.config.json` with the following structure:
 
@@ -130,7 +130,7 @@ Start by creating a configuration file named `/src/lib/icon.config.json` with th
 
 In this JSON file, you can define different configurations (config1 and config2 in this case) for your icons, specifying attributes like size, variation, and color.
 
-2. Implementation
+### Implementation
 
 In your Svelte page file, make use of the configurations from the JSON file:
 
@@ -158,10 +158,11 @@ In your Svelte page file, make use of the configurations from the JSON file:
 <Icon {...config2} icon="{CalendarCheckRegular}" />
 ```
 
-We import the configurations from the JSON file and assign them to config1 and config2. We then utilize the Icon component with the spread attributes ({...config1} and {...config2}) to apply the respective configurations to each icon.
+We import the configurations from the JSON file and assign them to config1 and config2. We then utilize the Icon component with the spread attributes to apply the respective configurations to each icon.
 
-3. Custom Default Icon
-   If you wish to create a custom default icon, you can follow these steps:
+### Custom Default Icon
+
+If you wish to create a custom default icon, you can follow these steps:
 
 Create a Svelte component named `src/lib/MyIcon.svelte`:
 
@@ -181,8 +182,9 @@ Create a Svelte component named `src/lib/MyIcon.svelte`:
 
 This component, `MyIcon.svelte`, accepts an `icon` prop which you can use to pass in the specific icon component you want to display. The default configuration is also applied to the icon.
 
-4. Implementation in a Page
-   To use your custom default icon in a Svelte page, do the following:
+### Implementation in a Page
+
+To use your custom default icon in a Svelte page, do the following:
 
 ```html
 <script>

@@ -27,7 +27,7 @@
   let size = '24';
 </script>
 
-<h1>Svelte Awesome Icons: Brand</h1>
+<h1>Svelte Awesome Icons: Brands</h1>
 <TableSearch
   placeholder="Search by icon name"
   hoverable={true}
