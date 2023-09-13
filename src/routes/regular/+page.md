@@ -26,16 +26,15 @@
   });
   let size = '24';
 </script>
-
-<h1>Svelte Awesome Icons: Solid</h1>
-
+<div class="m-8 w-full">
+<h1 class="px-4 mx-auto">Svelte Awesome Icons: Regular</h1>
 <TableSearch
   placeholder="Search by icon name"
   hoverable={true}
   bind:inputValue={searchTerm}
   divClass="relative overflow-x-auto"
 >
-  <div class="xl:w-1/3 lg:w-2/5 md:w-1/2 sm:w-3/4 w-full p-4">
+  <div class="w-full sm:w-3/4 md:w-1/2 lg:w-2/5 xl:w-1/3 p-4">
     <Label class="text-lg py-4 ">Icon size: {size}</Label>
     <Range id="range1" min="16" max="50" bind:value={size} />
   </div>
@@ -43,10 +42,10 @@
     <TabItem open>
       <span slot="title" class="text-lg">Mono</span>
       <div
-        class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white"
+        class="w-full grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-4 dark:text-white"
       >
         {#each filteredEntries as [name, component]}
-          {#if name.includes('Solid')}
+          {#if name.includes('Regular')}
             <div class="flex gap-4 items-center text-lg">
               <svelte:component this={component} class="shrink-0" bind:size />
               {name}
@@ -58,10 +57,10 @@
     <TabItem>
       <span slot="title" class="text-lg">Random Hex Colors</span>
       <div
-        class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white"
+        class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-4 dark:text-white"
       >
         {#each filteredEntries as [name, component]}
-          {#if name.includes('Solid')}
+          {#if name.includes('Regular')}
             <div class="flex gap-4 items-center text-lg">
               <svelte:component
                 this={component}
@@ -78,10 +77,10 @@
     <TabItem>
       <span slot="title" class="text-lg">Random Tailwind CSS Colors</span>
       <div
-        class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white"
+        class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-4 dark:text-white"
       >
         {#each filteredEntries as [name, component]}
-          {#if name.includes('Solid')}
+          {#if name.includes('Regular')}
             <div class="flex gap-4 items-center text-lg">
               <svelte:component this={component} class={random_tailwind_color()} bind:size />
               {name}
@@ -92,3 +91,4 @@
     </TabItem>
   </Tabs>
 </TableSearch>
+</div>

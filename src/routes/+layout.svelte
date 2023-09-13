@@ -1,5 +1,6 @@
-<script>
+<script lang="ts">
   import '../app.postcss';
+  import { onMount } from 'svelte';
   import { page } from '$app/stores';
   import DarkMode from 'flowbite-svelte/DarkMode.svelte';
   import Navbar from 'flowbite-svelte/Navbar.svelte';
@@ -18,6 +19,16 @@
   let divClass = 'w-full ml-auto lg:block lg:w-auto order-1 lg:order-none';
   let ulClass =
     'flex flex-col py-3 my-4 lg:flex-row lg:my-0 text-sm font-medium gap-4 dark:lg:bg-transparent lg:bg-white lg:border-0';
+    onMount(() => {
+    // Workaround until https://github.com/sveltejs/kit/issues/2664 is fixed
+    if (typeof window !== 'undefined' && window.location.hash) {
+      const deepLinkedElement = document.getElementById(window.location.hash.substring(1));
+
+      if (deepLinkedElement) {
+        window.setTimeout(() => deepLinkedElement.scrollIntoView(), 100);
+      }
+    }
+  });
 </script>
 
 <MetaTags
@@ -36,7 +47,7 @@
         alt: 'Svelte Awesome Icons'
       }
     ],
-    site_name: 'Svelte Awesome Icons'
+    siteName: 'Svelte Awesome Icons'
   }}
   twitter={{
     handle: '@shinokada',
@@ -47,8 +58,8 @@
     imageAlt: 'Svelte Awesome Icons'
   }}
 />
-
-<header class="flex-none w-full mx-auto bg-white dark:bg-stone-800">
+<div class="max-h-screen overflow-auto relative w-full">
+<header class="sticky top-0 z-40 flex-none w-full mx-auto bg-white border-b border-gray-200 dark:border-gray-600 dark:bg-gray-800">
   <Navbar color="default" fluid let:hidden let:toggle class="dark:bg-stone-800 ">
     <NavBrand href="/">
       <span
@@ -59,6 +70,7 @@
     </NavBrand>
 
     <NavUl
+      {activeUrl}
       {hidden}
       {divClass}
       {ulClass}
@@ -66,10 +78,10 @@
       nonActiveClass="md:!pl-3 md:!py-2 lg:!pl-0 text-gray-700 hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 dark:text-white lg:dark:hover:text-primary-700 dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent"
       activeClass="md:!pl-3 md:!py-2 lg:!pl-0 lg:text-primary-700 text-white dark:text-white dark:lg:text-primary-500 bg-primary-700 lg:bg-transparent dark:bg-primary-600 lg:dark:bg-transparent cursor-default"
     >
-      <NavLi href="/" active={activeUrl === '/'}>Home</NavLi>
-      <NavLi href="/brands" active={activeUrl === '/brands'}>Brands</NavLi>
-      <NavLi href="/regular" active={activeUrl === '/regular'}>Regular</NavLi>
-      <NavLi href="/solid" active={activeUrl === '/solid'}>Solid</NavLi>
+      <NavLi href="/">Home</NavLi>
+      <NavLi href="/brands">Brands</NavLi>
+      <NavLi href="/regular">Regular</NavLi>
+      <NavLi href="/solid">Solid</NavLi>
       <NavLi href="https://github.com/shinokada/svelte-awesome-icons">GitHub</NavLi>
       <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
     </NavUl>
@@ -79,7 +91,8 @@
     <NavHamburger on:click={toggle} btnClass="ml-3 m-0 lg:hidden" />
   </Navbar>
 </header>
-<div class="mx-8 mb-16">
+
+<div class="lg:flex">
   <slot />
 </div>
 
@@ -104,3 +117,5 @@
     </FooterLinkGroup>
   </div>
 </Footer>
+
+</div>

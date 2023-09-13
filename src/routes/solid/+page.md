@@ -26,8 +26,9 @@
   });
   let size = '24';
 </script>
+<div class="m-8 w-full">
+<h1 class="px-4 mx-auto">Svelte Awesome Icons: Solid</h1>
 
-<h1>Svelte Awesome Icons: Brands</h1>
 <TableSearch
   placeholder="Search by icon name"
   hoverable={true}
@@ -42,10 +43,10 @@
     <TabItem open>
       <span slot="title" class="text-lg">Mono</span>
       <div
-        class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white"
+        class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-4 dark:text-white"
       >
         {#each filteredEntries as [name, component]}
-          {#if name.includes('Brand')}
+          {#if name.includes('Solid')}
             <div class="flex gap-4 items-center text-lg">
               <svelte:component this={component} class="shrink-0" bind:size />
               {name}
@@ -57,10 +58,10 @@
     <TabItem>
       <span slot="title" class="text-lg">Random Hex Colors</span>
       <div
-        class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white"
+        class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-4 dark:text-white"
       >
         {#each filteredEntries as [name, component]}
-          {#if name.includes('Brand')}
+          {#if name.includes('Solid')}
             <div class="flex gap-4 items-center text-lg">
               <svelte:component
                 this={component}
@@ -77,10 +78,10 @@
     <TabItem>
       <span slot="title" class="text-lg">Random Tailwind CSS Colors</span>
       <div
-        class="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8 px-4 dark:text-white"
+        class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-4 dark:text-white"
       >
         {#each filteredEntries as [name, component]}
-          {#if name.includes('Brand')}
+          {#if name.includes('Solid')}
             <div class="flex gap-4 items-center text-lg">
               <svelte:component this={component} class={random_tailwind_color()} bind:size />
               {name}
@@ -91,3 +92,4 @@
     </TabItem>
   </Tabs>
 </TableSearch>
+</div>

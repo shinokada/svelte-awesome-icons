@@ -1,3 +1,7 @@
+---
+layout: mainLayout
+---
+
 # Svelte Awesome Icons
 
 <div class="flex gap-2 my-8">
@@ -38,11 +42,10 @@ In a svelte file:
 
 ```html
 <script>
-  import { ToiletsPortableSolid, StarHalfRegular, AppleBrand } from 'svelte-awesome-icons';
+  import { ToiletsPortableSolid, AppleBrand } from 'svelte-awesome-icons';
 </script>
 
 <ToiletsPortableSolid />
-<StarHalfRegular />
 <AppleBrand />
 ```
 
@@ -103,13 +106,13 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 <ToiletsPortableSolid class="shrink-0 h-20 w-20" />
 ```
 
-## Setting Global Icon Preferences with `setContext`
+## Setting Global Icon Preferences
 
 You can establish global icon preferences in your Svelte application using `setContext`. This allows you to configure icon-related properties once and share them across multiple components.
 
 In your `+layout.svelte` or `+page.svelte`, you can define and set global icon preferences as follows:
 
-```
+```html
 <script>
   import { setContext } from 'svelte';
 
@@ -126,7 +129,7 @@ In your `+layout.svelte` or `+page.svelte`, you can define and set global icon p
 The `size`, `color`, and `role` properties are optional, allowing you to fine-tune the appearance and accessibility of your icons as needed.
 If you set `size`, icons can be customized with different colors. For example:
 
-```
+```html
 <script>
   import { setContext } from 'svelte';
   import { AddressBookRegular, AlignRightSolid } from '$lib';
@@ -201,7 +204,7 @@ In your Svelte page file, make use of the configurations from the JSON file:
 
 We import the configurations from the JSON file and assign them to config1 and config2. We then utilize the Icon component with the spread attributes to apply the respective configurations to each icon.
 
-<h2 class="relative group text-gray-900 dark:text-white text-2xl font-bold"> <span id="custom-default-icon" />Custom Default Icon<a class="ml-2 text-primary-700 text-opacity-0 transition-opacity dark:text-primary-700 group-hover:opacity-100" href="#custom-default-icon"> #</a></h2>
+## Custom Default Icon
 
 If you wish to create a custom default icon, you can follow these steps:
 
