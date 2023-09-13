@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.6.4](https://github.com/shinokada/svelte-awesome-icons/compare/v0.6.3...v0.6.4) (2023-09-13)
+
+
+### Features
+
+* add getContext ([bd67e5e](https://github.com/shinokada/svelte-awesome-icons/commit/bd67e5eae062f2a642b7e8a077ad72c4baa6be1a))
+
 ### [0.6.3](https://github.com/shinokada/svelte-awesome-icons/compare/v0.6.2...v0.6.3) (2023-08-30)
 
 ### [0.6.2](https://github.com/shinokada/svelte-awesome-icons/compare/v0.6.1...v0.6.2) (2023-08-30)
