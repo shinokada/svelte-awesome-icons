@@ -1,3 +1,7 @@
+---
+layout: mainLayout
+---
+
 # Svelte Awesome Icons
 
 <div class="flex gap-2 my-8">
@@ -38,11 +42,10 @@ In a svelte file:
 
 ```html
 <script>
-  import { ToiletsPortableSolid, StarHalfRegular, AppleBrand } from 'svelte-awesome-icons';
+  import { ToiletsPortableSolid, AppleBrand } from 'svelte-awesome-icons';
 </script>
 
 <ToiletsPortableSolid />
-<StarHalfRegular />
 <AppleBrand />
 ```
 
@@ -103,13 +106,13 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 <ToiletsPortableSolid class="shrink-0 h-20 w-20" />
 ```
 
-## Setting Global Icon Preferences with `setContext`
+## Setting Global Icon Preferences
 
 You can establish global icon preferences in your Svelte application using `setContext`. This allows you to configure icon-related properties once and share them across multiple components.
 
 In your `+layout.svelte` or `+page.svelte`, you can define and set global icon preferences as follows:
 
-```
+```html
 <script>
   import { setContext } from 'svelte';
 
@@ -126,7 +129,7 @@ In your `+layout.svelte` or `+page.svelte`, you can define and set global icon p
 The `size`, `color`, and `role` properties are optional, allowing you to fine-tune the appearance and accessibility of your icons as needed.
 If you set `size`, icons can be customized with different colors. For example:
 
-```
+```html
 <script>
   import { setContext } from 'svelte';
   import { AddressBookRegular, AlignRightSolid } from '$lib';
@@ -248,7 +251,7 @@ Use the `color` prop to change colors with HEX color code.
 <AppleBrand color="#3fe537" />
 ```
 
-[## CSS framworks suport](#css-framworks-suport)
+## [CSS framworks suport](#css-framworks-suport)
 
 You can apply CSS framework **color** and other attributes directly to the icon component or its parent tag using the `class` prop.
 
@@ -266,7 +269,7 @@ Bootstrap examples:
 <ToiletsPortableSolid class="position-absolute top-0 px-1" />
 ```
 
-[## Dark mode](#dark-mode)
+## [Dark mode](#dark-mode)
 
 If you are using the dark mode on your website with Tailwind CSS, add your dark mode class to the `class` prop.
 
@@ -278,7 +281,7 @@ Let's use `dark` for the dark mode class as an example.
 <AppleBrand class="text-green-500 dark:text-blue-500" />
 ```
 
-[## aria-label](#aria-label)
+## [aria-label](#aria-label)
 
 All icons have aria-label. For example `ToiletsPortableSolid` has `aria-label="toilets portable"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
