@@ -103,7 +103,48 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 <ToiletsPortableSolid class="shrink-0 h-20 w-20" />
 ```
 
-## Creating a Default Global Icon Setting in Svelte
+## Setting Global Icon Preferences with `setContext`
+
+You can establish global icon preferences in your Svelte application using `setContext`. This allows you to configure icon-related properties once and share them across multiple components.
+
+In your `+layout.svelte` or `+page.svelte`, you can define and set global icon preferences as follows:
+
+```
+<script>
+  import { setContext } from 'svelte';
+
+  // Define your global icon settings
+  const iconCtx = {
+    size: "100",           // Icon size in pixels
+    color: '#ff4488',      // Icon color in hexadecimal or CSS color name
+    role: 'svg icon image' // Accessible role for the icon
+  };
+  setContext('iconCtx', iconCtx);
+</script>
+```
+
+The `size`, `color`, and `role` properties are optional, allowing you to fine-tune the appearance and accessibility of your icons as needed.
+If you set `size`, icons can be customized with different colors. For example:
+
+```
+<script>
+  import { setContext } from 'svelte';
+  import { AddressBookRegular, AlignRightSolid } from '$lib';
+  const iconCtx = {
+    size: "50",
+  };
+  setContext('iconCtx', iconCtx);
+</script>
+
+<AddressBookRegular color="#ff4488"/>
+<AlignRightSolid color="#cc0077"/>
+```
+
+Remember that you can set only one or two of these properties, allowing you to tailor icon settings to your specific design and accessibility requirements.
+
+Feel free to mix and match these properties as needed to create visually appealing and accessible icons in your Svelte application.
+
+## Creating a Default Icon Setting
 
 You can create a config file, `/src/lib/icon.config.json`.
 
@@ -160,7 +201,7 @@ In your Svelte page file, make use of the configurations from the JSON file:
 
 We import the configurations from the JSON file and assign them to config1 and config2. We then utilize the Icon component with the spread attributes to apply the respective configurations to each icon.
 
-### Custom Default Icon
+## Custom Default Icon
 
 If you wish to create a custom default icon, you can follow these steps:
 
@@ -207,7 +248,7 @@ Use the `color` prop to change colors with HEX color code.
 <AppleBrand color="#3fe537" />
 ```
 
-## CSS framworks suport
+[## CSS framworks suport](#css-framworks-suport)
 
 You can apply CSS framework **color** and other attributes directly to the icon component or its parent tag using the `class` prop.
 
@@ -225,7 +266,7 @@ Bootstrap examples:
 <ToiletsPortableSolid class="position-absolute top-0 px-1" />
 ```
 
-## Dark mode
+[## Dark mode](#dark-mode)
 
 If you are using the dark mode on your website with Tailwind CSS, add your dark mode class to the `class` prop.
 
@@ -237,7 +278,7 @@ Let's use `dark` for the dark mode class as an example.
 <AppleBrand class="text-green-500 dark:text-blue-500" />
 ```
 
-## aria-label
+[## aria-label](#aria-label)
 
 All icons have aria-label. For example `ToiletsPortableSolid` has `aria-label="toilets portable"`.
 Use `ariaLabel` prop to modify the `aria-label` value.
@@ -246,7 +287,7 @@ Use `ariaLabel` prop to modify the `aria-label` value.
 <ToiletsPortableSolid ariaLabel="Toilet" />
 ```
 
-## Unfocusable icon
+[## Unfocusable icon](#unfocusable-icon)
 
 If you want to make an icon unfocusable, add `tabindex="-1"`.
 
@@ -276,7 +317,7 @@ You can pass other attibutes as well.
 <ToiletsPortableSolid tabindex="0" />
 ```
 
-# Using svelte:component
+## Using svelte:component
 
 ```html
 <script>
@@ -286,7 +327,7 @@ You can pass other attibutes as well.
 <svelte:component this="{ToiletsPortableSolid}" />
 ```
 
-# Using onMount
+## Using onMount
 
 ```html
 <script>
