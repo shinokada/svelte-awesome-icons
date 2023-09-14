@@ -97,7 +97,6 @@ Use the `size` prop to change the size of icons.
 ```html
 <ToiletsPortableSolid size="40" />
 <StarHalfRegular size="50" />
-<AppleBrand size="60" />
 ```
 
 If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
@@ -106,7 +105,7 @@ If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by i
 <ToiletsPortableSolid class="shrink-0 h-20 w-20" />
 ```
 
-## Setting Global Icon Preferences
+## Setting Global Icon using setContext
 
 You can establish global icon preferences in your Svelte application using `setContext`. This allows you to configure icon-related properties once and share them across multiple components.
 
@@ -132,7 +131,7 @@ If you set `size`, icons can be customized with different colors. For example:
 ```html
 <script>
   import { setContext } from 'svelte';
-  import { AddressBookRegular, AlignRightSolid } from '$lib';
+  import { AddressBookRegular, AlignRightSolid } from 'svelte-awesome-icons';
   const iconCtx = {
     size: '50'
   };
