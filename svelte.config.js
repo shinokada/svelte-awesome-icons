@@ -13,11 +13,11 @@ const config = {
     dashes: 'oldschool'
   },
   preprocess: [
+    mdsvex(mdsvexConfig),
     vitePreprocess({}),
     preprocess({
       postcss: true
-    }),
-    mdsvex(mdsvexConfig)
+    })
   ],
 
   kit: {
