@@ -118,8 +118,8 @@ In your `+layout.svelte` or `+page.svelte`, you can define and set global icon p
 
   // Define your global icon settings
   const iconCtx = {
-    size: "100",           // Icon size in pixels
-    color: '#ff4488',      // Icon color in hexadecimal or CSS color name
+    size: '100', // Icon size in pixels
+    color: '#ff4488', // Icon color in hexadecimal or CSS color name
     role: 'svg icon image' // Accessible role for the icon
   };
   setContext('iconCtx', iconCtx);
@@ -134,13 +134,13 @@ If you set `size`, icons can be customized with different colors. For example:
   import { setContext } from 'svelte';
   import { AddressBookRegular, AlignRightSolid } from '$lib';
   const iconCtx = {
-    size: "50",
+    size: '50'
   };
   setContext('iconCtx', iconCtx);
 </script>
 
-<AddressBookRegular color="#ff4488"/>
-<AlignRightSolid color="#cc0077"/>
+<AddressBookRegular color="#ff4488" />
+<AlignRightSolid color="#cc0077" />
 ```
 
 Remember that you can set only one or two of these properties, allowing you to tailor icon settings to your specific design and accessibility requirements.

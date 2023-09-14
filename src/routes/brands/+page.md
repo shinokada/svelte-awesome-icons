@@ -1,6 +1,3 @@
-
-
-
 <script>
   import Label from 'flowbite-svelte/Label.svelte';
   import Range from 'flowbite-svelte/Range.svelte';
