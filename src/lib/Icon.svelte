@@ -1,29 +1,22 @@
 <script lang="ts">
   import type { ComponentType } from 'svelte';
-  export let icon: ComponentType;
-  export let size: number = 24;
-  export let color: string = '';
-  export let role: string = 'img';
-  export let ariaLabel: string = 'Icon';
+  interface Props{
+    icon: ComponentType;
+    size?: number;
+    color?: string;
+    role?: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+  let {icon, size = 24, color, role = 'img', ariaLabel = 'Icon', class: classname, ...restProps} = $props<Props>()
 </script>
 
-<svelte:component
-  this={icon}
-  {...$$restProps}
+<svelte:component 
+  {...restProps} 
   {role}
-  {size}
-  {color}
-  class={$$props.class}
+  this={icon} 
+  {size} 
+  {color} 
+  class={classname} 
   aria-label={ariaLabel}
 />
-
-<!--
-@component
-[Go to docs](https://svelte-awesome-icons.vercel.app)
-## Props
-@prop export let icon: ComponentType;
-@prop export let size: number = 24;
-@prop export let color: string = '';
-@prop export let role: string = 'img';
-@prop export let ariaLabel: string = 'Icon';
--->

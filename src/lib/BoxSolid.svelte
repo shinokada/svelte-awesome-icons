@@ -1,42 +1,32 @@
-<script>
+<script lang='ts'>
   import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
-  export let color = ctx.color || 'currentColor';
-  export let ariaLabel = 'box';
+  interface CtxType {
+		size?: string;
+		role?: string;
+    color?: string;
+	}
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props{
+    size?: string;
+    role?: string;
+    color?: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+  let { size = ctx.size || '24', role = ctx.role || 'img', color = ctx.color || 'currentColor', ariaLabel =  "box solid," , class: classname, ...restProps } = $props<Props>();
 </script>
 
 <svg
   xmlns="http://www.w3.org/2000/svg"
-  {...$$restProps}
+  {...restProps}
   {role}
   width={size}
   height={size}
   fill={color}
-  class={$$props.class}
+  class={classname}
   aria-label={ariaLabel}
-  on:click
-  on:keydown
-  on:keyup
-  on:focus
-  on:blur
-  on:mouseenter
-  on:mouseleave
-  on:mouseover
-  on:mouseout
   viewBox="0 0 448 512"
-  ><path
-    d="M50.7 58.5L0 160H208V32H93.7C75.5 32 58.9 42.3 50.7 58.5zM240 160H448L397.3 58.5C389.1 42.3 372.5 32 354.3 32H240V160zm208 32H0V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192z"
-  /></svg
+  >
+  <path d="M50.7 58.5L0 160H208V32H93.7C75.5 32 58.9 42.3 50.7 58.5zM240 160H448L397.3 58.5C389.1 42.3 372.5 32 354.3 32H240V160zm208 32H0V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V192z"/>
+  </svg
 >
-
-<!--
-@component
-[Go to docs](https://svelte-awesome-icons.vercel.app)
-## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
-@prop export let color = ctx.color || 'currentColor';
-@prop export let ariaLabel = 'box';
--->
