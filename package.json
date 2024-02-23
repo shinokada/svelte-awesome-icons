@@ -74,5 +74,17 @@
 	},
 	"svelte": "./dist/index.js",
 	"types": "./dist/index.d.ts",
-	"type": "module"
+	"type": "module",
+	"keywords": [
+    "svelte",
+    "sveltekit",
+    "font awesome",
+    "svg icons",
+    "tailwindcss",
+    "icons"
+  ],
+	"repository": {
+    "type": "git",
+    "url": "https://github.com/shinokada/svelte-awesome-icons"
+  }
 }
