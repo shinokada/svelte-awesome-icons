@@ -1,32 +1,51 @@
-<script lang='ts'>
-  import { getContext } from 'svelte';
-  interface CtxType {
+<script lang="ts">
+	import { getContext } from 'svelte';
+	interface CtxType {
 		size?: string;
 		role?: string;
-    color?: string;
+		color?: string;
 	}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props{
-    size?: string;
-    role?: string;
-    color?: string;
-    ariaLabel?: string;
-    class?: string;
-  }
-  let { size = ctx.size || '24', role = ctx.role || 'img', color = ctx.color || 'currentColor', ariaLabel =  "triangle exclamation solid," , class: classname, ...restProps } = $props<Props>();
+	const ctx: CtxType = getContext('iconCtx') ?? {};
+	interface Props {
+		size?: string;
+		role?: string;
+		color?: string;
+		ariaLabel?: string;
+		class?: string;
+	}
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		color = ctx.color || 'currentColor',
+		ariaLabel = 'triangle exclamation solid,',
+		class: classname,
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  {...restProps}
-  {role}
-  width={size}
-  height={size}
-  fill={color}
-  class={classname}
-  aria-label={ariaLabel}
-  viewBox="0 0 512 512"
-  >
-  <path d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/>
-  </svg
+	xmlns="http://www.w3.org/2000/svg"
+	{...restProps}
+	{role}
+	width={size}
+	height={size}
+	fill={color}
+	class={classname}
+	aria-label={ariaLabel}
+	viewBox="0 0 512 512"
 >
+	<path
+		d="M256 32c14.2 0 27.3 7.5 34.5 19.8l216 368c7.3 12.4 7.3 27.7 .2 40.1S486.3 480 472 480H40c-14.3 0-27.6-7.7-34.7-20.1s-7-27.8 .2-40.1l216-368C228.7 39.5 241.8 32 256 32zm0 128c-13.3 0-24 10.7-24 24V296c0 13.3 10.7 24 24 24s24-10.7 24-24V184c0-13.3-10.7-24-24-24zm32 224a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"
+	/>
+</svg>
+
+<!--
+@component
+[Go to docs](https://svelte-awesome-icons.vercel.app)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:color?:  string; = ctx.color || 'currentColor';
+@props:ariaLabel?:  string; = 'triangle exclamation solid,';
+@props:class?: string;
+-->

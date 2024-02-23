@@ -1,32 +1,51 @@
-<script lang='ts'>
-  import { getContext } from 'svelte';
-  interface CtxType {
+<script lang="ts">
+	import { getContext } from 'svelte';
+	interface CtxType {
 		size?: string;
 		role?: string;
-    color?: string;
+		color?: string;
 	}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props{
-    size?: string;
-    role?: string;
-    color?: string;
-    ariaLabel?: string;
-    class?: string;
-  }
-  let { size = ctx.size || '24', role = ctx.role || 'img', color = ctx.color || 'currentColor', ariaLabel =  "car tunnel solid," , class: classname, ...restProps } = $props<Props>();
+	const ctx: CtxType = getContext('iconCtx') ?? {};
+	interface Props {
+		size?: string;
+		role?: string;
+		color?: string;
+		ariaLabel?: string;
+		class?: string;
+	}
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		color = ctx.color || 'currentColor',
+		ariaLabel = 'car tunnel solid,',
+		class: classname,
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  {...restProps}
-  {role}
-  width={size}
-  height={size}
-  fill={color}
-  class={classname}
-  aria-label={ariaLabel}
-  viewBox="0 0 512 512"
-  >
-  <path d="M256 0C114.6 0 0 114.6 0 256V448c0 35.3 28.7 64 64 64h42.8c-6.6-5.9-10.8-14.4-10.8-24V376c0-20.8 11.3-38.9 28.1-48.6l21-64.7c7.5-23.1 29-38.7 53.3-38.7H313.6c24.3 0 45.8 15.6 53.3 38.7l21 64.7c16.8 9.7 28.2 27.8 28.2 48.6V488c0 9.6-4.2 18.1-10.8 24H448c35.3 0 64-28.7 64-64V256C512 114.6 397.4 0 256 0zM362.8 512c-6.6-5.9-10.8-14.4-10.8-24V448H160v40c0 9.6-4.2 18.1-10.8 24H362.8zM190.8 277.5L177 320H335l-13.8-42.5c-1.1-3.3-4.1-5.5-7.6-5.5H198.4c-3.5 0-6.5 2.2-7.6 5.5zM168 408a24 24 0 1 0 0-48 24 24 0 1 0 0 48zm200-24a24 24 0 1 0 -48 0 24 24 0 1 0 48 0z"/>
-  </svg
+	xmlns="http://www.w3.org/2000/svg"
+	{...restProps}
+	{role}
+	width={size}
+	height={size}
+	fill={color}
+	class={classname}
+	aria-label={ariaLabel}
+	viewBox="0 0 512 512"
 >
+	<path
+		d="M256 0C114.6 0 0 114.6 0 256V448c0 35.3 28.7 64 64 64h42.8c-6.6-5.9-10.8-14.4-10.8-24V376c0-20.8 11.3-38.9 28.1-48.6l21-64.7c7.5-23.1 29-38.7 53.3-38.7H313.6c24.3 0 45.8 15.6 53.3 38.7l21 64.7c16.8 9.7 28.2 27.8 28.2 48.6V488c0 9.6-4.2 18.1-10.8 24H448c35.3 0 64-28.7 64-64V256C512 114.6 397.4 0 256 0zM362.8 512c-6.6-5.9-10.8-14.4-10.8-24V448H160v40c0 9.6-4.2 18.1-10.8 24H362.8zM190.8 277.5L177 320H335l-13.8-42.5c-1.1-3.3-4.1-5.5-7.6-5.5H198.4c-3.5 0-6.5 2.2-7.6 5.5zM168 408a24 24 0 1 0 0-48 24 24 0 1 0 0 48zm200-24a24 24 0 1 0 -48 0 24 24 0 1 0 48 0z"
+	/>
+</svg>
+
+<!--
+@component
+[Go to docs](https://svelte-awesome-icons.vercel.app)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:color?:  string; = ctx.color || 'currentColor';
+@props:ariaLabel?:  string; = 'car tunnel solid,';
+@props:class?: string;
+-->

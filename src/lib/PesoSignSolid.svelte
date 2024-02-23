@@ -1,32 +1,51 @@
-<script lang='ts'>
-  import { getContext } from 'svelte';
-  interface CtxType {
+<script lang="ts">
+	import { getContext } from 'svelte';
+	interface CtxType {
 		size?: string;
 		role?: string;
-    color?: string;
+		color?: string;
 	}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props{
-    size?: string;
-    role?: string;
-    color?: string;
-    ariaLabel?: string;
-    class?: string;
-  }
-  let { size = ctx.size || '24', role = ctx.role || 'img', color = ctx.color || 'currentColor', ariaLabel =  "peso sign solid," , class: classname, ...restProps } = $props<Props>();
+	const ctx: CtxType = getContext('iconCtx') ?? {};
+	interface Props {
+		size?: string;
+		role?: string;
+		color?: string;
+		ariaLabel?: string;
+		class?: string;
+	}
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		color = ctx.color || 'currentColor',
+		ariaLabel = 'peso sign solid,',
+		class: classname,
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  {...restProps}
-  {role}
-  width={size}
-  height={size}
-  fill={color}
-  class={classname}
-  aria-label={ariaLabel}
-  viewBox="0 0 384 512"
-  >
-  <path d="M64 32C46.3 32 32 46.3 32 64v64c-17.7 0-32 14.3-32 32s14.3 32 32 32l0 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V384h80c68.4 0 127.7-39 156.8-96H352c17.7 0 32-14.3 32-32s-14.3-32-32-32h-.7c.5-5.3 .7-10.6 .7-16s-.2-10.7-.7-16h.7c17.7 0 32-14.3 32-32s-14.3-32-32-32H332.8C303.7 71 244.4 32 176 32H64zm190.4 96H96V96h80c30.5 0 58.2 12.2 78.4 32zM96 192H286.9c.7 5.2 1.1 10.6 1.1 16s-.4 10.8-1.1 16H96V192zm158.4 96c-20.2 19.8-47.9 32-78.4 32H96V288H254.4z"/>
-  </svg
+	xmlns="http://www.w3.org/2000/svg"
+	{...restProps}
+	{role}
+	width={size}
+	height={size}
+	fill={color}
+	class={classname}
+	aria-label={ariaLabel}
+	viewBox="0 0 384 512"
 >
+	<path
+		d="M64 32C46.3 32 32 46.3 32 64v64c-17.7 0-32 14.3-32 32s14.3 32 32 32l0 32c-17.7 0-32 14.3-32 32s14.3 32 32 32l0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V384h80c68.4 0 127.7-39 156.8-96H352c17.7 0 32-14.3 32-32s-14.3-32-32-32h-.7c.5-5.3 .7-10.6 .7-16s-.2-10.7-.7-16h.7c17.7 0 32-14.3 32-32s-14.3-32-32-32H332.8C303.7 71 244.4 32 176 32H64zm190.4 96H96V96h80c30.5 0 58.2 12.2 78.4 32zM96 192H286.9c.7 5.2 1.1 10.6 1.1 16s-.4 10.8-1.1 16H96V192zm158.4 96c-20.2 19.8-47.9 32-78.4 32H96V288H254.4z"
+	/>
+</svg>
+
+<!--
+@component
+[Go to docs](https://svelte-awesome-icons.vercel.app)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:color?:  string; = ctx.color || 'currentColor';
+@props:ariaLabel?:  string; = 'peso sign solid,';
+@props:class?: string;
+-->

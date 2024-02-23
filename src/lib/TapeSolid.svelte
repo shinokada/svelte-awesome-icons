@@ -1,32 +1,51 @@
-<script lang='ts'>
-  import { getContext } from 'svelte';
-  interface CtxType {
+<script lang="ts">
+	import { getContext } from 'svelte';
+	interface CtxType {
 		size?: string;
 		role?: string;
-    color?: string;
+		color?: string;
 	}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props{
-    size?: string;
-    role?: string;
-    color?: string;
-    ariaLabel?: string;
-    class?: string;
-  }
-  let { size = ctx.size || '24', role = ctx.role || 'img', color = ctx.color || 'currentColor', ariaLabel =  "tape solid," , class: classname, ...restProps } = $props<Props>();
+	const ctx: CtxType = getContext('iconCtx') ?? {};
+	interface Props {
+		size?: string;
+		role?: string;
+		color?: string;
+		ariaLabel?: string;
+		class?: string;
+	}
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		color = ctx.color || 'currentColor',
+		ariaLabel = 'tape solid,',
+		class: classname,
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  {...restProps}
-  {role}
-  width={size}
-  height={size}
-  fill={color}
-  class={classname}
-  aria-label={ariaLabel}
-  viewBox="0 0 576 512"
-  >
-  <path d="M380.8 416c41.5-40.7 67.2-97.3 67.2-160C448 132.3 347.7 32 224 32S0 132.3 0 256S100.3 480 224 480H544c17.7 0 32-14.3 32-32s-14.3-32-32-32H380.8zM224 160a96 96 0 1 1 0 192 96 96 0 1 1 0-192zm64 96a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"/>
-  </svg
+	xmlns="http://www.w3.org/2000/svg"
+	{...restProps}
+	{role}
+	width={size}
+	height={size}
+	fill={color}
+	class={classname}
+	aria-label={ariaLabel}
+	viewBox="0 0 576 512"
 >
+	<path
+		d="M380.8 416c41.5-40.7 67.2-97.3 67.2-160C448 132.3 347.7 32 224 32S0 132.3 0 256S100.3 480 224 480H544c17.7 0 32-14.3 32-32s-14.3-32-32-32H380.8zM224 160a96 96 0 1 1 0 192 96 96 0 1 1 0-192zm64 96a64 64 0 1 0 -128 0 64 64 0 1 0 128 0z"
+	/>
+</svg>
+
+<!--
+@component
+[Go to docs](https://svelte-awesome-icons.vercel.app)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:color?:  string; = ctx.color || 'currentColor';
+@props:ariaLabel?:  string; = 'tape solid,';
+@props:class?: string;
+-->

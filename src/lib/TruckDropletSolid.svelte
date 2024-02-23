@@ -1,32 +1,51 @@
-<script lang='ts'>
-  import { getContext } from 'svelte';
-  interface CtxType {
+<script lang="ts">
+	import { getContext } from 'svelte';
+	interface CtxType {
 		size?: string;
 		role?: string;
-    color?: string;
+		color?: string;
 	}
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props{
-    size?: string;
-    role?: string;
-    color?: string;
-    ariaLabel?: string;
-    class?: string;
-  }
-  let { size = ctx.size || '24', role = ctx.role || 'img', color = ctx.color || 'currentColor', ariaLabel =  "truck droplet solid," , class: classname, ...restProps } = $props<Props>();
+	const ctx: CtxType = getContext('iconCtx') ?? {};
+	interface Props {
+		size?: string;
+		role?: string;
+		color?: string;
+		ariaLabel?: string;
+		class?: string;
+	}
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		color = ctx.color || 'currentColor',
+		ariaLabel = 'truck droplet solid,',
+		class: classname,
+		...restProps
+	} = $props<Props>();
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  {...restProps}
-  {role}
-  width={size}
-  height={size}
-  fill={color}
-  class={classname}
-  aria-label={ariaLabel}
-  viewBox="0 0 640 512"
-  >
-  <path d="M0 48C0 21.5 21.5 0 48 0H368c26.5 0 48 21.5 48 48V96h50.7c17 0 33.3 6.7 45.3 18.7L589.3 192c12 12 18.7 28.3 18.7 45.3V256v32 64c17.7 0 32 14.3 32 32s-14.3 32-32 32H576c0 53-43 96-96 96s-96-43-96-96H256c0 53-43 96-96 96s-96-43-96-96H48c-26.5 0-48-21.5-48-48V48zM416 256H544V237.3L466.7 160H416v96zM160 464a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm368-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM208 272c39.8 0 72-29.6 72-66c0-27-39.4-82.9-59.9-110.3c-6.1-8.2-18.1-8.2-24.2 0C175.4 123 136 179 136 206c0 36.5 32.2 66 72 66z"/>
-  </svg
+	xmlns="http://www.w3.org/2000/svg"
+	{...restProps}
+	{role}
+	width={size}
+	height={size}
+	fill={color}
+	class={classname}
+	aria-label={ariaLabel}
+	viewBox="0 0 640 512"
 >
+	<path
+		d="M0 48C0 21.5 21.5 0 48 0H368c26.5 0 48 21.5 48 48V96h50.7c17 0 33.3 6.7 45.3 18.7L589.3 192c12 12 18.7 28.3 18.7 45.3V256v32 64c17.7 0 32 14.3 32 32s-14.3 32-32 32H576c0 53-43 96-96 96s-96-43-96-96H256c0 53-43 96-96 96s-96-43-96-96H48c-26.5 0-48-21.5-48-48V48zM416 256H544V237.3L466.7 160H416v96zM160 464a48 48 0 1 0 0-96 48 48 0 1 0 0 96zm368-48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM208 272c39.8 0 72-29.6 72-66c0-27-39.4-82.9-59.9-110.3c-6.1-8.2-18.1-8.2-24.2 0C175.4 123 136 179 136 206c0 36.5 32.2 66 72 66z"
+	/>
+</svg>
+
+<!--
+@component
+[Go to docs](https://svelte-awesome-icons.vercel.app)
+## Props
+@props: size?:  string; = ctx.size || '24';
+@props:role?:  string; = ctx.role || 'img';
+@props:color?:  string; = ctx.color || 'currentColor';
+@props:ariaLabel?:  string; = 'truck droplet solid,';
+@props:class?: string;
+-->
