@@ -4,17 +4,15 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [1.1.0](https://github.com/shinokada/svelte-awesome-icons/compare/v0.6.6...v1.1.0) (2024-01-27)
 
-
 ### Features
 
-* add data-sveltekit-reload to Home link so that it reloads sidebar menu and afterNavigate scrollTo in the +layout.svelte ([ba0620f](https://github.com/shinokada/svelte-awesome-icons/commit/ba0620ffda0964842efadba3605da6832ecc03a5))
-
+- add data-sveltekit-reload to Home link so that it reloads sidebar menu and afterNavigate scrollTo in the +layout.svelte ([ba0620f](https://github.com/shinokada/svelte-awesome-icons/commit/ba0620ffda0964842efadba3605da6832ecc03a5))
 
 ### Bug Fixes
 
-* move mdsvex(mdsvexConfig) to the first line ([8dd4fe8](https://github.com/shinokada/svelte-awesome-icons/commit/8dd4fe8e1000d28a7381dbecdacaf14d86c8e4e9))
-* NavHamburger class="ml-3 m-0 lg:hidden md:block" ([dccf714](https://github.com/shinokada/svelte-awesome-icons/commit/dccf7147126039cf015558e1f11faffba47e83b6))
-* use utils.js ([c4dbad7](https://github.com/shinokada/svelte-awesome-icons/commit/c4dbad709042d330c474f6c71984aad496b75bed))
+- move mdsvex(mdsvexConfig) to the first line ([8dd4fe8](https://github.com/shinokada/svelte-awesome-icons/commit/8dd4fe8e1000d28a7381dbecdacaf14d86c8e4e9))
+- NavHamburger class="ml-3 m-0 lg:hidden md:block" ([dccf714](https://github.com/shinokada/svelte-awesome-icons/commit/dccf7147126039cf015558e1f11faffba47e83b6))
+- use utils.js ([c4dbad7](https://github.com/shinokada/svelte-awesome-icons/commit/c4dbad709042d330c474f6c71984aad496b75bed))
 
 ### [0.6.6](https://github.com/shinokada/svelte-awesome-icons/compare/v0.6.5...v0.6.6) (2023-09-14)
 

@@ -32,8 +32,18 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 ## Installation
 
+### Svelte 4/5
+
 ```bash
 pnpm i -D svelte-awesome-icons
+```
+
+### Svelte 5:Runes
+
+After installing Svelte 5 and enabling `runes` in `svelte.config.js`:
+
+```bash
+pnpm i -D svelte-awesome-icons@2.0.0-next.1
 ```
 
 ## Usages
@@ -95,7 +105,8 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 Use the `size` prop to change the size of icons.
 
 ```html
-<ToiletsPortableSolid size="40" /> <StarHalfRegular size="50" />
+<ToiletsPortableSolid size="40" /> 
+<StarHalfRegular size="50" />
 ```
 
 If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
@@ -298,6 +309,7 @@ If you want to make an icon unfocusable, add `tabindex="-1"`.
 
 ## Events
 
+### Svelte 4
 All icons have the following events:
 
 - on:click
