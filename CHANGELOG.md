@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/shinokada/svelte-awesome-icons/compare/v1.1.0...v1.1.1) (2024-03-01)
+
+
+### Bug Fixes
+
+* README, homepage, package.json ([67929e4](https://github.com/shinokada/svelte-awesome-icons/commit/67929e470fa0c298ded9da9853ccd6f8f5a85467))
+
 ## [1.1.0](https://github.com/shinokada/svelte-awesome-icons/compare/v0.6.6...v1.1.0) (2024-01-27)
 
 ### Features
