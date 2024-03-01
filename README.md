@@ -14,7 +14,7 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 ## Docs
 
-Please see the [Svelte Awesome Icons documentation](https://svelte-awesome-icons.codewithshin.com/) for more details on using the icons in your Svelte application.
+See the [Svelte Awesome Icons documentation](https://svelte-awesome-icons.codewithshin.com/) to learn more.
 
 ## Icons
 
@@ -29,7 +29,6 @@ Please see the [Svelte Awesome Icons documentation](https://svelte-awesome-icons
 ## Original source
 
 [FontAwesome/Font-Awesome v6.2.1](https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs)
-
 
 ## Installation
 
@@ -49,7 +48,6 @@ pnpm i -D svelte-awesome-icons@2.0.0-next.x
 
 Replace x with the latest [release at GitHub](https://github.com/shinokada/svelte-awesome-icons/releases).
 
-
 ## Other icons
 
 - [Svelte-Icon-Sets](https://svelte-svg-icons.codewithshin.com/)
@@ -59,4 +57,3 @@ Replace x with the latest [release at GitHub](https://github.com/shinokada/svelt
 [Svelte-Awesome-Icons License](https://github.com/shinokada/svelte-awesome-icons/LICENSE)
 
 [Font-Awesome LICENSE](https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt)
-

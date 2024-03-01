@@ -105,8 +105,7 @@ If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, o
 Use the `size` prop to change the size of icons.
 
 ```html
-<ToiletsPortableSolid size="40" /> 
-<StarHalfRegular size="50" />
+<ToiletsPortableSolid size="40" /> <StarHalfRegular size="50" />
 ```
 
 If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
@@ -310,6 +309,7 @@ If you want to make an icon unfocusable, add `tabindex="-1"`.
 ## Events
 
 ### Svelte 4
+
 All icons have the following events:
 
 - on:click
