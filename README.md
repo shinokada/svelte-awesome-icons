@@ -1,58 +1,59 @@
-# create-svelte
+# Svelte Awesome Icons
 
-Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+<div class="flex gap-2 my-8">
+<a href="https://github.com/sponsors/shinokada" target="_blank" rel="noreferrer"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="sponsor"></a>
+<a href="https://www.npmjs.com/package/svelte-awesome-icons"  rel="noreferrer" target="_blank"><img src="https://img.shields.io/npm/v/svelte-awesome-icons" alt="npm"></a>
+<a href="https://twitter.com/shinokada"  rel="noreferrer" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada"></a>
+<a href="https://opensource.org/licenses/MIT"  rel="noreferrer" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-awesome-icons" alt="License"></a>
+<a href="https://www.npmjs.com/package/svelte-awesome-icons" rel="noreferrer" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-awesome-icons.svg" alt="npm"></a>
+</div>
 
-Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
+2020+ Font Awesome SVG icon components for Svelte.
 
-## Creating a project
+Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Docs
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+See the [Svelte Awesome Icons documentation](https://svelte-awesome-icons.codewithshin.com/) to learn more.
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Icons
 
-## Developing
+- [Brand](https://svelte-awesome-icons.codewithshin.com/brands/)
+- [Regular](https://svelte-awesome-icons.codewithshin.com/regular/)
+- [Solid](https://svelte-awesome-icons.codewithshin.com/solid/)
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Repo
 
-```bash
-npm run dev
+[GitHub Repo](https://github.com/shinokada/svelte-awesome-icons)
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+## Original source
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
+[FontAwesome/Font-Awesome v6.2.1](https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs)
 
-## Building
+## Installation
 
-To build your library:
-
-```bash
-npm run package
-```
-
-To create a production version of your showcase app:
+### Svelte 4/5
 
 ```bash
-npm run build
+pnpm i -D svelte-awesome-icons
 ```
 
-You can preview the production build with `npm run preview`.
+### Svelte 5:Runes
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
-
-## Publishing
-
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
-
-To publish your library to [npm](https://www.npmjs.com):
+After installing Svelte 5 and enabling `runes` in `svelte.config.js`:
 
 ```bash
-npm publish
+pnpm i -D svelte-awesome-icons@2.0.0-next.x
 ```
+
+Replace x with the latest [release at GitHub](https://github.com/shinokada/svelte-awesome-icons/releases).
+
+## Other icons
+
+- [Svelte-Icon-Sets](https://svelte-svg-icons.codewithshin.com/)
+
+## License
+
+[Svelte-Awesome-Icons License](https://github.com/shinokada/svelte-awesome-icons/LICENSE)
+
+[Font-Awesome LICENSE](https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt)
