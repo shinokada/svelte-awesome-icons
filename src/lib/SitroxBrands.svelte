@@ -1,51 +1,34 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
-	interface CtxType {
-		size?: string;
-		role?: string;
-		color?: string;
-	}
-	const ctx: CtxType = getContext('iconCtx') ?? {};
-	interface Props {
-		size?: string;
-		role?: string;
-		color?: string;
-		ariaLabel?: string;
-		class?: string;
-	}
-	let {
-		size = ctx.size || '24',
-		role = ctx.role || 'img',
-		color = ctx.color || 'currentColor',
-		ariaLabel = 'sitrox brands,',
-		class: classname,
-		...restProps
-	} = $props<Props>();
+  import { getContext } from 'svelte';
+  interface CtxType {
+    size?: string;
+    role?: string;
+    color?: string;
+  }
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props {
+    size?: string;
+    role?: string;
+    color?: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+  let { size = ctx.size || '24', role = ctx.role || 'img', color = ctx.color || 'currentColor', ariaLabel = 'sitrox brands,', class: classname, ...restProps } = $props<Props>();
 </script>
 
-<svg
-	xmlns="http://www.w3.org/2000/svg"
-	{...restProps}
-	{role}
-	width={size}
-	height={size}
-	fill={color}
-	class={classname}
-	aria-label={ariaLabel}
-	viewBox="0 0 448 512"
->
-	<path
-		d="M212.439 0.00846128V0H448V128H64C64 57.6008 141.755 0.475338 212.439 0.00846128ZM237.256 192V192.007C307.135 192.475 384 249.6 384 320H210.809V319.995C140.915 319.563 64 262.424 64 192H237.256ZM235.565 511.993C306.251 511.521 384 454.399 384 384H0V512H235.565V511.993Z"
-	/>
+<svg xmlns="http://www.w3.org/2000/svg" {...restProps} {role} width={size} height={size} fill={color} class={classname} aria-label={ariaLabel} viewBox="0 0 448 512">
+  <path
+    d="M212.439 0.00846128V0H448V128H64C64 57.6008 141.755 0.475338 212.439 0.00846128ZM237.256 192V192.007C307.135 192.475 384 249.6 384 320H210.809V319.995C140.915 319.563 64 262.424 64 192H237.256ZM235.565 511.993C306.251 511.521 384 454.399 384 384H0V512H235.565V511.993Z"
+  />
 </svg>
 
 <!--
 @component
 [Go to docs](https://svelte-awesome-icons.vercel.app)
 ## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:color?:  string; = ctx.color || 'currentColor';
-@props:ariaLabel?:  string; = 'sitrox brands,';
+@props: size?:  string; = ctx.size || '24', role;
+@props:role?: string;
+@props:color?: string;
+@props:ariaLabel?: string;
 @props:class?: string;
 -->

@@ -1,51 +1,34 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
-	interface CtxType {
-		size?: string;
-		role?: string;
-		color?: string;
-	}
-	const ctx: CtxType = getContext('iconCtx') ?? {};
-	interface Props {
-		size?: string;
-		role?: string;
-		color?: string;
-		ariaLabel?: string;
-		class?: string;
-	}
-	let {
-		size = ctx.size || '24',
-		role = ctx.role || 'img',
-		color = ctx.color || 'currentColor',
-		ariaLabel = 'html5 brands,',
-		class: classname,
-		...restProps
-	} = $props<Props>();
+  import { getContext } from 'svelte';
+  interface CtxType {
+    size?: string;
+    role?: string;
+    color?: string;
+  }
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props {
+    size?: string;
+    role?: string;
+    color?: string;
+    ariaLabel?: string;
+    class?: string;
+  }
+  let { size = ctx.size || '24', role = ctx.role || 'img', color = ctx.color || 'currentColor', ariaLabel = 'html5 brands,', class: classname, ...restProps } = $props<Props>();
 </script>
 
-<svg
-	xmlns="http://www.w3.org/2000/svg"
-	{...restProps}
-	{role}
-	width={size}
-	height={size}
-	fill={color}
-	class={classname}
-	aria-label={ariaLabel}
-	viewBox="0 0 384 512"
->
-	<path
-		d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"
-	/>
+<svg xmlns="http://www.w3.org/2000/svg" {...restProps} {role} width={size} height={size} fill={color} class={classname} aria-label={ariaLabel} viewBox="0 0 384 512">
+  <path
+    d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"
+  />
 </svg>
 
 <!--
 @component
 [Go to docs](https://svelte-awesome-icons.vercel.app)
 ## Props
-@props: size?:  string; = ctx.size || '24';
-@props:role?:  string; = ctx.role || 'img';
-@props:color?:  string; = ctx.color || 'currentColor';
-@props:ariaLabel?:  string; = 'html5 brands,';
+@props: size?:  string; = ctx.size || '24', role;
+@props:role?: string;
+@props:color?: string;
+@props:ariaLabel?: string;
 @props:class?: string;
 -->
