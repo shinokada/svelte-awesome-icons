@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- docs: update README
+
+## 2.0.0
+
+### Patch Changes
+
 - c76cee3: fomat: update
   fix: script replace from npm run build to npm run package for lib-helpers
 
