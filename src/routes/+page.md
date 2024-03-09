@@ -20,16 +20,6 @@ Thank you for considering my open-source package. If you use it in a commercial 
 
 [GitHub Repo](https://github.com/shinokada/svelte-awesome-icons)
 
-## Original source
-
-[FontAwesome/Font-Awesome v6.2.1](https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs)
-
-## License
-
-[Svelte-Awesome-Icons License](https://github.com/shinokada/svelte-awesome-icons/LICENSE)
-
-[Font-Awesome LICENSE](https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt)
-
 ## Installation
 
 ### Svelte 4/5
@@ -45,6 +35,8 @@ After installing Svelte 5 and enabling `runes` in `svelte.config.js`:
 ```bash
 pnpm i -D svelte-awesome-icons@2.0.0-next.1
 ```
+
+Replace `next.x` with the latest [release at GitHub](https://github.com/shinokada/svelte-awesome-icons/releases).
 
 ## Usages
 
@@ -379,6 +371,16 @@ Use `import * as Icon from 'svelte-awesome-icons`.
 <Icon.AppStoreBrand class="text-blue-500" />
 <Icon.ArrowRightToBracketSolid class="text-pink-700" />
 ```
+
+## Original source
+
+[FontAwesome/Font-Awesome v6.2.1](https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs)
+
+## License
+
+[Svelte-Awesome-Icons License](https://github.com/shinokada/svelte-awesome-icons/LICENSE)
+
+[Font-Awesome LICENSE](https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt)
 
 ## Other icons
 

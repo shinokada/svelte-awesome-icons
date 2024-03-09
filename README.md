@@ -46,7 +46,7 @@ After installing Svelte 5 and enabling `runes` in `svelte.config.js`:
 pnpm i -D svelte-awesome-icons@2.0.0-next.x
 ```
 
-Replace x with the latest [release at GitHub](https://github.com/shinokada/svelte-awesome-icons/releases).
+Replace `next.x` with the latest [release at GitHub](https://github.com/shinokada/svelte-awesome-icons/releases).
 
 ## Other icons
 
