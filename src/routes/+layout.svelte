@@ -30,7 +30,7 @@
   description="svelte-awesome-icons icon set for Svelte"
   openGraph={{
     type: 'website',
-    url: 'https://svelte-awesome-icons.vercel.app/',
+    url: 'https://svelte-awesome-icons.codewithshin.com/',
     title: 'Svelte Awesome Icons',
     description: 'Awesome icon set for Svelte',
     images: [
@@ -79,7 +79,7 @@
         <NavLi href="/regular">Regular</NavLi>
         <NavLi href="/solid">Solid</NavLi>
         <NavLi href="https://github.com/shinokada/svelte-awesome-icons">GitHub</NavLi>
-        <NavLi href="https://svelte-svg-icons.vercel.app/">Icon sets</NavLi>
+        <NavLi href="https://svelte-svg-icons.codewithshin.com/">Icon sets</NavLi>
       </NavUl>
       <div class="flex items-center ml-auto">
         <DarkMode class="inline-block dark:hover:text-white hover:text-gray-900" />
@@ -95,8 +95,8 @@
   <Footer footerType="logo" class="dark:dark:bg-stone-800">
     <div class="sm:flex sm:items-center sm:justify-between">
       <FooterBrand
-        href="https://svelte-awesome-icons.vercel.app/"
-        name="Svelte Awesome Icons"
+        href="https://codewithshin.com/"
+        name="codewithshin.com"
         classSpan="text-primary-700 dark:text-primary-500"
       />
       <FooterLinkGroup
