@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- fix: this version is for npmjs to add tag next
+
+## 2.0.0
+
+### Patch Changes
+
 - docs: update README
 
 ## 2.0.0

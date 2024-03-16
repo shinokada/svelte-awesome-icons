@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import * as Icons from '$lib';
   import { filterIconsByKeyword, random_tailwind_color, random_hex_color_code } from '../utils/helpers';
   const keywordsToInclude = '';

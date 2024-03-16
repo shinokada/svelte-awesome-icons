@@ -1,4 +1,4 @@
-export function removeHyphensAndCapitalize(str) {
+export function removeHyphensAndCapitalize(str: string) {
   // Handle empty string or strings without '-'
   if (!str || !str.includes('-')) {
     return str;
@@ -12,7 +12,7 @@ export function removeHyphensAndCapitalize(str) {
 }
 
 // Function to filter items that have keyword in their keys
-export function filterIconsByKeyword(icons, keyword) {
+export function filterIconsByKeyword(icons, keyword: string) {
   const filteredIcons = {};
   for (const key in icons) {
     if (key.includes(keyword) && !key.includes('IconOutline') && !key.includes('IconSolid')) {
@@ -22,7 +22,7 @@ export function filterIconsByKeyword(icons, keyword) {
   return filteredIcons;
 }
 
-export function excludeItemsByKeywords(items, keywords) {
+export function excludeItemsByKeywords(items, keywords: string) {
   const filteredItems = {};
   for (const key in items) {
     if (keywords.every((keyword) => !key.includes(keyword))) {
