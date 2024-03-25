@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.2.0
+
+### Minor Changes
+
+- feat: add withEvents props ([`8060fb3e07afe858787912b18a3cc634905b3532`](https://github.com/shinokada/svelte-awesome-icons/commit/8060fb3e07afe858787912b18a3cc634905b3532))
+- feat: add title and desc for A11y
+- docs: update website
+
 ## 1.1.2
 
 ### Patch Changes

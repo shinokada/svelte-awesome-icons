@@ -1,6 +1,6 @@
 {
   "name": "svelte-awesome-icons",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "main": "dist/index.js",
   "description": "Font Awesome SVG Icon components for Svelte",
   "author": {
