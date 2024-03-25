@@ -6,7 +6,6 @@ import flowbiteSveltePackage from './node_modules/flowbite-svelte/package.json' 
 import sveltePackage from 'svelte/package.json' assert { type: 'json' };
 import svelteKitPackage from '@sveltejs/kit/package.json' assert { type: 'json' };
 import vitePackage from 'vite/package.json' assert { type: 'json' };
-import tailwindcssPackage from 'tailwindcss/package.json' assert { type: 'json' };
 
 export default defineConfig({
   plugins: [sveltekit()],
