@@ -1,397 +1,170 @@
 ---
-layout: mainLayout
+layout: homeLayout
+title: Accessible SVG Icons - Svelte Awesome Icons
+subtitle: Accessible SVG Icons
+path:
+description: 480+ SVG Flowbite icons components for Svelte 3/4/5/Runes.
 ---
 
 <script>
-  import { Banner } from 'flowbite-svelte';
+  import { Banner, Card } from 'flowbite-svelte';
+  import { MetaTags } from 'svelte-meta-tags';
+  import MetaTag from './utils/MetaTag.svelte';
+  import { removeHyphensAndCapitalize } from './utils/utils';
+  import { StarRegular, KeyboardRegular, BellSolid, ObjectGroupRegular, CatSolid, CompassDraftingSolid, InfoSolid, AwardSolid, A7Solid, MoonSolid } from '$lib'
+
+  const name = __NAME__;
+  const version = __VERSION__;
+  const githuburl = __GITHUBURL__;
+  const flowbiteSvelteVersion = __FLOWBITESVELTEVERSION__;
+  const svelteVersion = __SVELTEVERSION__;
+  const svelteKitVersion = __SVELTEKITVERSION__;
+  const viteVersion = __VITEVERSION__;
 </script>
 
-<Banner id="default-banner" dismissable={false} classDiv='p-2'>
+<MetaTag {title} {subtitle} {description} />
+
+<Banner id="default-banner" dismissable={false} classDiv='max-w-3xl mt-4 mx-auto p-2'>
   <p class="flex items-center gap-4 text-lg font-normal text-gray-900 dark:text-gray-100">
-      To Keep It Going, Please Show Your Love.<a href='https://ko-fi.com/Z8Z2CHALG' target='_blank'><img height='42' style='border:0px;height:42px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+      To Keep It Going, Please Show Your Love.<a href='https://ko-fi.com/Z8Z2CHALG' target='_blank'><img height='40' style='border:0px;height:40px;' src='https://storage.ko-fi.com/cdn/kofi3.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
   </p>
 </Banner>
 
-# Svelte Awesome Icons
+<h1 class='flex justify-center my-8'>Svelte Awesome Icons</h1>
 
-<div class="flex gap-2 my-8">
-<a href="https://github.com/sponsors/shinokada" target="_blank" rel="noreferrer"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="sponsor"></a>
-<a href="https://www.npmjs.com/package/svelte-awesome-icons"  rel="noreferrer" target="_blank"><img src="https://img.shields.io/npm/v/svelte-awesome-icons" alt="npm"></a>
-<a href="https://twitter.com/shinokada"  rel="noreferrer" target="_blank"><img src="https://img.shields.io/badge/created%20by-@shinokada-4BBAAB.svg" alt="Created by Shin Okada"></a>
-<a href="https://opensource.org/licenses/MIT"  rel="noreferrer" target="_blank"><img src="https://img.shields.io/github/license/shinokada/svelte-awesome-icons" alt="License"></a>
-<a href="https://www.npmjs.com/package/svelte-awesome-icons" rel="noreferrer" target="_blank"><img src="https://img.shields.io/npm/dw/svelte-awesome-icons.svg" alt="npm"></a>
+<div class='grid grid-cols-2 md:grid-cols-3 gap-4'>
+  <Card>
+  <StarRegular class="w-8 h-8 mb-3 text-blue-500 dark:text-blue-400" />
+  <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Svelte 4/5/Runes</h3>
+  <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">
+  Verions 1 is for Svelte 4/5 and version 2 is for Svelte 5 Runes.
+  </p>
+  </Card>
+
+  <Card>
+  <KeyboardRegular class="w-8 h-8 mb-3 text-green-500 dark:text-green-400" />
+  <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Solid & Outline Icon Variations</h3>
+  <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">
+  480+ Solid and Outline SVG Icons.
+  </p>
+  </Card>
+
+  <Card>
+  <BellSolid class="w-8 h-8 mb-3 text-red-500 dark:text-red-400" />
+  <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Accessible SVGs</h3>
+  <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">
+  A11y props, `title`, `desc`, and `ariaLabel` for accessible SVG icons. 
+  </p>
+  </Card>
+
+  <Card>
+  <CompassDraftingSolid class="w-8 h-8 mb-3 text-purple-500 dark:text-purple-400" />
+  <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Faster Compiling</h3>
+  <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">
+   Import icons directly to optimize compilation speed and improve performance.
+  </p>
+  </Card>
+
+  <Card>
+  <ObjectGroupRegular class="w-8 h-8 mb-3 text-pink-500 dark:text-pink-400" />
+  <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">IDE Support</h3>
+  <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">
+  Hovering over a component name will display features, props, events, and more fo an LSP-compatible editors.
+  </p>
+  </Card>
+
+  <Card>
+  <CatSolid class="w-8 h-8 mb-3 text-yellow-500 dark:text-yellow-400" />
+  <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Global Icons</h3>
+  <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">
+  Use `IconSolid` and `IconOutline` to careat default icons.
+  </p>
+  </Card>
+
+  <Card>
+    <AwardSolid class="w-8 h-8 mb-3 text-yellow-500 dark:text-yellow-400" />
+    <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">CSS Frameworks support</h3>
+    <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">
+    Use TailwindCSS, Bootstrap CSS, or any other CSS frameworks.
+    </p>
+  </Card>
+
+  <Card>
+    <A7Solid class="w-8 h-8 mb-3 text-yellow-500 dark:text-yellow-400" />
+    <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Seven Props</h3>
+    <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">
+    Control the size, role, color, events, aria-label, title, and desc.
+    </p>
+  </Card>
+
+  <Card>
+    <MoonSolid class="w-8 h-8 mb-3 text-yellow-500 dark:text-yellow-400" />
+    <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Dark mode</h3>
+    <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">
+    Use `class` props to add your dark mode color.
+    </p>
+  </Card>
 </div>
 
-2020+ Font Awesome SVG icon components for Svelte.
-
-Thank you for considering my open-source package. If you use it in a commercial project, please support me by sponsoring me on GitHub: https://github.com/sponsors/shinokada. Your support helps me maintain and improve this package for the benefit of the community.
-
-## Repo
-
-[GitHub Repo](https://github.com/shinokada/svelte-awesome-icons)
-
-## Installation
-
-### Svelte 4/5
-
-```bash
-pnpm i -D svelte-awesome-icons
-```
-
-### Svelte 5:Runes
-
-After installing Svelte 5 and enabling `runes` in `svelte.config.js`:
-
-```bash
-pnpm i -D svelte-awesome-icons@2.0.0-next.1
-```
-
-Replace `next.x` with the latest [release at GitHub](https://github.com/shinokada/svelte-awesome-icons/releases).
-
-## Usages
-
-In a svelte file:
-
-```html
-<script>
-  import { ToiletsPortableSolid, AppleBrand } from 'svelte-awesome-icons';
-</script>
-
-<ToiletsPortableSolid />
-<AppleBrand />
-```
-
-## Faster compiling
-
-If you need only a few icons from this library in your Svelte app, import them directly. This can optimize compilation speed and improve performance by reducing the amount of code processed during compilation.
-
-```html
-<script>
-  import AppleBrand from 'svelte-awesome-icons/AppleBrand.svelte';
-</script>
-
-<AppleBrand />
-```
-
-If you are a TypeScript user, **install typescript version 5.0.0 or above.**
-
-```sh
-pnpm i -D typescript@beta
-```
-
-To avoid any complaints from the editor, add `node16` or `nodenext` to `moduleResolution` in your tsconfig.json file.
-
-```json
-{
-  //...
-  "compilerOptions": {
-    // ...
-    "moduleResolution": "nodenext"
-  }
-}
-```
-
-## Props
-
-- @prop export let size = ctx.size || '24';
-- @prop export let role = ctx.role || 'img';
-- @prop export let color = ctx.color || 'currentColor';
-- @prop export let ariaLabel = 'icon file name';
-
-## IDE support
-
-If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, or Neovim, hovering over a component name will display a documentation link, props, and events.
-
-## Size
-
-Use the `size` prop to change the size of icons.
-
-```html
-<ToiletsPortableSolid size="40" /> <StarHalfRegular size="50" />
-```
-
-If you are using Tailwind CSS, you can add a custom size using Tailwind CSS by including the desired classes in the class prop. For example:
-
-```html
-<ToiletsPortableSolid class="shrink-0 h-20 w-20" />
-```
-
-## Setting Global Icon using setContext
-
-You can establish global icon preferences in your Svelte application using `setContext`. This allows you to configure icon-related properties once and share them across multiple components.
-
-In your `+layout.svelte` or `+page.svelte`, you can define and set global icon preferences as follows:
-
-```html
-<script>
-  import { setContext } from 'svelte';
-
-  // Define your global icon settings
-  const iconCtx = {
-    size: '100', // Icon size in pixels
-    color: '#ff4488', // Icon color in hexadecimal or CSS color name
-    role: 'svg icon image' // Accessible role for the icon
-  };
-  setContext('iconCtx', iconCtx);
-</script>
-```
-
-The `size`, `color`, and `role` properties are optional, allowing you to fine-tune the appearance and accessibility of your icons as needed.
-If you set `size`, icons can be customized with different colors. For example:
-
-```html
-<script>
-  import { setContext } from 'svelte';
-  import { AddressBookRegular, AlignRightSolid } from 'svelte-awesome-icons';
-  const iconCtx = {
-    size: '50'
-  };
-  setContext('iconCtx', iconCtx);
-</script>
-
-<AddressBookRegular color="#ff4488" />
-<AlignRightSolid color="#cc0077" />
-```
-
-Remember that you can set only one or two of these properties, allowing you to tailor icon settings to your specific design and accessibility requirements.
-
-Feel free to mix and match these properties as needed to create visually appealing and accessible icons in your Svelte application.
-
-## Creating a Default Icon Setting
-
-You can create a config file, `/src/lib/icon.config.json`.
-
-The `Icon` component serves as a wrapper for svelte:component, allowing you to establish a global default setting or expand the capabilities of a component.
-
-To create a default global icon setting, follow these steps:
-
-### Configuration File
-
-Start by creating a configuration file named `/src/lib/icon.config.json` with the following structure:
-
-```json
-{
-  "config1": {
-    "size": 40,
-    "color": "#FF5733"
-  },
-  "config2": {
-    "size": 50,
-    "color": "#445533"
-  }
-}
-```
-
-In this JSON file, you can define different configurations (config1 and config2 in this case) for your icons, specifying attributes like size, variation, and color.
-
-### Implementation
-
-In your Svelte page file, make use of the configurations from the JSON file:
-
-```html
-<script lang="ts">
-  type IconConfig = {
-    config1: {
-      size: number;
-      color: string;
-    };
-    config2: {
-      size: number;
-      color: string;
-    };
-  };
-  import config from '$lib/icon.config.json';
-  import { Icon, AmazonBrand, CalendarCheckRegular } from 'svelte-awesome-icons';
-
-  const iconConfig: IconConfig = config;
-  const config1 = iconConfig.config1;
-  const config2 = iconConfig.config2;
-</script>
-
-<Icon {...config1} icon="{AmazonBrand}" />
-<Icon {...config2} icon="{CalendarCheckRegular}" />
-```
-
-We import the configurations from the JSON file and assign them to config1 and config2. We then utilize the Icon component with the spread attributes to apply the respective configurations to each icon.
-
-## Custom Default Icon
-
-If you wish to create a custom default icon, you can follow these steps:
-
-Create a Svelte component named `src/lib/MyIcon.svelte`:
-
-```html
-<script lang="ts">
-  import type { ComponentType } from 'svelte';
-  const config = {
-    size: 30,
-    color: '#FF5733'
-  };
-  import { Icon } from 'svelte-awesome-icons';
-  export let icon: ComponentType;
-</script>
-
-<Icon {...config} {icon} />
-```
-
-This component, `MyIcon.svelte`, accepts an `icon` prop which you can use to pass in the specific icon component you want to display. The default configuration is also applied to the icon.
-
-### Implementation in a Page
-
-To use your custom default icon in a Svelte page, do the following:
-
-```html
-<script>
-  import MyIcon from '$lib/MyIcon.svelte';
-  import { AmazonBrand } from 'svelte-awesome-icons';
-</script>
-
-<MyIcon icon="{AmazonBrand}" />
-```
-
-Here, we import the `MyIcon` component and the `AmazonBrand` icon. By passing the `AmazonBrand` icon to the `icon` prop of MyIcon, you apply the default configuration to the icon.
-
-## CSS HEX Colors
-
-Use the `color` prop to change colors with HEX color code.
-
-```html
-<ToiletsPortableSolid color="#c61515" />
-<StarHalfRegular color="#3759e5" />
-<AppleBrand color="#3fe537" />
-```
-
-## [CSS framworks suport](#css-framworks-suport)
-
-You can apply CSS framework **color** and other attributes directly to the icon component or its parent tag using the `class` prop.
-
-Tailwind CSS example:
-
-```html
-<ToiletsPortableSolid class="h-24 w-24 text-blue-700 mr-4" />
-<StarHalfRegular class="h-24 w-24 text-red-700" />
-<AppleBrand class="h-24 w-24 text-green-500" />
-```
-
-Bootstrap examples:
-
-```html
-<ToiletsPortableSolid class="position-absolute top-0 px-1" />
-```
-
-## [Dark mode](#dark-mode)
-
-If you are using the dark mode on your website with Tailwind CSS, add your dark mode class to the `class` prop.
-
-Let's use `dark` for the dark mode class as an example.
-
-```html
-<ToiletsPortableSolid class="text-blue-700 dark:text-red-500" />
-<StarHalfRegular class="text-red-700 dark:text-green-500" />
-<AppleBrand class="text-green-500 dark:text-blue-500" />
-```
-
-## [aria-label](#aria-label)
-
-All icons have aria-label. For example `ToiletsPortableSolid` has `aria-label="toilets portable"`.
-Use `ariaLabel` prop to modify the `aria-label` value.
-
-```html
-<ToiletsPortableSolid ariaLabel="Toilet" />
-```
-
-[## Unfocusable icon](#unfocusable-icon)
-
-If you want to make an icon unfocusable, add `tabindex="-1"`.
-
-```html
-<ToiletsPortableSolid tabindex="-1" />
-```
-
-## Events
-
-### Svelte 4
-
-All icons have the following events:
-
-- on:click
-- on:keydown
-- on:keyup
-- on:focus
-- on:blur
-- on:mouseenter
-- on:mouseleave
-- on:mouseover
-- on:mouseout
-
-## Passing down other attributes
-
-You can pass other attibutes as well.
-
-```html
-<ToiletsPortableSolid tabindex="0" />
-```
-
-## Using svelte:component
-
-```html
-<script>
-  import { ToiletsPortableSolid } from 'svelte-awesome-icons';
-</script>
-
-<svelte:component this="{ToiletsPortableSolid}" />
-```
-
-## Using onMount
-
-```html
-<script>
-  import { ToiletsPortableSolid } from 'svelte-awesome-icons';
-  import { onMount } from 'svelte';
-  const props = {
-    size: '50',
-    color: '#ff0000'
-  };
-  onMount(() => {
-    const icon = new ToiletsPortableSolid({ target: document.body, props });
-  });
-</script>
-```
-
-## Import all
-
-Use `import * as Icon from 'svelte-awesome-icons`.
-
-```html
-<script>
-  import * as Icon from 'svelte-awesome-icons';
-</script>
-
-<Icon.AppStoreBrand />
-<Icon.ArrowRightToBracketSolid />
-
-<h1>Size</h1>
-<Icon.AppStoreBrand size="30" />
-<Icon.ArrowRightToBracketSolid size="40" />
-
-<h1>CSS HEX color</h1>
-<Icon.ArrowRightToBracketSolid color="#c61515" size="40" />
-
-<h1>Tailwind CSS</h1>
-<Icon.AppStoreBrand class="text-blue-500" />
-<Icon.ArrowRightToBracketSolid class="text-pink-700" />
-```
-
-## Original source
-
-[FontAwesome/Font-Awesome v6.2.1](https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs)
-
-## License
-
-[Svelte-Awesome-Icons License](https://github.com/shinokada/svelte-awesome-icons/LICENSE)
-
-[Font-Awesome LICENSE](https://github.com/FortAwesome/Font-Awesome/blob/6.x/LICENSE.txt)
-
-## Other icons
-
-- [Svelte-Icon-Sets](https://svelte-svg-icons.codewithshin.com/)
+<h2 class='flex justify-center my-8'>Other information</h2>
+
+<div class='grid grid-cols-2 md:grid-cols-3 gap-4'>
+  <Card href='https://svelte-svg-icons.codewithshin.com/'>
+  <InfoSolid class="w-8 h-8 mb-3 text-oragne-500 dark:text-orange-400" />
+  <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Svelte Icon Family</h3>
+  <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">
+  Explore 29 Svelte SVG Icon Sets.
+  </p>
+  </Card>
+
+  <Card href='https://github.com/shinokada/svelte-awesome-icons/blob/main/LICENSE' class='dark:hover:no-underline'>
+  <InfoSolid class="w-8 h-8 mb-3 text-blue-500 dark:text-blue-400" />
+  <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">License</h3>
+  <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">
+  Released under the MIT License.
+  </p>
+  </Card>
+
+  <Card href='https://github.com/FortAwesome/Font-Awesome/tree/6.x/svgs'>
+  <InfoSolid class="w-8 h-8 mb-3 text-green-500 dark:text-green-400" />
+  <h3 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Original source</h3>
+  <p class="font-normal text-gray-700 dark:text-gray-400 leading-tight">
+  FontAwesome/Font-Awesome v6.2.1
+  </p>
+  </Card>
+</div>
+
+<h2 class='flex justify-center my-8'>Technical information about this website</h2>
+
+<div class='grid grid-cols-1'>
+<Card size='xl'>
+  <ul class="m-4 list-disc p-4 text-left text-lg dark:text-gray-400">
+  <li class="hover:text-red-700 hover:underline">
+    <a
+      href="{githuburl}"
+      class="me-4 hover:underline md:me-6">{removeHyphensAndCapitalize(name)} : {version}</a
+    >
+  </li>
+  <li>
+    <a href="https://flowbite-svelte.com/" class="me-4 hover:underline md:me-6"
+      >Flowbite-Svelte: {flowbiteSvelteVersion}</a
+    >
+  </li>
+  <li class="hover:text-red-700 hover:underline">
+    <a
+      href="https://svelte.dev/"
+      class="me-4 hover:underline md:me-6">Svelte: {svelteVersion}</a
+    >
+  </li>
+  <li>
+    <a href="https://kit.svelte.dev/docs/introduction" class="me-4 hover:underline md:me-6"
+      >SvelteKit: {svelteKitVersion}</a
+    >
+  </li>
+  <li class="hover:text-red-700 hover:underline">
+    <a href="https://vitejs.dev/" class="hover:underline">Vite: {viteVersion}</a>
+  </li>
+</ul>
+    
+</Card>
+</div>

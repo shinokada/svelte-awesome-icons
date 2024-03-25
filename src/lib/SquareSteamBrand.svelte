@@ -1,33 +1,111 @@
-<script>
+<script lang="ts">
+  interface CtxType {
+    size?: string;
+    role?: string;
+    color?: string;
+    class?: string;
+    withEvents?: boolean;
+  }
+
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+
   import { getContext } from 'svelte';
-  const ctx = getContext('iconCtx') ?? {};
-  export let size = ctx.size || '24';
-  export let role = ctx.role || 'img';
-  export let color = ctx.color || 'currentColor';
-  export let ariaLabel = 'square steam';
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+
+  let className = ctx.class || '';
+  export { className as class };
+  export let size: string = ctx.size || '24';
+  export let role: string = ctx.role || 'img';
+  export let color: string = ctx.color || 'currentColor';
+  export let withEvents = ctx.withEvents || false;
+  export let ariaLabel: string = 'square steam brand';
+  export let title: TitleType = {};
+  export let desc: DescType = {};
+
+  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
+  let hasDescription = false;
+
+  $: if (title.id || desc.id) {
+    hasDescription = true;
+  } else {
+    hasDescription = false;
+  }
 </script>
 
-<svg
-  xmlns="http://www.w3.org/2000/svg"
-  {...$$restProps}
-  {role}
-  width={size}
-  height={size}
-  fill={color}
-  class={$$props.class}
-  aria-label={ariaLabel}
-  viewBox="0 0 448 512"
-  ><path
-    d="M185.2 356.5c7.7-18.5-1-39.7-19.6-47.4l-29.5-12.2c11.4-4.3 24.3-4.5 36.4.5 12.2 5.1 21.6 14.6 26.7 26.7 5 12.2 5 25.6-.1 37.7-10.5 25.1-39.4 37-64.6 26.5-11.6-4.8-20.4-13.6-25.4-24.2l28.5 11.8c18.6 7.8 39.9-.9 47.6-19.4zM400 32H48C21.5 32 0 53.5 0 80v160.7l116.6 48.1c12-8.2 26.2-12.1 40.7-11.3l55.4-80.2v-1.1c0-48.2 39.3-87.5 87.6-87.5s87.6 39.3 87.6 87.5c0 49.2-40.9 88.7-89.6 87.5l-79 56.3c1.6 38.5-29.1 68.8-65.7 68.8-31.8 0-58.5-22.7-64.5-52.7L0 319.2V432c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-99.7 222.5c-32.2 0-58.4-26.1-58.4-58.3s26.2-58.3 58.4-58.3 58.4 26.2 58.4 58.3-26.2 58.3-58.4 58.3zm.1-14.6c24.2 0 43.9-19.6 43.9-43.8 0-24.2-19.6-43.8-43.9-43.8-24.2 0-43.9 19.6-43.9 43.8 0 24.2 19.7 43.8 43.9 43.8z"
-  /></svg
->
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...$$restProps}
+    {role}
+    width={size}
+    height={size}
+    fill={color}
+    class={className}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 448 512"
+    on:click
+    on:keydown
+    on:keyup
+    on:focus
+    on:blur
+    on:mouseenter
+    on:mouseleave
+    on:mouseover
+    on:mouseout
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path
+      d="M165.6 309.1c18.6 7.7 27.3 28.9 19.6 47.4s-29 27.2-47.6 19.4l-28.5-11.8c5 10.6 13.8 19.4 25.4 24.2c25.2 10.5 54.1-1.4 64.6-26.5c5.1-12.1 5.1-25.5 .1-37.7c-5.1-12.1-14.5-21.6-26.7-26.7c-12.1-5-25-4.8-36.4-.5l29.5 12.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V240.7l116.6 48.1c12-8.2 26.2-12.1 40.7-11.3l55.4-80.2v-1.1c0-48.2 39.3-87.5 87.6-87.5s87.6 39.3 87.6 87.5c0 49.2-40.9 88.7-89.6 87.5l-79 56.3c1.6 38.5-29.1 68.8-65.7 68.8c-31.8 0-58.5-22.7-64.5-52.7L0 319.2V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM241.9 196.2a58.4 58.4 0 1 0 116.8 0 58.4 58.4 0 1 0 -116.8 0zm14.6-.1a43.9 43.9 0 1 1 87.8 0 43.9 43.9 0 1 1 -87.8 0z"
+    />
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...$$restProps}
+    {role}
+    width={size}
+    height={size}
+    fill={color}
+    class={className}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 448 512"
+  >
+    {#if title.id && title.title}
+      <title id={title.id}>{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id={desc.id}>{desc.desc}</desc>
+    {/if}
+    <path
+      d="M165.6 309.1c18.6 7.7 27.3 28.9 19.6 47.4s-29 27.2-47.6 19.4l-28.5-11.8c5 10.6 13.8 19.4 25.4 24.2c25.2 10.5 54.1-1.4 64.6-26.5c5.1-12.1 5.1-25.5 .1-37.7c-5.1-12.1-14.5-21.6-26.7-26.7c-12.1-5-25-4.8-36.4-.5l29.5 12.2zM448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V240.7l116.6 48.1c12-8.2 26.2-12.1 40.7-11.3l55.4-80.2v-1.1c0-48.2 39.3-87.5 87.6-87.5s87.6 39.3 87.6 87.5c0 49.2-40.9 88.7-89.6 87.5l-79 56.3c1.6 38.5-29.1 68.8-65.7 68.8c-31.8 0-58.5-22.7-64.5-52.7L0 319.2V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM241.9 196.2a58.4 58.4 0 1 0 116.8 0 58.4 58.4 0 1 0 -116.8 0zm14.6-.1a43.9 43.9 0 1 1 87.8 0 43.9 43.9 0 1 1 -87.8 0z"
+    />
+  </svg>
+{/if}
 
 <!--
 @component
 [Go to docs](https://svelte-awesome-icons.codewithshin.com)
 ## Props
-@prop export let size = ctx.size || '24';
-@prop export let role = ctx.role || 'img';
-@prop export let color = ctx.color || 'currentColor';
-@prop export let ariaLabel = 'square steam';
+@prop export let size: string = ctx.size || '24';
+@prop export let role: string = ctx.role || 'img';
+@prop export let color: string = ctx.color || 'currentColor';
+@prop export let withEvents = ctx.withEvents || false;
+@prop export let ariaLabel: string = 'square steam brand';
+@prop export let title: TitleType = {};
+@prop export let desc: DescType = {};
 -->

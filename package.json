@@ -46,30 +46,30 @@
     "@sveltejs/package": "^2.3.0",
     "@sveltejs/vite-plugin-svelte": "^3.0.2",
     "@svitejs/changesets-changelog-github-compact": "^1.1.0",
-    "@typescript-eslint/eslint-plugin": "^7.2.0",
-    "@typescript-eslint/parser": "^7.2.0",
-    "autoprefixer": "^10.4.18",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
+    "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-svelte": "^2.35.1",
     "flowbite": "^1.8.1",
     "flowbite-svelte": "^0.44.24",
     "mdsvex": "^0.11.0",
-    "postcss": "^8.4.35",
+    "postcss": "^8.4.38",
     "postcss-load-config": "^4.0.2",
     "prettier": "^3.2.5",
     "prettier-plugin-svelte": "^3.2.2",
     "publint": "^0.2.7",
     "svelte": "^4.2.12",
-    "svelte-check": "^3.6.7",
+    "svelte-check": "^3.6.8",
     "svelte-lib-helpers": "^0.4.5",
     "svelte-meta-tags": "^3.1.1",
     "svelte-preprocess": "^5.1.3",
     "tailwind-merge": "^1.14.0",
     "tailwindcss": "^3.4.1",
     "tslib": "^2.6.2",
-    "typescript": "^5.4.2",
-    "vite": "^5.1.6",
+    "typescript": "^5.4.3",
+    "vite": "^5.2.6",
     "vitest": "^0.34.6"
   },
   "svelte": "./dist/index.js",
@@ -116,9 +116,9 @@
       "types": "./dist/A4Solid.svelte.d.ts",
       "svelte": "./dist/A4Solid.svelte"
     },
-    "./A500PxBrand.svelte": {
-      "types": "./dist/A500PxBrand.svelte.d.ts",
-      "svelte": "./dist/A500PxBrand.svelte"
+    "./A500pxBrand.svelte": {
+      "types": "./dist/A500pxBrand.svelte.d.ts",
+      "svelte": "./dist/A500pxBrand.svelte"
     },
     "./A5Solid.svelte": {
       "types": "./dist/A5Solid.svelte.d.ts",
@@ -979,6 +979,14 @@
     "./BrainSolid.svelte": {
       "types": "./dist/BrainSolid.svelte.d.ts",
       "svelte": "./dist/BrainSolid.svelte"
+    },
+    "./BraveBrand.svelte": {
+      "types": "./dist/BraveBrand.svelte.d.ts",
+      "svelte": "./dist/BraveBrand.svelte"
+    },
+    "./BraveReverseBrand.svelte": {
+      "types": "./dist/BraveReverseBrand.svelte.d.ts",
+      "svelte": "./dist/BraveReverseBrand.svelte"
     },
     "./BrazilianRealSignSolid.svelte": {
       "types": "./dist/BrazilianRealSignSolid.svelte.d.ts",
@@ -3576,6 +3584,10 @@
       "types": "./dist/GooglePlusGBrand.svelte.d.ts",
       "svelte": "./dist/GooglePlusGBrand.svelte"
     },
+    "./GoogleScholarBrand.svelte": {
+      "types": "./dist/GoogleScholarBrand.svelte.d.ts",
+      "svelte": "./dist/GoogleScholarBrand.svelte"
+    },
     "./GoogleWalletBrand.svelte": {
       "types": "./dist/GoogleWalletBrand.svelte.d.ts",
       "svelte": "./dist/GoogleWalletBrand.svelte"
@@ -4564,6 +4576,10 @@
       "types": "./dist/LessThanSolid.svelte.d.ts",
       "svelte": "./dist/LessThanSolid.svelte"
     },
+    "./LetterboxdBrand.svelte": {
+      "types": "./dist/LetterboxdBrand.svelte.d.ts",
+      "svelte": "./dist/LetterboxdBrand.svelte"
+    },
     "./LifeRingRegular.svelte": {
       "types": "./dist/LifeRingRegular.svelte.d.ts",
       "svelte": "./dist/LifeRingRegular.svelte"
@@ -4932,6 +4948,10 @@
       "types": "./dist/MinimizeSolid.svelte.d.ts",
       "svelte": "./dist/MinimizeSolid.svelte"
     },
+    "./MintbitBrand.svelte": {
+      "types": "./dist/MintbitBrand.svelte.d.ts",
+      "svelte": "./dist/MintbitBrand.svelte"
+    },
     "./MinusSolid.svelte": {
       "types": "./dist/MinusSolid.svelte.d.ts",
       "svelte": "./dist/MinusSolid.svelte"
@@ -5227,6 +5247,10 @@
     "./OpenidBrand.svelte": {
       "types": "./dist/OpenidBrand.svelte.d.ts",
       "svelte": "./dist/OpenidBrand.svelte"
+    },
+    "./OpensuseBrand.svelte": {
+      "types": "./dist/OpensuseBrand.svelte.d.ts",
+      "svelte": "./dist/OpensuseBrand.svelte"
     },
     "./OperaBrand.svelte": {
       "types": "./dist/OperaBrand.svelte.d.ts",
@@ -5687,6 +5711,10 @@
     "./PixBrand.svelte": {
       "types": "./dist/PixBrand.svelte.d.ts",
       "svelte": "./dist/PixBrand.svelte"
+    },
+    "./PixivBrand.svelte": {
+      "types": "./dist/PixivBrand.svelte.d.ts",
+      "svelte": "./dist/PixivBrand.svelte"
     },
     "./PizzaSliceSolid.svelte": {
       "types": "./dist/PizzaSliceSolid.svelte.d.ts",
@@ -6356,6 +6384,10 @@
       "types": "./dist/ShoePrintsSolid.svelte.d.ts",
       "svelte": "./dist/ShoePrintsSolid.svelte"
     },
+    "./ShoelaceBrand.svelte": {
+      "types": "./dist/ShoelaceBrand.svelte.d.ts",
+      "svelte": "./dist/ShoelaceBrand.svelte"
+    },
     "./ShopLockSolid.svelte": {
       "types": "./dist/ShopLockSolid.svelte.d.ts",
       "svelte": "./dist/ShopLockSolid.svelte"
@@ -6395,6 +6427,10 @@
     "./SignHangingSolid.svelte": {
       "types": "./dist/SignHangingSolid.svelte.d.ts",
       "svelte": "./dist/SignHangingSolid.svelte"
+    },
+    "./SignalMessengerBrand.svelte": {
+      "types": "./dist/SignalMessengerBrand.svelte.d.ts",
+      "svelte": "./dist/SignalMessengerBrand.svelte"
     },
     "./SignalSolid.svelte": {
       "types": "./dist/SignalSolid.svelte.d.ts",
@@ -6699,6 +6735,10 @@
     "./SquareLastfmBrand.svelte": {
       "types": "./dist/SquareLastfmBrand.svelte.d.ts",
       "svelte": "./dist/SquareLastfmBrand.svelte"
+    },
+    "./SquareLetterboxdBrand.svelte": {
+      "types": "./dist/SquareLetterboxdBrand.svelte.d.ts",
+      "svelte": "./dist/SquareLetterboxdBrand.svelte"
     },
     "./SquareMinusRegular.svelte": {
       "types": "./dist/SquareMinusRegular.svelte.d.ts",
@@ -7608,6 +7648,10 @@
       "types": "./dist/UpsBrand.svelte.d.ts",
       "svelte": "./dist/UpsBrand.svelte"
     },
+    "./UpworkBrand.svelte": {
+      "types": "./dist/UpworkBrand.svelte.d.ts",
+      "svelte": "./dist/UpworkBrand.svelte"
+    },
     "./UsbBrand.svelte": {
       "types": "./dist/UsbBrand.svelte.d.ts",
       "svelte": "./dist/UsbBrand.svelte"
@@ -7955,6 +7999,10 @@
     "./WazeBrand.svelte": {
       "types": "./dist/WazeBrand.svelte.d.ts",
       "svelte": "./dist/WazeBrand.svelte"
+    },
+    "./WebflowBrand.svelte": {
+      "types": "./dist/WebflowBrand.svelte.d.ts",
+      "svelte": "./dist/WebflowBrand.svelte"
     },
     "./WeeblyBrand.svelte": {
       "types": "./dist/WeeblyBrand.svelte.d.ts",

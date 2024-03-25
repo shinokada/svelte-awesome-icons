@@ -1,6 +1,6 @@
 /* Write your global styles here, in PostCSS syntax */
 @import '../static/styles/docs.css';
-@import '../node_modules/flowbite/dist/flowbite.css';
+/* @import '../node_modules/flowbite/dist/flowbite.css'; */
 
 /* Write your global styles here, in PostCSS syntax */
 @tailwind base;
@@ -56,7 +56,7 @@ table {
 }
 
 h1 {
-  @apply text-3xl my-8;
+  @apply text-3xl my-8 text-primary-800 dark:text-primary-400;
 }
 
 h2 {
@@ -71,10 +71,12 @@ p {
   @apply text-lg my-3;
 }
 
-a {
-  @apply text-blue-900 dark:text-blue-400 hover:underline;
-}
-
 pre {
   @apply bg-gray-100 text-gray-900 dark:text-gray-900 m-4 p-4;
+}
+
+@layer components {
+  .dark_bg_theme {
+    @apply dark:bg-stone-900;
+  }
 }
