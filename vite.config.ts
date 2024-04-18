@@ -2,7 +2,7 @@ import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
 
 import pkg from './package.json' assert { type: 'json' };
-import flowbiteSveltePackage from './node_modules/flowbite-svelte/package.json' assert { type: 'json' };
+import flowbiteSveltePackage from 'flowbite-svelte/package.json' assert { type: 'json' };
 import sveltePackage from 'svelte/package.json' assert { type: 'json' };
 import svelteKitPackage from '@sveltejs/kit/package.json' assert { type: 'json' };
 import vitePackage from 'vite/package.json' assert { type: 'json' };
