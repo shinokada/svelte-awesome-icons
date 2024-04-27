@@ -1,5 +1,0 @@
----
-"svelte-awesome-icons": patch
----
-
-feat: add a11y, title and desc props

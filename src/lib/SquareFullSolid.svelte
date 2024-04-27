@@ -101,3 +101,10 @@
       <path d="M0 0H512V512H0V0z"/>
   </svg>
 {/if}
+
+<!--
+@component
+[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
+## Props
+@props: 
+-->
