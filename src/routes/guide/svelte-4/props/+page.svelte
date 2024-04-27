@@ -15,7 +15,7 @@
   });
 </script>
 
-<h1>Props: v1</h1>
+<h1>Svelte Awesome Icons v1: Props</h1>
 
 <H2>Prop</H2>
 
