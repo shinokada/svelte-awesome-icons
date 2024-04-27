@@ -1,0 +1,1 @@
+pnpm i -D svelte-awesome-icons@2.0.0-next.x

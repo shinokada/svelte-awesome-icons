@@ -1,34 +1,103 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
-  interface CtxType {
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+  interface BaseProps {
     size?: string;
     role?: string;
     color?: string;
-  }
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props {
-    size?: string;
-    role?: string;
-    color?: string;
-    ariaLabel?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
     class?: string;
   }
-  let { size = ctx.size || '24', role = ctx.role || 'img', color = ctx.color || 'currentColor', ariaLabel = 'hryvnia sign solid', class: classname, ...restProps }: Props = $props();
+  interface CtxType extends BaseProps {}
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props extends BaseProps{
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+  }
+
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    color = ctx.color || 'currentColor', 
+    withEvents = ctx.withEvents || false, 
+    title = {}, 
+    desc = {}, 
+    class: classname, 
+    ariaLabel =  "hryvnia sign solid" , 
+    onclick, 
+    onkeydown, 
+    onkeyup,
+    ...restProps 
+  }: Props = $props();
+
+  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
+  let hasDescription = $state(false);
+
+  function updateHasDescription() {
+    // Double negation converts truthy values to true, falsy to false
+    hasDescription = !!(title.id || desc.id); 
+  }
+  updateHasDescription();
+
+  $effect(() => {
+    updateHasDescription();
+  })
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" {...restProps} {role} width={size} height={size} class={classname} fill={color} aria-label={ariaLabel} viewBox="0 0 384 512">
-  <path
-    d="M121.9 116.2C138.3 103.1 158.7 96 179.6 96H223c27.1 0 49 21.9 49 49c0 11.5-4 22.4-11.1 31H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H155.5l-50.6 28.9c-1.7 1-3.4 2-5.1 3.1H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H52.3c-2.8 9.9-4.3 20.4-4.3 31c0 62.4 50.6 113 113 113h43.4c35.5 0 70-12.1 97.7-34.3L308 441c13.8-11 16-31.2 5-45s-31.2-16-45-5l-5.9 4.7c-16.4 13.1-36.7 20.2-57.7 20.2H161c-27.1 0-49-21.9-49-49c0-11.5 4-22.4 11.1-31H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H228.5l50.6-28.9c1.7-1 3.4-2 5.1-3.1H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H331.7c2.8-10 4.3-20.4 4.3-31c0-62.4-50.6-113-113-113H179.6c-35.5 0-70 12.1-97.7 34.3L76 71c-13.8 11-16 31.2-5 45s31.2 16 45 5l5.9-4.7z"
-  />
-</svg>
-
-<!--
-@component
-[Go to docs](https://svelte-awesome-icons.vercel.app)
-## Props
-@props: size?: string;
-@props:role?: string;
-@props:color?: string;
-@props:ariaLabel?: string;
-@props:class?: string;
--->
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    fill={color}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 384 512"
+    onclick={onclick}
+    onkeydown={onkeydown}
+    onkeyup={onkeyup}
+  >
+    {#if title.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M121.9 116.2C138.3 103.1 158.7 96 179.6 96H223c27.1 0 49 21.9 49 49c0 11.5-4 22.4-11.1 31H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H155.5l-50.6 28.9c-1.7 1-3.4 2-5.1 3.1H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H52.3c-2.8 9.9-4.3 20.4-4.3 31c0 62.4 50.6 113 113 113h43.4c35.5 0 70-12.1 97.7-34.3L308 441c13.8-11 16-31.2 5-45s-31.2-16-45-5l-5.9 4.7c-16.4 13.1-36.7 20.2-57.7 20.2H161c-27.1 0-49-21.9-49-49c0-11.5 4-22.4 11.1-31H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H228.5l50.6-28.9c1.7-1 3.4-2 5.1-3.1H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H331.7c2.8-10 4.3-20.4 4.3-31c0-62.4-50.6-113-113-113H179.6c-35.5 0-70 12.1-97.7 34.3L76 71c-13.8 11-16 31.2-5 45s31.2 16 45 5l5.9-4.7z"/>
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    fill={color}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 384 512"
+  >
+    {#if title.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M121.9 116.2C138.3 103.1 158.7 96 179.6 96H223c27.1 0 49 21.9 49 49c0 11.5-4 22.4-11.1 31H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H155.5l-50.6 28.9c-1.7 1-3.4 2-5.1 3.1H32c-17.7 0-32 14.3-32 32s14.3 32 32 32H52.3c-2.8 9.9-4.3 20.4-4.3 31c0 62.4 50.6 113 113 113h43.4c35.5 0 70-12.1 97.7-34.3L308 441c13.8-11 16-31.2 5-45s-31.2-16-45-5l-5.9 4.7c-16.4 13.1-36.7 20.2-57.7 20.2H161c-27.1 0-49-21.9-49-49c0-11.5 4-22.4 11.1-31H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H228.5l50.6-28.9c1.7-1 3.4-2 5.1-3.1H352c17.7 0 32-14.3 32-32s-14.3-32-32-32H331.7c2.8-10 4.3-20.4 4.3-31c0-62.4-50.6-113-113-113H179.6c-35.5 0-70 12.1-97.7 34.3L76 71c-13.8 11-16 31.2-5 45s31.2 16 45 5l5.9-4.7z"/>
+  </svg>
+{/if}

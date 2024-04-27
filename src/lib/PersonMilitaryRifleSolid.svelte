@@ -1,34 +1,103 @@
-<script lang="ts">
+<script lang='ts'>
   import { getContext } from 'svelte';
-  interface CtxType {
+  type TitleType = {
+    id?: string;
+    title?: string;
+  };
+  type DescType = {
+    id?: string;
+    desc?: string;
+  };
+  interface BaseProps {
     size?: string;
     role?: string;
     color?: string;
-  }
-  const ctx: CtxType = getContext('iconCtx') ?? {};
-  interface Props {
-    size?: string;
-    role?: string;
-    color?: string;
-    ariaLabel?: string;
+    withEvents?: boolean;
+    onclick?: (event: MouseEvent) => void;
+    onkeydown?: (event: KeyboardEvent) => void;
+    onkeyup?: (event: KeyboardEvent) => void;
     class?: string;
   }
-  let { size = ctx.size || '24', role = ctx.role || 'img', color = ctx.color || 'currentColor', ariaLabel = 'person military rifle solid', class: classname, ...restProps }: Props = $props();
+  interface CtxType extends BaseProps {}
+  const ctx: CtxType = getContext('iconCtx') ?? {};
+  interface Props extends BaseProps{
+    title?: TitleType;
+    desc?: DescType;
+    ariaLabel?: string;
+  }
+
+  let { 
+    size = ctx.size || '24', 
+    role = ctx.role || 'img', 
+    color = ctx.color || 'currentColor', 
+    withEvents = ctx.withEvents || false, 
+    title = {}, 
+    desc = {}, 
+    class: classname, 
+    ariaLabel =  "person military rifle solid" , 
+    onclick, 
+    onkeydown, 
+    onkeyup,
+    ...restProps 
+  }: Props = $props();
+
+  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
+  let hasDescription = $state(false);
+
+  function updateHasDescription() {
+    // Double negation converts truthy values to true, falsy to false
+    hasDescription = !!(title.id || desc.id); 
+  }
+  updateHasDescription();
+
+  $effect(() => {
+    updateHasDescription();
+  })
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" {...restProps} {role} width={size} height={size} class={classname} fill={color} aria-label={ariaLabel} viewBox="0 0 512 512">
-  <path
-    d="M160 39c0-13 10-23.8 22.9-24.9L334.7 1.4C344 .7 352 8 352 17.4V48c0 8.8-7.2 16-16 16H185c-13.8 0-25-11.2-25-25zm17.6 57H334.4c1 5.2 1.6 10.5 1.6 16c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-5.5 .6-10.8 1.6-16zm228 364.3L352 369.7V480c0 1.3-.1 2.5-.2 3.8L177.5 234.9c16.6-7.1 34.6-10.9 53.3-10.9h50.4c15.9 0 31.3 2.8 45.8 7.9L421.9 67.7c-7.7-4.4-10.3-14.2-5.9-21.9s14.2-10.3 21.9-5.9l13.9 8 13.9 8c7.7 4.4 10.3 14.2 5.9 21.9L416 173.9l1.6 .9c15.3 8.8 20.6 28.4 11.7 43.7L392.6 282c2 2.8 3.9 5.8 5.7 8.8l76.1 128.8c11.2 19 4.9 43.5-14.1 54.8s-43.5 4.9-54.8-14.1zM320 512H192c-17.7 0-32-14.3-32-32V369.7l-53.6 90.6c-11.2 19-35.8 25.3-54.8 14.1s-25.3-35.8-14.1-54.8l76.1-128.8c9.4-15.8 21.7-29.3 36-40L331.1 510c-3.5 1.3-7.2 2-11.1 2zM296 320a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"
-  />
-</svg>
-
-<!--
-@component
-[Go to docs](https://svelte-awesome-icons.vercel.app)
-## Props
-@props: size?: string;
-@props:role?: string;
-@props:color?: string;
-@props:ariaLabel?: string;
-@props:class?: string;
--->
+{#if withEvents}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    fill={color}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 512 512"
+    onclick={onclick}
+    onkeydown={onkeydown}
+    onkeyup={onkeyup}
+  >
+    {#if title.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M160 39c0-13 10-23.8 22.9-24.9L334.7 1.4C344 .7 352 8 352 17.4V48c0 8.8-7.2 16-16 16H185c-13.8 0-25-11.2-25-25zm17.6 57H334.4c1 5.2 1.6 10.5 1.6 16c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-5.5 .6-10.8 1.6-16zm228 364.3L352 369.7V480c0 1.3-.1 2.5-.2 3.8L177.5 234.9c16.6-7.1 34.6-10.9 53.3-10.9h50.4c15.9 0 31.3 2.8 45.8 7.9L421.9 67.7c-7.7-4.4-10.3-14.2-5.9-21.9s14.2-10.3 21.9-5.9l13.9 8 13.9 8c7.7 4.4 10.3 14.2 5.9 21.9L416 173.9l1.6 .9c15.3 8.8 20.6 28.4 11.7 43.7L392.6 282c2 2.8 3.9 5.8 5.7 8.8l76.1 128.8c11.2 19 4.9 43.5-14.1 54.8s-43.5 4.9-54.8-14.1zM320 512H192c-17.7 0-32-14.3-32-32V369.7l-53.6 90.6c-11.2 19-35.8 25.3-54.8 14.1s-25.3-35.8-14.1-54.8l76.1-128.8c9.4-15.8 21.7-29.3 36-40L331.1 510c-3.5 1.3-7.2 2-11.1 2zM296 320a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"/>
+  </svg>
+{:else}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    {...restProps}
+    {role}
+    width={size}
+    height={size}
+    class={classname}
+    fill={color}
+    aria-label={ariaLabel}
+    aria-describedby={hasDescription ? ariaDescribedby : undefined}
+    viewBox="0 0 512 512"
+  >
+    {#if title.id && title.title}
+      <title id="{title.id}">{title.title}</title>
+    {/if}
+    {#if desc.id && desc.desc}
+      <desc id="{desc.id}">{desc.desc}</desc>
+    {/if}
+      <path d="M160 39c0-13 10-23.8 22.9-24.9L334.7 1.4C344 .7 352 8 352 17.4V48c0 8.8-7.2 16-16 16H185c-13.8 0-25-11.2-25-25zm17.6 57H334.4c1 5.2 1.6 10.5 1.6 16c0 44.2-35.8 80-80 80s-80-35.8-80-80c0-5.5 .6-10.8 1.6-16zm228 364.3L352 369.7V480c0 1.3-.1 2.5-.2 3.8L177.5 234.9c16.6-7.1 34.6-10.9 53.3-10.9h50.4c15.9 0 31.3 2.8 45.8 7.9L421.9 67.7c-7.7-4.4-10.3-14.2-5.9-21.9s14.2-10.3 21.9-5.9l13.9 8 13.9 8c7.7 4.4 10.3 14.2 5.9 21.9L416 173.9l1.6 .9c15.3 8.8 20.6 28.4 11.7 43.7L392.6 282c2 2.8 3.9 5.8 5.7 8.8l76.1 128.8c11.2 19 4.9 43.5-14.1 54.8s-43.5 4.9-54.8-14.1zM320 512H192c-17.7 0-32-14.3-32-32V369.7l-53.6 90.6c-11.2 19-35.8 25.3-54.8 14.1s-25.3-35.8-14.1-54.8l76.1-128.8c9.4-15.8 21.7-29.3 36-40L331.1 510c-3.5 1.3-7.2 2-11.1 2zM296 320a24 24 0 1 0 0-48 24 24 0 1 0 0 48z"/>
+  </svg>
+{/if}

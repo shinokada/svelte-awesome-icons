@@ -1,0 +1,1 @@
+<CalendarCheckRegular withEvents onclick="{handleClick}" />
