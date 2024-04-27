@@ -2,4 +2,4 @@
 "svelte-awesome-icons": patch
 ---
 
-feat: add a11y, title and desc props
+docs: update with runes-webkit
