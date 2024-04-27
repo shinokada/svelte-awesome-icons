@@ -4,6 +4,12 @@
 
 ### Patch Changes
 
+- docs: README update ([`dc69b058c5851cb95b375beefa179700947eaa65`](https://github.com/shinokada/svelte-awesome-icons/commit/dc69b058c5851cb95b375beefa179700947eaa65))
+
+## 2.0.0
+
+### Patch Changes
+
 - docs: update with runes-webkit ([`734427bc819b8b348b7f72124b3a906e0e0722b4`](https://github.com/shinokada/svelte-awesome-icons/commit/734427bc819b8b348b7f72124b3a906e0e0722b4))
 
 - feat: add a11y, title and desc props ([`28d5c0d4265f7fc358eacdf6ac3fda81cdced2de`](https://github.com/shinokada/svelte-awesome-icons/commit/28d5c0d4265f7fc358eacdf6ac3fda81cdced2de))
