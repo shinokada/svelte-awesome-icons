@@ -7,6 +7,7 @@
     H3,
     removeHyphensAndCapitalize
   } from 'runes-webkit';
+  import { BellRegular } from '$lib'
   
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
@@ -23,17 +24,17 @@
 
 <H2>Size</H2>
 
-<p>To change the size of an icon, use the `size` prop and specify the desired size. For example:</p>
+<p>To change the size of an icon, use the <Code>size</Code> prop and specify the desired size. For example:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/size.md'] as string} />
 
-<p>If you want to override the preconfigured size, you can add a custom size using Tailwind CSS by including the desired classes in the `class` prop. For example:</p>
+<p>You can add a custom size using Tailwind CSS by including the desired classes in the <Code>class</Code> prop. For example:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/size-2.md'] as string} />
 
 <H2>CSS HEX Colors</H2>
 
-Use the color attribute to change colors with HEX color code for Filled and Outlined components.
+<p>Use the color attribute to change colors with HEX color code for Filled and Outlined components.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/css-hex-color.md'] as string} />
 
@@ -56,8 +57,6 @@ Use the color attribute to change colors with HEX color code for Filled and Outl
 
 <p>If you are using the dark mode on your website with Tailwind CSS, add your dark mode class to the <Code>class</Code> prop.</p>
 
-<p>Let's use <Code>dark</Code> for the dark mode class as an example.</p>
-
 <HighlightCompo codeLang="ts" code={modules['./md/dark-mode.md'] as string} />
 
 <H2>A11y</H2>
@@ -70,6 +69,15 @@ Use <Code>ariaLabel</Code> prop to modify the <Code>aria-label</Code> value.</p>
 <p>Use <Code>title</Code>, <Code>desc</Code>, and <Code>ariaLabel</Code> props to make your icons accessible.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/a11y-2.md'] as string} />
+
+<CodeWrapper>
+<BellRegular
+  title={{ id: 'my-title', title: 'Red bell' }}
+  desc={{ id: 'my-descrip', desc: 'The shape of a red bell' }}
+  ariaLabel="red bell"
+  color="red"
+/>
+</CodeWrapper>
 
 <H2>withEvents</H2>
 
