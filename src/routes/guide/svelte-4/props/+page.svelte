@@ -17,7 +17,7 @@
 
 <h1>Svelte Awesome Icons v1: Props</h1>
 
-<H2>Prop</H2>
+<H2>Props</H2>
 
 <HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} />
 
@@ -31,7 +31,7 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/size.md'] as string} />
 
-<p>If you want to override the preconfigured size, you can add a custom size using Tailwind CSS by including the desired classes in the <Code>class</Code> prop. For example:</p>
+<p>You can add a custom size using Tailwind CSS by including the desired classes in the <Code>class</Code> prop. For example:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/size-2.md'] as string} />
 

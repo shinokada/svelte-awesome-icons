@@ -46,17 +46,6 @@
 <HighlightCompo codeLang="ts" code={modules['./md/a11y-friendly.md'] as string} />
 
 
-<p>Check out this icon in the console:</p>
-
-<CodeWrapper>
-  <CalendarCheckRegular
-  title={{ id: 'my-title', title: 'Red bell' }}
-  desc={{ id: 'my-descrip', desc: 'The shape of a red bell' }}
-  ariaLabel="red bell"
-  color="red"
-  />
-</CodeWrapper>
-
 <H2>Faster compiling</H2>
 
 <p>If you need only a few icons from this library in your Svelte app, import them directly. This can optimize compilation speed and improve performance by reducing the amount of code processed during compilation.</p>
