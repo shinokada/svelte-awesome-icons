@@ -75,8 +75,8 @@ devDependencies:
     specifier: ^0.2.5
     version: 0.2.5(svelte@5.0.0-next.125)
   runes-webkit:
-    specifier: ^0.6.11
-    version: 0.6.11(@sveltejs/kit@2.5.7)(svelte@5.0.0-next.125)
+    specifier: ^0.6.12
+    version: 0.6.12(@sveltejs/kit@2.5.7)(svelte@5.0.0-next.125)
   svelte:
     specifier: 5.0.0-next.125
     version: 5.0.0-next.125
@@ -3809,8 +3809,8 @@ packages:
       svelte: 5.0.0-next.125
     dev: true
 
-  /runes-webkit@0.6.11(@sveltejs/kit@2.5.7)(svelte@5.0.0-next.125):
-    resolution: {integrity: sha512-6yQy1BORkGEJ1bmbpqgkDCXsCLmKpB9GM+jqgJEYFvQXnfh0gPOo8b1DXYU7mSvo1F4QVqAxWQXg9XuzUF0UNg==}
+  /runes-webkit@0.6.12(@sveltejs/kit@2.5.7)(svelte@5.0.0-next.125):
+    resolution: {integrity: sha512-kP+f40Em9dZAKsZGFAFLfJmXVrH6NGSWp5rj+6goFCWJjnJPFRdExKSS8oHrej2qSqxev1IonUl6CKvSrKhwFA==}
     engines: {node: '>=18.0.0', npm: '>=7.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.5.5

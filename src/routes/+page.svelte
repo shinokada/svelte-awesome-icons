@@ -1,14 +1,22 @@
 <script lang="ts">
-  import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo, BellActiveAltOutline, insertObjectToArray, excludeByTitle, cards, info, pkg } from 'runes-webkit';
+  import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo, BellActiveAltOutline, GlobeOutline, insertObjectToArray, excludeByTitle, cards, info, pkg } from 'runes-webkit';
   import { A } from 'svelte-5-ui-lib';
-  const cardsToExclude = ['Seven Props']
+  const cardsToExclude = ['Seven Props', 'Global Icons']
   const brand = {
     title: 'Brands, Regular, and Solid Icons',
     description: '2000+ SVG Icons.',
     icon: BellActiveAltOutline,
     icon_class: 'text-green-500'
   }
-  let filteredCards = $state(insertObjectToArray(excludeByTitle(cards, cardsToExclude), brand, 2))
+
+  const global_icon = {
+    title: 'Global Icons',
+    description: 'Use <code>Icon</code> to careat default global icons.',
+    icon: GlobeOutline,
+    icon_class: 'text-purple-500'
+  }
+  let filteredCards = $state(insertObjectToArray(insertObjectToArray(excludeByTitle(cards, cardsToExclude), brand, 2), global_icon, 6))
+  // let new_cards = $state(insertObjectToArray(filteredCards, global_icon, 6))
 
   const runaticsVersion = __RUNATICS_VERSION__;
   const runesMetaTagsVersion = __RUNES_METATAGS_VERSION__;
