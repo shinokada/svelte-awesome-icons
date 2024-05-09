@@ -48,6 +48,10 @@ Enable Runes in <Code>svelte.config.js</Code>:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/faster-compiling.md'] as string} />
 
+<H2>Asscessible SVGs</H2>
+
+<p>A11y props, <Code>title</Code>, <Code>desc</Code>, and <Code>ariaLabel</Code> are used for accessible SVG icons.</p>
+
 
 <H2>Passing down other attributes</H2>
 
@@ -59,10 +63,6 @@ Enable Runes in <Code>svelte.config.js</Code>:</p>
 <H2>Using svelte:component</H2>
 
 <HighlightCompo codeLang="ts" code={modules['./md/using-svelte-component.md'] as string} />
-
-<H2>Using onMount</H2>
-<HighlightCompo codeLang="ts" code={modules['./md/using-onmount.md'] as string} />
-
 
 <H2>Import all</H2>
 
