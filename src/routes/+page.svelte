@@ -9,13 +9,8 @@
     icon_class: 'text-green-500'
   }
 
-  const global_icon = {
-    title: 'Global Icons',
-    description: 'Use <code>Icon</code> to careat default global icons.',
-    icon: GlobeOutline,
-    icon_class: 'text-purple-500'
-  }
-  let filteredCards = $state(insertObjectToArray(insertObjectToArray(excludeByTitle(cards, cardsToExclude), brand, 2), global_icon, 6))
+
+  let filteredCards = $state(insertObjectToArray(excludeByTitle(cards, cardsToExclude), brand, 2))
   // let new_cards = $state(insertObjectToArray(filteredCards, global_icon, 6))
 
   const runaticsVersion = __RUNATICS_VERSION__;

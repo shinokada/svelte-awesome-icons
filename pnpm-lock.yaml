@@ -75,8 +75,8 @@ devDependencies:
     specifier: ^0.2.5
     version: 0.2.5(svelte@5.0.0-next.125)
   runes-webkit:
-    specifier: ^0.6.12
-    version: 0.6.12(@sveltejs/kit@2.5.7)(svelte@5.0.0-next.125)
+    specifier: ^0.6.14
+    version: 0.6.14(@sveltejs/kit@2.5.7)(svelte@5.0.0-next.125)
   svelte:
     specifier: 5.0.0-next.125
     version: 5.0.0-next.125
@@ -2365,16 +2365,16 @@ packages:
       is-glob: 4.0.3
     dev: true
 
-  /glob@10.3.12:
-    resolution: {integrity: sha512-TCNv8vJ+xz4QiqTpfOJA7HvYv+tNIRHKfUWw/q+v2jdgN4ebz+KY9tGx5J4rHP0o84mNP+ApH66HRX8us3Khqg==}
+  /glob@10.3.13:
+    resolution: {integrity: sha512-CQ9K7FRtaP//lXUKJVVYFxvozIz3HR4Brk+yB5VSkmWiHVILwd7NqQ2+UH6Ab5/NzCLib+j1REVV+FSZ+ZHOvg==}
     engines: {node: '>=16 || 14 >=14.17'}
     hasBin: true
     dependencies:
       foreground-child: 3.1.1
       jackspeak: 2.3.6
       minimatch: 9.0.4
-      minipass: 7.1.0
-      path-scurry: 1.10.2
+      minipass: 7.1.1
+      path-scurry: 1.10.4
     dev: true
 
   /glob@7.2.3:
@@ -3017,8 +3017,8 @@ packages:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
     dev: true
 
-  /minipass@7.1.0:
-    resolution: {integrity: sha512-oGZRv2OT1lO2UF1zUcwdTb3wqUwI0kBGTgt/T7OdSj6M6N5m3o5uPf0AIW6lVxGGoiWUR7e2AwTE+xiwK8WQig==}
+  /minipass@7.1.1:
+    resolution: {integrity: sha512-UZ7eQ+h8ywIRAW1hIEl2AqdwzJucU/Kp59+8kkZeSvafXhZjul247BvIJjEVFVeON6d7lM46XX1HXCduKAS8VA==}
     engines: {node: '>=16 || 14 >=14.17'}
     dev: true
 
@@ -3310,12 +3310,12 @@ packages:
     resolution: {integrity: sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==}
     dev: true
 
-  /path-scurry@1.10.2:
-    resolution: {integrity: sha512-7xTavNy5RQXnsjANvVvMkEjvloOinkAjv/Z6Ildz9v2RinZ4SBKTWFOVRbaF8p0vpHnyjV/UwNDdKuUv6M5qcA==}
+  /path-scurry@1.10.4:
+    resolution: {integrity: sha512-nYo46tkNDCe4Ti+K4WP/ns2BjywqQMAeAz7r3lqtVkh8A0L9F86Ju2nLIrzFMUDSs1X0lHivbCiKG4eRUK2Z2Q==}
     engines: {node: '>=16 || 14 >=14.17'}
     dependencies:
       lru-cache: 10.2.2
-      minipass: 7.1.0
+      minipass: 7.1.1
     dev: true
 
   /path-type@4.0.0:
@@ -3809,8 +3809,8 @@ packages:
       svelte: 5.0.0-next.125
     dev: true
 
-  /runes-webkit@0.6.12(@sveltejs/kit@2.5.7)(svelte@5.0.0-next.125):
-    resolution: {integrity: sha512-kP+f40Em9dZAKsZGFAFLfJmXVrH6NGSWp5rj+6goFCWJjnJPFRdExKSS8oHrej2qSqxev1IonUl6CKvSrKhwFA==}
+  /runes-webkit@0.6.14(@sveltejs/kit@2.5.7)(svelte@5.0.0-next.125):
+    resolution: {integrity: sha512-naA/Q7ly6NDYYX5hD3GmQL8knaK0sRwwrvQdlaWk/4Es18G92yjbYyM/Z8N3XrqMwkflOl28j7k3Qiu8z2ZdiA==}
     engines: {node: '>=18.0.0', npm: '>=7.0.0'}
     peerDependencies:
       '@sveltejs/kit': ^2.5.5
@@ -4130,7 +4130,7 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
       commander: 4.1.1
-      glob: 10.3.12
+      glob: 10.3.13
       lines-and-columns: 1.2.4
       mz: 2.7.0
       pirates: 4.0.6
