@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 2.0.0-next.8
+
+### Patch Changes
+
+- chore: Enter prerelease mode and version packages ([`78de506e2071f0ee5b00cc4e2d9963e000627739`](https://github.com/shinokada/svelte-awesome-icons/commit/78de506e2071f0ee5b00cc4e2d9963e000627739))
+
 ## 2.0.0-next.7
 
 ### Patch Changes
