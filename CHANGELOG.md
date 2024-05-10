@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1
+
+### Patch Changes
+
+- fix: npm publish latest ([`240edbcc65570445bcc0234ef05def250408ee7a`](https://github.com/shinokada/svelte-awesome-icons/commit/240edbcc65570445bcc0234ef05def250408ee7a))
+
 ## 1.2.0
 
 ### Minor Changes

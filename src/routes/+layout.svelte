@@ -8,7 +8,7 @@
   import { extract } from './utils/Anchor.svelte';
   import Runatics from './utils/Runatics.svelte';
   export let data;
-  const analyticsId = data.ANALYTICS_ID
+  const analyticsId = data.ANALYTICS_ID;
 
   $: currentUrl = $page.url.pathname;
 

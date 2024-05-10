@@ -28,9 +28,13 @@
     <li>
       <span
         class="self-center text-2xl font-semibold whitespace-nowrap text-primary-900 dark:text-primary-500"
+      >
+        <a
+          href="https://codewithshin.com"
+          class="hover:text-primary-700 dark:hover:text-primary-400"
         >
-        <a href="https://codewithshin.com" class="hover:text-primary-700 dark:hover:text-primary-400">
-        codewithshin.com</a></span
+          codewithshin.com</a
+        ></span
       >
     </li>
     <li>
