@@ -31,8 +31,7 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation-2.md'] as string} />
 
-<p>Replace <Code>2.0.0-next.x</Code> with the latest <Code>v2</Code> version. Check the latest version at the GitHub Releases.
-Enable Runes in <Code>svelte.config.js</Code>:</p>
+<p>Enable Runes in <Code>svelte.config.js</Code>:</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/installation-3.md'] as string} />
 
