@@ -42,17 +42,7 @@
   }: Props = $props();
 
   let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  let hasDescription = $state(false);
-
-  function updateHasDescription() {
-    // Double negation converts truthy values to true, falsy to false
-    hasDescription = !!(title.id || desc.id); 
-  }
-  updateHasDescription();
-
-  $effect(() => {
-    updateHasDescription();
-  })
+  const hasDescription = $derived(!!(title.id || desc.id));
 </script>
 
 {#if withEvents}
@@ -101,10 +91,3 @@
       <path d="M129.5 512V345.9L18.5 48h55.8l81.8 229.7L250.2 0h51.3L180.8 347.8V512h-51.3z"/>
   </svg>
 {/if}
-
-<!--
-@component
-[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
-## Props
-@props: 
--->
