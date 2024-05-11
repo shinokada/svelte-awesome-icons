@@ -91,3 +91,10 @@
       <path d="M32 416c-17.7 0-32 14.3-32 32s14.3 32 32 32H480c17.7 0 32-14.3 32-32s-14.3-32-32-32H32z"/>
   </svg>
 {/if}
+
+<!--
+@component
+[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
+## Props
+@props: 
+-->

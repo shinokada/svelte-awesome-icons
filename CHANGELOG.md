@@ -1,5 +1,13 @@
 # svelte-icon-webkit
 
+## 2.0.0-next.9
+
+### Patch Changes
+
+- fix: change hasDescription to derived ([`42098b2f96a54bcd7479aaf355dc28ef38c229ca`](https://github.com/shinokada/svelte-awesome-icons/commit/42098b2f96a54bcd7479aaf355dc28ef38c229ca))
+  fix: add /test-results to .gitignore
+  fix: add i_p_tabitem_div_1='lg:grid-cols-3' to IconPage
+
 ## 2.0.0-next.8
 
 ### Patch Changes

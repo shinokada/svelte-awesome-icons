@@ -5,6 +5,7 @@
     "svelte-awesome-icons": "2.0.0-next.7"
   },
   "changesets": [
-    "few-impalas-help"
+    "few-impalas-help",
+    "rude-clouds-boil"
   ]
 }
