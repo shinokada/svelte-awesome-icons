@@ -41,6 +41,10 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/basic-usage.md'] as string} />
 
+<H2>IDE support</H2>
+
+<p>If you are using an LSP-compatible editor, such as VSCode, Atom, Sublime Text, or Neovim, hovering over a component name will display a documentation link, features, props, events, etc.</p>
+
 <H2>Faster compiling</H2>
 
 <p>If you need only a few icons from this library in your Svelte app, import them directly. This can optimize compilation speed and improve performance by reducing the amount of code processed during compilation.</p>
@@ -54,7 +58,7 @@
 
 <H2>Passing down other attributes</H2>
 
-<p>Since all icons have <Code>...$$restProps</Code>, you can pass other attibutes as well.</p>
+<p>Since all icons have <Code>...restProps</Code>, you can pass other attibutes as well.</p>
 
 <HighlightCompo codeLang="ts" code={modules['./md/passing-down-other-attributes.md'] as string} />
 
