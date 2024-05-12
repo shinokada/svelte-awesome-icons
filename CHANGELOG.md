@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 2.0.0-next.10
+
+### Patch Changes
+
+- fix: component docs ([`280ab3ab43430ab06d433241818d48a594809054`](https://github.com/shinokada/svelte-awesome-icons/commit/280ab3ab43430ab06d433241818d48a594809054))
+
 ## 2.0.0-next.9
 
 ### Patch Changes
