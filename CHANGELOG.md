@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 2.0.0-next.11
+
+### Patch Changes
+
+- fix: change size=number to string in Icon.svelte ([`c2a8f3d0576f0c0b4d67ca37f7779f54168c4997`](https://github.com/shinokada/svelte-awesome-icons/commit/c2a8f3d0576f0c0b4d67ca37f7779f54168c4997))
+
 ## 2.0.0-next.10
 
 ### Patch Changes
