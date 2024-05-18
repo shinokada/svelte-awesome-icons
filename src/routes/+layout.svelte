@@ -33,7 +33,7 @@
   import { ChessKnightRegular, ChessQueenRegular, GemRegular } from '$lib';
 
   let { children, data } = $props()
-  const analyticsId = data.ANALYTICS_ID
+  const analyticsId = data.ANALYTICS_ID_TWO
   let metaTags = $state(
     $page.data.pageMetaTags
       ? deepMerge($page.data.layoutMetaTags, $page.data.pageMetaTags)
