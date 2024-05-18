@@ -2,12 +2,12 @@
   import type { ComponentType } from 'svelte';
   interface Props{
     icon: ComponentType;
-    size?: number;
+    size?: string;
     role?: string;
     ariaLabel?: string;
     class?: string;
   }
-  let {icon, size = 24, role = 'img', ariaLabel = 'Icon', class: classname, ...restProps}: Props = $props()
+  let {icon, size = '24', role = 'img', ariaLabel = 'Icon', class: classname, ...restProps}: Props = $props()
 </script>
 
 <svelte:component 
@@ -24,7 +24,7 @@
 [Go to docs](https://svelte-awesome-icons.codewithshin.com/)
 ## Props
 @prop icon
-@prop size = 24
+@prop size = '24'
 @prop role = 'img'
 @prop ariaLabel = 'Icon'
 @prop class: classname
