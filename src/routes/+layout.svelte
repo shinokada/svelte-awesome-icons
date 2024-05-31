@@ -1,18 +1,18 @@
-<script context="module">
+<script context="module" lang="ts">
   const extra: ListType[] = [
     {
       name: 'Brand Icons',
-      icon: GemRegular as ComponentType,
+      icon: GemRegular as Component,
       href: '/brand-icons'
     },
     {
       name: 'Regular Icons',
-      icon: ChessKnightRegular as ComponentType,
+      icon: ChessKnightRegular as Component,
       href: '/regular-icons'
     },
     {
       name: 'Solid Icons',
-      icon: ChessQueenRegular as ComponentType,
+      icon: ChessQueenRegular as Component,
       href: '/solid-icons'
     }
   ];
@@ -24,7 +24,7 @@
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
   import type { ListType } from 'runes-webkit';
   import { Footer, OnThisPage, extract, Sidebar, removeHyphensAndCapitalize, sidebarList } from 'runes-webkit'
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';

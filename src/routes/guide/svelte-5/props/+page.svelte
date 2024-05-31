@@ -16,7 +16,7 @@
   });
 </script>
 
-<h1>Props: Svelte Awesome Icons v2 for Svelte Runes</h1>
+<h1>Props - Svelte Awesome Icons v2</h1>
 
 <H2>Props</H2>
 

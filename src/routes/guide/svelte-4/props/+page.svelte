@@ -1,11 +1,9 @@
 <script lang="ts">
   import {
     HighlightCompo,
-    CodeWrapper,
     Code,
     H2,
-    H3,
-    removeHyphensAndCapitalize
+    H3
   } from 'runes-webkit';
 
   const modules = import.meta.glob('./md/*.md', {
@@ -15,7 +13,7 @@
   });
 </script>
 
-<h1>Svelte Awesome Icons v1: Props</h1>
+<h1>Props - Svelte Awesome Icons v1</h1>
 
 <H2>Props</H2>
 

@@ -1,21 +1,44 @@
 <script lang="ts">
-  import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo, BellActiveAltOutline, GlobeOutline, insertObjectToArray, excludeByTitle, cards, info, pkg } from 'runes-webkit';
-  import { A } from 'svelte-5-ui-lib';
-  const cardsToExclude = ['Seven Props', 'Global Icons']
+  
+  import { removeHyphensAndCapitalize, HomeCards, SupportBanner, TechInfo, BellActiveAltOutline, InfoCircleOutline, cards, info } from 'runes-webkit';
+
   const brand = {
-    title: 'Brands, Regular, and Solid Icons',
-    description: '2000+ SVG Icons.',
+    title: `${removeHyphensAndCapitalize(__NAME__)}`,
+    description: `${__DESCRIPTION__}`,
     icon: BellActiveAltOutline,
-    icon_class: 'text-green-500'
+    icon_class: 'text-blue-500'
+  };
+
+  const filteredCards = [brand, ...cards];
+
+  const originalSource = {
+    title: 'Original source',
+    description: `${__ORIGINAL_SOURCE_NAME__}`,
+    icon: InfoCircleOutline,
+    href: `${__ORIGINAL_SOURCE_URL__}`,
+    icon_class: 'text-orange-500'
   }
-
-
-  let filteredCards = $state(insertObjectToArray(excludeByTitle(cards, cardsToExclude), brand, 2))
-  // let new_cards = $state(insertObjectToArray(filteredCards, global_icon, 6))
-
-  const runaticsVersion = __RUNATICS_VERSION__;
-  const runesMetaTagsVersion = __RUNES_METATAGS_VERSION__;
-  let newPkg = $state({...pkg, runaticsVersion, runesMetaTagsVersion})
+  const license = {
+    title: 'License',
+    description: 'Released under the MIT License.',
+    icon: InfoCircleOutline,
+    href: `https://github.com/shinokada/${__NAME__}/blob/main/LICENSE`,
+    icon_class: 'text-lime-500'
+  }
+ 
+  const newInfo = [originalSource, license, ...info];
+  const pkg = {
+    pkgName: __NAME__,
+    pkgVersion: __VERSION__,
+    repoUrl: __GITHUBURL__,
+    runaticsVersion: __RUNATICS_VERSION__,
+    runesMetaTagsVersion: __RUNES_METATAGS_VERSION__,
+    svelteVersion: __SVELTE_VERSION__,
+    svelteKitVersion: __SVELTEKIT_VERSION__,
+    svelte5uilib: __SVELTE_5_UI_LIB_VERSION__,
+    svelteRuneHighlight: __SVELTE_RUNE_HIGHLIGHT_VERSION__,
+    viteVersion: __VITE_VERSION__
+  };
 </script>
 
 <div class="relative h-full max-w-7xl mx-auto overflow-y-auto px-8 pb-20">
@@ -24,9 +47,9 @@
 </SupportBanner>
 
 <h1 class='flex justify-center my-8'>{removeHyphensAndCapitalize(__NAME__)}</h1>
-<h2 class='flex justify-center my-8'><A href ='/how-to-use' aclass='underline'>This is a demo page. Please read  How to use page.</A> </h2>
+
 <HomeCards cards={filteredCards}/>
 <h2 class='flex justify-center my-8'>Info</h2>
-<HomeCards cards={info} />
-<TechInfo {...newPkg} />
+<HomeCards cards={newInfo} />
+<TechInfo {...pkg} />
 </div>

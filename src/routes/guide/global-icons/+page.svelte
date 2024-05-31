@@ -8,7 +8,7 @@
   });
 </script>
 
-<h1>Setting Global Icon using setContext</h1>
+<h1>Setting Global Icon - Svelte Awesome Icons</h1>
 
 <p>You can create global icon preferences in your Svelte application using <Code>setContext</Code>. This allows you to configure icon-related properties once and share them across multiple components.</p>
 

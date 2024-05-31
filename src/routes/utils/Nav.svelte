@@ -1,6 +1,6 @@
 <script lang="ts">
   import { twMerge } from 'tailwind-merge';
-  import type { ComponentType } from 'svelte';
+  import type { Component } from 'svelte';
 	import { Navbar, NavLi, NavBrand, NavUl, uiHelpers, Darkmode, Dropdown, DropdownItem, Drawer } from 'svelte-5-ui-lib';
 	import { page } from '$app/stores';
   import { GithubSolid, random_tailwind_color, DotsHorizontalOutline, XSolid, Sidebar, sidebarList } from 'runes-webkit'
@@ -15,7 +15,7 @@
   type LiType = {
     name: string;
     href: string;
-    icon?: ComponentType;
+    icon?: Component;
   }
   interface Props{
     lis?: LiType[];

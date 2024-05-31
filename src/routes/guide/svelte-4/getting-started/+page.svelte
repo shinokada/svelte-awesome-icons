@@ -10,7 +10,7 @@
   });
 </script>
 
-<h1>Svelte Awesome Icons: v1</h1>
+<h1>Getting Started - Svelte Awesome Icons v1</h1>
 
 <div class="flex gap-2 my-8">
 <a href="https://github.com/sponsors/shinokada" target="_blank"><img src="https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" alt="sponsor" ></a>
