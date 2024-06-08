@@ -107,7 +107,9 @@
     {/if}
 			<div class="ml-auto flex items-center lg:order-1">
         {#if include}
+        <div class="hidden sm:block">
 				<DynamicCodeBlockStyle />
+        </div>
         {/if}
         <DotsHorizontalOutline withEvents onclick={dropdown.toggle} class="dark:text-white ml-6 mr-4" size="lg" />
       <div class="relative">
