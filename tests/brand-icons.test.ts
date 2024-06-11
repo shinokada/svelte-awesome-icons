@@ -8,26 +8,27 @@ test.beforeEach(async ({ page }) => {
   await page.goto('/brand-icons');
 });
 
-test('Brand Icons page has expected h1, meta title', async ({ page }) => {
+test('Solid Icons page  has expected h1, meta title', async ({ page }) => {
   await expect(page.getByRole('heading', { name: title })).toBeVisible();
 });
 
-test('Brand Icons page has expected meta title', async ({ page }) => {
+test('Solid Icons page  has expected meta title', async ({ page }) => {
   await expect(page).toHaveTitle(title);
 });
 
-test('Brand Icons page has expected meta description', async ({ page }) => {
+test('Solid Icons page  has expected meta description', async ({ page }) => {
   const metaDescription = page.locator('meta[name="description"]');
   await expect(metaDescription).toHaveAttribute('content', description);
 });
 
-test('Brand Icons page has expected meta og', async ({ page }) => {
+test('Solid Icons page  has expected meta og', async ({ page, baseURL }) => {
   const metaOgTitle = page.locator('meta[property="og:title"]');
   await expect(metaOgTitle).toHaveAttribute('content', title);
   const metaOgDescription = page.locator('meta[property="og:description"]');
   await expect(metaOgDescription).toHaveAttribute('content', description);
   const metaOgUrl = page.locator('meta[property="og:url"]');
-  await expect(metaOgUrl).toHaveAttribute('content', 'http://localhost:4173/brand-icons');
+  const url = baseURL + '/brand-icons';
+  await expect(metaOgUrl).toHaveAttribute('content', url);
   const metaOgImage = page.locator('meta[property="og:image"]');
   await expect(metaOgImage).toHaveAttribute(
     'content',
@@ -35,7 +36,7 @@ test('Brand Icons page has expected meta og', async ({ page }) => {
   );
 });
 
-test('Brand Icons page has expected meta twitter', async ({ page }) => {
+test('Solid Icons page  has expected meta twitter', async ({ page }) => {
   const metaTwitterTitle = page.locator('meta[name="twitter:title"]');
   await expect(metaTwitterTitle).toHaveAttribute('content', title);
   const metaTwitterDescription = page.locator('meta[name="twitter:description"]');
