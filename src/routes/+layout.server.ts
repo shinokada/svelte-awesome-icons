@@ -5,10 +5,11 @@ import { metaTitle, metaDescription, metaImg } from 'runes-meta-tags';
 export const load = ({ url }) => {
   const siteName = metaTitle('/', __NAME__);
   const title = metaTitle(url.pathname, __NAME__);
-  const basicDesc = '2000+ SVG icons from Font-Awesome for a Svelte 4, 5, and Runes project.'
+  const basicDesc = '2000+ SVG icons from Font-Awesome for a Svelte 4, 5, and Runes project.';
   const description = metaDescription(url.pathname, basicDesc);
   const image = metaImg(url.pathname, __NAME__);
-  const keywords = 'svg, font-awesome, icons, svelte, runes, accessible, ide support, faster compiling, css frameworks support, dark mode support';
+  const keywords =
+    'svg, font-awesome, icons, svelte, runes, accessible, ide support, faster compiling, css frameworks support, dark mode support';
 
   const layoutMetaTags: MetaProps = {
     title,
@@ -21,7 +22,7 @@ export const load = ({ url }) => {
       title,
       description,
       image,
-      imageAlt: title,
+      imageAlt: title
     },
     og: {
       type: 'website',

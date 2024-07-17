@@ -8,7 +8,6 @@
   });
 </script>
 
-
 <h1>Custom icons - Svelte Awesome Icons</h1>
 
 <p>You can create a custom default icon, by using <Code>Icon</Code>:</p>
@@ -19,7 +18,10 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/create-a-custom-component.md'] as string} />
 
-<p>This component, <Code>MyIcon.svelte</Code>, accepts an <Code>icon</Code> prop which you can use to pass in the specific icon component you want to display.</p>
+<p>
+  This component, <Code>MyIcon.svelte</Code>, accepts an <Code>icon</Code> prop which you can use to
+  pass in the specific icon component you want to display.
+</p>
 
 <H2>Implementation</H2>
 
@@ -27,4 +29,8 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/implementation.md'] as string} />
 
-<p>Here, we import the <Code>MyIcon</Code> component and the <Code>BandageSolid</Code> icon. By passing the <Code>BandageSolid</Code> icon to the <Code>icon</Code> prop of MyIcon, you apply the default configuration to the icon.</p>
+<p>
+  Here, we import the <Code>MyIcon</Code> component and the <Code>BandageSolid</Code> icon. By passing
+  the <Code>BandageSolid</Code> icon to the <Code>icon</Code> prop of MyIcon, you apply the default configuration
+  to the icon.
+</p>

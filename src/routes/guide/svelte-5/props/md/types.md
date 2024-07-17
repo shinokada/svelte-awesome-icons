@@ -1,3 +1,5 @@
+import type { SVGAttributes } from 'svelte/elements';
+
 type TitleType = {
   id?: string;
   title?: string;
@@ -8,15 +10,10 @@ type DescType = {
   desc?: string;
 };
 
-interface BaseProps {
+interface BaseProps extends SVGAttributes<SVGElement> {
   size?: string;
   role?: string;
   color?: string;
-  withEvents?: boolean;
-  onclick?: (event: MouseEvent) => void;
-  onkeydown?: (event: KeyboardEvent) => void;
-  onkeyup?: (event: KeyboardEvent) => void;
-  class?: string;
 }
 
 interface CtxType extends BaseProps {}
