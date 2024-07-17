@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "phone flip solid"
+@prop ariaLabel = 'phone flip solid'
 @prop ...restProps
 -->

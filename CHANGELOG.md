@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 2.0.0-next.12
+
+### Patch Changes
+
+- feat: extends SVGAttributes from svelte/elements ([`e008cca926325c34faab754490027842e2e2801c`](https://github.com/shinokada/svelte-awesome-icons/commit/e008cca926325c34faab754490027842e2e2801c))
+
 ## 2.0.0-next.11
 
 ### Patch Changes

@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "bluetooth brands"
+@prop ariaLabel = 'bluetooth brands'
 @prop ...restProps
 -->

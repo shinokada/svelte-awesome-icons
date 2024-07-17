@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "arrows turn to dots solid"
+@prop ariaLabel = 'arrows turn to dots solid'
 @prop ...restProps
 -->

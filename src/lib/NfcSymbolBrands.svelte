@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "nfc symbol brands"
+@prop ariaLabel = 'nfc symbol brands'
 @prop ...restProps
 -->

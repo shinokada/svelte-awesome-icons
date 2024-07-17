@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "folder open solid"
+@prop ariaLabel = 'folder open solid'
 @prop ...restProps
 -->

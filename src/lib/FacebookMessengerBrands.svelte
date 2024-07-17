@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "facebook messenger brands"
+@prop ariaLabel = 'facebook messenger brands'
 @prop ...restProps
 -->

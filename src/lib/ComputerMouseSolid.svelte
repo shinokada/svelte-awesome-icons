@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "computer mouse solid"
+@prop ariaLabel = 'computer mouse solid'
 @prop ...restProps
 -->

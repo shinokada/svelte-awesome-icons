@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "strikethrough solid"
+@prop ariaLabel = 'strikethrough solid'
 @prop ...restProps
 -->

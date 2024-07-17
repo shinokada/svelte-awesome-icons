@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "closed captioning regular"
+@prop ariaLabel = 'closed captioning regular'
 @prop ...restProps
 -->

@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "firefox browser brands"
+@prop ariaLabel = 'firefox browser brands'
 @prop ...restProps
 -->

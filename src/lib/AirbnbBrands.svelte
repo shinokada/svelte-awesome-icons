@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "airbnb brands"
+@prop ariaLabel = 'airbnb brands'
 @prop ...restProps
 -->

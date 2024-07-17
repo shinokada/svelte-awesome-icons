@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "align center solid"
+@prop ariaLabel = 'align center solid'
 @prop ...restProps
 -->

@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "grip vertical solid"
+@prop ariaLabel = 'grip vertical solid'
 @prop ...restProps
 -->

@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "mobile screen button solid"
+@prop ariaLabel = 'mobile screen button solid'
 @prop ...restProps
 -->

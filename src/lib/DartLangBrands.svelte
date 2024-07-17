@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "dart lang brands"
+@prop ariaLabel = 'dart lang brands'
 @prop ...restProps
 -->

@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "wordpress simple brands"
+@prop ariaLabel = 'wordpress simple brands'
 @prop ...restProps
 -->

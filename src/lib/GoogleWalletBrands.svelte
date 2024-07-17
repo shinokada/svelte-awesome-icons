@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "google wallet brands"
+@prop ariaLabel = 'google wallet brands'
 @prop ...restProps
 -->

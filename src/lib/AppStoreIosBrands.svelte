@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "app store ios brands"
+@prop ariaLabel = 'app store ios brands'
 @prop ...restProps
 -->

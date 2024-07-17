@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "ethereum brands"
+@prop ariaLabel = 'ethereum brands'
 @prop ...restProps
 -->

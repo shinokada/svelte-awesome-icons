@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "users between lines solid"
+@prop ariaLabel = 'users between lines solid'
 @prop ...restProps
 -->

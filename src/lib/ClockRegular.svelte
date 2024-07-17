@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "clock regular"
+@prop ariaLabel = 'clock regular'
 @prop ...restProps
 -->

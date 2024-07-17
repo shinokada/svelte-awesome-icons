@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "sim card solid"
+@prop ariaLabel = 'sim card solid'
 @prop ...restProps
 -->

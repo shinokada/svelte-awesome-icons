@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "triangle exclamation solid"
+@prop ariaLabel = 'triangle exclamation solid'
 @prop ...restProps
 -->

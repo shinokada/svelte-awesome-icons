@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "map pin solid"
+@prop ariaLabel = 'map pin solid'
 @prop ...restProps
 -->

@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "typo3 brands"
+@prop ariaLabel = 'typo3 brands'
 @prop ...restProps
 -->

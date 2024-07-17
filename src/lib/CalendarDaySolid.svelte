@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "calendar day solid"
+@prop ariaLabel = 'calendar day solid'
 @prop ...restProps
 -->

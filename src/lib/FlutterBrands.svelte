@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "flutter brands"
+@prop ariaLabel = 'flutter brands'
 @prop ...restProps
 -->

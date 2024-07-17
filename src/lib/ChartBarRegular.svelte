@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "chart bar regular"
+@prop ariaLabel = 'chart bar regular'
 @prop ...restProps
 -->

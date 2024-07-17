@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "object group regular"
+@prop ariaLabel = 'object group regular'
 @prop ...restProps
 -->

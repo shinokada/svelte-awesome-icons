@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "handshake simple slash solid"
+@prop ariaLabel = 'handshake simple slash solid'
 @prop ...restProps
 -->

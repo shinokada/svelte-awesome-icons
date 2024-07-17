@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "naira sign solid"
+@prop ariaLabel = 'naira sign solid'
 @prop ...restProps
 -->

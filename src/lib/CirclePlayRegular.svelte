@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "circle play regular"
+@prop ariaLabel = 'circle play regular'
 @prop ...restProps
 -->

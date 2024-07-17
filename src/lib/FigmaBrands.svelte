@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "figma brands"
+@prop ariaLabel = 'figma brands'
 @prop ...restProps
 -->

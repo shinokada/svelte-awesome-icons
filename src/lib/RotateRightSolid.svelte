@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "rotate right solid"
+@prop ariaLabel = 'rotate right solid'
 @prop ...restProps
 -->

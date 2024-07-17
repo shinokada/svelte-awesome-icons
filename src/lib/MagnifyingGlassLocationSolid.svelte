@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "magnifying glass location solid"
+@prop ariaLabel = 'magnifying glass location solid'
 @prop ...restProps
 -->

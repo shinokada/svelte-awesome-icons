@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "window minimize solid"
+@prop ariaLabel = 'window minimize solid'
 @prop ...restProps
 -->

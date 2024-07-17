@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "cpanel brands"
+@prop ariaLabel = 'cpanel brands'
 @prop ...restProps
 -->

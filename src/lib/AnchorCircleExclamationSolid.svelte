@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "anchor circle exclamation solid"
+@prop ariaLabel = 'anchor circle exclamation solid'
 @prop ...restProps
 -->

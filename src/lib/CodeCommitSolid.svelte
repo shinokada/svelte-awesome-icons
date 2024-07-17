@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "code commit solid"
+@prop ariaLabel = 'code commit solid'
 @prop ...restProps
 -->

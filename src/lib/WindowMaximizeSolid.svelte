@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "window maximize solid"
+@prop ariaLabel = 'window maximize solid'
 @prop ...restProps
 -->

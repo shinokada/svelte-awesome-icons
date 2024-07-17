@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "golang brands"
+@prop ariaLabel = 'golang brands'
 @prop ...restProps
 -->

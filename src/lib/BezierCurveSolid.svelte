@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "bezier curve solid"
+@prop ariaLabel = 'bezier curve solid'
 @prop ...restProps
 -->

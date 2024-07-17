@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "draw polygon solid"
+@prop ariaLabel = 'draw polygon solid'
 @prop ...restProps
 -->

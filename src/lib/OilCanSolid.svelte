@@ -68,6 +68,6 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel =  "oil can solid"
+@prop ariaLabel = 'oil can solid'
 @prop ...restProps
 -->

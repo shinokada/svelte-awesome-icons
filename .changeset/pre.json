@@ -4,5 +4,11 @@
   "initialVersions": {
     "svelte-awesome-icons": "2.0.0-next.7"
   },
-  "changesets": ["early-suns-itch", "few-impalas-help", "pink-bags-kneel", "rude-clouds-boil"]
+  "changesets": [
+    "early-suns-itch",
+    "few-impalas-help",
+    "five-steaks-deny",
+    "pink-bags-kneel",
+    "rude-clouds-boil"
+  ]
 }
