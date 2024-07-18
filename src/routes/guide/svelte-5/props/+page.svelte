@@ -109,11 +109,10 @@
 <H2>Passing down other attributes</H2>
 
 <P>
-  Since all icons have <Code>...restProps</Code>, you can pass other <A
-    target="_blank"
-    href="https://github.com/sveltejs/svelte/blob/main/packages/svelte/elements.d.ts"
-    >SVGAttributes</A
-  >.
+  As default all icons are extend <A
+    href="https://github.com/sveltejs/svelte/blob/svelte%405.0.0-next.182/packages/svelte/elements.d.ts"
+    >SVGAttributes SVGElement</A
+  >. You can add all the events and other props described in the type.
 </P>
 
 <CodeWrapper>

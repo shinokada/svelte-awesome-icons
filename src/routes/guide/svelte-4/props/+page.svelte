@@ -14,10 +14,6 @@
 
 <HighlightCompo codeLang="ts" code={modules['./md/props.md'] as string} />
 
-<H2>Types</H2>
-
-<HighlightCompo codeLang="ts" code={modules['./md/types.md'] as string} />
-
 <H2>Size</H2>
 
 <p>

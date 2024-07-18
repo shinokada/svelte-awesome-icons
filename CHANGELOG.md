@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 2.0.0-next.13
+
+### Patch Changes
+
+- feat: move types to types.ts ([`fcfd473fb2baef65d5e9a0c9e8559d013a4cd94f`](https://github.com/shinokada/svelte-awesome-icons/commit/fcfd473fb2baef65d5e9a0c9e8559d013a4cd94f))
+
 ## 2.0.0-next.12
 
 ### Patch Changes

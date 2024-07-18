@@ -1,5 +1,4 @@
 import type { SVGAttributes } from 'svelte/elements';
-
 type TitleType = {
   id?: string;
   title?: string;
@@ -16,9 +15,9 @@ interface BaseProps extends SVGAttributes<SVGElement> {
   color?: string;
 }
 
-interface CtxType extends BaseProps {}
+export interface CtxType extends BaseProps {}
 
-interface Props extends BaseProps{
+export interface Props extends BaseProps {
   title?: TitleType;
   desc?: DescType;
   ariaLabel?: string;
