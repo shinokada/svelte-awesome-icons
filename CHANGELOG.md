@@ -1,5 +1,13 @@
 # svelte-icon-webkit
 
+## 2.0.0-next.14
+
+### Patch Changes
+
+- feat: move types to types.ts ([`ad0b5c6fc38c207f95affb61d3ed8b78071bfb1b`](https://github.com/shinokada/svelte-awesome-icons/commit/ad0b5c6fc38c207f95affb61d3ed8b78071bfb1b))
+
+- fix: peerDependenies ([`c06964ad9dd350bf4d2c2382464f795ac516c999`](https://github.com/shinokada/svelte-awesome-icons/commit/c06964ad9dd350bf4d2c2382464f795ac516c999))
+
 ## 2.0.0-next.13
 
 ### Patch Changes
