@@ -3,21 +3,10 @@
   import type { Props } from './types';
 
   interface IconProps extends Props {
-    icon: Component;
+    Icon: Component;
   }
 
-  let { icon, size = '24', role = 'img', ariaLabel = 'Icon', ...restProps }: IconProps = $props();
+  let { Icon, size = '24', role = 'img', ariaLabel = 'Icon', ...restProps }: IconProps = $props();
 </script>
 
-<svelte:component this={icon} {...restProps} {role} {size} aria-label={ariaLabel} />
-
-<!--
-@component
-[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
-## Props
-@prop icon
-@prop size = '24'
-@prop role = 'img'
-@prop ariaLabel = 'Icon'
-@prop ...restProps
--->
+<Icon {...restProps} {role} {size} aria-label={ariaLabel} />
