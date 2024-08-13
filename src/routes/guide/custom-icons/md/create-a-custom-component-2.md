@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Icon as AwesomeIcon } from '$lib';
+  import { Icon as AwesomeIcon } from 'svelte-awersome-icons';
   import { type Component } from 'svelte';
   const config: { size: string, color: string, ariaLabel: string, class: string } = {
     size: "40",
