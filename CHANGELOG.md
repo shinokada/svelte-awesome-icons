@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 2.0.0-next.16
+
+### Patch Changes
+
+- fix: add color to Icon.svelte ([`3a18d6fdaeaeaa0704926b6e5acf32ae8b134a08`](https://github.com/shinokada/svelte-awesome-icons/commit/3a18d6fdaeaeaa0704926b6e5acf32ae8b134a08))
+
 ## 2.0.0-next.15
 
 ### Patch Changes
