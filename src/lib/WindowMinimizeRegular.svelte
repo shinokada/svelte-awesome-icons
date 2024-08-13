@@ -38,15 +38,3 @@
     <path d="M24 432c-13.3 0-24 10.7-24 24s10.7 24 24 24l464 0c13.3 0 24-10.7 24-24s-10.7-24-24-24L24 432z"/>
 </svg>
 
-<!--
-@component
-[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop desc
-@prop ariaLabel =  "window minimize regular"
-@prop ...restProps
--->

@@ -1,10 +1,11 @@
 <script lang="ts">
-  import { Icon as AwesomeIcon } from 'svelte-awesome-icons';
+  import { Icon as AwesomeIcon } from '$lib';
   import { type Component } from 'svelte';
-  const config: { size: string, color: string, ariaLabel: string } = {
-    size: "30",
+  const config: { size: string, color: string, ariaLabel: string, class: string } = {
+    size: "40",
     color: '#88FF33',
     ariaLabel: "my custom icon",
+    class: "mx-2"
   };
   interface Props {
     Icon: Component

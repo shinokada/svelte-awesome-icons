@@ -38,15 +38,3 @@
     <path d="M0 0H512V512H0V0z"/>
 </svg>
 
-<!--
-@component
-[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop desc
-@prop ariaLabel =  "square full solid"
-@prop ...restProps
--->
