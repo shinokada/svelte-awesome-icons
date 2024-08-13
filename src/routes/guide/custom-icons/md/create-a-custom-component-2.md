@@ -1,7 +1,7 @@
 <script lang="ts">
   import { Icon as AwesomeIcon } from 'svelte-awesome-icons';
   import { type Component } from 'svelte';
-  const config: { size: AwesomeIcon['Props']['size'], color: string, ariaLabel: string } = {
+  const config: { size: string, color: string, ariaLabel: string } = {
     size: "30",
     color: '#88FF33',
     ariaLabel: "my custom icon",
