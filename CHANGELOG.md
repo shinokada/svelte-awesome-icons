@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 2.0.0-next.15
+
+### Patch Changes
+
+- fix: remove svelte:component from Icon.svelte ([`9ea7486c56f6d4e39cff2754f4e85a28c369dec6`](https://github.com/shinokada/svelte-awesome-icons/commit/9ea7486c56f6d4e39cff2754f4e85a28c369dec6))
+
 ## 2.0.0-next.14
 
 ### Patch Changes
