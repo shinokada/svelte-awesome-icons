@@ -13,7 +13,7 @@
   const brand = {
     title: `${removeHyphensAndCapitalize(__NAME__)}`,
     description: `${__DESCRIPTION__}`,
-    icon: BellActiveAltOutline,
+    Icon: BellActiveAltOutline,
     icon_class: 'text-blue-500'
   };
 
@@ -22,14 +22,14 @@
   const originalSource = {
     title: 'Original source',
     description: `${__ORIGINAL_SOURCE_NAME__}`,
-    icon: InfoCircleOutline,
+    Icon: InfoCircleOutline,
     href: `${__ORIGINAL_SOURCE_URL__}`,
     icon_class: 'text-orange-500'
   };
   const license = {
     title: 'License',
     description: 'Released under the MIT License.',
-    icon: InfoCircleOutline,
+    Icon: InfoCircleOutline,
     href: `https://github.com/shinokada/${__NAME__}/blob/main/LICENSE`,
     icon_class: 'text-lime-500'
   };
