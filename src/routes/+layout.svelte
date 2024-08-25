@@ -1,24 +1,3 @@
-<script context="module" lang="ts">
-  const extra: ListType[] = [
-    {
-      name: 'Brand Icons',
-      icon: GemRegular as Component,
-      href: '/brand-icons'
-    },
-    {
-      name: 'Regular Icons',
-      icon: ChessKnightRegular as Component,
-      href: '/regular-icons'
-    },
-    {
-      name: 'Solid Icons',
-      icon: ChessQueenRegular as Component,
-      href: '/solid-icons'
-    }
-  ];
-  export const newSidebarList: ListType[] = [...sidebarList, ...extra];
-</script>
-
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
@@ -35,7 +14,7 @@
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
   import { Runatics } from 'runatics';
-  import { ChessKnightRegular, ChessQueenRegular, GemRegular } from '$lib';
+  import { newSidebarList } from './utils/helpers';
 
   let { children, data } = $props();
   const analyticsId = data.ANALYTICS_ID_TWO;
