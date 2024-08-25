@@ -184,7 +184,7 @@
   drawerStatus={navDrawerStatus}
   closeDrawer={closeNavDrawer}
   params={transitionParams}
-  class='w-64 dark_bg_theme bg-gray-50'
+  class='w-64 dark_bg_them'
 >
   <div class="flex items-center pb-4">
     <h5
@@ -220,7 +220,7 @@
   <Sidebar
     sidebarList={newSidebarList}
     asideClass="w-60 p-0 border-none mt-20 ml-4 !important"
-    divClass="dark_bg_theme p-0"
+    divClass="dark_bg_theme p-0 bg-white"
     sidebarClose={closeNavDrawer}
   />
 </Drawer>

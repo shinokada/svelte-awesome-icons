@@ -1,15 +1,12 @@
 <script lang="ts">
   import '../app.pcss';
   import { page } from '$app/stores';
-  import type { Component } from 'svelte';
-  import type { ListType } from 'runes-webkit';
   import {
     Footer,
     OnThisPage,
     extract,
     Sidebar,
-    removeHyphensAndCapitalize,
-    sidebarList
+    removeHyphensAndCapitalize
   } from 'runes-webkit';
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import Nav from './utils/Nav.svelte';
