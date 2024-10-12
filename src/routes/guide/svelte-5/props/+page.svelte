@@ -1,12 +1,5 @@
 <script lang="ts">
-  import {
-    HighlightCompo,
-    CodeWrapper,
-    Code,
-    H2,
-    H3,
-    removeHyphensAndCapitalize
-  } from 'runes-webkit';
+  import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
   import { BellRegular } from '$lib';
   import { A, P } from 'svelte-5-ui-lib';
 

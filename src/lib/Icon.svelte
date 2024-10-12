@@ -6,19 +6,14 @@
     Icon: Component;
   }
 
-  let { Icon, size = '24', color='currentColor', role = 'img', ariaLabel = 'Icon', ...restProps }: IconProps = $props();
+  let {
+    Icon,
+    size = '24',
+    color = 'currentColor',
+    role = 'img',
+    ariaLabel = 'Icon',
+    ...restProps
+  }: IconProps = $props();
 </script>
 
 <Icon {...restProps} {role} {size} {color} {ariaLabel} />
-
-<!--
-@component
-[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
-## Props
-@prop Icon
-@prop size = '24'
-@prop color='currentColor'
-@prop role = 'img'
-@prop ariaLabel = 'Icon'
-@prop ...restProps
--->
