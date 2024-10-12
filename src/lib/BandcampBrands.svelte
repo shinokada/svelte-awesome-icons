@@ -39,3 +39,16 @@
     d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm48.2,326.1h-181L207.9,178h181Z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel = 'bandcamp brands'
+@prop ...restProps
+-->

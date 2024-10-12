@@ -39,3 +39,16 @@
     d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel = 'ethereum brands'
+@prop ...restProps
+-->

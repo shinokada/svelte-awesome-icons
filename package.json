@@ -1,6 +1,6 @@
 {
   "name": "svelte-awesome-icons",
-  "version": "2.0.0-next.16",
+  "version": "2.0.0-next.17",
   "description": "Font Awesome SVG Icon components for Svelte",
   "license": "MIT",
   "homepage": "https://svelte-awesome-icons.codewithshin.com/",
@@ -36,7 +36,7 @@
     "copy:packagejson": "svelte-lib-helpers package",
     "gen:docs5": "svelte-lib-helpers docs5",
     "gen:docs5FromType": "svelte-lib-helpers docs5FromType",
-    "lib-helpers": "npm run gen:docs5 && npm run package && npm run gen:exports && npm run copy:packagejson"
+    "lib-helpers": "pnpm format && pnpm gen:docs5 && pnpm package && pnpm  gen:exports && pnpm copy:packagejson"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.9",

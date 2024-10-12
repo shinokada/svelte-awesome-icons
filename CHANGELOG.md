@@ -1,5 +1,11 @@
 # svelte-icon-webkit
 
+## 2.0.0-next.17
+
+### Patch Changes
+
+- types: update ([`84df51b38ceca3dc1d24a22e66f72e762125577e`](https://github.com/shinokada/svelte-awesome-icons/commit/84df51b38ceca3dc1d24a22e66f72e762125577e))
+
 ## 2.0.0-next.16
 
 ### Patch Changes
