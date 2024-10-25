@@ -1,111 +1,54 @@
 <script lang="ts">
-  interface CtxType {
-    size?: string;
-    role?: string;
-    color?: string;
-    class?: string;
-    withEvents?: boolean;
-  }
-
-  type TitleType = {
-    id?: string;
-    title?: string;
-  };
-
-  type DescType = {
-    id?: string;
-    desc?: string;
-  };
-
   import { getContext } from 'svelte';
-  const ctx: CtxType = getContext('iconCtx') ?? {};
+  import type { BaseProps, Props } from './types';
 
-  let className = ctx.class || '';
-  export { className as class };
-  export let size: string = ctx.size || '24';
-  export let role: string = ctx.role || 'img';
-  export let color: string = ctx.color || 'currentColor';
-  export let withEvents = ctx.withEvents || false;
-  export let ariaLabel: string = 'heading solid';
-  export let title: TitleType = {};
-  export let desc: DescType = {};
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  let hasDescription = false;
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    ariaLabel = 'heading solid',
+    ...restProps
+  }: Props = $props();
 
-  $: if (title.id || desc.id) {
-    hasDescription = true;
-  } else {
-    hasDescription = false;
-  }
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...$$restProps}
-    {role}
-    width={size}
-    height={size}
-    fill={color}
-    class={className}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 448 512"
-    on:click
-    on:keydown
-    on:keyup
-    on:focus
-    on:blur
-    on:mouseenter
-    on:mouseleave
-    on:mouseover
-    on:mouseout
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M0 64C0 46.3 14.3 32 32 32H80h48c17.7 0 32 14.3 32 32s-14.3 32-32 32H112V208H336V96H320c-17.7 0-32-14.3-32-32s14.3-32 32-32h48 48c17.7 0 32 14.3 32 32s-14.3 32-32 32H400V240 416h16c17.7 0 32 14.3 32 32s-14.3 32-32 32H368 320c-17.7 0-32-14.3-32-32s14.3-32 32-32h16V272H112V416h16c17.7 0 32 14.3 32 32s-14.3 32-32 32H80 32c-17.7 0-32-14.3-32-32s14.3-32 32-32H48V240 96H32C14.3 96 0 81.7 0 64z"
-    />
-  </svg>
-{:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...$$restProps}
-    {role}
-    width={size}
-    height={size}
-    fill={color}
-    class={className}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 448 512"
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M0 64C0 46.3 14.3 32 32 32H80h48c17.7 0 32 14.3 32 32s-14.3 32-32 32H112V208H336V96H320c-17.7 0-32-14.3-32-32s14.3-32 32-32h48 48c17.7 0 32 14.3 32 32s-14.3 32-32 32H400V240 416h16c17.7 0 32 14.3 32 32s-14.3 32-32 32H368 320c-17.7 0-32-14.3-32-32s14.3-32 32-32h16V272H112V416h16c17.7 0 32 14.3 32 32s-14.3 32-32 32H80 32c-17.7 0-32-14.3-32-32s14.3-32 32-32H48V240 96H32C14.3 96 0 81.7 0 64z"
-    />
-  </svg>
-{/if}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  fill={color}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 448 512"
+>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path
+    d="M0 64C0 46.3 14.3 32 32 32l48 0 48 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-16 0 0 112 224 0 0-112-16 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l48 0 48 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-16 0 0 144 0 176 16 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-48 0-48 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l16 0 0-144-224 0 0 144 16 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-48 0-48 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l16 0 0-176L48 96 32 96C14.3 96 0 81.7 0 64z"
+  />
+</svg>
 
 <!--
 @component
-[Go to docs](https://svelte-awesome-icons.codewithshin.com)
+[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
 ## Props
-@prop export let size: string = ctx.size || '24';
-@prop export let role: string = ctx.role || 'img';
-@prop export let color: string = ctx.color || 'currentColor';
-@prop export let withEvents = ctx.withEvents || false;
-@prop export let ariaLabel: string = 'heading solid';
-@prop export let title: TitleType = {};
-@prop export let desc: DescType = {};
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel = 'heading solid'
+@prop ...restProps
 -->

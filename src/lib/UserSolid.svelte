@@ -1,111 +1,54 @@
 <script lang="ts">
-  interface CtxType {
-    size?: string;
-    role?: string;
-    color?: string;
-    class?: string;
-    withEvents?: boolean;
-  }
-
-  type TitleType = {
-    id?: string;
-    title?: string;
-  };
-
-  type DescType = {
-    id?: string;
-    desc?: string;
-  };
-
   import { getContext } from 'svelte';
-  const ctx: CtxType = getContext('iconCtx') ?? {};
+  import type { BaseProps, Props } from './types';
 
-  let className = ctx.class || '';
-  export { className as class };
-  export let size: string = ctx.size || '24';
-  export let role: string = ctx.role || 'img';
-  export let color: string = ctx.color || 'currentColor';
-  export let withEvents = ctx.withEvents || false;
-  export let ariaLabel: string = 'user solid';
-  export let title: TitleType = {};
-  export let desc: DescType = {};
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  let hasDescription = false;
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    ariaLabel = 'user solid',
+    ...restProps
+  }: Props = $props();
 
-  $: if (title.id || desc.id) {
-    hasDescription = true;
-  } else {
-    hasDescription = false;
-  }
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...$$restProps}
-    {role}
-    width={size}
-    height={size}
-    fill={color}
-    class={className}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 448 512"
-    on:click
-    on:keydown
-    on:keyup
-    on:focus
-    on:blur
-    on:mouseenter
-    on:mouseleave
-    on:mouseover
-    on:mouseout
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
-    />
-  </svg>
-{:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...$$restProps}
-    {role}
-    width={size}
-    height={size}
-    fill={color}
-    class={className}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 448 512"
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
-    />
-  </svg>
-{/if}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  fill={color}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 448 512"
+>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path
+    d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z"
+  />
+</svg>
 
 <!--
 @component
-[Go to docs](https://svelte-awesome-icons.codewithshin.com)
+[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
 ## Props
-@prop export let size: string = ctx.size || '24';
-@prop export let role: string = ctx.role || 'img';
-@prop export let color: string = ctx.color || 'currentColor';
-@prop export let withEvents = ctx.withEvents || false;
-@prop export let ariaLabel: string = 'user solid';
-@prop export let title: TitleType = {};
-@prop export let desc: DescType = {};
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel = 'user solid'
+@prop ...restProps
 -->

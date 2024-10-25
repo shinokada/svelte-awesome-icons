@@ -1,0 +1,7 @@
+- size = ctx.size || '24' 
+- role = ctx.role || 'img' 
+- color = ctx.color || 'currentColor' 
+- title = {} 
+- desc = {} 
+- ariaLabel =  <icon file name>
+- class, id, name, role, and all other props from SVGAttributes 

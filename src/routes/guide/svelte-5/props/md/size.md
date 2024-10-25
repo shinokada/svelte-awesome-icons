@@ -1,0 +1,1 @@
+<CalendarCheckRegular size="40" />

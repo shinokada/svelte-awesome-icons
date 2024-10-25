@@ -1,16 +1,24 @@
 {
   "name": "svelte-awesome-icons",
-  "version": "1.2.1",
-  "main": "dist/index.js",
+  "version": "2.0.0",
   "description": "Font Awesome SVG Icon components for Svelte",
+  "license": "MIT",
+  "homepage": "https://svelte-awesome-icons.codewithshin.com/",
   "author": {
     "name": "Shinichi Okada",
     "email": "connect@codewithshin.com",
-    "url": "https://blog.codewithshin.com"
+    "url": "https://codewithshin.com"
+  },
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinokada/svelte-awesome-icons"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=18.0.0"
   },
   "bugs": "https://github.com/shinokada/svelte-awesome-icons/issues",
-  "homepage": "https://svelte-awesome-icons.codewithshin.com",
-  "license": "MIT",
   "scripts": {
     "dev": "vite dev",
     "build": "vite build && npm run package",
@@ -20,57 +28,60 @@
     "test": "npm run test:integration && npm run test:unit",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "lint": "prettier --check --plugin prettier-plugin-svelte . && eslint .",
-    "format": "prettier --write  --plugin prettier-plugin-svelte .",
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write .",
     "test:integration": "playwright test",
     "test:unit": "vitest",
     "gen:exports": "svelte-lib-helpers exports",
-    "gen:docs": "svelte-lib-helpers docs",
-    "gen:compo-data": "svelte-lib-helpers compo-data",
-    "copy:package": "svelte-lib-helpers package",
-    "lib-helpers": "npm run format && npm run gen:docs && npm run package && npm run gen:exports && npm run copy:package",
-    "package:publish": "standard-version && git push --follow-tags origin main && npm publish"
-  },
-  "files": [
-    "dist"
-  ],
-  "peerDependencies": {
-    "svelte": "^3.54.0 || ^4.0.0 || ^5.0.0"
+    "copy:packagejson": "svelte-lib-helpers package",
+    "gen:docs5": "svelte-lib-helpers docs5",
+    "gen:docs5FromType": "svelte-lib-helpers docs5FromType",
+    "lib-helpers": "pnpm format && pnpm gen:docs5 && pnpm package && pnpm  gen:exports && pnpm copy:packagejson"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.1",
-    "@floating-ui/dom": "^1.6.5",
-    "@playwright/test": "^1.44.0",
-    "@sveltejs/adapter-auto": "^3.2.0",
-    "@sveltejs/kit": "^2.5.7",
-    "@sveltejs/package": "^2.3.1",
-    "@sveltejs/vite-plugin-svelte": "^3.1.0",
-    "@svitejs/changesets-changelog-github-compact": "^1.1.0",
-    "@typescript-eslint/eslint-plugin": "^7.8.0",
-    "@typescript-eslint/parser": "^7.8.0",
-    "autoprefixer": "^10.4.19",
-    "eslint": "^8.57.0",
+    "@changesets/cli": "^2.27.9",
+    "@playwright/test": "^1.48.1",
+    "@sveltejs/adapter-auto": "^3.3.1",
+    "@sveltejs/kit": "^2.7.3",
+    "@sveltejs/package": "^2.3.7",
+    "@sveltejs/vite-plugin-svelte": "4.0.0",
+    "@svitejs/changesets-changelog-github-compact": "^1.2.0",
+    "@types/eslint": "^9.6.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.13.0",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-svelte": "^2.39.0",
-    "flowbite": "^1.8.1",
-    "flowbite-svelte": "^0.44.24",
-    "mdsvex": "^0.11.0",
-    "postcss": "^8.4.38",
-    "postcss-load-config": "^4.0.2",
-    "prettier": "^3.2.5",
-    "prettier-plugin-svelte": "^3.2.3",
-    "publint": "^0.2.7",
-    "svelte": "^4.2.16",
-    "svelte-check": "^3.7.1",
-    "svelte-lib-helpers": "^0.4.5",
-    "svelte-meta-tags": "^3.1.2",
-    "svelte-preprocess": "^5.1.4",
-    "tailwind-merge": "^1.14.0",
-    "tailwindcss": "^3.4.3",
-    "tslib": "^2.6.2",
-    "typescript": "^5.4.5",
-    "vite": "^5.2.11",
-    "vitest": "^0.34.6"
+    "eslint-plugin-svelte": "2.46.0",
+    "globals": "^15.11.0",
+    "highlight.js": "^11.10.0",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "prettier-plugin-svelte": "^3.2.7",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "publint": "^0.2.12",
+    "runatics": "^0.1.3",
+    "runes-meta-tags": "^0.4.0",
+    "runes-webkit": "^0.9.36",
+    "svelte": "5.1.2",
+    "svelte-5-ui-lib": "^0.9.23",
+    "svelte-check": "^4.0.5",
+    "svelte-lib-helpers": "^0.4.16",
+    "svelte-preprocess": "^6.0.3",
+    "svelte-rune-highlight": "^0.5.12",
+    "tailwind-merge": "^2.5.4",
+    "tailwindcss": "^3.4.14",
+    "tslib": "^2.8.0",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.11.0",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.3"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
+  ],
+  "peerDependencies": {
+    "svelte": "^5.0.0 || ^5.0.0-next.1"
   },
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -78,15 +89,16 @@
   "keywords": [
     "svelte",
     "sveltekit",
-    "font awesome",
+    "font-awesome",
     "svg icons",
-    "tailwindcss",
     "icons"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/shinokada/svelte-awesome-icons"
-  },
+  "contributors": [
+    {
+      "name": "FortAwesome/Font-Awesome",
+      "url": "https://github.com/FortAwesome/Font-Awesome/tree/6.x"
+    }
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -108,17 +120,17 @@
       "types": "./dist/A3Solid.svelte.d.ts",
       "svelte": "./dist/A3Solid.svelte"
     },
-    "./A42GroupBrand.svelte": {
-      "types": "./dist/A42GroupBrand.svelte.d.ts",
-      "svelte": "./dist/A42GroupBrand.svelte"
+    "./A42GroupBrands.svelte": {
+      "types": "./dist/A42GroupBrands.svelte.d.ts",
+      "svelte": "./dist/A42GroupBrands.svelte"
     },
     "./A4Solid.svelte": {
       "types": "./dist/A4Solid.svelte.d.ts",
       "svelte": "./dist/A4Solid.svelte"
     },
-    "./A500pxBrand.svelte": {
-      "types": "./dist/A500pxBrand.svelte.d.ts",
-      "svelte": "./dist/A500pxBrand.svelte"
+    "./A500PxBrands.svelte": {
+      "types": "./dist/A500PxBrands.svelte.d.ts",
+      "svelte": "./dist/A500PxBrands.svelte"
     },
     "./A5Solid.svelte": {
       "types": "./dist/A5Solid.svelte.d.ts",
@@ -144,13 +156,13 @@
       "types": "./dist/ASolid.svelte.d.ts",
       "svelte": "./dist/ASolid.svelte"
     },
-    "./AccessibleIconBrand.svelte": {
-      "types": "./dist/AccessibleIconBrand.svelte.d.ts",
-      "svelte": "./dist/AccessibleIconBrand.svelte"
+    "./AccessibleIconBrands.svelte": {
+      "types": "./dist/AccessibleIconBrands.svelte.d.ts",
+      "svelte": "./dist/AccessibleIconBrands.svelte"
     },
-    "./AccusoftBrand.svelte": {
-      "types": "./dist/AccusoftBrand.svelte.d.ts",
-      "svelte": "./dist/AccusoftBrand.svelte"
+    "./AccusoftBrands.svelte": {
+      "types": "./dist/AccusoftBrands.svelte.d.ts",
+      "svelte": "./dist/AccusoftBrands.svelte"
     },
     "./AddressBookRegular.svelte": {
       "types": "./dist/AddressBookRegular.svelte.d.ts",
@@ -168,25 +180,25 @@
       "types": "./dist/AddressCardSolid.svelte.d.ts",
       "svelte": "./dist/AddressCardSolid.svelte"
     },
-    "./AdnBrand.svelte": {
-      "types": "./dist/AdnBrand.svelte.d.ts",
-      "svelte": "./dist/AdnBrand.svelte"
+    "./AdnBrands.svelte": {
+      "types": "./dist/AdnBrands.svelte.d.ts",
+      "svelte": "./dist/AdnBrands.svelte"
     },
-    "./AdversalBrand.svelte": {
-      "types": "./dist/AdversalBrand.svelte.d.ts",
-      "svelte": "./dist/AdversalBrand.svelte"
+    "./AdversalBrands.svelte": {
+      "types": "./dist/AdversalBrands.svelte.d.ts",
+      "svelte": "./dist/AdversalBrands.svelte"
     },
-    "./AffiliatethemeBrand.svelte": {
-      "types": "./dist/AffiliatethemeBrand.svelte.d.ts",
-      "svelte": "./dist/AffiliatethemeBrand.svelte"
+    "./AffiliatethemeBrands.svelte": {
+      "types": "./dist/AffiliatethemeBrands.svelte.d.ts",
+      "svelte": "./dist/AffiliatethemeBrands.svelte"
     },
-    "./AirbnbBrand.svelte": {
-      "types": "./dist/AirbnbBrand.svelte.d.ts",
-      "svelte": "./dist/AirbnbBrand.svelte"
+    "./AirbnbBrands.svelte": {
+      "types": "./dist/AirbnbBrands.svelte.d.ts",
+      "svelte": "./dist/AirbnbBrands.svelte"
     },
-    "./AlgoliaBrand.svelte": {
-      "types": "./dist/AlgoliaBrand.svelte.d.ts",
-      "svelte": "./dist/AlgoliaBrand.svelte"
+    "./AlgoliaBrands.svelte": {
+      "types": "./dist/AlgoliaBrands.svelte.d.ts",
+      "svelte": "./dist/AlgoliaBrands.svelte"
     },
     "./AlignCenterSolid.svelte": {
       "types": "./dist/AlignCenterSolid.svelte.d.ts",
@@ -204,21 +216,21 @@
       "types": "./dist/AlignRightSolid.svelte.d.ts",
       "svelte": "./dist/AlignRightSolid.svelte"
     },
-    "./AlipayBrand.svelte": {
-      "types": "./dist/AlipayBrand.svelte.d.ts",
-      "svelte": "./dist/AlipayBrand.svelte"
+    "./AlipayBrands.svelte": {
+      "types": "./dist/AlipayBrands.svelte.d.ts",
+      "svelte": "./dist/AlipayBrands.svelte"
     },
-    "./AmazonBrand.svelte": {
-      "types": "./dist/AmazonBrand.svelte.d.ts",
-      "svelte": "./dist/AmazonBrand.svelte"
+    "./AmazonBrands.svelte": {
+      "types": "./dist/AmazonBrands.svelte.d.ts",
+      "svelte": "./dist/AmazonBrands.svelte"
     },
-    "./AmazonPayBrand.svelte": {
-      "types": "./dist/AmazonPayBrand.svelte.d.ts",
-      "svelte": "./dist/AmazonPayBrand.svelte"
+    "./AmazonPayBrands.svelte": {
+      "types": "./dist/AmazonPayBrands.svelte.d.ts",
+      "svelte": "./dist/AmazonPayBrands.svelte"
     },
-    "./AmiliaBrand.svelte": {
-      "types": "./dist/AmiliaBrand.svelte.d.ts",
-      "svelte": "./dist/AmiliaBrand.svelte"
+    "./AmiliaBrands.svelte": {
+      "types": "./dist/AmiliaBrands.svelte.d.ts",
+      "svelte": "./dist/AmiliaBrands.svelte"
     },
     "./AnchorCircleCheckSolid.svelte": {
       "types": "./dist/AnchorCircleCheckSolid.svelte.d.ts",
@@ -240,13 +252,13 @@
       "types": "./dist/AnchorSolid.svelte.d.ts",
       "svelte": "./dist/AnchorSolid.svelte"
     },
-    "./AndroidBrand.svelte": {
-      "types": "./dist/AndroidBrand.svelte.d.ts",
-      "svelte": "./dist/AndroidBrand.svelte"
+    "./AndroidBrands.svelte": {
+      "types": "./dist/AndroidBrands.svelte.d.ts",
+      "svelte": "./dist/AndroidBrands.svelte"
     },
-    "./AngellistBrand.svelte": {
-      "types": "./dist/AngellistBrand.svelte.d.ts",
-      "svelte": "./dist/AngellistBrand.svelte"
+    "./AngellistBrands.svelte": {
+      "types": "./dist/AngellistBrands.svelte.d.ts",
+      "svelte": "./dist/AngellistBrands.svelte"
     },
     "./AngleDownSolid.svelte": {
       "types": "./dist/AngleDownSolid.svelte.d.ts",
@@ -280,37 +292,37 @@
       "types": "./dist/AnglesUpSolid.svelte.d.ts",
       "svelte": "./dist/AnglesUpSolid.svelte"
     },
-    "./AngrycreativeBrand.svelte": {
-      "types": "./dist/AngrycreativeBrand.svelte.d.ts",
-      "svelte": "./dist/AngrycreativeBrand.svelte"
+    "./AngrycreativeBrands.svelte": {
+      "types": "./dist/AngrycreativeBrands.svelte.d.ts",
+      "svelte": "./dist/AngrycreativeBrands.svelte"
     },
-    "./AngularBrand.svelte": {
-      "types": "./dist/AngularBrand.svelte.d.ts",
-      "svelte": "./dist/AngularBrand.svelte"
+    "./AngularBrands.svelte": {
+      "types": "./dist/AngularBrands.svelte.d.ts",
+      "svelte": "./dist/AngularBrands.svelte"
     },
     "./AnkhSolid.svelte": {
       "types": "./dist/AnkhSolid.svelte.d.ts",
       "svelte": "./dist/AnkhSolid.svelte"
     },
-    "./AppStoreBrand.svelte": {
-      "types": "./dist/AppStoreBrand.svelte.d.ts",
-      "svelte": "./dist/AppStoreBrand.svelte"
+    "./AppStoreBrands.svelte": {
+      "types": "./dist/AppStoreBrands.svelte.d.ts",
+      "svelte": "./dist/AppStoreBrands.svelte"
     },
-    "./AppStoreIosBrand.svelte": {
-      "types": "./dist/AppStoreIosBrand.svelte.d.ts",
-      "svelte": "./dist/AppStoreIosBrand.svelte"
+    "./AppStoreIosBrands.svelte": {
+      "types": "./dist/AppStoreIosBrands.svelte.d.ts",
+      "svelte": "./dist/AppStoreIosBrands.svelte"
     },
-    "./ApperBrand.svelte": {
-      "types": "./dist/ApperBrand.svelte.d.ts",
-      "svelte": "./dist/ApperBrand.svelte"
+    "./ApperBrands.svelte": {
+      "types": "./dist/ApperBrands.svelte.d.ts",
+      "svelte": "./dist/ApperBrands.svelte"
     },
-    "./AppleBrand.svelte": {
-      "types": "./dist/AppleBrand.svelte.d.ts",
-      "svelte": "./dist/AppleBrand.svelte"
+    "./AppleBrands.svelte": {
+      "types": "./dist/AppleBrands.svelte.d.ts",
+      "svelte": "./dist/AppleBrands.svelte"
     },
-    "./ApplePayBrand.svelte": {
-      "types": "./dist/ApplePayBrand.svelte.d.ts",
-      "svelte": "./dist/ApplePayBrand.svelte"
+    "./ApplePayBrands.svelte": {
+      "types": "./dist/ApplePayBrands.svelte.d.ts",
+      "svelte": "./dist/ApplePayBrands.svelte"
     },
     "./AppleWholeSolid.svelte": {
       "types": "./dist/AppleWholeSolid.svelte.d.ts",
@@ -532,33 +544,33 @@
       "types": "./dist/ArrowsUpToLineSolid.svelte.d.ts",
       "svelte": "./dist/ArrowsUpToLineSolid.svelte"
     },
-    "./ArtstationBrand.svelte": {
-      "types": "./dist/ArtstationBrand.svelte.d.ts",
-      "svelte": "./dist/ArtstationBrand.svelte"
+    "./ArtstationBrands.svelte": {
+      "types": "./dist/ArtstationBrands.svelte.d.ts",
+      "svelte": "./dist/ArtstationBrands.svelte"
     },
     "./AsteriskSolid.svelte": {
       "types": "./dist/AsteriskSolid.svelte.d.ts",
       "svelte": "./dist/AsteriskSolid.svelte"
     },
-    "./AsymmetrikBrand.svelte": {
-      "types": "./dist/AsymmetrikBrand.svelte.d.ts",
-      "svelte": "./dist/AsymmetrikBrand.svelte"
+    "./AsymmetrikBrands.svelte": {
+      "types": "./dist/AsymmetrikBrands.svelte.d.ts",
+      "svelte": "./dist/AsymmetrikBrands.svelte"
     },
     "./AtSolid.svelte": {
       "types": "./dist/AtSolid.svelte.d.ts",
       "svelte": "./dist/AtSolid.svelte"
     },
-    "./AtlassianBrand.svelte": {
-      "types": "./dist/AtlassianBrand.svelte.d.ts",
-      "svelte": "./dist/AtlassianBrand.svelte"
+    "./AtlassianBrands.svelte": {
+      "types": "./dist/AtlassianBrands.svelte.d.ts",
+      "svelte": "./dist/AtlassianBrands.svelte"
     },
     "./AtomSolid.svelte": {
       "types": "./dist/AtomSolid.svelte.d.ts",
       "svelte": "./dist/AtomSolid.svelte"
     },
-    "./AudibleBrand.svelte": {
-      "types": "./dist/AudibleBrand.svelte.d.ts",
-      "svelte": "./dist/AudibleBrand.svelte"
+    "./AudibleBrands.svelte": {
+      "types": "./dist/AudibleBrands.svelte.d.ts",
+      "svelte": "./dist/AudibleBrands.svelte"
     },
     "./AudioDescriptionSolid.svelte": {
       "types": "./dist/AudioDescriptionSolid.svelte.d.ts",
@@ -568,25 +580,25 @@
       "types": "./dist/AustralSignSolid.svelte.d.ts",
       "svelte": "./dist/AustralSignSolid.svelte"
     },
-    "./AutoprefixerBrand.svelte": {
-      "types": "./dist/AutoprefixerBrand.svelte.d.ts",
-      "svelte": "./dist/AutoprefixerBrand.svelte"
+    "./AutoprefixerBrands.svelte": {
+      "types": "./dist/AutoprefixerBrands.svelte.d.ts",
+      "svelte": "./dist/AutoprefixerBrands.svelte"
     },
-    "./AvianexBrand.svelte": {
-      "types": "./dist/AvianexBrand.svelte.d.ts",
-      "svelte": "./dist/AvianexBrand.svelte"
+    "./AvianexBrands.svelte": {
+      "types": "./dist/AvianexBrands.svelte.d.ts",
+      "svelte": "./dist/AvianexBrands.svelte"
     },
-    "./AviatoBrand.svelte": {
-      "types": "./dist/AviatoBrand.svelte.d.ts",
-      "svelte": "./dist/AviatoBrand.svelte"
+    "./AviatoBrands.svelte": {
+      "types": "./dist/AviatoBrands.svelte.d.ts",
+      "svelte": "./dist/AviatoBrands.svelte"
     },
     "./AwardSolid.svelte": {
       "types": "./dist/AwardSolid.svelte.d.ts",
       "svelte": "./dist/AwardSolid.svelte"
     },
-    "./AwsBrand.svelte": {
-      "types": "./dist/AwsBrand.svelte.d.ts",
-      "svelte": "./dist/AwsBrand.svelte"
+    "./AwsBrands.svelte": {
+      "types": "./dist/AwsBrands.svelte.d.ts",
+      "svelte": "./dist/AwsBrands.svelte"
     },
     "./BSolid.svelte": {
       "types": "./dist/BSolid.svelte.d.ts",
@@ -648,9 +660,9 @@
       "types": "./dist/BandageSolid.svelte.d.ts",
       "svelte": "./dist/BandageSolid.svelte"
     },
-    "./BandcampBrand.svelte": {
-      "types": "./dist/BandcampBrand.svelte.d.ts",
-      "svelte": "./dist/BandcampBrand.svelte"
+    "./BandcampBrands.svelte": {
+      "types": "./dist/BandcampBrands.svelte.d.ts",
+      "svelte": "./dist/BandcampBrands.svelte"
     },
     "./BangladeshiTakaSignSolid.svelte": {
       "types": "./dist/BangladeshiTakaSignSolid.svelte.d.ts",
@@ -712,9 +724,9 @@
       "types": "./dist/BatteryThreeQuartersSolid.svelte.d.ts",
       "svelte": "./dist/BatteryThreeQuartersSolid.svelte"
     },
-    "./BattleNetBrand.svelte": {
-      "types": "./dist/BattleNetBrand.svelte.d.ts",
-      "svelte": "./dist/BattleNetBrand.svelte"
+    "./BattleNetBrands.svelte": {
+      "types": "./dist/BattleNetBrands.svelte.d.ts",
+      "svelte": "./dist/BattleNetBrands.svelte"
     },
     "./BedPulseSolid.svelte": {
       "types": "./dist/BedPulseSolid.svelte.d.ts",
@@ -728,9 +740,9 @@
       "types": "./dist/BeerMugEmptySolid.svelte.d.ts",
       "svelte": "./dist/BeerMugEmptySolid.svelte"
     },
-    "./BehanceBrand.svelte": {
-      "types": "./dist/BehanceBrand.svelte.d.ts",
-      "svelte": "./dist/BehanceBrand.svelte"
+    "./BehanceBrands.svelte": {
+      "types": "./dist/BehanceBrands.svelte.d.ts",
+      "svelte": "./dist/BehanceBrands.svelte"
     },
     "./BellConciergeSolid.svelte": {
       "types": "./dist/BellConciergeSolid.svelte.d.ts",
@@ -760,13 +772,13 @@
       "types": "./dist/BicycleSolid.svelte.d.ts",
       "svelte": "./dist/BicycleSolid.svelte"
     },
-    "./BilibiliBrand.svelte": {
-      "types": "./dist/BilibiliBrand.svelte.d.ts",
-      "svelte": "./dist/BilibiliBrand.svelte"
+    "./BilibiliBrands.svelte": {
+      "types": "./dist/BilibiliBrands.svelte.d.ts",
+      "svelte": "./dist/BilibiliBrands.svelte"
     },
-    "./BimobjectBrand.svelte": {
-      "types": "./dist/BimobjectBrand.svelte.d.ts",
-      "svelte": "./dist/BimobjectBrand.svelte"
+    "./BimobjectBrands.svelte": {
+      "types": "./dist/BimobjectBrands.svelte.d.ts",
+      "svelte": "./dist/BimobjectBrands.svelte"
     },
     "./BinocularsSolid.svelte": {
       "types": "./dist/BinocularsSolid.svelte.d.ts",
@@ -776,29 +788,29 @@
       "types": "./dist/BiohazardSolid.svelte.d.ts",
       "svelte": "./dist/BiohazardSolid.svelte"
     },
-    "./BitbucketBrand.svelte": {
-      "types": "./dist/BitbucketBrand.svelte.d.ts",
-      "svelte": "./dist/BitbucketBrand.svelte"
+    "./BitbucketBrands.svelte": {
+      "types": "./dist/BitbucketBrands.svelte.d.ts",
+      "svelte": "./dist/BitbucketBrands.svelte"
     },
-    "./BitcoinBrand.svelte": {
-      "types": "./dist/BitcoinBrand.svelte.d.ts",
-      "svelte": "./dist/BitcoinBrand.svelte"
+    "./BitcoinBrands.svelte": {
+      "types": "./dist/BitcoinBrands.svelte.d.ts",
+      "svelte": "./dist/BitcoinBrands.svelte"
     },
     "./BitcoinSignSolid.svelte": {
       "types": "./dist/BitcoinSignSolid.svelte.d.ts",
       "svelte": "./dist/BitcoinSignSolid.svelte"
     },
-    "./BityBrand.svelte": {
-      "types": "./dist/BityBrand.svelte.d.ts",
-      "svelte": "./dist/BityBrand.svelte"
+    "./BityBrands.svelte": {
+      "types": "./dist/BityBrands.svelte.d.ts",
+      "svelte": "./dist/BityBrands.svelte"
     },
-    "./BlackTieBrand.svelte": {
-      "types": "./dist/BlackTieBrand.svelte.d.ts",
-      "svelte": "./dist/BlackTieBrand.svelte"
+    "./BlackTieBrands.svelte": {
+      "types": "./dist/BlackTieBrands.svelte.d.ts",
+      "svelte": "./dist/BlackTieBrands.svelte"
     },
-    "./BlackberryBrand.svelte": {
-      "types": "./dist/BlackberryBrand.svelte.d.ts",
-      "svelte": "./dist/BlackberryBrand.svelte"
+    "./BlackberryBrands.svelte": {
+      "types": "./dist/BlackberryBrands.svelte.d.ts",
+      "svelte": "./dist/BlackberryBrands.svelte"
     },
     "./BlenderPhoneSolid.svelte": {
       "types": "./dist/BlenderPhoneSolid.svelte.d.ts",
@@ -812,21 +824,25 @@
       "types": "./dist/BlogSolid.svelte.d.ts",
       "svelte": "./dist/BlogSolid.svelte"
     },
-    "./BloggerBBrand.svelte": {
-      "types": "./dist/BloggerBBrand.svelte.d.ts",
-      "svelte": "./dist/BloggerBBrand.svelte"
+    "./BloggerBBrands.svelte": {
+      "types": "./dist/BloggerBBrands.svelte.d.ts",
+      "svelte": "./dist/BloggerBBrands.svelte"
     },
-    "./BloggerBrand.svelte": {
-      "types": "./dist/BloggerBrand.svelte.d.ts",
-      "svelte": "./dist/BloggerBrand.svelte"
+    "./BloggerBrands.svelte": {
+      "types": "./dist/BloggerBrands.svelte.d.ts",
+      "svelte": "./dist/BloggerBrands.svelte"
     },
-    "./BluetoothBBrand.svelte": {
-      "types": "./dist/BluetoothBBrand.svelte.d.ts",
-      "svelte": "./dist/BluetoothBBrand.svelte"
+    "./BlueskyBrands.svelte": {
+      "types": "./dist/BlueskyBrands.svelte.d.ts",
+      "svelte": "./dist/BlueskyBrands.svelte"
     },
-    "./BluetoothBrand.svelte": {
-      "types": "./dist/BluetoothBrand.svelte.d.ts",
-      "svelte": "./dist/BluetoothBrand.svelte"
+    "./BluetoothBBrands.svelte": {
+      "types": "./dist/BluetoothBBrands.svelte.d.ts",
+      "svelte": "./dist/BluetoothBBrands.svelte"
+    },
+    "./BluetoothBrands.svelte": {
+      "types": "./dist/BluetoothBrands.svelte.d.ts",
+      "svelte": "./dist/BluetoothBrands.svelte"
     },
     "./BoldSolid.svelte": {
       "types": "./dist/BoldSolid.svelte.d.ts",
@@ -904,9 +920,9 @@
       "types": "./dist/BookmarkSolid.svelte.d.ts",
       "svelte": "./dist/BookmarkSolid.svelte"
     },
-    "./BootstrapBrand.svelte": {
-      "types": "./dist/BootstrapBrand.svelte.d.ts",
-      "svelte": "./dist/BootstrapBrand.svelte"
+    "./BootstrapBrands.svelte": {
+      "types": "./dist/BootstrapBrands.svelte.d.ts",
+      "svelte": "./dist/BootstrapBrands.svelte"
     },
     "./BorderAllSolid.svelte": {
       "types": "./dist/BorderAllSolid.svelte.d.ts",
@@ -924,9 +940,9 @@
       "types": "./dist/BoreHoleSolid.svelte.d.ts",
       "svelte": "./dist/BoreHoleSolid.svelte"
     },
-    "./BotsBrand.svelte": {
-      "types": "./dist/BotsBrand.svelte.d.ts",
-      "svelte": "./dist/BotsBrand.svelte"
+    "./BotsBrands.svelte": {
+      "types": "./dist/BotsBrands.svelte.d.ts",
+      "svelte": "./dist/BotsBrands.svelte"
     },
     "./BottleDropletSolid.svelte": {
       "types": "./dist/BottleDropletSolid.svelte.d.ts",
@@ -980,13 +996,13 @@
       "types": "./dist/BrainSolid.svelte.d.ts",
       "svelte": "./dist/BrainSolid.svelte"
     },
-    "./BraveBrand.svelte": {
-      "types": "./dist/BraveBrand.svelte.d.ts",
-      "svelte": "./dist/BraveBrand.svelte"
+    "./BraveBrands.svelte": {
+      "types": "./dist/BraveBrands.svelte.d.ts",
+      "svelte": "./dist/BraveBrands.svelte"
     },
-    "./BraveReverseBrand.svelte": {
-      "types": "./dist/BraveReverseBrand.svelte.d.ts",
-      "svelte": "./dist/BraveReverseBrand.svelte"
+    "./BraveReverseBrands.svelte": {
+      "types": "./dist/BraveReverseBrands.svelte.d.ts",
+      "svelte": "./dist/BraveReverseBrands.svelte"
     },
     "./BrazilianRealSignSolid.svelte": {
       "types": "./dist/BrazilianRealSignSolid.svelte.d.ts",
@@ -1040,17 +1056,17 @@
       "types": "./dist/BrushSolid.svelte.d.ts",
       "svelte": "./dist/BrushSolid.svelte"
     },
-    "./BtcBrand.svelte": {
-      "types": "./dist/BtcBrand.svelte.d.ts",
-      "svelte": "./dist/BtcBrand.svelte"
+    "./BtcBrands.svelte": {
+      "types": "./dist/BtcBrands.svelte.d.ts",
+      "svelte": "./dist/BtcBrands.svelte"
     },
     "./BucketSolid.svelte": {
       "types": "./dist/BucketSolid.svelte.d.ts",
       "svelte": "./dist/BucketSolid.svelte"
     },
-    "./BufferBrand.svelte": {
-      "types": "./dist/BufferBrand.svelte.d.ts",
-      "svelte": "./dist/BufferBrand.svelte"
+    "./BufferBrands.svelte": {
+      "types": "./dist/BufferBrands.svelte.d.ts",
+      "svelte": "./dist/BufferBrands.svelte"
     },
     "./BugSlashSolid.svelte": {
       "types": "./dist/BugSlashSolid.svelte.d.ts",
@@ -1132,9 +1148,9 @@
       "types": "./dist/BurgerSolid.svelte.d.ts",
       "svelte": "./dist/BurgerSolid.svelte"
     },
-    "./BuromobelexperteBrand.svelte": {
-      "types": "./dist/BuromobelexperteBrand.svelte.d.ts",
-      "svelte": "./dist/BuromobelexperteBrand.svelte"
+    "./BuromobelexperteBrands.svelte": {
+      "types": "./dist/BuromobelexperteBrands.svelte.d.ts",
+      "svelte": "./dist/BuromobelexperteBrands.svelte"
     },
     "./BurstSolid.svelte": {
       "types": "./dist/BurstSolid.svelte.d.ts",
@@ -1152,13 +1168,13 @@
       "types": "./dist/BusinessTimeSolid.svelte.d.ts",
       "svelte": "./dist/BusinessTimeSolid.svelte"
     },
-    "./BuyNLargeBrand.svelte": {
-      "types": "./dist/BuyNLargeBrand.svelte.d.ts",
-      "svelte": "./dist/BuyNLargeBrand.svelte"
+    "./BuyNLargeBrands.svelte": {
+      "types": "./dist/BuyNLargeBrands.svelte.d.ts",
+      "svelte": "./dist/BuyNLargeBrands.svelte"
     },
-    "./BuyselladsBrand.svelte": {
-      "types": "./dist/BuyselladsBrand.svelte.d.ts",
-      "svelte": "./dist/BuyselladsBrand.svelte"
+    "./BuyselladsBrands.svelte": {
+      "types": "./dist/BuyselladsBrands.svelte.d.ts",
+      "svelte": "./dist/BuyselladsBrands.svelte"
     },
     "./CSolid.svelte": {
       "types": "./dist/CSolid.svelte.d.ts",
@@ -1248,9 +1264,9 @@
       "types": "./dist/CampgroundSolid.svelte.d.ts",
       "svelte": "./dist/CampgroundSolid.svelte"
     },
-    "./CanadianMapleLeafBrand.svelte": {
-      "types": "./dist/CanadianMapleLeafBrand.svelte.d.ts",
-      "svelte": "./dist/CanadianMapleLeafBrand.svelte"
+    "./CanadianMapleLeafBrands.svelte": {
+      "types": "./dist/CanadianMapleLeafBrands.svelte.d.ts",
+      "svelte": "./dist/CanadianMapleLeafBrands.svelte"
     },
     "./CandyCaneSolid.svelte": {
       "types": "./dist/CandyCaneSolid.svelte.d.ts",
@@ -1344,45 +1360,45 @@
       "types": "./dist/CatSolid.svelte.d.ts",
       "svelte": "./dist/CatSolid.svelte"
     },
-    "./CcAmazonPayBrand.svelte": {
-      "types": "./dist/CcAmazonPayBrand.svelte.d.ts",
-      "svelte": "./dist/CcAmazonPayBrand.svelte"
+    "./CcAmazonPayBrands.svelte": {
+      "types": "./dist/CcAmazonPayBrands.svelte.d.ts",
+      "svelte": "./dist/CcAmazonPayBrands.svelte"
     },
-    "./CcAmexBrand.svelte": {
-      "types": "./dist/CcAmexBrand.svelte.d.ts",
-      "svelte": "./dist/CcAmexBrand.svelte"
+    "./CcAmexBrands.svelte": {
+      "types": "./dist/CcAmexBrands.svelte.d.ts",
+      "svelte": "./dist/CcAmexBrands.svelte"
     },
-    "./CcApplePayBrand.svelte": {
-      "types": "./dist/CcApplePayBrand.svelte.d.ts",
-      "svelte": "./dist/CcApplePayBrand.svelte"
+    "./CcApplePayBrands.svelte": {
+      "types": "./dist/CcApplePayBrands.svelte.d.ts",
+      "svelte": "./dist/CcApplePayBrands.svelte"
     },
-    "./CcDinersClubBrand.svelte": {
-      "types": "./dist/CcDinersClubBrand.svelte.d.ts",
-      "svelte": "./dist/CcDinersClubBrand.svelte"
+    "./CcDinersClubBrands.svelte": {
+      "types": "./dist/CcDinersClubBrands.svelte.d.ts",
+      "svelte": "./dist/CcDinersClubBrands.svelte"
     },
-    "./CcDiscoverBrand.svelte": {
-      "types": "./dist/CcDiscoverBrand.svelte.d.ts",
-      "svelte": "./dist/CcDiscoverBrand.svelte"
+    "./CcDiscoverBrands.svelte": {
+      "types": "./dist/CcDiscoverBrands.svelte.d.ts",
+      "svelte": "./dist/CcDiscoverBrands.svelte"
     },
-    "./CcJcbBrand.svelte": {
-      "types": "./dist/CcJcbBrand.svelte.d.ts",
-      "svelte": "./dist/CcJcbBrand.svelte"
+    "./CcJcbBrands.svelte": {
+      "types": "./dist/CcJcbBrands.svelte.d.ts",
+      "svelte": "./dist/CcJcbBrands.svelte"
     },
-    "./CcMastercardBrand.svelte": {
-      "types": "./dist/CcMastercardBrand.svelte.d.ts",
-      "svelte": "./dist/CcMastercardBrand.svelte"
+    "./CcMastercardBrands.svelte": {
+      "types": "./dist/CcMastercardBrands.svelte.d.ts",
+      "svelte": "./dist/CcMastercardBrands.svelte"
     },
-    "./CcPaypalBrand.svelte": {
-      "types": "./dist/CcPaypalBrand.svelte.d.ts",
-      "svelte": "./dist/CcPaypalBrand.svelte"
+    "./CcPaypalBrands.svelte": {
+      "types": "./dist/CcPaypalBrands.svelte.d.ts",
+      "svelte": "./dist/CcPaypalBrands.svelte"
     },
-    "./CcStripeBrand.svelte": {
-      "types": "./dist/CcStripeBrand.svelte.d.ts",
-      "svelte": "./dist/CcStripeBrand.svelte"
+    "./CcStripeBrands.svelte": {
+      "types": "./dist/CcStripeBrands.svelte.d.ts",
+      "svelte": "./dist/CcStripeBrands.svelte"
     },
-    "./CcVisaBrand.svelte": {
-      "types": "./dist/CcVisaBrand.svelte.d.ts",
-      "svelte": "./dist/CcVisaBrand.svelte"
+    "./CcVisaBrands.svelte": {
+      "types": "./dist/CcVisaBrands.svelte.d.ts",
+      "svelte": "./dist/CcVisaBrands.svelte"
     },
     "./CediSignSolid.svelte": {
       "types": "./dist/CediSignSolid.svelte.d.ts",
@@ -1392,13 +1408,13 @@
       "types": "./dist/CentSignSolid.svelte.d.ts",
       "svelte": "./dist/CentSignSolid.svelte"
     },
-    "./CentercodeBrand.svelte": {
-      "types": "./dist/CentercodeBrand.svelte.d.ts",
-      "svelte": "./dist/CentercodeBrand.svelte"
+    "./CentercodeBrands.svelte": {
+      "types": "./dist/CentercodeBrands.svelte.d.ts",
+      "svelte": "./dist/CentercodeBrands.svelte"
     },
-    "./CentosBrand.svelte": {
-      "types": "./dist/CentosBrand.svelte.d.ts",
-      "svelte": "./dist/CentosBrand.svelte"
+    "./CentosBrands.svelte": {
+      "types": "./dist/CentosBrands.svelte.d.ts",
+      "svelte": "./dist/CentosBrands.svelte"
     },
     "./CertificateSolid.svelte": {
       "types": "./dist/CertificateSolid.svelte.d.ts",
@@ -1564,13 +1580,13 @@
       "types": "./dist/ChildrenSolid.svelte.d.ts",
       "svelte": "./dist/ChildrenSolid.svelte"
     },
-    "./ChromeBrand.svelte": {
-      "types": "./dist/ChromeBrand.svelte.d.ts",
-      "svelte": "./dist/ChromeBrand.svelte"
+    "./ChromeBrands.svelte": {
+      "types": "./dist/ChromeBrands.svelte.d.ts",
+      "svelte": "./dist/ChromeBrands.svelte"
     },
-    "./ChromecastBrand.svelte": {
-      "types": "./dist/ChromecastBrand.svelte.d.ts",
-      "svelte": "./dist/ChromecastBrand.svelte"
+    "./ChromecastBrands.svelte": {
+      "types": "./dist/ChromecastBrands.svelte.d.ts",
+      "svelte": "./dist/ChromecastBrands.svelte"
     },
     "./ChurchSolid.svelte": {
       "types": "./dist/ChurchSolid.svelte.d.ts",
@@ -1860,29 +1876,29 @@
       "types": "./dist/CloudSunSolid.svelte.d.ts",
       "svelte": "./dist/CloudSunSolid.svelte"
     },
-    "./CloudflareBrand.svelte": {
-      "types": "./dist/CloudflareBrand.svelte.d.ts",
-      "svelte": "./dist/CloudflareBrand.svelte"
+    "./CloudflareBrands.svelte": {
+      "types": "./dist/CloudflareBrands.svelte.d.ts",
+      "svelte": "./dist/CloudflareBrands.svelte"
     },
-    "./CloudscaleBrand.svelte": {
-      "types": "./dist/CloudscaleBrand.svelte.d.ts",
-      "svelte": "./dist/CloudscaleBrand.svelte"
+    "./CloudscaleBrands.svelte": {
+      "types": "./dist/CloudscaleBrands.svelte.d.ts",
+      "svelte": "./dist/CloudscaleBrands.svelte"
     },
-    "./CloudsmithBrand.svelte": {
-      "types": "./dist/CloudsmithBrand.svelte.d.ts",
-      "svelte": "./dist/CloudsmithBrand.svelte"
+    "./CloudsmithBrands.svelte": {
+      "types": "./dist/CloudsmithBrands.svelte.d.ts",
+      "svelte": "./dist/CloudsmithBrands.svelte"
     },
-    "./CloudversifyBrand.svelte": {
-      "types": "./dist/CloudversifyBrand.svelte.d.ts",
-      "svelte": "./dist/CloudversifyBrand.svelte"
+    "./CloudversifyBrands.svelte": {
+      "types": "./dist/CloudversifyBrands.svelte.d.ts",
+      "svelte": "./dist/CloudversifyBrands.svelte"
     },
     "./CloverSolid.svelte": {
       "types": "./dist/CloverSolid.svelte.d.ts",
       "svelte": "./dist/CloverSolid.svelte"
     },
-    "./CmplidBrand.svelte": {
-      "types": "./dist/CmplidBrand.svelte.d.ts",
-      "svelte": "./dist/CmplidBrand.svelte"
+    "./CmplidBrands.svelte": {
+      "types": "./dist/CmplidBrands.svelte.d.ts",
+      "svelte": "./dist/CmplidBrands.svelte"
     },
     "./CodeBranchSolid.svelte": {
       "types": "./dist/CodeBranchSolid.svelte.d.ts",
@@ -1912,13 +1928,13 @@
       "types": "./dist/CodeSolid.svelte.d.ts",
       "svelte": "./dist/CodeSolid.svelte"
     },
-    "./CodepenBrand.svelte": {
-      "types": "./dist/CodepenBrand.svelte.d.ts",
-      "svelte": "./dist/CodepenBrand.svelte"
+    "./CodepenBrands.svelte": {
+      "types": "./dist/CodepenBrands.svelte.d.ts",
+      "svelte": "./dist/CodepenBrands.svelte"
     },
-    "./CodiepieBrand.svelte": {
-      "types": "./dist/CodiepieBrand.svelte.d.ts",
-      "svelte": "./dist/CodiepieBrand.svelte"
+    "./CodiepieBrands.svelte": {
+      "types": "./dist/CodiepieBrands.svelte.d.ts",
+      "svelte": "./dist/CodiepieBrands.svelte"
     },
     "./CoinsSolid.svelte": {
       "types": "./dist/CoinsSolid.svelte.d.ts",
@@ -2000,17 +2016,17 @@
       "types": "./dist/ComputerSolid.svelte.d.ts",
       "svelte": "./dist/ComputerSolid.svelte"
     },
-    "./ConfluenceBrand.svelte": {
-      "types": "./dist/ConfluenceBrand.svelte.d.ts",
-      "svelte": "./dist/ConfluenceBrand.svelte"
+    "./ConfluenceBrands.svelte": {
+      "types": "./dist/ConfluenceBrands.svelte.d.ts",
+      "svelte": "./dist/ConfluenceBrands.svelte"
     },
-    "./ConnectdevelopBrand.svelte": {
-      "types": "./dist/ConnectdevelopBrand.svelte.d.ts",
-      "svelte": "./dist/ConnectdevelopBrand.svelte"
+    "./ConnectdevelopBrands.svelte": {
+      "types": "./dist/ConnectdevelopBrands.svelte.d.ts",
+      "svelte": "./dist/ConnectdevelopBrands.svelte"
     },
-    "./ContaoBrand.svelte": {
-      "types": "./dist/ContaoBrand.svelte.d.ts",
-      "svelte": "./dist/ContaoBrand.svelte"
+    "./ContaoBrands.svelte": {
+      "types": "./dist/ContaoBrands.svelte.d.ts",
+      "svelte": "./dist/ContaoBrands.svelte"
     },
     "./CookieBiteSolid.svelte": {
       "types": "./dist/CookieBiteSolid.svelte.d.ts",
@@ -2036,9 +2052,9 @@
       "types": "./dist/CopyrightSolid.svelte.d.ts",
       "svelte": "./dist/CopyrightSolid.svelte"
     },
-    "./CottonBureauBrand.svelte": {
-      "types": "./dist/CottonBureauBrand.svelte.d.ts",
-      "svelte": "./dist/CottonBureauBrand.svelte"
+    "./CottonBureauBrands.svelte": {
+      "types": "./dist/CottonBureauBrands.svelte.d.ts",
+      "svelte": "./dist/CottonBureauBrands.svelte"
     },
     "./CouchSolid.svelte": {
       "types": "./dist/CouchSolid.svelte.d.ts",
@@ -2048,65 +2064,65 @@
       "types": "./dist/CowSolid.svelte.d.ts",
       "svelte": "./dist/CowSolid.svelte"
     },
-    "./CpanelBrand.svelte": {
-      "types": "./dist/CpanelBrand.svelte.d.ts",
-      "svelte": "./dist/CpanelBrand.svelte"
+    "./CpanelBrands.svelte": {
+      "types": "./dist/CpanelBrands.svelte.d.ts",
+      "svelte": "./dist/CpanelBrands.svelte"
     },
-    "./CreativeCommonsBrand.svelte": {
-      "types": "./dist/CreativeCommonsBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsBrand.svelte"
+    "./CreativeCommonsBrands.svelte": {
+      "types": "./dist/CreativeCommonsBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsBrands.svelte"
     },
-    "./CreativeCommonsByBrand.svelte": {
-      "types": "./dist/CreativeCommonsByBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsByBrand.svelte"
+    "./CreativeCommonsByBrands.svelte": {
+      "types": "./dist/CreativeCommonsByBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsByBrands.svelte"
     },
-    "./CreativeCommonsNcBrand.svelte": {
-      "types": "./dist/CreativeCommonsNcBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsNcBrand.svelte"
+    "./CreativeCommonsNcBrands.svelte": {
+      "types": "./dist/CreativeCommonsNcBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsNcBrands.svelte"
     },
-    "./CreativeCommonsNcEuBrand.svelte": {
-      "types": "./dist/CreativeCommonsNcEuBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsNcEuBrand.svelte"
+    "./CreativeCommonsNcEuBrands.svelte": {
+      "types": "./dist/CreativeCommonsNcEuBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsNcEuBrands.svelte"
     },
-    "./CreativeCommonsNcJpBrand.svelte": {
-      "types": "./dist/CreativeCommonsNcJpBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsNcJpBrand.svelte"
+    "./CreativeCommonsNcJpBrands.svelte": {
+      "types": "./dist/CreativeCommonsNcJpBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsNcJpBrands.svelte"
     },
-    "./CreativeCommonsNdBrand.svelte": {
-      "types": "./dist/CreativeCommonsNdBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsNdBrand.svelte"
+    "./CreativeCommonsNdBrands.svelte": {
+      "types": "./dist/CreativeCommonsNdBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsNdBrands.svelte"
     },
-    "./CreativeCommonsPdAltBrand.svelte": {
-      "types": "./dist/CreativeCommonsPdAltBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsPdAltBrand.svelte"
+    "./CreativeCommonsPdAltBrands.svelte": {
+      "types": "./dist/CreativeCommonsPdAltBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsPdAltBrands.svelte"
     },
-    "./CreativeCommonsPdBrand.svelte": {
-      "types": "./dist/CreativeCommonsPdBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsPdBrand.svelte"
+    "./CreativeCommonsPdBrands.svelte": {
+      "types": "./dist/CreativeCommonsPdBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsPdBrands.svelte"
     },
-    "./CreativeCommonsRemixBrand.svelte": {
-      "types": "./dist/CreativeCommonsRemixBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsRemixBrand.svelte"
+    "./CreativeCommonsRemixBrands.svelte": {
+      "types": "./dist/CreativeCommonsRemixBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsRemixBrands.svelte"
     },
-    "./CreativeCommonsSaBrand.svelte": {
-      "types": "./dist/CreativeCommonsSaBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsSaBrand.svelte"
+    "./CreativeCommonsSaBrands.svelte": {
+      "types": "./dist/CreativeCommonsSaBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsSaBrands.svelte"
     },
-    "./CreativeCommonsSamplingBrand.svelte": {
-      "types": "./dist/CreativeCommonsSamplingBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsSamplingBrand.svelte"
+    "./CreativeCommonsSamplingBrands.svelte": {
+      "types": "./dist/CreativeCommonsSamplingBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsSamplingBrands.svelte"
     },
-    "./CreativeCommonsSamplingPlusBrand.svelte": {
-      "types": "./dist/CreativeCommonsSamplingPlusBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsSamplingPlusBrand.svelte"
+    "./CreativeCommonsSamplingPlusBrands.svelte": {
+      "types": "./dist/CreativeCommonsSamplingPlusBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsSamplingPlusBrands.svelte"
     },
-    "./CreativeCommonsShareBrand.svelte": {
-      "types": "./dist/CreativeCommonsShareBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsShareBrand.svelte"
+    "./CreativeCommonsShareBrands.svelte": {
+      "types": "./dist/CreativeCommonsShareBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsShareBrands.svelte"
     },
-    "./CreativeCommonsZeroBrand.svelte": {
-      "types": "./dist/CreativeCommonsZeroBrand.svelte.d.ts",
-      "svelte": "./dist/CreativeCommonsZeroBrand.svelte"
+    "./CreativeCommonsZeroBrands.svelte": {
+      "types": "./dist/CreativeCommonsZeroBrands.svelte.d.ts",
+      "svelte": "./dist/CreativeCommonsZeroBrands.svelte"
     },
     "./CreditCardRegular.svelte": {
       "types": "./dist/CreditCardRegular.svelte.d.ts",
@@ -2116,9 +2132,9 @@
       "types": "./dist/CreditCardSolid.svelte.d.ts",
       "svelte": "./dist/CreditCardSolid.svelte"
     },
-    "./CriticalRoleBrand.svelte": {
-      "types": "./dist/CriticalRoleBrand.svelte.d.ts",
-      "svelte": "./dist/CriticalRoleBrand.svelte"
+    "./CriticalRoleBrands.svelte": {
+      "types": "./dist/CriticalRoleBrands.svelte.d.ts",
+      "svelte": "./dist/CriticalRoleBrands.svelte"
     },
     "./CropSimpleSolid.svelte": {
       "types": "./dist/CropSimpleSolid.svelte.d.ts",
@@ -2152,13 +2168,13 @@
       "types": "./dist/CruzeiroSignSolid.svelte.d.ts",
       "svelte": "./dist/CruzeiroSignSolid.svelte"
     },
-    "./Css3AltBrand.svelte": {
-      "types": "./dist/Css3AltBrand.svelte.d.ts",
-      "svelte": "./dist/Css3AltBrand.svelte"
+    "./Css3AltBrands.svelte": {
+      "types": "./dist/Css3AltBrands.svelte.d.ts",
+      "svelte": "./dist/Css3AltBrands.svelte"
     },
-    "./Css3Brand.svelte": {
-      "types": "./dist/Css3Brand.svelte.d.ts",
-      "svelte": "./dist/Css3Brand.svelte"
+    "./Css3Brands.svelte": {
+      "types": "./dist/Css3Brands.svelte.d.ts",
+      "svelte": "./dist/Css3Brands.svelte"
     },
     "./CubeSolid.svelte": {
       "types": "./dist/CubeSolid.svelte.d.ts",
@@ -2172,81 +2188,85 @@
       "types": "./dist/CubesStackedSolid.svelte.d.ts",
       "svelte": "./dist/CubesStackedSolid.svelte"
     },
-    "./CuttlefishBrand.svelte": {
-      "types": "./dist/CuttlefishBrand.svelte.d.ts",
-      "svelte": "./dist/CuttlefishBrand.svelte"
+    "./CuttlefishBrands.svelte": {
+      "types": "./dist/CuttlefishBrands.svelte.d.ts",
+      "svelte": "./dist/CuttlefishBrands.svelte"
     },
-    "./DAndDBeyondBrand.svelte": {
-      "types": "./dist/DAndDBeyondBrand.svelte.d.ts",
-      "svelte": "./dist/DAndDBeyondBrand.svelte"
+    "./DAndDBeyondBrands.svelte": {
+      "types": "./dist/DAndDBeyondBrands.svelte.d.ts",
+      "svelte": "./dist/DAndDBeyondBrands.svelte"
     },
-    "./DAndDBrand.svelte": {
-      "types": "./dist/DAndDBrand.svelte.d.ts",
-      "svelte": "./dist/DAndDBrand.svelte"
+    "./DAndDBrands.svelte": {
+      "types": "./dist/DAndDBrands.svelte.d.ts",
+      "svelte": "./dist/DAndDBrands.svelte"
     },
     "./DSolid.svelte": {
       "types": "./dist/DSolid.svelte.d.ts",
       "svelte": "./dist/DSolid.svelte"
     },
-    "./DailymotionBrand.svelte": {
-      "types": "./dist/DailymotionBrand.svelte.d.ts",
-      "svelte": "./dist/DailymotionBrand.svelte"
+    "./DailymotionBrands.svelte": {
+      "types": "./dist/DailymotionBrands.svelte.d.ts",
+      "svelte": "./dist/DailymotionBrands.svelte"
     },
-    "./DashcubeBrand.svelte": {
-      "types": "./dist/DashcubeBrand.svelte.d.ts",
-      "svelte": "./dist/DashcubeBrand.svelte"
+    "./DartLangBrands.svelte": {
+      "types": "./dist/DartLangBrands.svelte.d.ts",
+      "svelte": "./dist/DartLangBrands.svelte"
+    },
+    "./DashcubeBrands.svelte": {
+      "types": "./dist/DashcubeBrands.svelte.d.ts",
+      "svelte": "./dist/DashcubeBrands.svelte"
     },
     "./DatabaseSolid.svelte": {
       "types": "./dist/DatabaseSolid.svelte.d.ts",
       "svelte": "./dist/DatabaseSolid.svelte"
     },
-    "./DebianBrand.svelte": {
-      "types": "./dist/DebianBrand.svelte.d.ts",
-      "svelte": "./dist/DebianBrand.svelte"
+    "./DebianBrands.svelte": {
+      "types": "./dist/DebianBrands.svelte.d.ts",
+      "svelte": "./dist/DebianBrands.svelte"
     },
-    "./DeezerBrand.svelte": {
-      "types": "./dist/DeezerBrand.svelte.d.ts",
-      "svelte": "./dist/DeezerBrand.svelte"
+    "./DeezerBrands.svelte": {
+      "types": "./dist/DeezerBrands.svelte.d.ts",
+      "svelte": "./dist/DeezerBrands.svelte"
     },
     "./DeleteLeftSolid.svelte": {
       "types": "./dist/DeleteLeftSolid.svelte.d.ts",
       "svelte": "./dist/DeleteLeftSolid.svelte"
     },
-    "./DeliciousBrand.svelte": {
-      "types": "./dist/DeliciousBrand.svelte.d.ts",
-      "svelte": "./dist/DeliciousBrand.svelte"
+    "./DeliciousBrands.svelte": {
+      "types": "./dist/DeliciousBrands.svelte.d.ts",
+      "svelte": "./dist/DeliciousBrands.svelte"
     },
     "./DemocratSolid.svelte": {
       "types": "./dist/DemocratSolid.svelte.d.ts",
       "svelte": "./dist/DemocratSolid.svelte"
     },
-    "./DeploydogBrand.svelte": {
-      "types": "./dist/DeploydogBrand.svelte.d.ts",
-      "svelte": "./dist/DeploydogBrand.svelte"
+    "./DeploydogBrands.svelte": {
+      "types": "./dist/DeploydogBrands.svelte.d.ts",
+      "svelte": "./dist/DeploydogBrands.svelte"
     },
-    "./DeskproBrand.svelte": {
-      "types": "./dist/DeskproBrand.svelte.d.ts",
-      "svelte": "./dist/DeskproBrand.svelte"
+    "./DeskproBrands.svelte": {
+      "types": "./dist/DeskproBrands.svelte.d.ts",
+      "svelte": "./dist/DeskproBrands.svelte"
     },
     "./DesktopSolid.svelte": {
       "types": "./dist/DesktopSolid.svelte.d.ts",
       "svelte": "./dist/DesktopSolid.svelte"
     },
-    "./DevBrand.svelte": {
-      "types": "./dist/DevBrand.svelte.d.ts",
-      "svelte": "./dist/DevBrand.svelte"
+    "./DevBrands.svelte": {
+      "types": "./dist/DevBrands.svelte.d.ts",
+      "svelte": "./dist/DevBrands.svelte"
     },
-    "./DeviantartBrand.svelte": {
-      "types": "./dist/DeviantartBrand.svelte.d.ts",
-      "svelte": "./dist/DeviantartBrand.svelte"
+    "./DeviantartBrands.svelte": {
+      "types": "./dist/DeviantartBrands.svelte.d.ts",
+      "svelte": "./dist/DeviantartBrands.svelte"
     },
     "./DharmachakraSolid.svelte": {
       "types": "./dist/DharmachakraSolid.svelte.d.ts",
       "svelte": "./dist/DharmachakraSolid.svelte"
     },
-    "./DhlBrand.svelte": {
-      "types": "./dist/DhlBrand.svelte.d.ts",
-      "svelte": "./dist/DhlBrand.svelte"
+    "./DhlBrands.svelte": {
+      "types": "./dist/DhlBrands.svelte.d.ts",
+      "svelte": "./dist/DhlBrands.svelte"
     },
     "./DiagramNextSolid.svelte": {
       "types": "./dist/DiagramNextSolid.svelte.d.ts",
@@ -2272,9 +2292,9 @@
       "types": "./dist/DiamondTurnRightSolid.svelte.d.ts",
       "svelte": "./dist/DiamondTurnRightSolid.svelte"
     },
-    "./DiasporaBrand.svelte": {
-      "types": "./dist/DiasporaBrand.svelte.d.ts",
-      "svelte": "./dist/DiasporaBrand.svelte"
+    "./DiasporaBrands.svelte": {
+      "types": "./dist/DiasporaBrands.svelte.d.ts",
+      "svelte": "./dist/DiasporaBrands.svelte"
     },
     "./DiceD20Solid.svelte": {
       "types": "./dist/DiceD20Solid.svelte.d.ts",
@@ -2312,21 +2332,21 @@
       "types": "./dist/DiceTwoSolid.svelte.d.ts",
       "svelte": "./dist/DiceTwoSolid.svelte"
     },
-    "./DiggBrand.svelte": {
-      "types": "./dist/DiggBrand.svelte.d.ts",
-      "svelte": "./dist/DiggBrand.svelte"
+    "./DiggBrands.svelte": {
+      "types": "./dist/DiggBrands.svelte.d.ts",
+      "svelte": "./dist/DiggBrands.svelte"
     },
-    "./DigitalOceanBrand.svelte": {
-      "types": "./dist/DigitalOceanBrand.svelte.d.ts",
-      "svelte": "./dist/DigitalOceanBrand.svelte"
+    "./DigitalOceanBrands.svelte": {
+      "types": "./dist/DigitalOceanBrands.svelte.d.ts",
+      "svelte": "./dist/DigitalOceanBrands.svelte"
     },
-    "./DiscordBrand.svelte": {
-      "types": "./dist/DiscordBrand.svelte.d.ts",
-      "svelte": "./dist/DiscordBrand.svelte"
+    "./DiscordBrands.svelte": {
+      "types": "./dist/DiscordBrands.svelte.d.ts",
+      "svelte": "./dist/DiscordBrands.svelte"
     },
-    "./DiscourseBrand.svelte": {
-      "types": "./dist/DiscourseBrand.svelte.d.ts",
-      "svelte": "./dist/DiscourseBrand.svelte"
+    "./DiscourseBrands.svelte": {
+      "types": "./dist/DiscourseBrands.svelte.d.ts",
+      "svelte": "./dist/DiscourseBrands.svelte"
     },
     "./DiseaseSolid.svelte": {
       "types": "./dist/DiseaseSolid.svelte.d.ts",
@@ -2344,13 +2364,13 @@
       "types": "./dist/DnaSolid.svelte.d.ts",
       "svelte": "./dist/DnaSolid.svelte"
     },
-    "./DochubBrand.svelte": {
-      "types": "./dist/DochubBrand.svelte.d.ts",
-      "svelte": "./dist/DochubBrand.svelte"
+    "./DochubBrands.svelte": {
+      "types": "./dist/DochubBrands.svelte.d.ts",
+      "svelte": "./dist/DochubBrands.svelte"
     },
-    "./DockerBrand.svelte": {
-      "types": "./dist/DockerBrand.svelte.d.ts",
-      "svelte": "./dist/DockerBrand.svelte"
+    "./DockerBrands.svelte": {
+      "types": "./dist/DockerBrands.svelte.d.ts",
+      "svelte": "./dist/DockerBrands.svelte"
     },
     "./DogSolid.svelte": {
       "types": "./dist/DogSolid.svelte.d.ts",
@@ -2392,9 +2412,9 @@
       "types": "./dist/DownloadSolid.svelte.d.ts",
       "svelte": "./dist/DownloadSolid.svelte"
     },
-    "./Draft2digitalBrand.svelte": {
-      "types": "./dist/Draft2digitalBrand.svelte.d.ts",
-      "svelte": "./dist/Draft2digitalBrand.svelte"
+    "./Draft2digitalBrands.svelte": {
+      "types": "./dist/Draft2digitalBrands.svelte.d.ts",
+      "svelte": "./dist/Draft2digitalBrands.svelte"
     },
     "./DragonSolid.svelte": {
       "types": "./dist/DragonSolid.svelte.d.ts",
@@ -2404,13 +2424,13 @@
       "types": "./dist/DrawPolygonSolid.svelte.d.ts",
       "svelte": "./dist/DrawPolygonSolid.svelte"
     },
-    "./DribbbleBrand.svelte": {
-      "types": "./dist/DribbbleBrand.svelte.d.ts",
-      "svelte": "./dist/DribbbleBrand.svelte"
+    "./DribbbleBrands.svelte": {
+      "types": "./dist/DribbbleBrands.svelte.d.ts",
+      "svelte": "./dist/DribbbleBrands.svelte"
     },
-    "./DropboxBrand.svelte": {
-      "types": "./dist/DropboxBrand.svelte.d.ts",
-      "svelte": "./dist/DropboxBrand.svelte"
+    "./DropboxBrands.svelte": {
+      "types": "./dist/DropboxBrands.svelte.d.ts",
+      "svelte": "./dist/DropboxBrands.svelte"
     },
     "./DropletSlashSolid.svelte": {
       "types": "./dist/DropletSlashSolid.svelte.d.ts",
@@ -2432,9 +2452,9 @@
       "types": "./dist/DrumstickBiteSolid.svelte.d.ts",
       "svelte": "./dist/DrumstickBiteSolid.svelte"
     },
-    "./DrupalBrand.svelte": {
-      "types": "./dist/DrupalBrand.svelte.d.ts",
-      "svelte": "./dist/DrupalBrand.svelte"
+    "./DrupalBrands.svelte": {
+      "types": "./dist/DrupalBrands.svelte.d.ts",
+      "svelte": "./dist/DrupalBrands.svelte"
     },
     "./DumbbellSolid.svelte": {
       "types": "./dist/DumbbellSolid.svelte.d.ts",
@@ -2452,9 +2472,9 @@
       "types": "./dist/DungeonSolid.svelte.d.ts",
       "svelte": "./dist/DungeonSolid.svelte"
     },
-    "./DyalogBrand.svelte": {
-      "types": "./dist/DyalogBrand.svelte.d.ts",
-      "svelte": "./dist/DyalogBrand.svelte"
+    "./DyalogBrands.svelte": {
+      "types": "./dist/DyalogBrands.svelte.d.ts",
+      "svelte": "./dist/DyalogBrands.svelte"
     },
     "./ESolid.svelte": {
       "types": "./dist/ESolid.svelte.d.ts",
@@ -2468,9 +2488,9 @@
       "types": "./dist/EarListenSolid.svelte.d.ts",
       "svelte": "./dist/EarListenSolid.svelte"
     },
-    "./EarlybirdsBrand.svelte": {
-      "types": "./dist/EarlybirdsBrand.svelte.d.ts",
-      "svelte": "./dist/EarlybirdsBrand.svelte"
+    "./EarlybirdsBrands.svelte": {
+      "types": "./dist/EarlybirdsBrands.svelte.d.ts",
+      "svelte": "./dist/EarlybirdsBrands.svelte"
     },
     "./EarthAfricaSolid.svelte": {
       "types": "./dist/EarthAfricaSolid.svelte.d.ts",
@@ -2492,17 +2512,17 @@
       "types": "./dist/EarthOceaniaSolid.svelte.d.ts",
       "svelte": "./dist/EarthOceaniaSolid.svelte"
     },
-    "./EbayBrand.svelte": {
-      "types": "./dist/EbayBrand.svelte.d.ts",
-      "svelte": "./dist/EbayBrand.svelte"
+    "./EbayBrands.svelte": {
+      "types": "./dist/EbayBrands.svelte.d.ts",
+      "svelte": "./dist/EbayBrands.svelte"
     },
-    "./EdgeBrand.svelte": {
-      "types": "./dist/EdgeBrand.svelte.d.ts",
-      "svelte": "./dist/EdgeBrand.svelte"
+    "./EdgeBrands.svelte": {
+      "types": "./dist/EdgeBrands.svelte.d.ts",
+      "svelte": "./dist/EdgeBrands.svelte"
     },
-    "./EdgeLegacyBrand.svelte": {
-      "types": "./dist/EdgeLegacyBrand.svelte.d.ts",
-      "svelte": "./dist/EdgeLegacyBrand.svelte"
+    "./EdgeLegacyBrands.svelte": {
+      "types": "./dist/EdgeLegacyBrands.svelte.d.ts",
+      "svelte": "./dist/EdgeLegacyBrands.svelte"
     },
     "./EggSolid.svelte": {
       "types": "./dist/EggSolid.svelte.d.ts",
@@ -2512,9 +2532,9 @@
       "types": "./dist/EjectSolid.svelte.d.ts",
       "svelte": "./dist/EjectSolid.svelte"
     },
-    "./ElementorBrand.svelte": {
-      "types": "./dist/ElementorBrand.svelte.d.ts",
-      "svelte": "./dist/ElementorBrand.svelte"
+    "./ElementorBrands.svelte": {
+      "types": "./dist/ElementorBrands.svelte.d.ts",
+      "svelte": "./dist/ElementorBrands.svelte"
     },
     "./ElevatorSolid.svelte": {
       "types": "./dist/ElevatorSolid.svelte.d.ts",
@@ -2528,17 +2548,17 @@
       "types": "./dist/EllipsisVerticalSolid.svelte.d.ts",
       "svelte": "./dist/EllipsisVerticalSolid.svelte"
     },
-    "./ElloBrand.svelte": {
-      "types": "./dist/ElloBrand.svelte.d.ts",
-      "svelte": "./dist/ElloBrand.svelte"
+    "./ElloBrands.svelte": {
+      "types": "./dist/ElloBrands.svelte.d.ts",
+      "svelte": "./dist/ElloBrands.svelte"
     },
-    "./EmberBrand.svelte": {
-      "types": "./dist/EmberBrand.svelte.d.ts",
-      "svelte": "./dist/EmberBrand.svelte"
+    "./EmberBrands.svelte": {
+      "types": "./dist/EmberBrands.svelte.d.ts",
+      "svelte": "./dist/EmberBrands.svelte"
     },
-    "./EmpireBrand.svelte": {
-      "types": "./dist/EmpireBrand.svelte.d.ts",
-      "svelte": "./dist/EmpireBrand.svelte"
+    "./EmpireBrands.svelte": {
+      "types": "./dist/EmpireBrands.svelte.d.ts",
+      "svelte": "./dist/EmpireBrands.svelte"
     },
     "./EnvelopeCircleCheckSolid.svelte": {
       "types": "./dist/EnvelopeCircleCheckSolid.svelte.d.ts",
@@ -2568,9 +2588,9 @@
       "types": "./dist/EnvelopesBulkSolid.svelte.d.ts",
       "svelte": "./dist/EnvelopesBulkSolid.svelte"
     },
-    "./EnviraBrand.svelte": {
-      "types": "./dist/EnviraBrand.svelte.d.ts",
-      "svelte": "./dist/EnviraBrand.svelte"
+    "./EnviraBrands.svelte": {
+      "types": "./dist/EnviraBrands.svelte.d.ts",
+      "svelte": "./dist/EnviraBrands.svelte"
     },
     "./EqualsSolid.svelte": {
       "types": "./dist/EqualsSolid.svelte.d.ts",
@@ -2580,29 +2600,29 @@
       "types": "./dist/EraserSolid.svelte.d.ts",
       "svelte": "./dist/EraserSolid.svelte"
     },
-    "./ErlangBrand.svelte": {
-      "types": "./dist/ErlangBrand.svelte.d.ts",
-      "svelte": "./dist/ErlangBrand.svelte"
+    "./ErlangBrands.svelte": {
+      "types": "./dist/ErlangBrands.svelte.d.ts",
+      "svelte": "./dist/ErlangBrands.svelte"
     },
-    "./EthereumBrand.svelte": {
-      "types": "./dist/EthereumBrand.svelte.d.ts",
-      "svelte": "./dist/EthereumBrand.svelte"
+    "./EthereumBrands.svelte": {
+      "types": "./dist/EthereumBrands.svelte.d.ts",
+      "svelte": "./dist/EthereumBrands.svelte"
     },
     "./EthernetSolid.svelte": {
       "types": "./dist/EthernetSolid.svelte.d.ts",
       "svelte": "./dist/EthernetSolid.svelte"
     },
-    "./EtsyBrand.svelte": {
-      "types": "./dist/EtsyBrand.svelte.d.ts",
-      "svelte": "./dist/EtsyBrand.svelte"
+    "./EtsyBrands.svelte": {
+      "types": "./dist/EtsyBrands.svelte.d.ts",
+      "svelte": "./dist/EtsyBrands.svelte"
     },
     "./EuroSignSolid.svelte": {
       "types": "./dist/EuroSignSolid.svelte.d.ts",
       "svelte": "./dist/EuroSignSolid.svelte"
     },
-    "./EvernoteBrand.svelte": {
-      "types": "./dist/EvernoteBrand.svelte.d.ts",
-      "svelte": "./dist/EvernoteBrand.svelte"
+    "./EvernoteBrands.svelte": {
+      "types": "./dist/EvernoteBrands.svelte.d.ts",
+      "svelte": "./dist/EvernoteBrands.svelte"
     },
     "./ExclamationSolid.svelte": {
       "types": "./dist/ExclamationSolid.svelte.d.ts",
@@ -2612,9 +2632,9 @@
       "types": "./dist/ExpandSolid.svelte.d.ts",
       "svelte": "./dist/ExpandSolid.svelte"
     },
-    "./ExpeditedsslBrand.svelte": {
-      "types": "./dist/ExpeditedsslBrand.svelte.d.ts",
-      "svelte": "./dist/ExpeditedsslBrand.svelte"
+    "./ExpeditedsslBrands.svelte": {
+      "types": "./dist/ExpeditedsslBrands.svelte.d.ts",
+      "svelte": "./dist/ExpeditedsslBrands.svelte"
     },
     "./ExplosionSolid.svelte": {
       "types": "./dist/ExplosionSolid.svelte.d.ts",
@@ -2936,25 +2956,25 @@
       "types": "./dist/FaceTiredSolid.svelte.d.ts",
       "svelte": "./dist/FaceTiredSolid.svelte"
     },
-    "./FacebookBrand.svelte": {
-      "types": "./dist/FacebookBrand.svelte.d.ts",
-      "svelte": "./dist/FacebookBrand.svelte"
+    "./FacebookBrands.svelte": {
+      "types": "./dist/FacebookBrands.svelte.d.ts",
+      "svelte": "./dist/FacebookBrands.svelte"
     },
-    "./FacebookFBrand.svelte": {
-      "types": "./dist/FacebookFBrand.svelte.d.ts",
-      "svelte": "./dist/FacebookFBrand.svelte"
+    "./FacebookFBrands.svelte": {
+      "types": "./dist/FacebookFBrands.svelte.d.ts",
+      "svelte": "./dist/FacebookFBrands.svelte"
     },
-    "./FacebookMessengerBrand.svelte": {
-      "types": "./dist/FacebookMessengerBrand.svelte.d.ts",
-      "svelte": "./dist/FacebookMessengerBrand.svelte"
+    "./FacebookMessengerBrands.svelte": {
+      "types": "./dist/FacebookMessengerBrands.svelte.d.ts",
+      "svelte": "./dist/FacebookMessengerBrands.svelte"
     },
     "./FanSolid.svelte": {
       "types": "./dist/FanSolid.svelte.d.ts",
       "svelte": "./dist/FanSolid.svelte"
     },
-    "./FantasyFlightGamesBrand.svelte": {
-      "types": "./dist/FantasyFlightGamesBrand.svelte.d.ts",
-      "svelte": "./dist/FantasyFlightGamesBrand.svelte"
+    "./FantasyFlightGamesBrands.svelte": {
+      "types": "./dist/FantasyFlightGamesBrands.svelte.d.ts",
+      "svelte": "./dist/FantasyFlightGamesBrands.svelte"
     },
     "./FaucetDripSolid.svelte": {
       "types": "./dist/FaucetDripSolid.svelte.d.ts",
@@ -2976,21 +2996,21 @@
       "types": "./dist/FeatherSolid.svelte.d.ts",
       "svelte": "./dist/FeatherSolid.svelte"
     },
-    "./FedexBrand.svelte": {
-      "types": "./dist/FedexBrand.svelte.d.ts",
-      "svelte": "./dist/FedexBrand.svelte"
+    "./FedexBrands.svelte": {
+      "types": "./dist/FedexBrands.svelte.d.ts",
+      "svelte": "./dist/FedexBrands.svelte"
     },
-    "./FedoraBrand.svelte": {
-      "types": "./dist/FedoraBrand.svelte.d.ts",
-      "svelte": "./dist/FedoraBrand.svelte"
+    "./FedoraBrands.svelte": {
+      "types": "./dist/FedoraBrands.svelte.d.ts",
+      "svelte": "./dist/FedoraBrands.svelte"
     },
     "./FerrySolid.svelte": {
       "types": "./dist/FerrySolid.svelte.d.ts",
       "svelte": "./dist/FerrySolid.svelte"
     },
-    "./FigmaBrand.svelte": {
-      "types": "./dist/FigmaBrand.svelte.d.ts",
-      "svelte": "./dist/FigmaBrand.svelte"
+    "./FigmaBrands.svelte": {
+      "types": "./dist/FigmaBrands.svelte.d.ts",
+      "svelte": "./dist/FigmaBrands.svelte"
     },
     "./FileArrowDownSolid.svelte": {
       "types": "./dist/FileArrowDownSolid.svelte.d.ts",
@@ -3208,25 +3228,25 @@
       "types": "./dist/FireSolid.svelte.d.ts",
       "svelte": "./dist/FireSolid.svelte"
     },
-    "./FirefoxBrand.svelte": {
-      "types": "./dist/FirefoxBrand.svelte.d.ts",
-      "svelte": "./dist/FirefoxBrand.svelte"
+    "./FirefoxBrands.svelte": {
+      "types": "./dist/FirefoxBrands.svelte.d.ts",
+      "svelte": "./dist/FirefoxBrands.svelte"
     },
-    "./FirefoxBrowserBrand.svelte": {
-      "types": "./dist/FirefoxBrowserBrand.svelte.d.ts",
-      "svelte": "./dist/FirefoxBrowserBrand.svelte"
+    "./FirefoxBrowserBrands.svelte": {
+      "types": "./dist/FirefoxBrowserBrands.svelte.d.ts",
+      "svelte": "./dist/FirefoxBrowserBrands.svelte"
     },
-    "./FirstOrderAltBrand.svelte": {
-      "types": "./dist/FirstOrderAltBrand.svelte.d.ts",
-      "svelte": "./dist/FirstOrderAltBrand.svelte"
+    "./FirstOrderAltBrands.svelte": {
+      "types": "./dist/FirstOrderAltBrands.svelte.d.ts",
+      "svelte": "./dist/FirstOrderAltBrands.svelte"
     },
-    "./FirstOrderBrand.svelte": {
-      "types": "./dist/FirstOrderBrand.svelte.d.ts",
-      "svelte": "./dist/FirstOrderBrand.svelte"
+    "./FirstOrderBrands.svelte": {
+      "types": "./dist/FirstOrderBrands.svelte.d.ts",
+      "svelte": "./dist/FirstOrderBrands.svelte"
     },
-    "./FirstdraftBrand.svelte": {
-      "types": "./dist/FirstdraftBrand.svelte.d.ts",
-      "svelte": "./dist/FirstdraftBrand.svelte"
+    "./FirstdraftBrands.svelte": {
+      "types": "./dist/FirstdraftBrands.svelte.d.ts",
+      "svelte": "./dist/FirstdraftBrands.svelte"
     },
     "./FishFinsSolid.svelte": {
       "types": "./dist/FishFinsSolid.svelte.d.ts",
@@ -3260,13 +3280,13 @@
       "types": "./dist/FlaskVialSolid.svelte.d.ts",
       "svelte": "./dist/FlaskVialSolid.svelte"
     },
-    "./FlickrBrand.svelte": {
-      "types": "./dist/FlickrBrand.svelte.d.ts",
-      "svelte": "./dist/FlickrBrand.svelte"
+    "./FlickrBrands.svelte": {
+      "types": "./dist/FlickrBrands.svelte.d.ts",
+      "svelte": "./dist/FlickrBrands.svelte"
     },
-    "./FlipboardBrand.svelte": {
-      "types": "./dist/FlipboardBrand.svelte.d.ts",
-      "svelte": "./dist/FlipboardBrand.svelte"
+    "./FlipboardBrands.svelte": {
+      "types": "./dist/FlipboardBrands.svelte.d.ts",
+      "svelte": "./dist/FlipboardBrands.svelte"
     },
     "./FloppyDiskRegular.svelte": {
       "types": "./dist/FloppyDiskRegular.svelte.d.ts",
@@ -3280,9 +3300,13 @@
       "types": "./dist/FlorinSignSolid.svelte.d.ts",
       "svelte": "./dist/FlorinSignSolid.svelte"
     },
-    "./FlyBrand.svelte": {
-      "types": "./dist/FlyBrand.svelte.d.ts",
-      "svelte": "./dist/FlyBrand.svelte"
+    "./FlutterBrands.svelte": {
+      "types": "./dist/FlutterBrands.svelte.d.ts",
+      "svelte": "./dist/FlutterBrands.svelte"
+    },
+    "./FlyBrands.svelte": {
+      "types": "./dist/FlyBrands.svelte.d.ts",
+      "svelte": "./dist/FlyBrands.svelte"
     },
     "./FolderClosedRegular.svelte": {
       "types": "./dist/FolderClosedRegular.svelte.d.ts",
@@ -3320,9 +3344,9 @@
       "types": "./dist/FolderTreeSolid.svelte.d.ts",
       "svelte": "./dist/FolderTreeSolid.svelte"
     },
-    "./FontAwesomeBrand.svelte": {
-      "types": "./dist/FontAwesomeBrand.svelte.d.ts",
-      "svelte": "./dist/FontAwesomeBrand.svelte"
+    "./FontAwesomeBrands.svelte": {
+      "types": "./dist/FontAwesomeBrands.svelte.d.ts",
+      "svelte": "./dist/FontAwesomeBrands.svelte"
     },
     "./FontAwesomeRegular.svelte": {
       "types": "./dist/FontAwesomeRegular.svelte.d.ts",
@@ -3336,29 +3360,29 @@
       "types": "./dist/FontSolid.svelte.d.ts",
       "svelte": "./dist/FontSolid.svelte"
     },
-    "./FonticonsBrand.svelte": {
-      "types": "./dist/FonticonsBrand.svelte.d.ts",
-      "svelte": "./dist/FonticonsBrand.svelte"
+    "./FonticonsBrands.svelte": {
+      "types": "./dist/FonticonsBrands.svelte.d.ts",
+      "svelte": "./dist/FonticonsBrands.svelte"
     },
-    "./FonticonsFiBrand.svelte": {
-      "types": "./dist/FonticonsFiBrand.svelte.d.ts",
-      "svelte": "./dist/FonticonsFiBrand.svelte"
+    "./FonticonsFiBrands.svelte": {
+      "types": "./dist/FonticonsFiBrands.svelte.d.ts",
+      "svelte": "./dist/FonticonsFiBrands.svelte"
     },
     "./FootballSolid.svelte": {
       "types": "./dist/FootballSolid.svelte.d.ts",
       "svelte": "./dist/FootballSolid.svelte"
     },
-    "./FortAwesomeAltBrand.svelte": {
-      "types": "./dist/FortAwesomeAltBrand.svelte.d.ts",
-      "svelte": "./dist/FortAwesomeAltBrand.svelte"
+    "./FortAwesomeAltBrands.svelte": {
+      "types": "./dist/FortAwesomeAltBrands.svelte.d.ts",
+      "svelte": "./dist/FortAwesomeAltBrands.svelte"
     },
-    "./FortAwesomeBrand.svelte": {
-      "types": "./dist/FortAwesomeBrand.svelte.d.ts",
-      "svelte": "./dist/FortAwesomeBrand.svelte"
+    "./FortAwesomeBrands.svelte": {
+      "types": "./dist/FortAwesomeBrands.svelte.d.ts",
+      "svelte": "./dist/FortAwesomeBrands.svelte"
     },
-    "./ForumbeeBrand.svelte": {
-      "types": "./dist/ForumbeeBrand.svelte.d.ts",
-      "svelte": "./dist/ForumbeeBrand.svelte"
+    "./ForumbeeBrands.svelte": {
+      "types": "./dist/ForumbeeBrands.svelte.d.ts",
+      "svelte": "./dist/ForumbeeBrands.svelte"
     },
     "./ForwardFastSolid.svelte": {
       "types": "./dist/ForwardFastSolid.svelte.d.ts",
@@ -3372,29 +3396,29 @@
       "types": "./dist/ForwardStepSolid.svelte.d.ts",
       "svelte": "./dist/ForwardStepSolid.svelte"
     },
-    "./FoursquareBrand.svelte": {
-      "types": "./dist/FoursquareBrand.svelte.d.ts",
-      "svelte": "./dist/FoursquareBrand.svelte"
+    "./FoursquareBrands.svelte": {
+      "types": "./dist/FoursquareBrands.svelte.d.ts",
+      "svelte": "./dist/FoursquareBrands.svelte"
     },
     "./FrancSignSolid.svelte": {
       "types": "./dist/FrancSignSolid.svelte.d.ts",
       "svelte": "./dist/FrancSignSolid.svelte"
     },
-    "./FreeCodeCampBrand.svelte": {
-      "types": "./dist/FreeCodeCampBrand.svelte.d.ts",
-      "svelte": "./dist/FreeCodeCampBrand.svelte"
+    "./FreeCodeCampBrands.svelte": {
+      "types": "./dist/FreeCodeCampBrands.svelte.d.ts",
+      "svelte": "./dist/FreeCodeCampBrands.svelte"
     },
-    "./FreebsdBrand.svelte": {
-      "types": "./dist/FreebsdBrand.svelte.d.ts",
-      "svelte": "./dist/FreebsdBrand.svelte"
+    "./FreebsdBrands.svelte": {
+      "types": "./dist/FreebsdBrands.svelte.d.ts",
+      "svelte": "./dist/FreebsdBrands.svelte"
     },
     "./FrogSolid.svelte": {
       "types": "./dist/FrogSolid.svelte.d.ts",
       "svelte": "./dist/FrogSolid.svelte"
     },
-    "./FulcrumBrand.svelte": {
-      "types": "./dist/FulcrumBrand.svelte.d.ts",
-      "svelte": "./dist/FulcrumBrand.svelte"
+    "./FulcrumBrands.svelte": {
+      "types": "./dist/FulcrumBrands.svelte.d.ts",
+      "svelte": "./dist/FulcrumBrands.svelte"
     },
     "./FutbolRegular.svelte": {
       "types": "./dist/FutbolRegular.svelte.d.ts",
@@ -3408,13 +3432,13 @@
       "types": "./dist/GSolid.svelte.d.ts",
       "svelte": "./dist/GSolid.svelte"
     },
-    "./GalacticRepublicBrand.svelte": {
-      "types": "./dist/GalacticRepublicBrand.svelte.d.ts",
-      "svelte": "./dist/GalacticRepublicBrand.svelte"
+    "./GalacticRepublicBrands.svelte": {
+      "types": "./dist/GalacticRepublicBrands.svelte.d.ts",
+      "svelte": "./dist/GalacticRepublicBrands.svelte"
     },
-    "./GalacticSenateBrand.svelte": {
-      "types": "./dist/GalacticSenateBrand.svelte.d.ts",
-      "svelte": "./dist/GalacticSenateBrand.svelte"
+    "./GalacticSenateBrands.svelte": {
+      "types": "./dist/GalacticSenateBrands.svelte.d.ts",
+      "svelte": "./dist/GalacticSenateBrands.svelte"
     },
     "./GamepadSolid.svelte": {
       "types": "./dist/GamepadSolid.svelte.d.ts",
@@ -3464,17 +3488,17 @@
       "types": "./dist/GenderlessSolid.svelte.d.ts",
       "svelte": "./dist/GenderlessSolid.svelte"
     },
-    "./GetPocketBrand.svelte": {
-      "types": "./dist/GetPocketBrand.svelte.d.ts",
-      "svelte": "./dist/GetPocketBrand.svelte"
+    "./GetPocketBrands.svelte": {
+      "types": "./dist/GetPocketBrands.svelte.d.ts",
+      "svelte": "./dist/GetPocketBrands.svelte"
     },
-    "./GgBrand.svelte": {
-      "types": "./dist/GgBrand.svelte.d.ts",
-      "svelte": "./dist/GgBrand.svelte"
+    "./GgBrands.svelte": {
+      "types": "./dist/GgBrands.svelte.d.ts",
+      "svelte": "./dist/GgBrands.svelte"
     },
-    "./GgCircleBrand.svelte": {
-      "types": "./dist/GgCircleBrand.svelte.d.ts",
-      "svelte": "./dist/GgCircleBrand.svelte"
+    "./GgCircleBrands.svelte": {
+      "types": "./dist/GgCircleBrands.svelte.d.ts",
+      "svelte": "./dist/GgCircleBrands.svelte"
     },
     "./GhostSolid.svelte": {
       "types": "./dist/GhostSolid.svelte.d.ts",
@@ -3488,33 +3512,33 @@
       "types": "./dist/GiftsSolid.svelte.d.ts",
       "svelte": "./dist/GiftsSolid.svelte"
     },
-    "./GitAltBrand.svelte": {
-      "types": "./dist/GitAltBrand.svelte.d.ts",
-      "svelte": "./dist/GitAltBrand.svelte"
+    "./GitAltBrands.svelte": {
+      "types": "./dist/GitAltBrands.svelte.d.ts",
+      "svelte": "./dist/GitAltBrands.svelte"
     },
-    "./GitBrand.svelte": {
-      "types": "./dist/GitBrand.svelte.d.ts",
-      "svelte": "./dist/GitBrand.svelte"
+    "./GitBrands.svelte": {
+      "types": "./dist/GitBrands.svelte.d.ts",
+      "svelte": "./dist/GitBrands.svelte"
     },
-    "./GithubAltBrand.svelte": {
-      "types": "./dist/GithubAltBrand.svelte.d.ts",
-      "svelte": "./dist/GithubAltBrand.svelte"
+    "./GithubAltBrands.svelte": {
+      "types": "./dist/GithubAltBrands.svelte.d.ts",
+      "svelte": "./dist/GithubAltBrands.svelte"
     },
-    "./GithubBrand.svelte": {
-      "types": "./dist/GithubBrand.svelte.d.ts",
-      "svelte": "./dist/GithubBrand.svelte"
+    "./GithubBrands.svelte": {
+      "types": "./dist/GithubBrands.svelte.d.ts",
+      "svelte": "./dist/GithubBrands.svelte"
     },
-    "./GitkrakenBrand.svelte": {
-      "types": "./dist/GitkrakenBrand.svelte.d.ts",
-      "svelte": "./dist/GitkrakenBrand.svelte"
+    "./GitkrakenBrands.svelte": {
+      "types": "./dist/GitkrakenBrands.svelte.d.ts",
+      "svelte": "./dist/GitkrakenBrands.svelte"
     },
-    "./GitlabBrand.svelte": {
-      "types": "./dist/GitlabBrand.svelte.d.ts",
-      "svelte": "./dist/GitlabBrand.svelte"
+    "./GitlabBrands.svelte": {
+      "types": "./dist/GitlabBrands.svelte.d.ts",
+      "svelte": "./dist/GitlabBrands.svelte"
     },
-    "./GitterBrand.svelte": {
-      "types": "./dist/GitterBrand.svelte.d.ts",
-      "svelte": "./dist/GitterBrand.svelte"
+    "./GitterBrands.svelte": {
+      "types": "./dist/GitterBrands.svelte.d.ts",
+      "svelte": "./dist/GitterBrands.svelte"
     },
     "./GlassWaterDropletSolid.svelte": {
       "types": "./dist/GlassWaterDropletSolid.svelte.d.ts",
@@ -3528,69 +3552,69 @@
       "types": "./dist/GlassesSolid.svelte.d.ts",
       "svelte": "./dist/GlassesSolid.svelte"
     },
-    "./GlideBrand.svelte": {
-      "types": "./dist/GlideBrand.svelte.d.ts",
-      "svelte": "./dist/GlideBrand.svelte"
+    "./GlideBrands.svelte": {
+      "types": "./dist/GlideBrands.svelte.d.ts",
+      "svelte": "./dist/GlideBrands.svelte"
     },
-    "./GlideGBrand.svelte": {
-      "types": "./dist/GlideGBrand.svelte.d.ts",
-      "svelte": "./dist/GlideGBrand.svelte"
+    "./GlideGBrands.svelte": {
+      "types": "./dist/GlideGBrands.svelte.d.ts",
+      "svelte": "./dist/GlideGBrands.svelte"
     },
     "./GlobeSolid.svelte": {
       "types": "./dist/GlobeSolid.svelte.d.ts",
       "svelte": "./dist/GlobeSolid.svelte"
     },
-    "./GoforeBrand.svelte": {
-      "types": "./dist/GoforeBrand.svelte.d.ts",
-      "svelte": "./dist/GoforeBrand.svelte"
+    "./GoforeBrands.svelte": {
+      "types": "./dist/GoforeBrands.svelte.d.ts",
+      "svelte": "./dist/GoforeBrands.svelte"
     },
-    "./GolangBrand.svelte": {
-      "types": "./dist/GolangBrand.svelte.d.ts",
-      "svelte": "./dist/GolangBrand.svelte"
+    "./GolangBrands.svelte": {
+      "types": "./dist/GolangBrands.svelte.d.ts",
+      "svelte": "./dist/GolangBrands.svelte"
     },
     "./GolfBallTeeSolid.svelte": {
       "types": "./dist/GolfBallTeeSolid.svelte.d.ts",
       "svelte": "./dist/GolfBallTeeSolid.svelte"
     },
-    "./GoodreadsBrand.svelte": {
-      "types": "./dist/GoodreadsBrand.svelte.d.ts",
-      "svelte": "./dist/GoodreadsBrand.svelte"
+    "./GoodreadsBrands.svelte": {
+      "types": "./dist/GoodreadsBrands.svelte.d.ts",
+      "svelte": "./dist/GoodreadsBrands.svelte"
     },
-    "./GoodreadsGBrand.svelte": {
-      "types": "./dist/GoodreadsGBrand.svelte.d.ts",
-      "svelte": "./dist/GoodreadsGBrand.svelte"
+    "./GoodreadsGBrands.svelte": {
+      "types": "./dist/GoodreadsGBrands.svelte.d.ts",
+      "svelte": "./dist/GoodreadsGBrands.svelte"
     },
-    "./GoogleBrand.svelte": {
-      "types": "./dist/GoogleBrand.svelte.d.ts",
-      "svelte": "./dist/GoogleBrand.svelte"
+    "./GoogleBrands.svelte": {
+      "types": "./dist/GoogleBrands.svelte.d.ts",
+      "svelte": "./dist/GoogleBrands.svelte"
     },
-    "./GoogleDriveBrand.svelte": {
-      "types": "./dist/GoogleDriveBrand.svelte.d.ts",
-      "svelte": "./dist/GoogleDriveBrand.svelte"
+    "./GoogleDriveBrands.svelte": {
+      "types": "./dist/GoogleDriveBrands.svelte.d.ts",
+      "svelte": "./dist/GoogleDriveBrands.svelte"
     },
-    "./GooglePayBrand.svelte": {
-      "types": "./dist/GooglePayBrand.svelte.d.ts",
-      "svelte": "./dist/GooglePayBrand.svelte"
+    "./GooglePayBrands.svelte": {
+      "types": "./dist/GooglePayBrands.svelte.d.ts",
+      "svelte": "./dist/GooglePayBrands.svelte"
     },
-    "./GooglePlayBrand.svelte": {
-      "types": "./dist/GooglePlayBrand.svelte.d.ts",
-      "svelte": "./dist/GooglePlayBrand.svelte"
+    "./GooglePlayBrands.svelte": {
+      "types": "./dist/GooglePlayBrands.svelte.d.ts",
+      "svelte": "./dist/GooglePlayBrands.svelte"
     },
-    "./GooglePlusBrand.svelte": {
-      "types": "./dist/GooglePlusBrand.svelte.d.ts",
-      "svelte": "./dist/GooglePlusBrand.svelte"
+    "./GooglePlusBrands.svelte": {
+      "types": "./dist/GooglePlusBrands.svelte.d.ts",
+      "svelte": "./dist/GooglePlusBrands.svelte"
     },
-    "./GooglePlusGBrand.svelte": {
-      "types": "./dist/GooglePlusGBrand.svelte.d.ts",
-      "svelte": "./dist/GooglePlusGBrand.svelte"
+    "./GooglePlusGBrands.svelte": {
+      "types": "./dist/GooglePlusGBrands.svelte.d.ts",
+      "svelte": "./dist/GooglePlusGBrands.svelte"
     },
-    "./GoogleScholarBrand.svelte": {
-      "types": "./dist/GoogleScholarBrand.svelte.d.ts",
-      "svelte": "./dist/GoogleScholarBrand.svelte"
+    "./GoogleScholarBrands.svelte": {
+      "types": "./dist/GoogleScholarBrands.svelte.d.ts",
+      "svelte": "./dist/GoogleScholarBrands.svelte"
     },
-    "./GoogleWalletBrand.svelte": {
-      "types": "./dist/GoogleWalletBrand.svelte.d.ts",
-      "svelte": "./dist/GoogleWalletBrand.svelte"
+    "./GoogleWalletBrands.svelte": {
+      "types": "./dist/GoogleWalletBrands.svelte.d.ts",
+      "svelte": "./dist/GoogleWalletBrands.svelte"
     },
     "./GopuramSolid.svelte": {
       "types": "./dist/GopuramSolid.svelte.d.ts",
@@ -3600,13 +3624,13 @@
       "types": "./dist/GraduationCapSolid.svelte.d.ts",
       "svelte": "./dist/GraduationCapSolid.svelte"
     },
-    "./GratipayBrand.svelte": {
-      "types": "./dist/GratipayBrand.svelte.d.ts",
-      "svelte": "./dist/GratipayBrand.svelte"
+    "./GratipayBrands.svelte": {
+      "types": "./dist/GratipayBrands.svelte.d.ts",
+      "svelte": "./dist/GratipayBrands.svelte"
     },
-    "./GravBrand.svelte": {
-      "types": "./dist/GravBrand.svelte.d.ts",
-      "svelte": "./dist/GravBrand.svelte"
+    "./GravBrands.svelte": {
+      "types": "./dist/GravBrands.svelte.d.ts",
+      "svelte": "./dist/GravBrands.svelte"
     },
     "./GreaterThanEqualSolid.svelte": {
       "types": "./dist/GreaterThanEqualSolid.svelte.d.ts",
@@ -3632,33 +3656,33 @@
       "types": "./dist/GripVerticalSolid.svelte.d.ts",
       "svelte": "./dist/GripVerticalSolid.svelte"
     },
-    "./GripfireBrand.svelte": {
-      "types": "./dist/GripfireBrand.svelte.d.ts",
-      "svelte": "./dist/GripfireBrand.svelte"
+    "./GripfireBrands.svelte": {
+      "types": "./dist/GripfireBrands.svelte.d.ts",
+      "svelte": "./dist/GripfireBrands.svelte"
     },
     "./GroupArrowsRotateSolid.svelte": {
       "types": "./dist/GroupArrowsRotateSolid.svelte.d.ts",
       "svelte": "./dist/GroupArrowsRotateSolid.svelte"
     },
-    "./GruntBrand.svelte": {
-      "types": "./dist/GruntBrand.svelte.d.ts",
-      "svelte": "./dist/GruntBrand.svelte"
+    "./GruntBrands.svelte": {
+      "types": "./dist/GruntBrands.svelte.d.ts",
+      "svelte": "./dist/GruntBrands.svelte"
     },
     "./GuaraniSignSolid.svelte": {
       "types": "./dist/GuaraniSignSolid.svelte.d.ts",
       "svelte": "./dist/GuaraniSignSolid.svelte"
     },
-    "./GuildedBrand.svelte": {
-      "types": "./dist/GuildedBrand.svelte.d.ts",
-      "svelte": "./dist/GuildedBrand.svelte"
+    "./GuildedBrands.svelte": {
+      "types": "./dist/GuildedBrands.svelte.d.ts",
+      "svelte": "./dist/GuildedBrands.svelte"
     },
     "./GuitarSolid.svelte": {
       "types": "./dist/GuitarSolid.svelte.d.ts",
       "svelte": "./dist/GuitarSolid.svelte"
     },
-    "./GulpBrand.svelte": {
-      "types": "./dist/GulpBrand.svelte.d.ts",
-      "svelte": "./dist/GulpBrand.svelte"
+    "./GulpBrands.svelte": {
+      "types": "./dist/GulpBrands.svelte.d.ts",
+      "svelte": "./dist/GulpBrands.svelte"
     },
     "./GunSolid.svelte": {
       "types": "./dist/GunSolid.svelte.d.ts",
@@ -3668,13 +3692,13 @@
       "types": "./dist/HSolid.svelte.d.ts",
       "svelte": "./dist/HSolid.svelte"
     },
-    "./HackerNewsBrand.svelte": {
-      "types": "./dist/HackerNewsBrand.svelte.d.ts",
-      "svelte": "./dist/HackerNewsBrand.svelte"
+    "./HackerNewsBrands.svelte": {
+      "types": "./dist/HackerNewsBrands.svelte.d.ts",
+      "svelte": "./dist/HackerNewsBrands.svelte"
     },
-    "./HackerrankBrand.svelte": {
-      "types": "./dist/HackerrankBrand.svelte.d.ts",
-      "svelte": "./dist/HackerrankBrand.svelte"
+    "./HackerrankBrands.svelte": {
+      "types": "./dist/HackerrankBrands.svelte.d.ts",
+      "svelte": "./dist/HackerrankBrands.svelte"
     },
     "./HammerSolid.svelte": {
       "types": "./dist/HammerSolid.svelte.d.ts",
@@ -3888,9 +3912,9 @@
       "types": "./dist/HardDriveSolid.svelte.d.ts",
       "svelte": "./dist/HardDriveSolid.svelte"
     },
-    "./HashnodeBrand.svelte": {
-      "types": "./dist/HashnodeBrand.svelte.d.ts",
-      "svelte": "./dist/HashnodeBrand.svelte"
+    "./HashnodeBrands.svelte": {
+      "types": "./dist/HashnodeBrands.svelte.d.ts",
+      "svelte": "./dist/HashnodeBrands.svelte"
     },
     "./HashtagSolid.svelte": {
       "types": "./dist/HashtagSolid.svelte.d.ts",
@@ -4012,17 +4036,17 @@
       "types": "./dist/HippoSolid.svelte.d.ts",
       "svelte": "./dist/HippoSolid.svelte"
     },
-    "./HipsBrand.svelte": {
-      "types": "./dist/HipsBrand.svelte.d.ts",
-      "svelte": "./dist/HipsBrand.svelte"
+    "./HipsBrands.svelte": {
+      "types": "./dist/HipsBrands.svelte.d.ts",
+      "svelte": "./dist/HipsBrands.svelte"
     },
-    "./HireAHelperBrand.svelte": {
-      "types": "./dist/HireAHelperBrand.svelte.d.ts",
-      "svelte": "./dist/HireAHelperBrand.svelte"
+    "./HireAHelperBrands.svelte": {
+      "types": "./dist/HireAHelperBrands.svelte.d.ts",
+      "svelte": "./dist/HireAHelperBrands.svelte"
     },
-    "./HiveBrand.svelte": {
-      "types": "./dist/HiveBrand.svelte.d.ts",
-      "svelte": "./dist/HiveBrand.svelte"
+    "./HiveBrands.svelte": {
+      "types": "./dist/HiveBrands.svelte.d.ts",
+      "svelte": "./dist/HiveBrands.svelte"
     },
     "./HockeyPuckSolid.svelte": {
       "types": "./dist/HockeyPuckSolid.svelte.d.ts",
@@ -4032,13 +4056,13 @@
       "types": "./dist/HollyBerrySolid.svelte.d.ts",
       "svelte": "./dist/HollyBerrySolid.svelte"
     },
-    "./HooliBrand.svelte": {
-      "types": "./dist/HooliBrand.svelte.d.ts",
-      "svelte": "./dist/HooliBrand.svelte"
+    "./HooliBrands.svelte": {
+      "types": "./dist/HooliBrands.svelte.d.ts",
+      "svelte": "./dist/HooliBrands.svelte"
     },
-    "./HornbillBrand.svelte": {
-      "types": "./dist/HornbillBrand.svelte.d.ts",
-      "svelte": "./dist/HornbillBrand.svelte"
+    "./HornbillBrands.svelte": {
+      "types": "./dist/HornbillBrands.svelte.d.ts",
+      "svelte": "./dist/HornbillBrands.svelte"
     },
     "./HorseHeadSolid.svelte": {
       "types": "./dist/HorseHeadSolid.svelte.d.ts",
@@ -4072,9 +4096,9 @@
       "types": "./dist/HotelSolid.svelte.d.ts",
       "svelte": "./dist/HotelSolid.svelte"
     },
-    "./HotjarBrand.svelte": {
-      "types": "./dist/HotjarBrand.svelte.d.ts",
-      "svelte": "./dist/HotjarBrand.svelte"
+    "./HotjarBrands.svelte": {
+      "types": "./dist/HotjarBrands.svelte.d.ts",
+      "svelte": "./dist/HotjarBrands.svelte"
     },
     "./HourglassEndSolid.svelte": {
       "types": "./dist/HourglassEndSolid.svelte.d.ts",
@@ -4196,21 +4220,21 @@
       "types": "./dist/HouseUserSolid.svelte.d.ts",
       "svelte": "./dist/HouseUserSolid.svelte"
     },
-    "./HouzzBrand.svelte": {
-      "types": "./dist/HouzzBrand.svelte.d.ts",
-      "svelte": "./dist/HouzzBrand.svelte"
+    "./HouzzBrands.svelte": {
+      "types": "./dist/HouzzBrands.svelte.d.ts",
+      "svelte": "./dist/HouzzBrands.svelte"
     },
     "./HryvniaSignSolid.svelte": {
       "types": "./dist/HryvniaSignSolid.svelte.d.ts",
       "svelte": "./dist/HryvniaSignSolid.svelte"
     },
-    "./Html5Brand.svelte": {
-      "types": "./dist/Html5Brand.svelte.d.ts",
-      "svelte": "./dist/Html5Brand.svelte"
+    "./Html5Brands.svelte": {
+      "types": "./dist/Html5Brands.svelte.d.ts",
+      "svelte": "./dist/Html5Brands.svelte"
     },
-    "./HubspotBrand.svelte": {
-      "types": "./dist/HubspotBrand.svelte.d.ts",
-      "svelte": "./dist/HubspotBrand.svelte"
+    "./HubspotBrands.svelte": {
+      "types": "./dist/HubspotBrands.svelte.d.ts",
+      "svelte": "./dist/HubspotBrands.svelte"
     },
     "./HurricaneSolid.svelte": {
       "types": "./dist/HurricaneSolid.svelte.d.ts",
@@ -4260,9 +4284,9 @@
       "types": "./dist/IdCardSolid.svelte.d.ts",
       "svelte": "./dist/IdCardSolid.svelte"
     },
-    "./IdealBrand.svelte": {
-      "types": "./dist/IdealBrand.svelte.d.ts",
-      "svelte": "./dist/IdealBrand.svelte"
+    "./IdealBrands.svelte": {
+      "types": "./dist/IdealBrands.svelte.d.ts",
+      "svelte": "./dist/IdealBrands.svelte"
     },
     "./IglooSolid.svelte": {
       "types": "./dist/IglooSolid.svelte.d.ts",
@@ -4288,9 +4312,9 @@
       "types": "./dist/ImagesSolid.svelte.d.ts",
       "svelte": "./dist/ImagesSolid.svelte"
     },
-    "./ImdbBrand.svelte": {
-      "types": "./dist/ImdbBrand.svelte.d.ts",
-      "svelte": "./dist/ImdbBrand.svelte"
+    "./ImdbBrands.svelte": {
+      "types": "./dist/ImdbBrands.svelte.d.ts",
+      "svelte": "./dist/ImdbBrands.svelte"
     },
     "./InboxSolid.svelte": {
       "types": "./dist/InboxSolid.svelte.d.ts",
@@ -4316,45 +4340,45 @@
       "types": "./dist/InfoSolid.svelte.d.ts",
       "svelte": "./dist/InfoSolid.svelte"
     },
-    "./InstagramBrand.svelte": {
-      "types": "./dist/InstagramBrand.svelte.d.ts",
-      "svelte": "./dist/InstagramBrand.svelte"
+    "./InstagramBrands.svelte": {
+      "types": "./dist/InstagramBrands.svelte.d.ts",
+      "svelte": "./dist/InstagramBrands.svelte"
     },
-    "./InstalodBrand.svelte": {
-      "types": "./dist/InstalodBrand.svelte.d.ts",
-      "svelte": "./dist/InstalodBrand.svelte"
+    "./InstalodBrands.svelte": {
+      "types": "./dist/InstalodBrands.svelte.d.ts",
+      "svelte": "./dist/InstalodBrands.svelte"
     },
-    "./IntercomBrand.svelte": {
-      "types": "./dist/IntercomBrand.svelte.d.ts",
-      "svelte": "./dist/IntercomBrand.svelte"
+    "./IntercomBrands.svelte": {
+      "types": "./dist/IntercomBrands.svelte.d.ts",
+      "svelte": "./dist/IntercomBrands.svelte"
     },
-    "./InternetExplorerBrand.svelte": {
-      "types": "./dist/InternetExplorerBrand.svelte.d.ts",
-      "svelte": "./dist/InternetExplorerBrand.svelte"
+    "./InternetExplorerBrands.svelte": {
+      "types": "./dist/InternetExplorerBrands.svelte.d.ts",
+      "svelte": "./dist/InternetExplorerBrands.svelte"
     },
-    "./InvisionBrand.svelte": {
-      "types": "./dist/InvisionBrand.svelte.d.ts",
-      "svelte": "./dist/InvisionBrand.svelte"
+    "./InvisionBrands.svelte": {
+      "types": "./dist/InvisionBrands.svelte.d.ts",
+      "svelte": "./dist/InvisionBrands.svelte"
     },
-    "./IoxhostBrand.svelte": {
-      "types": "./dist/IoxhostBrand.svelte.d.ts",
-      "svelte": "./dist/IoxhostBrand.svelte"
+    "./IoxhostBrands.svelte": {
+      "types": "./dist/IoxhostBrands.svelte.d.ts",
+      "svelte": "./dist/IoxhostBrands.svelte"
     },
     "./ItalicSolid.svelte": {
       "types": "./dist/ItalicSolid.svelte.d.ts",
       "svelte": "./dist/ItalicSolid.svelte"
     },
-    "./ItchIoBrand.svelte": {
-      "types": "./dist/ItchIoBrand.svelte.d.ts",
-      "svelte": "./dist/ItchIoBrand.svelte"
+    "./ItchIoBrands.svelte": {
+      "types": "./dist/ItchIoBrands.svelte.d.ts",
+      "svelte": "./dist/ItchIoBrands.svelte"
     },
-    "./ItunesBrand.svelte": {
-      "types": "./dist/ItunesBrand.svelte.d.ts",
-      "svelte": "./dist/ItunesBrand.svelte"
+    "./ItunesBrands.svelte": {
+      "types": "./dist/ItunesBrands.svelte.d.ts",
+      "svelte": "./dist/ItunesBrands.svelte"
     },
-    "./ItunesNoteBrand.svelte": {
-      "types": "./dist/ItunesNoteBrand.svelte.d.ts",
-      "svelte": "./dist/ItunesNoteBrand.svelte"
+    "./ItunesNoteBrands.svelte": {
+      "types": "./dist/ItunesNoteBrands.svelte.d.ts",
+      "svelte": "./dist/ItunesNoteBrands.svelte"
     },
     "./JSolid.svelte": {
       "types": "./dist/JSolid.svelte.d.ts",
@@ -4368,21 +4392,21 @@
       "types": "./dist/JarWheatSolid.svelte.d.ts",
       "svelte": "./dist/JarWheatSolid.svelte"
     },
-    "./JavaBrand.svelte": {
-      "types": "./dist/JavaBrand.svelte.d.ts",
-      "svelte": "./dist/JavaBrand.svelte"
+    "./JavaBrands.svelte": {
+      "types": "./dist/JavaBrands.svelte.d.ts",
+      "svelte": "./dist/JavaBrands.svelte"
     },
-    "./JediOrderBrand.svelte": {
-      "types": "./dist/JediOrderBrand.svelte.d.ts",
-      "svelte": "./dist/JediOrderBrand.svelte"
+    "./JediOrderBrands.svelte": {
+      "types": "./dist/JediOrderBrands.svelte.d.ts",
+      "svelte": "./dist/JediOrderBrands.svelte"
     },
     "./JediSolid.svelte": {
       "types": "./dist/JediSolid.svelte.d.ts",
       "svelte": "./dist/JediSolid.svelte"
     },
-    "./JenkinsBrand.svelte": {
-      "types": "./dist/JenkinsBrand.svelte.d.ts",
-      "svelte": "./dist/JenkinsBrand.svelte"
+    "./JenkinsBrands.svelte": {
+      "types": "./dist/JenkinsBrands.svelte.d.ts",
+      "svelte": "./dist/JenkinsBrands.svelte"
     },
     "./JetFighterSolid.svelte": {
       "types": "./dist/JetFighterSolid.svelte.d.ts",
@@ -4392,33 +4416,37 @@
       "types": "./dist/JetFighterUpSolid.svelte.d.ts",
       "svelte": "./dist/JetFighterUpSolid.svelte"
     },
-    "./JiraBrand.svelte": {
-      "types": "./dist/JiraBrand.svelte.d.ts",
-      "svelte": "./dist/JiraBrand.svelte"
+    "./JiraBrands.svelte": {
+      "types": "./dist/JiraBrands.svelte.d.ts",
+      "svelte": "./dist/JiraBrands.svelte"
     },
-    "./JogetBrand.svelte": {
-      "types": "./dist/JogetBrand.svelte.d.ts",
-      "svelte": "./dist/JogetBrand.svelte"
+    "./JogetBrands.svelte": {
+      "types": "./dist/JogetBrands.svelte.d.ts",
+      "svelte": "./dist/JogetBrands.svelte"
     },
     "./JointSolid.svelte": {
       "types": "./dist/JointSolid.svelte.d.ts",
       "svelte": "./dist/JointSolid.svelte"
     },
-    "./JoomlaBrand.svelte": {
-      "types": "./dist/JoomlaBrand.svelte.d.ts",
-      "svelte": "./dist/JoomlaBrand.svelte"
+    "./JoomlaBrands.svelte": {
+      "types": "./dist/JoomlaBrands.svelte.d.ts",
+      "svelte": "./dist/JoomlaBrands.svelte"
     },
-    "./JsBrand.svelte": {
-      "types": "./dist/JsBrand.svelte.d.ts",
-      "svelte": "./dist/JsBrand.svelte"
+    "./JsBrands.svelte": {
+      "types": "./dist/JsBrands.svelte.d.ts",
+      "svelte": "./dist/JsBrands.svelte"
     },
-    "./JsfiddleBrand.svelte": {
-      "types": "./dist/JsfiddleBrand.svelte.d.ts",
-      "svelte": "./dist/JsfiddleBrand.svelte"
+    "./JsfiddleBrands.svelte": {
+      "types": "./dist/JsfiddleBrands.svelte.d.ts",
+      "svelte": "./dist/JsfiddleBrands.svelte"
     },
     "./JugDetergentSolid.svelte": {
       "types": "./dist/JugDetergentSolid.svelte.d.ts",
       "svelte": "./dist/JugDetergentSolid.svelte"
+    },
+    "./JxlBrands.svelte": {
+      "types": "./dist/JxlBrands.svelte.d.ts",
+      "svelte": "./dist/JxlBrands.svelte"
     },
     "./KSolid.svelte": {
       "types": "./dist/KSolid.svelte.d.ts",
@@ -4428,17 +4456,17 @@
       "types": "./dist/KaabaSolid.svelte.d.ts",
       "svelte": "./dist/KaabaSolid.svelte"
     },
-    "./KaggleBrand.svelte": {
-      "types": "./dist/KaggleBrand.svelte.d.ts",
-      "svelte": "./dist/KaggleBrand.svelte"
+    "./KaggleBrands.svelte": {
+      "types": "./dist/KaggleBrands.svelte.d.ts",
+      "svelte": "./dist/KaggleBrands.svelte"
     },
     "./KeySolid.svelte": {
       "types": "./dist/KeySolid.svelte.d.ts",
       "svelte": "./dist/KeySolid.svelte"
     },
-    "./KeybaseBrand.svelte": {
-      "types": "./dist/KeybaseBrand.svelte.d.ts",
-      "svelte": "./dist/KeybaseBrand.svelte"
+    "./KeybaseBrands.svelte": {
+      "types": "./dist/KeybaseBrands.svelte.d.ts",
+      "svelte": "./dist/KeybaseBrands.svelte"
     },
     "./KeyboardRegular.svelte": {
       "types": "./dist/KeyboardRegular.svelte.d.ts",
@@ -4448,21 +4476,21 @@
       "types": "./dist/KeyboardSolid.svelte.d.ts",
       "svelte": "./dist/KeyboardSolid.svelte"
     },
-    "./KeycdnBrand.svelte": {
-      "types": "./dist/KeycdnBrand.svelte.d.ts",
-      "svelte": "./dist/KeycdnBrand.svelte"
+    "./KeycdnBrands.svelte": {
+      "types": "./dist/KeycdnBrands.svelte.d.ts",
+      "svelte": "./dist/KeycdnBrands.svelte"
     },
     "./KhandaSolid.svelte": {
       "types": "./dist/KhandaSolid.svelte.d.ts",
       "svelte": "./dist/KhandaSolid.svelte"
     },
-    "./KickstarterBrand.svelte": {
-      "types": "./dist/KickstarterBrand.svelte.d.ts",
-      "svelte": "./dist/KickstarterBrand.svelte"
+    "./KickstarterBrands.svelte": {
+      "types": "./dist/KickstarterBrands.svelte.d.ts",
+      "svelte": "./dist/KickstarterBrands.svelte"
     },
-    "./KickstarterKBrand.svelte": {
-      "types": "./dist/KickstarterKBrand.svelte.d.ts",
-      "svelte": "./dist/KickstarterKBrand.svelte"
+    "./KickstarterKBrands.svelte": {
+      "types": "./dist/KickstarterKBrands.svelte.d.ts",
+      "svelte": "./dist/KickstarterKBrands.svelte"
     },
     "./KipSignSolid.svelte": {
       "types": "./dist/KipSignSolid.svelte.d.ts",
@@ -4480,9 +4508,9 @@
       "types": "./dist/KiwiBirdSolid.svelte.d.ts",
       "svelte": "./dist/KiwiBirdSolid.svelte"
     },
-    "./KorvueBrand.svelte": {
-      "types": "./dist/KorvueBrand.svelte.d.ts",
-      "svelte": "./dist/KorvueBrand.svelte"
+    "./KorvueBrands.svelte": {
+      "types": "./dist/KorvueBrands.svelte.d.ts",
+      "svelte": "./dist/KorvueBrands.svelte"
     },
     "./LSolid.svelte": {
       "types": "./dist/LSolid.svelte.d.ts",
@@ -4524,17 +4552,17 @@
       "types": "./dist/LaptopSolid.svelte.d.ts",
       "svelte": "./dist/LaptopSolid.svelte"
     },
-    "./LaravelBrand.svelte": {
-      "types": "./dist/LaravelBrand.svelte.d.ts",
-      "svelte": "./dist/LaravelBrand.svelte"
+    "./LaravelBrands.svelte": {
+      "types": "./dist/LaravelBrands.svelte.d.ts",
+      "svelte": "./dist/LaravelBrands.svelte"
     },
     "./LariSignSolid.svelte": {
       "types": "./dist/LariSignSolid.svelte.d.ts",
       "svelte": "./dist/LariSignSolid.svelte"
     },
-    "./LastfmBrand.svelte": {
-      "types": "./dist/LastfmBrand.svelte.d.ts",
-      "svelte": "./dist/LastfmBrand.svelte"
+    "./LastfmBrands.svelte": {
+      "types": "./dist/LastfmBrands.svelte.d.ts",
+      "svelte": "./dist/LastfmBrands.svelte"
     },
     "./LayerGroupSolid.svelte": {
       "types": "./dist/LayerGroupSolid.svelte.d.ts",
@@ -4544,9 +4572,9 @@
       "types": "./dist/LeafSolid.svelte.d.ts",
       "svelte": "./dist/LeafSolid.svelte"
     },
-    "./LeanpubBrand.svelte": {
-      "types": "./dist/LeanpubBrand.svelte.d.ts",
-      "svelte": "./dist/LeanpubBrand.svelte"
+    "./LeanpubBrands.svelte": {
+      "types": "./dist/LeanpubBrands.svelte.d.ts",
+      "svelte": "./dist/LeanpubBrands.svelte"
     },
     "./LeftLongSolid.svelte": {
       "types": "./dist/LeftLongSolid.svelte.d.ts",
@@ -4564,9 +4592,9 @@
       "types": "./dist/LemonSolid.svelte.d.ts",
       "svelte": "./dist/LemonSolid.svelte"
     },
-    "./LessBrand.svelte": {
-      "types": "./dist/LessBrand.svelte.d.ts",
-      "svelte": "./dist/LessBrand.svelte"
+    "./LessBrands.svelte": {
+      "types": "./dist/LessBrands.svelte.d.ts",
+      "svelte": "./dist/LessBrands.svelte"
     },
     "./LessThanEqualSolid.svelte": {
       "types": "./dist/LessThanEqualSolid.svelte.d.ts",
@@ -4576,9 +4604,9 @@
       "types": "./dist/LessThanSolid.svelte.d.ts",
       "svelte": "./dist/LessThanSolid.svelte"
     },
-    "./LetterboxdBrand.svelte": {
-      "types": "./dist/LetterboxdBrand.svelte.d.ts",
-      "svelte": "./dist/LetterboxdBrand.svelte"
+    "./LetterboxdBrands.svelte": {
+      "types": "./dist/LetterboxdBrands.svelte.d.ts",
+      "svelte": "./dist/LetterboxdBrands.svelte"
     },
     "./LifeRingRegular.svelte": {
       "types": "./dist/LifeRingRegular.svelte.d.ts",
@@ -4596,9 +4624,9 @@
       "types": "./dist/LightbulbSolid.svelte.d.ts",
       "svelte": "./dist/LightbulbSolid.svelte"
     },
-    "./LineBrand.svelte": {
-      "types": "./dist/LineBrand.svelte.d.ts",
-      "svelte": "./dist/LineBrand.svelte"
+    "./LineBrands.svelte": {
+      "types": "./dist/LineBrands.svelte.d.ts",
+      "svelte": "./dist/LineBrands.svelte"
     },
     "./LinesLeaningSolid.svelte": {
       "types": "./dist/LinesLeaningSolid.svelte.d.ts",
@@ -4612,21 +4640,21 @@
       "types": "./dist/LinkSolid.svelte.d.ts",
       "svelte": "./dist/LinkSolid.svelte"
     },
-    "./LinkedinBrand.svelte": {
-      "types": "./dist/LinkedinBrand.svelte.d.ts",
-      "svelte": "./dist/LinkedinBrand.svelte"
+    "./LinkedinBrands.svelte": {
+      "types": "./dist/LinkedinBrands.svelte.d.ts",
+      "svelte": "./dist/LinkedinBrands.svelte"
     },
-    "./LinkedinInBrand.svelte": {
-      "types": "./dist/LinkedinInBrand.svelte.d.ts",
-      "svelte": "./dist/LinkedinInBrand.svelte"
+    "./LinkedinInBrands.svelte": {
+      "types": "./dist/LinkedinInBrands.svelte.d.ts",
+      "svelte": "./dist/LinkedinInBrands.svelte"
     },
-    "./LinodeBrand.svelte": {
-      "types": "./dist/LinodeBrand.svelte.d.ts",
-      "svelte": "./dist/LinodeBrand.svelte"
+    "./LinodeBrands.svelte": {
+      "types": "./dist/LinodeBrands.svelte.d.ts",
+      "svelte": "./dist/LinodeBrands.svelte"
     },
-    "./LinuxBrand.svelte": {
-      "types": "./dist/LinuxBrand.svelte.d.ts",
-      "svelte": "./dist/LinuxBrand.svelte"
+    "./LinuxBrands.svelte": {
+      "types": "./dist/LinuxBrands.svelte.d.ts",
+      "svelte": "./dist/LinuxBrands.svelte"
     },
     "./LiraSignSolid.svelte": {
       "types": "./dist/LiraSignSolid.svelte.d.ts",
@@ -4692,17 +4720,17 @@
       "types": "./dist/LungsVirusSolid.svelte.d.ts",
       "svelte": "./dist/LungsVirusSolid.svelte"
     },
-    "./LyftBrand.svelte": {
-      "types": "./dist/LyftBrand.svelte.d.ts",
-      "svelte": "./dist/LyftBrand.svelte"
+    "./LyftBrands.svelte": {
+      "types": "./dist/LyftBrands.svelte.d.ts",
+      "svelte": "./dist/LyftBrands.svelte"
     },
     "./MSolid.svelte": {
       "types": "./dist/MSolid.svelte.d.ts",
       "svelte": "./dist/MSolid.svelte"
     },
-    "./MagentoBrand.svelte": {
-      "types": "./dist/MagentoBrand.svelte.d.ts",
-      "svelte": "./dist/MagentoBrand.svelte"
+    "./MagentoBrands.svelte": {
+      "types": "./dist/MagentoBrands.svelte.d.ts",
+      "svelte": "./dist/MagentoBrands.svelte"
     },
     "./MagnetSolid.svelte": {
       "types": "./dist/MagnetSolid.svelte.d.ts",
@@ -4736,17 +4764,17 @@
       "types": "./dist/MagnifyingGlassSolid.svelte.d.ts",
       "svelte": "./dist/MagnifyingGlassSolid.svelte"
     },
-    "./MailchimpBrand.svelte": {
-      "types": "./dist/MailchimpBrand.svelte.d.ts",
-      "svelte": "./dist/MailchimpBrand.svelte"
+    "./MailchimpBrands.svelte": {
+      "types": "./dist/MailchimpBrands.svelte.d.ts",
+      "svelte": "./dist/MailchimpBrands.svelte"
     },
     "./ManatSignSolid.svelte": {
       "types": "./dist/ManatSignSolid.svelte.d.ts",
       "svelte": "./dist/ManatSignSolid.svelte"
     },
-    "./MandalorianBrand.svelte": {
-      "types": "./dist/MandalorianBrand.svelte.d.ts",
-      "svelte": "./dist/MandalorianBrand.svelte"
+    "./MandalorianBrands.svelte": {
+      "types": "./dist/MandalorianBrands.svelte.d.ts",
+      "svelte": "./dist/MandalorianBrands.svelte"
     },
     "./MapLocationDotSolid.svelte": {
       "types": "./dist/MapLocationDotSolid.svelte.d.ts",
@@ -4768,9 +4796,9 @@
       "types": "./dist/MapSolid.svelte.d.ts",
       "svelte": "./dist/MapSolid.svelte"
     },
-    "./MarkdownBrand.svelte": {
-      "types": "./dist/MarkdownBrand.svelte.d.ts",
-      "svelte": "./dist/MarkdownBrand.svelte"
+    "./MarkdownBrands.svelte": {
+      "types": "./dist/MarkdownBrands.svelte.d.ts",
+      "svelte": "./dist/MarkdownBrands.svelte"
     },
     "./MarkerSolid.svelte": {
       "types": "./dist/MarkerSolid.svelte.d.ts",
@@ -4832,57 +4860,57 @@
       "types": "./dist/MasksTheaterSolid.svelte.d.ts",
       "svelte": "./dist/MasksTheaterSolid.svelte"
     },
-    "./MastodonBrand.svelte": {
-      "types": "./dist/MastodonBrand.svelte.d.ts",
-      "svelte": "./dist/MastodonBrand.svelte"
+    "./MastodonBrands.svelte": {
+      "types": "./dist/MastodonBrands.svelte.d.ts",
+      "svelte": "./dist/MastodonBrands.svelte"
     },
     "./MattressPillowSolid.svelte": {
       "types": "./dist/MattressPillowSolid.svelte.d.ts",
       "svelte": "./dist/MattressPillowSolid.svelte"
     },
-    "./MaxcdnBrand.svelte": {
-      "types": "./dist/MaxcdnBrand.svelte.d.ts",
-      "svelte": "./dist/MaxcdnBrand.svelte"
+    "./MaxcdnBrands.svelte": {
+      "types": "./dist/MaxcdnBrands.svelte.d.ts",
+      "svelte": "./dist/MaxcdnBrands.svelte"
     },
     "./MaximizeSolid.svelte": {
       "types": "./dist/MaximizeSolid.svelte.d.ts",
       "svelte": "./dist/MaximizeSolid.svelte"
     },
-    "./MdbBrand.svelte": {
-      "types": "./dist/MdbBrand.svelte.d.ts",
-      "svelte": "./dist/MdbBrand.svelte"
+    "./MdbBrands.svelte": {
+      "types": "./dist/MdbBrands.svelte.d.ts",
+      "svelte": "./dist/MdbBrands.svelte"
     },
     "./MedalSolid.svelte": {
       "types": "./dist/MedalSolid.svelte.d.ts",
       "svelte": "./dist/MedalSolid.svelte"
     },
-    "./MedappsBrand.svelte": {
-      "types": "./dist/MedappsBrand.svelte.d.ts",
-      "svelte": "./dist/MedappsBrand.svelte"
+    "./MedappsBrands.svelte": {
+      "types": "./dist/MedappsBrands.svelte.d.ts",
+      "svelte": "./dist/MedappsBrands.svelte"
     },
-    "./MediumBrand.svelte": {
-      "types": "./dist/MediumBrand.svelte.d.ts",
-      "svelte": "./dist/MediumBrand.svelte"
+    "./MediumBrands.svelte": {
+      "types": "./dist/MediumBrands.svelte.d.ts",
+      "svelte": "./dist/MediumBrands.svelte"
     },
-    "./MedrtBrand.svelte": {
-      "types": "./dist/MedrtBrand.svelte.d.ts",
-      "svelte": "./dist/MedrtBrand.svelte"
+    "./MedrtBrands.svelte": {
+      "types": "./dist/MedrtBrands.svelte.d.ts",
+      "svelte": "./dist/MedrtBrands.svelte"
     },
-    "./MeetupBrand.svelte": {
-      "types": "./dist/MeetupBrand.svelte.d.ts",
-      "svelte": "./dist/MeetupBrand.svelte"
+    "./MeetupBrands.svelte": {
+      "types": "./dist/MeetupBrands.svelte.d.ts",
+      "svelte": "./dist/MeetupBrands.svelte"
     },
-    "./MegaportBrand.svelte": {
-      "types": "./dist/MegaportBrand.svelte.d.ts",
-      "svelte": "./dist/MegaportBrand.svelte"
+    "./MegaportBrands.svelte": {
+      "types": "./dist/MegaportBrands.svelte.d.ts",
+      "svelte": "./dist/MegaportBrands.svelte"
     },
     "./MemorySolid.svelte": {
       "types": "./dist/MemorySolid.svelte.d.ts",
       "svelte": "./dist/MemorySolid.svelte"
     },
-    "./MendeleyBrand.svelte": {
-      "types": "./dist/MendeleyBrand.svelte.d.ts",
-      "svelte": "./dist/MendeleyBrand.svelte"
+    "./MendeleyBrands.svelte": {
+      "types": "./dist/MendeleyBrands.svelte.d.ts",
+      "svelte": "./dist/MendeleyBrands.svelte"
     },
     "./MenorahSolid.svelte": {
       "types": "./dist/MenorahSolid.svelte.d.ts",
@@ -4900,17 +4928,17 @@
       "types": "./dist/MessageSolid.svelte.d.ts",
       "svelte": "./dist/MessageSolid.svelte"
     },
-    "./MetaBrand.svelte": {
-      "types": "./dist/MetaBrand.svelte.d.ts",
-      "svelte": "./dist/MetaBrand.svelte"
+    "./MetaBrands.svelte": {
+      "types": "./dist/MetaBrands.svelte.d.ts",
+      "svelte": "./dist/MetaBrands.svelte"
     },
     "./MeteorSolid.svelte": {
       "types": "./dist/MeteorSolid.svelte.d.ts",
       "svelte": "./dist/MeteorSolid.svelte"
     },
-    "./MicroblogBrand.svelte": {
-      "types": "./dist/MicroblogBrand.svelte.d.ts",
-      "svelte": "./dist/MicroblogBrand.svelte"
+    "./MicroblogBrands.svelte": {
+      "types": "./dist/MicroblogBrands.svelte.d.ts",
+      "svelte": "./dist/MicroblogBrands.svelte"
     },
     "./MicrochipSolid.svelte": {
       "types": "./dist/MicrochipSolid.svelte.d.ts",
@@ -4936,9 +4964,9 @@
       "types": "./dist/MicroscopeSolid.svelte.d.ts",
       "svelte": "./dist/MicroscopeSolid.svelte"
     },
-    "./MicrosoftBrand.svelte": {
-      "types": "./dist/MicrosoftBrand.svelte.d.ts",
-      "svelte": "./dist/MicrosoftBrand.svelte"
+    "./MicrosoftBrands.svelte": {
+      "types": "./dist/MicrosoftBrands.svelte.d.ts",
+      "svelte": "./dist/MicrosoftBrands.svelte"
     },
     "./MillSignSolid.svelte": {
       "types": "./dist/MillSignSolid.svelte.d.ts",
@@ -4948,9 +4976,9 @@
       "types": "./dist/MinimizeSolid.svelte.d.ts",
       "svelte": "./dist/MinimizeSolid.svelte"
     },
-    "./MintbitBrand.svelte": {
-      "types": "./dist/MintbitBrand.svelte.d.ts",
-      "svelte": "./dist/MintbitBrand.svelte"
+    "./MintbitBrands.svelte": {
+      "types": "./dist/MintbitBrands.svelte.d.ts",
+      "svelte": "./dist/MintbitBrands.svelte"
     },
     "./MinusSolid.svelte": {
       "types": "./dist/MinusSolid.svelte.d.ts",
@@ -4960,21 +4988,21 @@
       "types": "./dist/MittenSolid.svelte.d.ts",
       "svelte": "./dist/MittenSolid.svelte"
     },
-    "./MixBrand.svelte": {
-      "types": "./dist/MixBrand.svelte.d.ts",
-      "svelte": "./dist/MixBrand.svelte"
+    "./MixBrands.svelte": {
+      "types": "./dist/MixBrands.svelte.d.ts",
+      "svelte": "./dist/MixBrands.svelte"
     },
-    "./MixcloudBrand.svelte": {
-      "types": "./dist/MixcloudBrand.svelte.d.ts",
-      "svelte": "./dist/MixcloudBrand.svelte"
+    "./MixcloudBrands.svelte": {
+      "types": "./dist/MixcloudBrands.svelte.d.ts",
+      "svelte": "./dist/MixcloudBrands.svelte"
     },
-    "./MixerBrand.svelte": {
-      "types": "./dist/MixerBrand.svelte.d.ts",
-      "svelte": "./dist/MixerBrand.svelte"
+    "./MixerBrands.svelte": {
+      "types": "./dist/MixerBrands.svelte.d.ts",
+      "svelte": "./dist/MixerBrands.svelte"
     },
-    "./MizuniBrand.svelte": {
-      "types": "./dist/MizuniBrand.svelte.d.ts",
-      "svelte": "./dist/MizuniBrand.svelte"
+    "./MizuniBrands.svelte": {
+      "types": "./dist/MizuniBrands.svelte.d.ts",
+      "svelte": "./dist/MizuniBrands.svelte"
     },
     "./MobileButtonSolid.svelte": {
       "types": "./dist/MobileButtonSolid.svelte.d.ts",
@@ -4996,13 +5024,13 @@
       "types": "./dist/MobileSolid.svelte.d.ts",
       "svelte": "./dist/MobileSolid.svelte"
     },
-    "./ModxBrand.svelte": {
-      "types": "./dist/ModxBrand.svelte.d.ts",
-      "svelte": "./dist/ModxBrand.svelte"
+    "./ModxBrands.svelte": {
+      "types": "./dist/ModxBrands.svelte.d.ts",
+      "svelte": "./dist/ModxBrands.svelte"
     },
-    "./MoneroBrand.svelte": {
-      "types": "./dist/MoneroBrand.svelte.d.ts",
-      "svelte": "./dist/MoneroBrand.svelte"
+    "./MoneroBrands.svelte": {
+      "types": "./dist/MoneroBrands.svelte.d.ts",
+      "svelte": "./dist/MoneroBrands.svelte"
     },
     "./MoneyBill1Regular.svelte": {
       "types": "./dist/MoneyBill1Regular.svelte.d.ts",
@@ -5116,13 +5144,13 @@
       "types": "./dist/NairaSignSolid.svelte.d.ts",
       "svelte": "./dist/NairaSignSolid.svelte"
     },
-    "./NapsterBrand.svelte": {
-      "types": "./dist/NapsterBrand.svelte.d.ts",
-      "svelte": "./dist/NapsterBrand.svelte"
+    "./NapsterBrands.svelte": {
+      "types": "./dist/NapsterBrands.svelte.d.ts",
+      "svelte": "./dist/NapsterBrands.svelte"
     },
-    "./NeosBrand.svelte": {
-      "types": "./dist/NeosBrand.svelte.d.ts",
-      "svelte": "./dist/NeosBrand.svelte"
+    "./NeosBrands.svelte": {
+      "types": "./dist/NeosBrands.svelte.d.ts",
+      "svelte": "./dist/NeosBrands.svelte"
     },
     "./NetworkWiredSolid.svelte": {
       "types": "./dist/NetworkWiredSolid.svelte.d.ts",
@@ -5140,25 +5168,25 @@
       "types": "./dist/NewspaperSolid.svelte.d.ts",
       "svelte": "./dist/NewspaperSolid.svelte"
     },
-    "./NfcDirectionalBrand.svelte": {
-      "types": "./dist/NfcDirectionalBrand.svelte.d.ts",
-      "svelte": "./dist/NfcDirectionalBrand.svelte"
+    "./NfcDirectionalBrands.svelte": {
+      "types": "./dist/NfcDirectionalBrands.svelte.d.ts",
+      "svelte": "./dist/NfcDirectionalBrands.svelte"
     },
-    "./NfcSymbolBrand.svelte": {
-      "types": "./dist/NfcSymbolBrand.svelte.d.ts",
-      "svelte": "./dist/NfcSymbolBrand.svelte"
+    "./NfcSymbolBrands.svelte": {
+      "types": "./dist/NfcSymbolBrands.svelte.d.ts",
+      "svelte": "./dist/NfcSymbolBrands.svelte"
     },
-    "./NimblrBrand.svelte": {
-      "types": "./dist/NimblrBrand.svelte.d.ts",
-      "svelte": "./dist/NimblrBrand.svelte"
+    "./NimblrBrands.svelte": {
+      "types": "./dist/NimblrBrands.svelte.d.ts",
+      "svelte": "./dist/NimblrBrands.svelte"
     },
-    "./NodeBrand.svelte": {
-      "types": "./dist/NodeBrand.svelte.d.ts",
-      "svelte": "./dist/NodeBrand.svelte"
+    "./NodeBrands.svelte": {
+      "types": "./dist/NodeBrands.svelte.d.ts",
+      "svelte": "./dist/NodeBrands.svelte"
     },
-    "./NodeJsBrand.svelte": {
-      "types": "./dist/NodeJsBrand.svelte.d.ts",
-      "svelte": "./dist/NodeJsBrand.svelte"
+    "./NodeJsBrands.svelte": {
+      "types": "./dist/NodeJsBrands.svelte.d.ts",
+      "svelte": "./dist/NodeJsBrands.svelte"
     },
     "./NotEqualSolid.svelte": {
       "types": "./dist/NotEqualSolid.svelte.d.ts",
@@ -5180,17 +5208,17 @@
       "types": "./dist/NotesMedicalSolid.svelte.d.ts",
       "svelte": "./dist/NotesMedicalSolid.svelte"
     },
-    "./NpmBrand.svelte": {
-      "types": "./dist/NpmBrand.svelte.d.ts",
-      "svelte": "./dist/NpmBrand.svelte"
+    "./NpmBrands.svelte": {
+      "types": "./dist/NpmBrands.svelte.d.ts",
+      "svelte": "./dist/NpmBrands.svelte"
     },
-    "./Ns8Brand.svelte": {
-      "types": "./dist/Ns8Brand.svelte.d.ts",
-      "svelte": "./dist/Ns8Brand.svelte"
+    "./Ns8Brands.svelte": {
+      "types": "./dist/Ns8Brands.svelte.d.ts",
+      "svelte": "./dist/Ns8Brands.svelte"
     },
-    "./NutritionixBrand.svelte": {
-      "types": "./dist/NutritionixBrand.svelte.d.ts",
-      "svelte": "./dist/NutritionixBrand.svelte"
+    "./NutritionixBrands.svelte": {
+      "types": "./dist/NutritionixBrands.svelte.d.ts",
+      "svelte": "./dist/NutritionixBrands.svelte"
     },
     "./OSolid.svelte": {
       "types": "./dist/OSolid.svelte.d.ts",
@@ -5212,17 +5240,17 @@
       "types": "./dist/ObjectUngroupSolid.svelte.d.ts",
       "svelte": "./dist/ObjectUngroupSolid.svelte"
     },
-    "./OctopusDeployBrand.svelte": {
-      "types": "./dist/OctopusDeployBrand.svelte.d.ts",
-      "svelte": "./dist/OctopusDeployBrand.svelte"
+    "./OctopusDeployBrands.svelte": {
+      "types": "./dist/OctopusDeployBrands.svelte.d.ts",
+      "svelte": "./dist/OctopusDeployBrands.svelte"
     },
-    "./OdnoklassnikiBrand.svelte": {
-      "types": "./dist/OdnoklassnikiBrand.svelte.d.ts",
-      "svelte": "./dist/OdnoklassnikiBrand.svelte"
+    "./OdnoklassnikiBrands.svelte": {
+      "types": "./dist/OdnoklassnikiBrands.svelte.d.ts",
+      "svelte": "./dist/OdnoklassnikiBrands.svelte"
     },
-    "./OdyseeBrand.svelte": {
-      "types": "./dist/OdyseeBrand.svelte.d.ts",
-      "svelte": "./dist/OdyseeBrand.svelte"
+    "./OdyseeBrands.svelte": {
+      "types": "./dist/OdyseeBrands.svelte.d.ts",
+      "svelte": "./dist/OdyseeBrands.svelte"
     },
     "./OilCanSolid.svelte": {
       "types": "./dist/OilCanSolid.svelte.d.ts",
@@ -5232,41 +5260,41 @@
       "types": "./dist/OilWellSolid.svelte.d.ts",
       "svelte": "./dist/OilWellSolid.svelte"
     },
-    "./OldRepublicBrand.svelte": {
-      "types": "./dist/OldRepublicBrand.svelte.d.ts",
-      "svelte": "./dist/OldRepublicBrand.svelte"
+    "./OldRepublicBrands.svelte": {
+      "types": "./dist/OldRepublicBrands.svelte.d.ts",
+      "svelte": "./dist/OldRepublicBrands.svelte"
     },
     "./OmSolid.svelte": {
       "types": "./dist/OmSolid.svelte.d.ts",
       "svelte": "./dist/OmSolid.svelte"
     },
-    "./OpencartBrand.svelte": {
-      "types": "./dist/OpencartBrand.svelte.d.ts",
-      "svelte": "./dist/OpencartBrand.svelte"
+    "./OpencartBrands.svelte": {
+      "types": "./dist/OpencartBrands.svelte.d.ts",
+      "svelte": "./dist/OpencartBrands.svelte"
     },
-    "./OpenidBrand.svelte": {
-      "types": "./dist/OpenidBrand.svelte.d.ts",
-      "svelte": "./dist/OpenidBrand.svelte"
+    "./OpenidBrands.svelte": {
+      "types": "./dist/OpenidBrands.svelte.d.ts",
+      "svelte": "./dist/OpenidBrands.svelte"
     },
-    "./OpensuseBrand.svelte": {
-      "types": "./dist/OpensuseBrand.svelte.d.ts",
-      "svelte": "./dist/OpensuseBrand.svelte"
+    "./OpensuseBrands.svelte": {
+      "types": "./dist/OpensuseBrands.svelte.d.ts",
+      "svelte": "./dist/OpensuseBrands.svelte"
     },
-    "./OperaBrand.svelte": {
-      "types": "./dist/OperaBrand.svelte.d.ts",
-      "svelte": "./dist/OperaBrand.svelte"
+    "./OperaBrands.svelte": {
+      "types": "./dist/OperaBrands.svelte.d.ts",
+      "svelte": "./dist/OperaBrands.svelte"
     },
-    "./OptinMonsterBrand.svelte": {
-      "types": "./dist/OptinMonsterBrand.svelte.d.ts",
-      "svelte": "./dist/OptinMonsterBrand.svelte"
+    "./OptinMonsterBrands.svelte": {
+      "types": "./dist/OptinMonsterBrands.svelte.d.ts",
+      "svelte": "./dist/OptinMonsterBrands.svelte"
     },
-    "./OrcidBrand.svelte": {
-      "types": "./dist/OrcidBrand.svelte.d.ts",
-      "svelte": "./dist/OrcidBrand.svelte"
+    "./OrcidBrands.svelte": {
+      "types": "./dist/OrcidBrands.svelte.d.ts",
+      "svelte": "./dist/OrcidBrands.svelte"
     },
-    "./OsiBrand.svelte": {
-      "types": "./dist/OsiBrand.svelte.d.ts",
-      "svelte": "./dist/OsiBrand.svelte"
+    "./OsiBrands.svelte": {
+      "types": "./dist/OsiBrands.svelte.d.ts",
+      "svelte": "./dist/OsiBrands.svelte"
     },
     "./OtterSolid.svelte": {
       "types": "./dist/OtterSolid.svelte.d.ts",
@@ -5280,17 +5308,17 @@
       "types": "./dist/PSolid.svelte.d.ts",
       "svelte": "./dist/PSolid.svelte"
     },
-    "./PadletBrand.svelte": {
-      "types": "./dist/PadletBrand.svelte.d.ts",
-      "svelte": "./dist/PadletBrand.svelte"
+    "./PadletBrands.svelte": {
+      "types": "./dist/PadletBrands.svelte.d.ts",
+      "svelte": "./dist/PadletBrands.svelte"
     },
-    "./Page4Brand.svelte": {
-      "types": "./dist/Page4Brand.svelte.d.ts",
-      "svelte": "./dist/Page4Brand.svelte"
+    "./Page4Brands.svelte": {
+      "types": "./dist/Page4Brands.svelte.d.ts",
+      "svelte": "./dist/Page4Brands.svelte"
     },
-    "./PagelinesBrand.svelte": {
-      "types": "./dist/PagelinesBrand.svelte.d.ts",
-      "svelte": "./dist/PagelinesBrand.svelte"
+    "./PagelinesBrands.svelte": {
+      "types": "./dist/PagelinesBrands.svelte.d.ts",
+      "svelte": "./dist/PagelinesBrands.svelte"
     },
     "./PagerSolid.svelte": {
       "types": "./dist/PagerSolid.svelte.d.ts",
@@ -5308,9 +5336,9 @@
       "types": "./dist/PaletteSolid.svelte.d.ts",
       "svelte": "./dist/PaletteSolid.svelte"
     },
-    "./PalfedBrand.svelte": {
-      "types": "./dist/PalfedBrand.svelte.d.ts",
-      "svelte": "./dist/PalfedBrand.svelte"
+    "./PalfedBrands.svelte": {
+      "types": "./dist/PalfedBrands.svelte.d.ts",
+      "svelte": "./dist/PalfedBrands.svelte"
     },
     "./PalletSolid.svelte": {
       "types": "./dist/PalletSolid.svelte.d.ts",
@@ -5352,9 +5380,9 @@
       "types": "./dist/PasteSolid.svelte.d.ts",
       "svelte": "./dist/PasteSolid.svelte"
     },
-    "./PatreonBrand.svelte": {
-      "types": "./dist/PatreonBrand.svelte.d.ts",
-      "svelte": "./dist/PatreonBrand.svelte"
+    "./PatreonBrands.svelte": {
+      "types": "./dist/PatreonBrands.svelte.d.ts",
+      "svelte": "./dist/PatreonBrands.svelte"
     },
     "./PauseSolid.svelte": {
       "types": "./dist/PauseSolid.svelte.d.ts",
@@ -5364,9 +5392,9 @@
       "types": "./dist/PawSolid.svelte.d.ts",
       "svelte": "./dist/PawSolid.svelte"
     },
-    "./PaypalBrand.svelte": {
-      "types": "./dist/PaypalBrand.svelte.d.ts",
-      "svelte": "./dist/PaypalBrand.svelte"
+    "./PaypalBrands.svelte": {
+      "types": "./dist/PaypalBrands.svelte.d.ts",
+      "svelte": "./dist/PaypalBrands.svelte"
     },
     "./PeaceSolid.svelte": {
       "types": "./dist/PeaceSolid.svelte.d.ts",
@@ -5436,17 +5464,17 @@
       "types": "./dist/PepperHotSolid.svelte.d.ts",
       "svelte": "./dist/PepperHotSolid.svelte"
     },
-    "./PerbyteBrand.svelte": {
-      "types": "./dist/PerbyteBrand.svelte.d.ts",
-      "svelte": "./dist/PerbyteBrand.svelte"
+    "./PerbyteBrands.svelte": {
+      "types": "./dist/PerbyteBrands.svelte.d.ts",
+      "svelte": "./dist/PerbyteBrands.svelte"
     },
     "./PercentSolid.svelte": {
       "types": "./dist/PercentSolid.svelte.d.ts",
       "svelte": "./dist/PercentSolid.svelte"
     },
-    "./PeriscopeBrand.svelte": {
-      "types": "./dist/PeriscopeBrand.svelte.d.ts",
-      "svelte": "./dist/PeriscopeBrand.svelte"
+    "./PeriscopeBrands.svelte": {
+      "types": "./dist/PeriscopeBrands.svelte.d.ts",
+      "svelte": "./dist/PeriscopeBrands.svelte"
     },
     "./PersonArrowDownToLineSolid.svelte": {
       "types": "./dist/PersonArrowDownToLineSolid.svelte.d.ts",
@@ -5640,17 +5668,17 @@
       "types": "./dist/PesoSignSolid.svelte.d.ts",
       "svelte": "./dist/PesoSignSolid.svelte"
     },
-    "./PhabricatorBrand.svelte": {
-      "types": "./dist/PhabricatorBrand.svelte.d.ts",
-      "svelte": "./dist/PhabricatorBrand.svelte"
+    "./PhabricatorBrands.svelte": {
+      "types": "./dist/PhabricatorBrands.svelte.d.ts",
+      "svelte": "./dist/PhabricatorBrands.svelte"
     },
-    "./PhoenixFrameworkBrand.svelte": {
-      "types": "./dist/PhoenixFrameworkBrand.svelte.d.ts",
-      "svelte": "./dist/PhoenixFrameworkBrand.svelte"
+    "./PhoenixFrameworkBrands.svelte": {
+      "types": "./dist/PhoenixFrameworkBrands.svelte.d.ts",
+      "svelte": "./dist/PhoenixFrameworkBrands.svelte"
     },
-    "./PhoenixSquadronBrand.svelte": {
-      "types": "./dist/PhoenixSquadronBrand.svelte.d.ts",
-      "svelte": "./dist/PhoenixSquadronBrand.svelte"
+    "./PhoenixSquadronBrands.svelte": {
+      "types": "./dist/PhoenixSquadronBrands.svelte.d.ts",
+      "svelte": "./dist/PhoenixSquadronBrands.svelte"
     },
     "./PhoneFlipSolid.svelte": {
       "types": "./dist/PhoneFlipSolid.svelte.d.ts",
@@ -5672,25 +5700,25 @@
       "types": "./dist/PhotoFilmSolid.svelte.d.ts",
       "svelte": "./dist/PhotoFilmSolid.svelte"
     },
-    "./PhpBrand.svelte": {
-      "types": "./dist/PhpBrand.svelte.d.ts",
-      "svelte": "./dist/PhpBrand.svelte"
+    "./PhpBrands.svelte": {
+      "types": "./dist/PhpBrands.svelte.d.ts",
+      "svelte": "./dist/PhpBrands.svelte"
     },
-    "./PiedPiperAltBrand.svelte": {
-      "types": "./dist/PiedPiperAltBrand.svelte.d.ts",
-      "svelte": "./dist/PiedPiperAltBrand.svelte"
+    "./PiedPiperAltBrands.svelte": {
+      "types": "./dist/PiedPiperAltBrands.svelte.d.ts",
+      "svelte": "./dist/PiedPiperAltBrands.svelte"
     },
-    "./PiedPiperBrand.svelte": {
-      "types": "./dist/PiedPiperBrand.svelte.d.ts",
-      "svelte": "./dist/PiedPiperBrand.svelte"
+    "./PiedPiperBrands.svelte": {
+      "types": "./dist/PiedPiperBrands.svelte.d.ts",
+      "svelte": "./dist/PiedPiperBrands.svelte"
     },
-    "./PiedPiperHatBrand.svelte": {
-      "types": "./dist/PiedPiperHatBrand.svelte.d.ts",
-      "svelte": "./dist/PiedPiperHatBrand.svelte"
+    "./PiedPiperHatBrands.svelte": {
+      "types": "./dist/PiedPiperHatBrands.svelte.d.ts",
+      "svelte": "./dist/PiedPiperHatBrands.svelte"
     },
-    "./PiedPiperPpBrand.svelte": {
-      "types": "./dist/PiedPiperPpBrand.svelte.d.ts",
-      "svelte": "./dist/PiedPiperPpBrand.svelte"
+    "./PiedPiperPpBrands.svelte": {
+      "types": "./dist/PiedPiperPpBrands.svelte.d.ts",
+      "svelte": "./dist/PiedPiperPpBrands.svelte"
     },
     "./PiggyBankSolid.svelte": {
       "types": "./dist/PiggyBankSolid.svelte.d.ts",
@@ -5700,21 +5728,21 @@
       "types": "./dist/PillsSolid.svelte.d.ts",
       "svelte": "./dist/PillsSolid.svelte"
     },
-    "./PinterestBrand.svelte": {
-      "types": "./dist/PinterestBrand.svelte.d.ts",
-      "svelte": "./dist/PinterestBrand.svelte"
+    "./PinterestBrands.svelte": {
+      "types": "./dist/PinterestBrands.svelte.d.ts",
+      "svelte": "./dist/PinterestBrands.svelte"
     },
-    "./PinterestPBrand.svelte": {
-      "types": "./dist/PinterestPBrand.svelte.d.ts",
-      "svelte": "./dist/PinterestPBrand.svelte"
+    "./PinterestPBrands.svelte": {
+      "types": "./dist/PinterestPBrands.svelte.d.ts",
+      "svelte": "./dist/PinterestPBrands.svelte"
     },
-    "./PixBrand.svelte": {
-      "types": "./dist/PixBrand.svelte.d.ts",
-      "svelte": "./dist/PixBrand.svelte"
+    "./PixBrands.svelte": {
+      "types": "./dist/PixBrands.svelte.d.ts",
+      "svelte": "./dist/PixBrands.svelte"
     },
-    "./PixivBrand.svelte": {
-      "types": "./dist/PixivBrand.svelte.d.ts",
-      "svelte": "./dist/PixivBrand.svelte"
+    "./PixivBrands.svelte": {
+      "types": "./dist/PixivBrands.svelte.d.ts",
+      "svelte": "./dist/PixivBrands.svelte"
     },
     "./PizzaSliceSolid.svelte": {
       "types": "./dist/PizzaSliceSolid.svelte.d.ts",
@@ -5772,9 +5800,9 @@
       "types": "./dist/PlaySolid.svelte.d.ts",
       "svelte": "./dist/PlaySolid.svelte"
     },
-    "./PlaystationBrand.svelte": {
-      "types": "./dist/PlaystationBrand.svelte.d.ts",
-      "svelte": "./dist/PlaystationBrand.svelte"
+    "./PlaystationBrands.svelte": {
+      "types": "./dist/PlaystationBrands.svelte.d.ts",
+      "svelte": "./dist/PlaystationBrands.svelte"
     },
     "./PlugCircleBoltSolid.svelte": {
       "types": "./dist/PlugCircleBoltSolid.svelte.d.ts",
@@ -5848,9 +5876,9 @@
       "types": "./dist/PrintSolid.svelte.d.ts",
       "svelte": "./dist/PrintSolid.svelte"
     },
-    "./ProductHuntBrand.svelte": {
-      "types": "./dist/ProductHuntBrand.svelte.d.ts",
-      "svelte": "./dist/ProductHuntBrand.svelte"
+    "./ProductHuntBrands.svelte": {
+      "types": "./dist/ProductHuntBrands.svelte.d.ts",
+      "svelte": "./dist/ProductHuntBrands.svelte"
     },
     "./PumpMedicalSolid.svelte": {
       "types": "./dist/PumpMedicalSolid.svelte.d.ts",
@@ -5860,25 +5888,25 @@
       "types": "./dist/PumpSoapSolid.svelte.d.ts",
       "svelte": "./dist/PumpSoapSolid.svelte"
     },
-    "./PushedBrand.svelte": {
-      "types": "./dist/PushedBrand.svelte.d.ts",
-      "svelte": "./dist/PushedBrand.svelte"
+    "./PushedBrands.svelte": {
+      "types": "./dist/PushedBrands.svelte.d.ts",
+      "svelte": "./dist/PushedBrands.svelte"
     },
     "./PuzzlePieceSolid.svelte": {
       "types": "./dist/PuzzlePieceSolid.svelte.d.ts",
       "svelte": "./dist/PuzzlePieceSolid.svelte"
     },
-    "./PythonBrand.svelte": {
-      "types": "./dist/PythonBrand.svelte.d.ts",
-      "svelte": "./dist/PythonBrand.svelte"
+    "./PythonBrands.svelte": {
+      "types": "./dist/PythonBrands.svelte.d.ts",
+      "svelte": "./dist/PythonBrands.svelte"
     },
     "./QSolid.svelte": {
       "types": "./dist/QSolid.svelte.d.ts",
       "svelte": "./dist/QSolid.svelte"
     },
-    "./QqBrand.svelte": {
-      "types": "./dist/QqBrand.svelte.d.ts",
-      "svelte": "./dist/QqBrand.svelte"
+    "./QqBrands.svelte": {
+      "types": "./dist/QqBrands.svelte.d.ts",
+      "svelte": "./dist/QqBrands.svelte"
     },
     "./QrcodeSolid.svelte": {
       "types": "./dist/QrcodeSolid.svelte.d.ts",
@@ -5888,13 +5916,13 @@
       "types": "./dist/QuestionSolid.svelte.d.ts",
       "svelte": "./dist/QuestionSolid.svelte"
     },
-    "./QuinscapeBrand.svelte": {
-      "types": "./dist/QuinscapeBrand.svelte.d.ts",
-      "svelte": "./dist/QuinscapeBrand.svelte"
+    "./QuinscapeBrands.svelte": {
+      "types": "./dist/QuinscapeBrands.svelte.d.ts",
+      "svelte": "./dist/QuinscapeBrands.svelte"
     },
-    "./QuoraBrand.svelte": {
-      "types": "./dist/QuoraBrand.svelte.d.ts",
-      "svelte": "./dist/QuoraBrand.svelte"
+    "./QuoraBrands.svelte": {
+      "types": "./dist/QuoraBrands.svelte.d.ts",
+      "svelte": "./dist/QuoraBrands.svelte"
     },
     "./QuoteLeftSolid.svelte": {
       "types": "./dist/QuoteLeftSolid.svelte.d.ts",
@@ -5904,9 +5932,9 @@
       "types": "./dist/QuoteRightSolid.svelte.d.ts",
       "svelte": "./dist/QuoteRightSolid.svelte"
     },
-    "./RProjectBrand.svelte": {
-      "types": "./dist/RProjectBrand.svelte.d.ts",
-      "svelte": "./dist/RProjectBrand.svelte"
+    "./RProjectBrands.svelte": {
+      "types": "./dist/RProjectBrands.svelte.d.ts",
+      "svelte": "./dist/RProjectBrands.svelte"
     },
     "./RSolid.svelte": {
       "types": "./dist/RSolid.svelte.d.ts",
@@ -5928,29 +5956,29 @@
       "types": "./dist/RankingStarSolid.svelte.d.ts",
       "svelte": "./dist/RankingStarSolid.svelte"
     },
-    "./RaspberryPiBrand.svelte": {
-      "types": "./dist/RaspberryPiBrand.svelte.d.ts",
-      "svelte": "./dist/RaspberryPiBrand.svelte"
+    "./RaspberryPiBrands.svelte": {
+      "types": "./dist/RaspberryPiBrands.svelte.d.ts",
+      "svelte": "./dist/RaspberryPiBrands.svelte"
     },
-    "./RavelryBrand.svelte": {
-      "types": "./dist/RavelryBrand.svelte.d.ts",
-      "svelte": "./dist/RavelryBrand.svelte"
+    "./RavelryBrands.svelte": {
+      "types": "./dist/RavelryBrands.svelte.d.ts",
+      "svelte": "./dist/RavelryBrands.svelte"
     },
-    "./ReactBrand.svelte": {
-      "types": "./dist/ReactBrand.svelte.d.ts",
-      "svelte": "./dist/ReactBrand.svelte"
+    "./ReactBrands.svelte": {
+      "types": "./dist/ReactBrands.svelte.d.ts",
+      "svelte": "./dist/ReactBrands.svelte"
     },
-    "./ReacteuropeBrand.svelte": {
-      "types": "./dist/ReacteuropeBrand.svelte.d.ts",
-      "svelte": "./dist/ReacteuropeBrand.svelte"
+    "./ReacteuropeBrands.svelte": {
+      "types": "./dist/ReacteuropeBrands.svelte.d.ts",
+      "svelte": "./dist/ReacteuropeBrands.svelte"
     },
-    "./ReadmeBrand.svelte": {
-      "types": "./dist/ReadmeBrand.svelte.d.ts",
-      "svelte": "./dist/ReadmeBrand.svelte"
+    "./ReadmeBrands.svelte": {
+      "types": "./dist/ReadmeBrands.svelte.d.ts",
+      "svelte": "./dist/ReadmeBrands.svelte"
     },
-    "./RebelBrand.svelte": {
-      "types": "./dist/RebelBrand.svelte.d.ts",
-      "svelte": "./dist/RebelBrand.svelte"
+    "./RebelBrands.svelte": {
+      "types": "./dist/RebelBrands.svelte.d.ts",
+      "svelte": "./dist/RebelBrands.svelte"
     },
     "./ReceiptSolid.svelte": {
       "types": "./dist/ReceiptSolid.svelte.d.ts",
@@ -5984,21 +6012,21 @@
       "types": "./dist/RecycleSolid.svelte.d.ts",
       "svelte": "./dist/RecycleSolid.svelte"
     },
-    "./RedRiverBrand.svelte": {
-      "types": "./dist/RedRiverBrand.svelte.d.ts",
-      "svelte": "./dist/RedRiverBrand.svelte"
+    "./RedRiverBrands.svelte": {
+      "types": "./dist/RedRiverBrands.svelte.d.ts",
+      "svelte": "./dist/RedRiverBrands.svelte"
     },
-    "./RedditAlienBrand.svelte": {
-      "types": "./dist/RedditAlienBrand.svelte.d.ts",
-      "svelte": "./dist/RedditAlienBrand.svelte"
+    "./RedditAlienBrands.svelte": {
+      "types": "./dist/RedditAlienBrands.svelte.d.ts",
+      "svelte": "./dist/RedditAlienBrands.svelte"
     },
-    "./RedditBrand.svelte": {
-      "types": "./dist/RedditBrand.svelte.d.ts",
-      "svelte": "./dist/RedditBrand.svelte"
+    "./RedditBrands.svelte": {
+      "types": "./dist/RedditBrands.svelte.d.ts",
+      "svelte": "./dist/RedditBrands.svelte"
     },
-    "./RedhatBrand.svelte": {
-      "types": "./dist/RedhatBrand.svelte.d.ts",
-      "svelte": "./dist/RedhatBrand.svelte"
+    "./RedhatBrands.svelte": {
+      "types": "./dist/RedhatBrands.svelte.d.ts",
+      "svelte": "./dist/RedhatBrands.svelte"
     },
     "./RegisteredRegular.svelte": {
       "types": "./dist/RegisteredRegular.svelte.d.ts",
@@ -6008,9 +6036,9 @@
       "types": "./dist/RegisteredSolid.svelte.d.ts",
       "svelte": "./dist/RegisteredSolid.svelte"
     },
-    "./RenrenBrand.svelte": {
-      "types": "./dist/RenrenBrand.svelte.d.ts",
-      "svelte": "./dist/RenrenBrand.svelte"
+    "./RenrenBrands.svelte": {
+      "types": "./dist/RenrenBrands.svelte.d.ts",
+      "svelte": "./dist/RenrenBrands.svelte"
     },
     "./RepeatSolid.svelte": {
       "types": "./dist/RepeatSolid.svelte.d.ts",
@@ -6024,21 +6052,21 @@
       "types": "./dist/ReplySolid.svelte.d.ts",
       "svelte": "./dist/ReplySolid.svelte"
     },
-    "./ReplydBrand.svelte": {
-      "types": "./dist/ReplydBrand.svelte.d.ts",
-      "svelte": "./dist/ReplydBrand.svelte"
+    "./ReplydBrands.svelte": {
+      "types": "./dist/ReplydBrands.svelte.d.ts",
+      "svelte": "./dist/ReplydBrands.svelte"
     },
     "./RepublicanSolid.svelte": {
       "types": "./dist/RepublicanSolid.svelte.d.ts",
       "svelte": "./dist/RepublicanSolid.svelte"
     },
-    "./ResearchgateBrand.svelte": {
-      "types": "./dist/ResearchgateBrand.svelte.d.ts",
-      "svelte": "./dist/ResearchgateBrand.svelte"
+    "./ResearchgateBrands.svelte": {
+      "types": "./dist/ResearchgateBrands.svelte.d.ts",
+      "svelte": "./dist/ResearchgateBrands.svelte"
     },
-    "./ResolvingBrand.svelte": {
-      "types": "./dist/ResolvingBrand.svelte.d.ts",
-      "svelte": "./dist/ResolvingBrand.svelte"
+    "./ResolvingBrands.svelte": {
+      "types": "./dist/ResolvingBrands.svelte.d.ts",
+      "svelte": "./dist/ResolvingBrands.svelte"
     },
     "./RestroomSolid.svelte": {
       "types": "./dist/RestroomSolid.svelte.d.ts",
@@ -6048,9 +6076,9 @@
       "types": "./dist/RetweetSolid.svelte.d.ts",
       "svelte": "./dist/RetweetSolid.svelte"
     },
-    "./RevBrand.svelte": {
-      "types": "./dist/RevBrand.svelte.d.ts",
-      "svelte": "./dist/RevBrand.svelte"
+    "./RevBrands.svelte": {
+      "types": "./dist/RevBrands.svelte.d.ts",
+      "svelte": "./dist/RevBrands.svelte"
     },
     "./RibbonSolid.svelte": {
       "types": "./dist/RibbonSolid.svelte.d.ts",
@@ -6116,13 +6144,13 @@
       "types": "./dist/RocketSolid.svelte.d.ts",
       "svelte": "./dist/RocketSolid.svelte"
     },
-    "./RocketchatBrand.svelte": {
-      "types": "./dist/RocketchatBrand.svelte.d.ts",
-      "svelte": "./dist/RocketchatBrand.svelte"
+    "./RocketchatBrands.svelte": {
+      "types": "./dist/RocketchatBrands.svelte.d.ts",
+      "svelte": "./dist/RocketchatBrands.svelte"
     },
-    "./RockrmsBrand.svelte": {
-      "types": "./dist/RockrmsBrand.svelte.d.ts",
-      "svelte": "./dist/RockrmsBrand.svelte"
+    "./RockrmsBrands.svelte": {
+      "types": "./dist/RockrmsBrands.svelte.d.ts",
+      "svelte": "./dist/RockrmsBrands.svelte"
     },
     "./RotateLeftSolid.svelte": {
       "types": "./dist/RotateLeftSolid.svelte.d.ts",
@@ -6176,9 +6204,9 @@
       "types": "./dist/RupiahSignSolid.svelte.d.ts",
       "svelte": "./dist/RupiahSignSolid.svelte"
     },
-    "./RustBrand.svelte": {
-      "types": "./dist/RustBrand.svelte.d.ts",
-      "svelte": "./dist/RustBrand.svelte"
+    "./RustBrands.svelte": {
+      "types": "./dist/RustBrands.svelte.d.ts",
+      "svelte": "./dist/RustBrands.svelte"
     },
     "./SSolid.svelte": {
       "types": "./dist/SSolid.svelte.d.ts",
@@ -6192,21 +6220,21 @@
       "types": "./dist/SackXmarkSolid.svelte.d.ts",
       "svelte": "./dist/SackXmarkSolid.svelte"
     },
-    "./SafariBrand.svelte": {
-      "types": "./dist/SafariBrand.svelte.d.ts",
-      "svelte": "./dist/SafariBrand.svelte"
+    "./SafariBrands.svelte": {
+      "types": "./dist/SafariBrands.svelte.d.ts",
+      "svelte": "./dist/SafariBrands.svelte"
     },
     "./SailboatSolid.svelte": {
       "types": "./dist/SailboatSolid.svelte.d.ts",
       "svelte": "./dist/SailboatSolid.svelte"
     },
-    "./SalesforceBrand.svelte": {
-      "types": "./dist/SalesforceBrand.svelte.d.ts",
-      "svelte": "./dist/SalesforceBrand.svelte"
+    "./SalesforceBrands.svelte": {
+      "types": "./dist/SalesforceBrands.svelte.d.ts",
+      "svelte": "./dist/SalesforceBrands.svelte"
     },
-    "./SassBrand.svelte": {
-      "types": "./dist/SassBrand.svelte.d.ts",
-      "svelte": "./dist/SassBrand.svelte"
+    "./SassBrands.svelte": {
+      "types": "./dist/SassBrands.svelte.d.ts",
+      "svelte": "./dist/SassBrands.svelte"
     },
     "./SatelliteDishSolid.svelte": {
       "types": "./dist/SatelliteDishSolid.svelte.d.ts",
@@ -6228,9 +6256,9 @@
       "types": "./dist/ScaleUnbalancedSolid.svelte.d.ts",
       "svelte": "./dist/ScaleUnbalancedSolid.svelte"
     },
-    "./SchlixBrand.svelte": {
-      "types": "./dist/SchlixBrand.svelte.d.ts",
-      "svelte": "./dist/SchlixBrand.svelte"
+    "./SchlixBrands.svelte": {
+      "types": "./dist/SchlixBrands.svelte.d.ts",
+      "svelte": "./dist/SchlixBrands.svelte"
     },
     "./SchoolCircleCheckSolid.svelte": {
       "types": "./dist/SchoolCircleCheckSolid.svelte.d.ts",
@@ -6260,9 +6288,9 @@
       "types": "./dist/ScissorsSolid.svelte.d.ts",
       "svelte": "./dist/ScissorsSolid.svelte"
     },
-    "./ScreenpalBrand.svelte": {
-      "types": "./dist/ScreenpalBrand.svelte.d.ts",
-      "svelte": "./dist/ScreenpalBrand.svelte"
+    "./ScreenpalBrands.svelte": {
+      "types": "./dist/ScreenpalBrands.svelte.d.ts",
+      "svelte": "./dist/ScreenpalBrands.svelte"
     },
     "./ScrewdriverSolid.svelte": {
       "types": "./dist/ScrewdriverSolid.svelte.d.ts",
@@ -6272,9 +6300,9 @@
       "types": "./dist/ScrewdriverWrenchSolid.svelte.d.ts",
       "svelte": "./dist/ScrewdriverWrenchSolid.svelte"
     },
-    "./ScribdBrand.svelte": {
-      "types": "./dist/ScribdBrand.svelte.d.ts",
-      "svelte": "./dist/ScribdBrand.svelte"
+    "./ScribdBrands.svelte": {
+      "types": "./dist/ScribdBrands.svelte.d.ts",
+      "svelte": "./dist/ScribdBrands.svelte"
     },
     "./ScrollSolid.svelte": {
       "types": "./dist/ScrollSolid.svelte.d.ts",
@@ -6288,9 +6316,9 @@
       "types": "./dist/SdCardSolid.svelte.d.ts",
       "svelte": "./dist/SdCardSolid.svelte"
     },
-    "./SearchenginBrand.svelte": {
-      "types": "./dist/SearchenginBrand.svelte.d.ts",
-      "svelte": "./dist/SearchenginBrand.svelte"
+    "./SearchenginBrands.svelte": {
+      "types": "./dist/SearchenginBrands.svelte.d.ts",
+      "svelte": "./dist/SearchenginBrands.svelte"
     },
     "./SectionSolid.svelte": {
       "types": "./dist/SectionSolid.svelte.d.ts",
@@ -6300,21 +6328,21 @@
       "types": "./dist/SeedlingSolid.svelte.d.ts",
       "svelte": "./dist/SeedlingSolid.svelte"
     },
-    "./SellcastBrand.svelte": {
-      "types": "./dist/SellcastBrand.svelte.d.ts",
-      "svelte": "./dist/SellcastBrand.svelte"
+    "./SellcastBrands.svelte": {
+      "types": "./dist/SellcastBrands.svelte.d.ts",
+      "svelte": "./dist/SellcastBrands.svelte"
     },
-    "./SellsyBrand.svelte": {
-      "types": "./dist/SellsyBrand.svelte.d.ts",
-      "svelte": "./dist/SellsyBrand.svelte"
+    "./SellsyBrands.svelte": {
+      "types": "./dist/SellsyBrands.svelte.d.ts",
+      "svelte": "./dist/SellsyBrands.svelte"
     },
     "./ServerSolid.svelte": {
       "types": "./dist/ServerSolid.svelte.d.ts",
       "svelte": "./dist/ServerSolid.svelte"
     },
-    "./ServicestackBrand.svelte": {
-      "types": "./dist/ServicestackBrand.svelte.d.ts",
-      "svelte": "./dist/ServicestackBrand.svelte"
+    "./ServicestackBrands.svelte": {
+      "types": "./dist/ServicestackBrands.svelte.d.ts",
+      "svelte": "./dist/ServicestackBrands.svelte"
     },
     "./ShapesSolid.svelte": {
       "types": "./dist/ShapesSolid.svelte.d.ts",
@@ -6376,17 +6404,17 @@
       "types": "./dist/ShirtSolid.svelte.d.ts",
       "svelte": "./dist/ShirtSolid.svelte"
     },
-    "./ShirtsinbulkBrand.svelte": {
-      "types": "./dist/ShirtsinbulkBrand.svelte.d.ts",
-      "svelte": "./dist/ShirtsinbulkBrand.svelte"
+    "./ShirtsinbulkBrands.svelte": {
+      "types": "./dist/ShirtsinbulkBrands.svelte.d.ts",
+      "svelte": "./dist/ShirtsinbulkBrands.svelte"
     },
     "./ShoePrintsSolid.svelte": {
       "types": "./dist/ShoePrintsSolid.svelte.d.ts",
       "svelte": "./dist/ShoePrintsSolid.svelte"
     },
-    "./ShoelaceBrand.svelte": {
-      "types": "./dist/ShoelaceBrand.svelte.d.ts",
-      "svelte": "./dist/ShoelaceBrand.svelte"
+    "./ShoelaceBrands.svelte": {
+      "types": "./dist/ShoelaceBrands.svelte.d.ts",
+      "svelte": "./dist/ShoelaceBrands.svelte"
     },
     "./ShopLockSolid.svelte": {
       "types": "./dist/ShopLockSolid.svelte.d.ts",
@@ -6400,13 +6428,13 @@
       "types": "./dist/ShopSolid.svelte.d.ts",
       "svelte": "./dist/ShopSolid.svelte"
     },
-    "./ShopifyBrand.svelte": {
-      "types": "./dist/ShopifyBrand.svelte.d.ts",
-      "svelte": "./dist/ShopifyBrand.svelte"
+    "./ShopifyBrands.svelte": {
+      "types": "./dist/ShopifyBrands.svelte.d.ts",
+      "svelte": "./dist/ShopifyBrands.svelte"
     },
-    "./ShopwareBrand.svelte": {
-      "types": "./dist/ShopwareBrand.svelte.d.ts",
-      "svelte": "./dist/ShopwareBrand.svelte"
+    "./ShopwareBrands.svelte": {
+      "types": "./dist/ShopwareBrands.svelte.d.ts",
+      "svelte": "./dist/ShopwareBrands.svelte"
     },
     "./ShowerSolid.svelte": {
       "types": "./dist/ShowerSolid.svelte.d.ts",
@@ -6428,9 +6456,9 @@
       "types": "./dist/SignHangingSolid.svelte.d.ts",
       "svelte": "./dist/SignHangingSolid.svelte"
     },
-    "./SignalMessengerBrand.svelte": {
-      "types": "./dist/SignalMessengerBrand.svelte.d.ts",
-      "svelte": "./dist/SignalMessengerBrand.svelte"
+    "./SignalMessengerBrands.svelte": {
+      "types": "./dist/SignalMessengerBrands.svelte.d.ts",
+      "svelte": "./dist/SignalMessengerBrands.svelte"
     },
     "./SignalSolid.svelte": {
       "types": "./dist/SignalSolid.svelte.d.ts",
@@ -6448,33 +6476,33 @@
       "types": "./dist/SimCardSolid.svelte.d.ts",
       "svelte": "./dist/SimCardSolid.svelte"
     },
-    "./SimplybuiltBrand.svelte": {
-      "types": "./dist/SimplybuiltBrand.svelte.d.ts",
-      "svelte": "./dist/SimplybuiltBrand.svelte"
+    "./SimplybuiltBrands.svelte": {
+      "types": "./dist/SimplybuiltBrands.svelte.d.ts",
+      "svelte": "./dist/SimplybuiltBrands.svelte"
     },
     "./SinkSolid.svelte": {
       "types": "./dist/SinkSolid.svelte.d.ts",
       "svelte": "./dist/SinkSolid.svelte"
     },
-    "./SistrixBrand.svelte": {
-      "types": "./dist/SistrixBrand.svelte.d.ts",
-      "svelte": "./dist/SistrixBrand.svelte"
+    "./SistrixBrands.svelte": {
+      "types": "./dist/SistrixBrands.svelte.d.ts",
+      "svelte": "./dist/SistrixBrands.svelte"
     },
     "./SitemapSolid.svelte": {
       "types": "./dist/SitemapSolid.svelte.d.ts",
       "svelte": "./dist/SitemapSolid.svelte"
     },
-    "./SithBrand.svelte": {
-      "types": "./dist/SithBrand.svelte.d.ts",
-      "svelte": "./dist/SithBrand.svelte"
+    "./SithBrands.svelte": {
+      "types": "./dist/SithBrands.svelte.d.ts",
+      "svelte": "./dist/SithBrands.svelte"
     },
-    "./SitroxBrand.svelte": {
-      "types": "./dist/SitroxBrand.svelte.d.ts",
-      "svelte": "./dist/SitroxBrand.svelte"
+    "./SitroxBrands.svelte": {
+      "types": "./dist/SitroxBrands.svelte.d.ts",
+      "svelte": "./dist/SitroxBrands.svelte"
     },
-    "./SketchBrand.svelte": {
-      "types": "./dist/SketchBrand.svelte.d.ts",
-      "svelte": "./dist/SketchBrand.svelte"
+    "./SketchBrands.svelte": {
+      "types": "./dist/SketchBrands.svelte.d.ts",
+      "svelte": "./dist/SketchBrands.svelte"
     },
     "./SkullCrossbonesSolid.svelte": {
       "types": "./dist/SkullCrossbonesSolid.svelte.d.ts",
@@ -6484,17 +6512,17 @@
       "types": "./dist/SkullSolid.svelte.d.ts",
       "svelte": "./dist/SkullSolid.svelte"
     },
-    "./SkyatlasBrand.svelte": {
-      "types": "./dist/SkyatlasBrand.svelte.d.ts",
-      "svelte": "./dist/SkyatlasBrand.svelte"
+    "./SkyatlasBrands.svelte": {
+      "types": "./dist/SkyatlasBrands.svelte.d.ts",
+      "svelte": "./dist/SkyatlasBrands.svelte"
     },
-    "./SkypeBrand.svelte": {
-      "types": "./dist/SkypeBrand.svelte.d.ts",
-      "svelte": "./dist/SkypeBrand.svelte"
+    "./SkypeBrands.svelte": {
+      "types": "./dist/SkypeBrands.svelte.d.ts",
+      "svelte": "./dist/SkypeBrands.svelte"
     },
-    "./SlackBrand.svelte": {
-      "types": "./dist/SlackBrand.svelte.d.ts",
-      "svelte": "./dist/SlackBrand.svelte"
+    "./SlackBrands.svelte": {
+      "types": "./dist/SlackBrands.svelte.d.ts",
+      "svelte": "./dist/SlackBrands.svelte"
     },
     "./SlashSolid.svelte": {
       "types": "./dist/SlashSolid.svelte.d.ts",
@@ -6508,9 +6536,9 @@
       "types": "./dist/SlidersSolid.svelte.d.ts",
       "svelte": "./dist/SlidersSolid.svelte"
     },
-    "./SlideshareBrand.svelte": {
-      "types": "./dist/SlideshareBrand.svelte.d.ts",
-      "svelte": "./dist/SlideshareBrand.svelte"
+    "./SlideshareBrands.svelte": {
+      "types": "./dist/SlideshareBrands.svelte.d.ts",
+      "svelte": "./dist/SlideshareBrands.svelte"
     },
     "./SmogSolid.svelte": {
       "types": "./dist/SmogSolid.svelte.d.ts",
@@ -6520,9 +6548,9 @@
       "types": "./dist/SmokingSolid.svelte.d.ts",
       "svelte": "./dist/SmokingSolid.svelte"
     },
-    "./SnapchatBrand.svelte": {
-      "types": "./dist/SnapchatBrand.svelte.d.ts",
-      "svelte": "./dist/SnapchatBrand.svelte"
+    "./SnapchatBrands.svelte": {
+      "types": "./dist/SnapchatBrands.svelte.d.ts",
+      "svelte": "./dist/SnapchatBrands.svelte"
     },
     "./SnowflakeRegular.svelte": {
       "types": "./dist/SnowflakeRegular.svelte.d.ts",
@@ -6564,33 +6592,33 @@
       "types": "./dist/SortUpSolid.svelte.d.ts",
       "svelte": "./dist/SortUpSolid.svelte"
     },
-    "./SoundcloudBrand.svelte": {
-      "types": "./dist/SoundcloudBrand.svelte.d.ts",
-      "svelte": "./dist/SoundcloudBrand.svelte"
+    "./SoundcloudBrands.svelte": {
+      "types": "./dist/SoundcloudBrands.svelte.d.ts",
+      "svelte": "./dist/SoundcloudBrands.svelte"
     },
-    "./SourcetreeBrand.svelte": {
-      "types": "./dist/SourcetreeBrand.svelte.d.ts",
-      "svelte": "./dist/SourcetreeBrand.svelte"
+    "./SourcetreeBrands.svelte": {
+      "types": "./dist/SourcetreeBrands.svelte.d.ts",
+      "svelte": "./dist/SourcetreeBrands.svelte"
     },
     "./SpaSolid.svelte": {
       "types": "./dist/SpaSolid.svelte.d.ts",
       "svelte": "./dist/SpaSolid.svelte"
     },
-    "./SpaceAwesomeBrand.svelte": {
-      "types": "./dist/SpaceAwesomeBrand.svelte.d.ts",
-      "svelte": "./dist/SpaceAwesomeBrand.svelte"
+    "./SpaceAwesomeBrands.svelte": {
+      "types": "./dist/SpaceAwesomeBrands.svelte.d.ts",
+      "svelte": "./dist/SpaceAwesomeBrands.svelte"
     },
     "./SpaghettiMonsterFlyingSolid.svelte": {
       "types": "./dist/SpaghettiMonsterFlyingSolid.svelte.d.ts",
       "svelte": "./dist/SpaghettiMonsterFlyingSolid.svelte"
     },
-    "./SpeakapBrand.svelte": {
-      "types": "./dist/SpeakapBrand.svelte.d.ts",
-      "svelte": "./dist/SpeakapBrand.svelte"
+    "./SpeakapBrands.svelte": {
+      "types": "./dist/SpeakapBrands.svelte.d.ts",
+      "svelte": "./dist/SpeakapBrands.svelte"
     },
-    "./SpeakerDeckBrand.svelte": {
-      "types": "./dist/SpeakerDeckBrand.svelte.d.ts",
-      "svelte": "./dist/SpeakerDeckBrand.svelte"
+    "./SpeakerDeckBrands.svelte": {
+      "types": "./dist/SpeakerDeckBrands.svelte.d.ts",
+      "svelte": "./dist/SpeakerDeckBrands.svelte"
     },
     "./SpellCheckSolid.svelte": {
       "types": "./dist/SpellCheckSolid.svelte.d.ts",
@@ -6612,9 +6640,9 @@
       "types": "./dist/SpoonSolid.svelte.d.ts",
       "svelte": "./dist/SpoonSolid.svelte"
     },
-    "./SpotifyBrand.svelte": {
-      "types": "./dist/SpotifyBrand.svelte.d.ts",
-      "svelte": "./dist/SpotifyBrand.svelte"
+    "./SpotifyBrands.svelte": {
+      "types": "./dist/SpotifyBrands.svelte.d.ts",
+      "svelte": "./dist/SpotifyBrands.svelte"
     },
     "./SprayCanSolid.svelte": {
       "types": "./dist/SprayCanSolid.svelte.d.ts",
@@ -6628,9 +6656,9 @@
       "types": "./dist/SquareArrowUpRightSolid.svelte.d.ts",
       "svelte": "./dist/SquareArrowUpRightSolid.svelte"
     },
-    "./SquareBehanceBrand.svelte": {
-      "types": "./dist/SquareBehanceBrand.svelte.d.ts",
-      "svelte": "./dist/SquareBehanceBrand.svelte"
+    "./SquareBehanceBrands.svelte": {
+      "types": "./dist/SquareBehanceBrands.svelte.d.ts",
+      "svelte": "./dist/SquareBehanceBrands.svelte"
     },
     "./SquareCaretDownRegular.svelte": {
       "types": "./dist/SquareCaretDownRegular.svelte.d.ts",
@@ -6672,25 +6700,25 @@
       "types": "./dist/SquareCheckSolid.svelte.d.ts",
       "svelte": "./dist/SquareCheckSolid.svelte"
     },
-    "./SquareDribbbleBrand.svelte": {
-      "types": "./dist/SquareDribbbleBrand.svelte.d.ts",
-      "svelte": "./dist/SquareDribbbleBrand.svelte"
+    "./SquareDribbbleBrands.svelte": {
+      "types": "./dist/SquareDribbbleBrands.svelte.d.ts",
+      "svelte": "./dist/SquareDribbbleBrands.svelte"
     },
     "./SquareEnvelopeSolid.svelte": {
       "types": "./dist/SquareEnvelopeSolid.svelte.d.ts",
       "svelte": "./dist/SquareEnvelopeSolid.svelte"
     },
-    "./SquareFacebookBrand.svelte": {
-      "types": "./dist/SquareFacebookBrand.svelte.d.ts",
-      "svelte": "./dist/SquareFacebookBrand.svelte"
+    "./SquareFacebookBrands.svelte": {
+      "types": "./dist/SquareFacebookBrands.svelte.d.ts",
+      "svelte": "./dist/SquareFacebookBrands.svelte"
     },
-    "./SquareFontAwesomeBrand.svelte": {
-      "types": "./dist/SquareFontAwesomeBrand.svelte.d.ts",
-      "svelte": "./dist/SquareFontAwesomeBrand.svelte"
+    "./SquareFontAwesomeBrands.svelte": {
+      "types": "./dist/SquareFontAwesomeBrands.svelte.d.ts",
+      "svelte": "./dist/SquareFontAwesomeBrands.svelte"
     },
-    "./SquareFontAwesomeStrokeBrand.svelte": {
-      "types": "./dist/SquareFontAwesomeStrokeBrand.svelte.d.ts",
-      "svelte": "./dist/SquareFontAwesomeStrokeBrand.svelte"
+    "./SquareFontAwesomeStrokeBrands.svelte": {
+      "types": "./dist/SquareFontAwesomeStrokeBrands.svelte.d.ts",
+      "svelte": "./dist/SquareFontAwesomeStrokeBrands.svelte"
     },
     "./SquareFullRegular.svelte": {
       "types": "./dist/SquareFullRegular.svelte.d.ts",
@@ -6700,45 +6728,45 @@
       "types": "./dist/SquareFullSolid.svelte.d.ts",
       "svelte": "./dist/SquareFullSolid.svelte"
     },
-    "./SquareGitBrand.svelte": {
-      "types": "./dist/SquareGitBrand.svelte.d.ts",
-      "svelte": "./dist/SquareGitBrand.svelte"
+    "./SquareGitBrands.svelte": {
+      "types": "./dist/SquareGitBrands.svelte.d.ts",
+      "svelte": "./dist/SquareGitBrands.svelte"
     },
-    "./SquareGithubBrand.svelte": {
-      "types": "./dist/SquareGithubBrand.svelte.d.ts",
-      "svelte": "./dist/SquareGithubBrand.svelte"
+    "./SquareGithubBrands.svelte": {
+      "types": "./dist/SquareGithubBrands.svelte.d.ts",
+      "svelte": "./dist/SquareGithubBrands.svelte"
     },
-    "./SquareGitlabBrand.svelte": {
-      "types": "./dist/SquareGitlabBrand.svelte.d.ts",
-      "svelte": "./dist/SquareGitlabBrand.svelte"
+    "./SquareGitlabBrands.svelte": {
+      "types": "./dist/SquareGitlabBrands.svelte.d.ts",
+      "svelte": "./dist/SquareGitlabBrands.svelte"
     },
-    "./SquareGooglePlusBrand.svelte": {
-      "types": "./dist/SquareGooglePlusBrand.svelte.d.ts",
-      "svelte": "./dist/SquareGooglePlusBrand.svelte"
+    "./SquareGooglePlusBrands.svelte": {
+      "types": "./dist/SquareGooglePlusBrands.svelte.d.ts",
+      "svelte": "./dist/SquareGooglePlusBrands.svelte"
     },
     "./SquareHSolid.svelte": {
       "types": "./dist/SquareHSolid.svelte.d.ts",
       "svelte": "./dist/SquareHSolid.svelte"
     },
-    "./SquareHackerNewsBrand.svelte": {
-      "types": "./dist/SquareHackerNewsBrand.svelte.d.ts",
-      "svelte": "./dist/SquareHackerNewsBrand.svelte"
+    "./SquareHackerNewsBrands.svelte": {
+      "types": "./dist/SquareHackerNewsBrands.svelte.d.ts",
+      "svelte": "./dist/SquareHackerNewsBrands.svelte"
     },
-    "./SquareInstagramBrand.svelte": {
-      "types": "./dist/SquareInstagramBrand.svelte.d.ts",
-      "svelte": "./dist/SquareInstagramBrand.svelte"
+    "./SquareInstagramBrands.svelte": {
+      "types": "./dist/SquareInstagramBrands.svelte.d.ts",
+      "svelte": "./dist/SquareInstagramBrands.svelte"
     },
-    "./SquareJsBrand.svelte": {
-      "types": "./dist/SquareJsBrand.svelte.d.ts",
-      "svelte": "./dist/SquareJsBrand.svelte"
+    "./SquareJsBrands.svelte": {
+      "types": "./dist/SquareJsBrands.svelte.d.ts",
+      "svelte": "./dist/SquareJsBrands.svelte"
     },
-    "./SquareLastfmBrand.svelte": {
-      "types": "./dist/SquareLastfmBrand.svelte.d.ts",
-      "svelte": "./dist/SquareLastfmBrand.svelte"
+    "./SquareLastfmBrands.svelte": {
+      "types": "./dist/SquareLastfmBrands.svelte.d.ts",
+      "svelte": "./dist/SquareLastfmBrands.svelte"
     },
-    "./SquareLetterboxdBrand.svelte": {
-      "types": "./dist/SquareLetterboxdBrand.svelte.d.ts",
-      "svelte": "./dist/SquareLetterboxdBrand.svelte"
+    "./SquareLetterboxdBrands.svelte": {
+      "types": "./dist/SquareLetterboxdBrands.svelte.d.ts",
+      "svelte": "./dist/SquareLetterboxdBrands.svelte"
     },
     "./SquareMinusRegular.svelte": {
       "types": "./dist/SquareMinusRegular.svelte.d.ts",
@@ -6752,9 +6780,9 @@
       "types": "./dist/SquareNfiSolid.svelte.d.ts",
       "svelte": "./dist/SquareNfiSolid.svelte"
     },
-    "./SquareOdnoklassnikiBrand.svelte": {
-      "types": "./dist/SquareOdnoklassnikiBrand.svelte.d.ts",
-      "svelte": "./dist/SquareOdnoklassnikiBrand.svelte"
+    "./SquareOdnoklassnikiBrands.svelte": {
+      "types": "./dist/SquareOdnoklassnikiBrands.svelte.d.ts",
+      "svelte": "./dist/SquareOdnoklassnikiBrands.svelte"
     },
     "./SquareParkingSolid.svelte": {
       "types": "./dist/SquareParkingSolid.svelte.d.ts",
@@ -6776,13 +6804,13 @@
       "types": "./dist/SquarePhoneSolid.svelte.d.ts",
       "svelte": "./dist/SquarePhoneSolid.svelte"
     },
-    "./SquarePiedPiperBrand.svelte": {
-      "types": "./dist/SquarePiedPiperBrand.svelte.d.ts",
-      "svelte": "./dist/SquarePiedPiperBrand.svelte"
+    "./SquarePiedPiperBrands.svelte": {
+      "types": "./dist/SquarePiedPiperBrands.svelte.d.ts",
+      "svelte": "./dist/SquarePiedPiperBrands.svelte"
     },
-    "./SquarePinterestBrand.svelte": {
-      "types": "./dist/SquarePinterestBrand.svelte.d.ts",
-      "svelte": "./dist/SquarePinterestBrand.svelte"
+    "./SquarePinterestBrands.svelte": {
+      "types": "./dist/SquarePinterestBrands.svelte.d.ts",
+      "svelte": "./dist/SquarePinterestBrands.svelte"
     },
     "./SquarePlusRegular.svelte": {
       "types": "./dist/SquarePlusRegular.svelte.d.ts",
@@ -6800,9 +6828,9 @@
       "types": "./dist/SquarePollVerticalSolid.svelte.d.ts",
       "svelte": "./dist/SquarePollVerticalSolid.svelte"
     },
-    "./SquareRedditBrand.svelte": {
-      "types": "./dist/SquareRedditBrand.svelte.d.ts",
-      "svelte": "./dist/SquareRedditBrand.svelte"
+    "./SquareRedditBrands.svelte": {
+      "types": "./dist/SquareRedditBrands.svelte.d.ts",
+      "svelte": "./dist/SquareRedditBrands.svelte"
     },
     "./SquareRegular.svelte": {
       "types": "./dist/SquareRegular.svelte.d.ts",
@@ -6820,81 +6848,93 @@
       "types": "./dist/SquareShareNodesSolid.svelte.d.ts",
       "svelte": "./dist/SquareShareNodesSolid.svelte"
     },
-    "./SquareSnapchatBrand.svelte": {
-      "types": "./dist/SquareSnapchatBrand.svelte.d.ts",
-      "svelte": "./dist/SquareSnapchatBrand.svelte"
+    "./SquareSnapchatBrands.svelte": {
+      "types": "./dist/SquareSnapchatBrands.svelte.d.ts",
+      "svelte": "./dist/SquareSnapchatBrands.svelte"
     },
     "./SquareSolid.svelte": {
       "types": "./dist/SquareSolid.svelte.d.ts",
       "svelte": "./dist/SquareSolid.svelte"
     },
-    "./SquareSteamBrand.svelte": {
-      "types": "./dist/SquareSteamBrand.svelte.d.ts",
-      "svelte": "./dist/SquareSteamBrand.svelte"
+    "./SquareSteamBrands.svelte": {
+      "types": "./dist/SquareSteamBrands.svelte.d.ts",
+      "svelte": "./dist/SquareSteamBrands.svelte"
     },
-    "./SquareThreadsBrand.svelte": {
-      "types": "./dist/SquareThreadsBrand.svelte.d.ts",
-      "svelte": "./dist/SquareThreadsBrand.svelte"
+    "./SquareThreadsBrands.svelte": {
+      "types": "./dist/SquareThreadsBrands.svelte.d.ts",
+      "svelte": "./dist/SquareThreadsBrands.svelte"
     },
-    "./SquareTumblrBrand.svelte": {
-      "types": "./dist/SquareTumblrBrand.svelte.d.ts",
-      "svelte": "./dist/SquareTumblrBrand.svelte"
+    "./SquareTumblrBrands.svelte": {
+      "types": "./dist/SquareTumblrBrands.svelte.d.ts",
+      "svelte": "./dist/SquareTumblrBrands.svelte"
     },
-    "./SquareTwitterBrand.svelte": {
-      "types": "./dist/SquareTwitterBrand.svelte.d.ts",
-      "svelte": "./dist/SquareTwitterBrand.svelte"
+    "./SquareTwitterBrands.svelte": {
+      "types": "./dist/SquareTwitterBrands.svelte.d.ts",
+      "svelte": "./dist/SquareTwitterBrands.svelte"
     },
     "./SquareUpRightSolid.svelte": {
       "types": "./dist/SquareUpRightSolid.svelte.d.ts",
       "svelte": "./dist/SquareUpRightSolid.svelte"
     },
-    "./SquareViadeoBrand.svelte": {
-      "types": "./dist/SquareViadeoBrand.svelte.d.ts",
-      "svelte": "./dist/SquareViadeoBrand.svelte"
+    "./SquareUpworkBrands.svelte": {
+      "types": "./dist/SquareUpworkBrands.svelte.d.ts",
+      "svelte": "./dist/SquareUpworkBrands.svelte"
     },
-    "./SquareVimeoBrand.svelte": {
-      "types": "./dist/SquareVimeoBrand.svelte.d.ts",
-      "svelte": "./dist/SquareVimeoBrand.svelte"
+    "./SquareViadeoBrands.svelte": {
+      "types": "./dist/SquareViadeoBrands.svelte.d.ts",
+      "svelte": "./dist/SquareViadeoBrands.svelte"
+    },
+    "./SquareVimeoBrands.svelte": {
+      "types": "./dist/SquareVimeoBrands.svelte.d.ts",
+      "svelte": "./dist/SquareVimeoBrands.svelte"
     },
     "./SquareVirusSolid.svelte": {
       "types": "./dist/SquareVirusSolid.svelte.d.ts",
       "svelte": "./dist/SquareVirusSolid.svelte"
     },
-    "./SquareWhatsappBrand.svelte": {
-      "types": "./dist/SquareWhatsappBrand.svelte.d.ts",
-      "svelte": "./dist/SquareWhatsappBrand.svelte"
+    "./SquareWebAwesomeBrands.svelte": {
+      "types": "./dist/SquareWebAwesomeBrands.svelte.d.ts",
+      "svelte": "./dist/SquareWebAwesomeBrands.svelte"
     },
-    "./SquareXTwitterBrand.svelte": {
-      "types": "./dist/SquareXTwitterBrand.svelte.d.ts",
-      "svelte": "./dist/SquareXTwitterBrand.svelte"
+    "./SquareWebAwesomeStrokeBrands.svelte": {
+      "types": "./dist/SquareWebAwesomeStrokeBrands.svelte.d.ts",
+      "svelte": "./dist/SquareWebAwesomeStrokeBrands.svelte"
     },
-    "./SquareXingBrand.svelte": {
-      "types": "./dist/SquareXingBrand.svelte.d.ts",
-      "svelte": "./dist/SquareXingBrand.svelte"
+    "./SquareWhatsappBrands.svelte": {
+      "types": "./dist/SquareWhatsappBrands.svelte.d.ts",
+      "svelte": "./dist/SquareWhatsappBrands.svelte"
+    },
+    "./SquareXTwitterBrands.svelte": {
+      "types": "./dist/SquareXTwitterBrands.svelte.d.ts",
+      "svelte": "./dist/SquareXTwitterBrands.svelte"
+    },
+    "./SquareXingBrands.svelte": {
+      "types": "./dist/SquareXingBrands.svelte.d.ts",
+      "svelte": "./dist/SquareXingBrands.svelte"
     },
     "./SquareXmarkSolid.svelte": {
       "types": "./dist/SquareXmarkSolid.svelte.d.ts",
       "svelte": "./dist/SquareXmarkSolid.svelte"
     },
-    "./SquareYoutubeBrand.svelte": {
-      "types": "./dist/SquareYoutubeBrand.svelte.d.ts",
-      "svelte": "./dist/SquareYoutubeBrand.svelte"
+    "./SquareYoutubeBrands.svelte": {
+      "types": "./dist/SquareYoutubeBrands.svelte.d.ts",
+      "svelte": "./dist/SquareYoutubeBrands.svelte"
     },
-    "./SquarespaceBrand.svelte": {
-      "types": "./dist/SquarespaceBrand.svelte.d.ts",
-      "svelte": "./dist/SquarespaceBrand.svelte"
+    "./SquarespaceBrands.svelte": {
+      "types": "./dist/SquarespaceBrands.svelte.d.ts",
+      "svelte": "./dist/SquarespaceBrands.svelte"
     },
-    "./StackExchangeBrand.svelte": {
-      "types": "./dist/StackExchangeBrand.svelte.d.ts",
-      "svelte": "./dist/StackExchangeBrand.svelte"
+    "./StackExchangeBrands.svelte": {
+      "types": "./dist/StackExchangeBrands.svelte.d.ts",
+      "svelte": "./dist/StackExchangeBrands.svelte"
     },
-    "./StackOverflowBrand.svelte": {
-      "types": "./dist/StackOverflowBrand.svelte.d.ts",
-      "svelte": "./dist/StackOverflowBrand.svelte"
+    "./StackOverflowBrands.svelte": {
+      "types": "./dist/StackOverflowBrands.svelte.d.ts",
+      "svelte": "./dist/StackOverflowBrands.svelte"
     },
-    "./StackpathBrand.svelte": {
-      "types": "./dist/StackpathBrand.svelte.d.ts",
-      "svelte": "./dist/StackpathBrand.svelte"
+    "./StackpathBrands.svelte": {
+      "types": "./dist/StackpathBrands.svelte.d.ts",
+      "svelte": "./dist/StackpathBrands.svelte"
     },
     "./StaffSnakeSolid.svelte": {
       "types": "./dist/StaffSnakeSolid.svelte.d.ts",
@@ -6948,17 +6988,17 @@
       "types": "./dist/StarSolid.svelte.d.ts",
       "svelte": "./dist/StarSolid.svelte"
     },
-    "./StaylinkedBrand.svelte": {
-      "types": "./dist/StaylinkedBrand.svelte.d.ts",
-      "svelte": "./dist/StaylinkedBrand.svelte"
+    "./StaylinkedBrands.svelte": {
+      "types": "./dist/StaylinkedBrands.svelte.d.ts",
+      "svelte": "./dist/StaylinkedBrands.svelte"
     },
-    "./SteamBrand.svelte": {
-      "types": "./dist/SteamBrand.svelte.d.ts",
-      "svelte": "./dist/SteamBrand.svelte"
+    "./SteamBrands.svelte": {
+      "types": "./dist/SteamBrands.svelte.d.ts",
+      "svelte": "./dist/SteamBrands.svelte"
     },
-    "./SteamSymbolBrand.svelte": {
-      "types": "./dist/SteamSymbolBrand.svelte.d.ts",
-      "svelte": "./dist/SteamSymbolBrand.svelte"
+    "./SteamSymbolBrands.svelte": {
+      "types": "./dist/SteamSymbolBrands.svelte.d.ts",
+      "svelte": "./dist/SteamSymbolBrands.svelte"
     },
     "./SterlingSignSolid.svelte": {
       "types": "./dist/SterlingSignSolid.svelte.d.ts",
@@ -6968,9 +7008,9 @@
       "types": "./dist/StethoscopeSolid.svelte.d.ts",
       "svelte": "./dist/StethoscopeSolid.svelte"
     },
-    "./StickerMuleBrand.svelte": {
-      "types": "./dist/StickerMuleBrand.svelte.d.ts",
-      "svelte": "./dist/StickerMuleBrand.svelte"
+    "./StickerMuleBrands.svelte": {
+      "types": "./dist/StickerMuleBrands.svelte.d.ts",
+      "svelte": "./dist/StickerMuleBrands.svelte"
     },
     "./StopSolid.svelte": {
       "types": "./dist/StopSolid.svelte.d.ts",
@@ -6992,9 +7032,9 @@
       "types": "./dist/StoreSolid.svelte.d.ts",
       "svelte": "./dist/StoreSolid.svelte"
     },
-    "./StravaBrand.svelte": {
-      "types": "./dist/StravaBrand.svelte.d.ts",
-      "svelte": "./dist/StravaBrand.svelte"
+    "./StravaBrands.svelte": {
+      "types": "./dist/StravaBrands.svelte.d.ts",
+      "svelte": "./dist/StravaBrands.svelte"
     },
     "./StreetViewSolid.svelte": {
       "types": "./dist/StreetViewSolid.svelte.d.ts",
@@ -7004,33 +7044,33 @@
       "types": "./dist/StrikethroughSolid.svelte.d.ts",
       "svelte": "./dist/StrikethroughSolid.svelte"
     },
-    "./StripeBrand.svelte": {
-      "types": "./dist/StripeBrand.svelte.d.ts",
-      "svelte": "./dist/StripeBrand.svelte"
+    "./StripeBrands.svelte": {
+      "types": "./dist/StripeBrands.svelte.d.ts",
+      "svelte": "./dist/StripeBrands.svelte"
     },
-    "./StripeSBrand.svelte": {
-      "types": "./dist/StripeSBrand.svelte.d.ts",
-      "svelte": "./dist/StripeSBrand.svelte"
+    "./StripeSBrands.svelte": {
+      "types": "./dist/StripeSBrands.svelte.d.ts",
+      "svelte": "./dist/StripeSBrands.svelte"
     },
     "./StroopwafelSolid.svelte": {
       "types": "./dist/StroopwafelSolid.svelte.d.ts",
       "svelte": "./dist/StroopwafelSolid.svelte"
     },
-    "./StubberBrand.svelte": {
-      "types": "./dist/StubberBrand.svelte.d.ts",
-      "svelte": "./dist/StubberBrand.svelte"
+    "./StubberBrands.svelte": {
+      "types": "./dist/StubberBrands.svelte.d.ts",
+      "svelte": "./dist/StubberBrands.svelte"
     },
-    "./StudiovinariBrand.svelte": {
-      "types": "./dist/StudiovinariBrand.svelte.d.ts",
-      "svelte": "./dist/StudiovinariBrand.svelte"
+    "./StudiovinariBrands.svelte": {
+      "types": "./dist/StudiovinariBrands.svelte.d.ts",
+      "svelte": "./dist/StudiovinariBrands.svelte"
     },
-    "./StumbleuponBrand.svelte": {
-      "types": "./dist/StumbleuponBrand.svelte.d.ts",
-      "svelte": "./dist/StumbleuponBrand.svelte"
+    "./StumbleuponBrands.svelte": {
+      "types": "./dist/StumbleuponBrands.svelte.d.ts",
+      "svelte": "./dist/StumbleuponBrands.svelte"
     },
-    "./StumbleuponCircleBrand.svelte": {
-      "types": "./dist/StumbleuponCircleBrand.svelte.d.ts",
-      "svelte": "./dist/StumbleuponCircleBrand.svelte"
+    "./StumbleuponCircleBrands.svelte": {
+      "types": "./dist/StumbleuponCircleBrands.svelte.d.ts",
+      "svelte": "./dist/StumbleuponCircleBrands.svelte"
     },
     "./SubscriptSolid.svelte": {
       "types": "./dist/SubscriptSolid.svelte.d.ts",
@@ -7060,33 +7100,33 @@
       "types": "./dist/SunSolid.svelte.d.ts",
       "svelte": "./dist/SunSolid.svelte"
     },
-    "./SuperpowersBrand.svelte": {
-      "types": "./dist/SuperpowersBrand.svelte.d.ts",
-      "svelte": "./dist/SuperpowersBrand.svelte"
+    "./SuperpowersBrands.svelte": {
+      "types": "./dist/SuperpowersBrands.svelte.d.ts",
+      "svelte": "./dist/SuperpowersBrands.svelte"
     },
     "./SuperscriptSolid.svelte": {
       "types": "./dist/SuperscriptSolid.svelte.d.ts",
       "svelte": "./dist/SuperscriptSolid.svelte"
     },
-    "./SuppleBrand.svelte": {
-      "types": "./dist/SuppleBrand.svelte.d.ts",
-      "svelte": "./dist/SuppleBrand.svelte"
+    "./SuppleBrands.svelte": {
+      "types": "./dist/SuppleBrands.svelte.d.ts",
+      "svelte": "./dist/SuppleBrands.svelte"
     },
-    "./SuseBrand.svelte": {
-      "types": "./dist/SuseBrand.svelte.d.ts",
-      "svelte": "./dist/SuseBrand.svelte"
+    "./SuseBrands.svelte": {
+      "types": "./dist/SuseBrands.svelte.d.ts",
+      "svelte": "./dist/SuseBrands.svelte"
     },
     "./SwatchbookSolid.svelte": {
       "types": "./dist/SwatchbookSolid.svelte.d.ts",
       "svelte": "./dist/SwatchbookSolid.svelte"
     },
-    "./SwiftBrand.svelte": {
-      "types": "./dist/SwiftBrand.svelte.d.ts",
-      "svelte": "./dist/SwiftBrand.svelte"
+    "./SwiftBrands.svelte": {
+      "types": "./dist/SwiftBrands.svelte.d.ts",
+      "svelte": "./dist/SwiftBrands.svelte"
     },
-    "./SymfonyBrand.svelte": {
-      "types": "./dist/SymfonyBrand.svelte.d.ts",
-      "svelte": "./dist/SymfonyBrand.svelte"
+    "./SymfonyBrands.svelte": {
+      "types": "./dist/SymfonyBrands.svelte.d.ts",
+      "svelte": "./dist/SymfonyBrands.svelte"
     },
     "./SynagogueSolid.svelte": {
       "types": "./dist/SynagogueSolid.svelte.d.ts",
@@ -7100,9 +7140,21 @@
       "types": "./dist/TSolid.svelte.d.ts",
       "svelte": "./dist/TSolid.svelte"
     },
+    "./TableCellsColumnLockSolid.svelte": {
+      "types": "./dist/TableCellsColumnLockSolid.svelte.d.ts",
+      "svelte": "./dist/TableCellsColumnLockSolid.svelte"
+    },
     "./TableCellsLargeSolid.svelte": {
       "types": "./dist/TableCellsLargeSolid.svelte.d.ts",
       "svelte": "./dist/TableCellsLargeSolid.svelte"
+    },
+    "./TableCellsRowLockSolid.svelte": {
+      "types": "./dist/TableCellsRowLockSolid.svelte.d.ts",
+      "svelte": "./dist/TableCellsRowLockSolid.svelte"
+    },
+    "./TableCellsRowUnlockSolid.svelte": {
+      "types": "./dist/TableCellsRowUnlockSolid.svelte.d.ts",
+      "svelte": "./dist/TableCellsRowUnlockSolid.svelte"
     },
     "./TableCellsSolid.svelte": {
       "types": "./dist/TableCellsSolid.svelte.d.ts",
@@ -7168,9 +7220,9 @@
       "types": "./dist/TaxiSolid.svelte.d.ts",
       "svelte": "./dist/TaxiSolid.svelte"
     },
-    "./TeamspeakBrand.svelte": {
-      "types": "./dist/TeamspeakBrand.svelte.d.ts",
-      "svelte": "./dist/TeamspeakBrand.svelte"
+    "./TeamspeakBrands.svelte": {
+      "types": "./dist/TeamspeakBrands.svelte.d.ts",
+      "svelte": "./dist/TeamspeakBrands.svelte"
     },
     "./TeethOpenSolid.svelte": {
       "types": "./dist/TeethOpenSolid.svelte.d.ts",
@@ -7180,9 +7232,9 @@
       "types": "./dist/TeethSolid.svelte.d.ts",
       "svelte": "./dist/TeethSolid.svelte"
     },
-    "./TelegramBrand.svelte": {
-      "types": "./dist/TelegramBrand.svelte.d.ts",
-      "svelte": "./dist/TelegramBrand.svelte"
+    "./TelegramBrands.svelte": {
+      "types": "./dist/TelegramBrands.svelte.d.ts",
+      "svelte": "./dist/TelegramBrands.svelte"
     },
     "./TemperatureArrowDownSolid.svelte": {
       "types": "./dist/TemperatureArrowDownSolid.svelte.d.ts",
@@ -7220,9 +7272,9 @@
       "types": "./dist/TemperatureThreeQuartersSolid.svelte.d.ts",
       "svelte": "./dist/TemperatureThreeQuartersSolid.svelte"
     },
-    "./TencentWeiboBrand.svelte": {
-      "types": "./dist/TencentWeiboBrand.svelte.d.ts",
-      "svelte": "./dist/TencentWeiboBrand.svelte"
+    "./TencentWeiboBrands.svelte": {
+      "types": "./dist/TencentWeiboBrands.svelte.d.ts",
+      "svelte": "./dist/TencentWeiboBrands.svelte"
     },
     "./TengeSignSolid.svelte": {
       "types": "./dist/TengeSignSolid.svelte.d.ts",
@@ -7268,29 +7320,29 @@
       "types": "./dist/TextWidthSolid.svelte.d.ts",
       "svelte": "./dist/TextWidthSolid.svelte"
     },
-    "./TheRedYetiBrand.svelte": {
-      "types": "./dist/TheRedYetiBrand.svelte.d.ts",
-      "svelte": "./dist/TheRedYetiBrand.svelte"
+    "./TheRedYetiBrands.svelte": {
+      "types": "./dist/TheRedYetiBrands.svelte.d.ts",
+      "svelte": "./dist/TheRedYetiBrands.svelte"
     },
-    "./ThemecoBrand.svelte": {
-      "types": "./dist/ThemecoBrand.svelte.d.ts",
-      "svelte": "./dist/ThemecoBrand.svelte"
+    "./ThemecoBrands.svelte": {
+      "types": "./dist/ThemecoBrands.svelte.d.ts",
+      "svelte": "./dist/ThemecoBrands.svelte"
     },
-    "./ThemeisleBrand.svelte": {
-      "types": "./dist/ThemeisleBrand.svelte.d.ts",
-      "svelte": "./dist/ThemeisleBrand.svelte"
+    "./ThemeisleBrands.svelte": {
+      "types": "./dist/ThemeisleBrands.svelte.d.ts",
+      "svelte": "./dist/ThemeisleBrands.svelte"
     },
     "./ThermometerSolid.svelte": {
       "types": "./dist/ThermometerSolid.svelte.d.ts",
       "svelte": "./dist/ThermometerSolid.svelte"
     },
-    "./ThinkPeaksBrand.svelte": {
-      "types": "./dist/ThinkPeaksBrand.svelte.d.ts",
-      "svelte": "./dist/ThinkPeaksBrand.svelte"
+    "./ThinkPeaksBrands.svelte": {
+      "types": "./dist/ThinkPeaksBrands.svelte.d.ts",
+      "svelte": "./dist/ThinkPeaksBrands.svelte"
     },
-    "./ThreadsBrand.svelte": {
-      "types": "./dist/ThreadsBrand.svelte.d.ts",
-      "svelte": "./dist/ThreadsBrand.svelte"
+    "./ThreadsBrands.svelte": {
+      "types": "./dist/ThreadsBrands.svelte.d.ts",
+      "svelte": "./dist/ThreadsBrands.svelte"
     },
     "./ThumbsDownRegular.svelte": {
       "types": "./dist/ThumbsDownRegular.svelte.d.ts",
@@ -7308,6 +7360,10 @@
       "types": "./dist/ThumbsUpSolid.svelte.d.ts",
       "svelte": "./dist/ThumbsUpSolid.svelte"
     },
+    "./ThumbtackSlashSolid.svelte": {
+      "types": "./dist/ThumbtackSlashSolid.svelte.d.ts",
+      "svelte": "./dist/ThumbtackSlashSolid.svelte"
+    },
     "./ThumbtackSolid.svelte": {
       "types": "./dist/ThumbtackSolid.svelte.d.ts",
       "svelte": "./dist/ThumbtackSolid.svelte"
@@ -7320,9 +7376,9 @@
       "types": "./dist/TicketSolid.svelte.d.ts",
       "svelte": "./dist/TicketSolid.svelte"
     },
-    "./TiktokBrand.svelte": {
-      "types": "./dist/TiktokBrand.svelte.d.ts",
-      "svelte": "./dist/TiktokBrand.svelte"
+    "./TiktokBrands.svelte": {
+      "types": "./dist/TiktokBrands.svelte.d.ts",
+      "svelte": "./dist/TiktokBrands.svelte"
     },
     "./TimelineSolid.svelte": {
       "types": "./dist/TimelineSolid.svelte.d.ts",
@@ -7388,9 +7444,9 @@
       "types": "./dist/TractorSolid.svelte.d.ts",
       "svelte": "./dist/TractorSolid.svelte"
     },
-    "./TradeFederationBrand.svelte": {
-      "types": "./dist/TradeFederationBrand.svelte.d.ts",
-      "svelte": "./dist/TradeFederationBrand.svelte"
+    "./TradeFederationBrands.svelte": {
+      "types": "./dist/TradeFederationBrands.svelte.d.ts",
+      "svelte": "./dist/TradeFederationBrands.svelte"
     },
     "./TrademarkSolid.svelte": {
       "types": "./dist/TrademarkSolid.svelte.d.ts",
@@ -7448,9 +7504,9 @@
       "types": "./dist/TreeSolid.svelte.d.ts",
       "svelte": "./dist/TreeSolid.svelte"
     },
-    "./TrelloBrand.svelte": {
-      "types": "./dist/TrelloBrand.svelte.d.ts",
-      "svelte": "./dist/TrelloBrand.svelte"
+    "./TrelloBrands.svelte": {
+      "types": "./dist/TrelloBrands.svelte.d.ts",
+      "svelte": "./dist/TrelloBrands.svelte"
     },
     "./TriangleExclamationSolid.svelte": {
       "types": "./dist/TriangleExclamationSolid.svelte.d.ts",
@@ -7524,9 +7580,9 @@
       "types": "./dist/TtySolid.svelte.d.ts",
       "svelte": "./dist/TtySolid.svelte"
     },
-    "./TumblrBrand.svelte": {
-      "types": "./dist/TumblrBrand.svelte.d.ts",
-      "svelte": "./dist/TumblrBrand.svelte"
+    "./TumblrBrands.svelte": {
+      "types": "./dist/TumblrBrands.svelte.d.ts",
+      "svelte": "./dist/TumblrBrands.svelte"
     },
     "./TurkishLiraSignSolid.svelte": {
       "types": "./dist/TurkishLiraSignSolid.svelte.d.ts",
@@ -7544,37 +7600,37 @@
       "types": "./dist/TvSolid.svelte.d.ts",
       "svelte": "./dist/TvSolid.svelte"
     },
-    "./TwitchBrand.svelte": {
-      "types": "./dist/TwitchBrand.svelte.d.ts",
-      "svelte": "./dist/TwitchBrand.svelte"
+    "./TwitchBrands.svelte": {
+      "types": "./dist/TwitchBrands.svelte.d.ts",
+      "svelte": "./dist/TwitchBrands.svelte"
     },
-    "./TwitterBrand.svelte": {
-      "types": "./dist/TwitterBrand.svelte.d.ts",
-      "svelte": "./dist/TwitterBrand.svelte"
+    "./TwitterBrands.svelte": {
+      "types": "./dist/TwitterBrands.svelte.d.ts",
+      "svelte": "./dist/TwitterBrands.svelte"
     },
-    "./Typo3Brand.svelte": {
-      "types": "./dist/Typo3Brand.svelte.d.ts",
-      "svelte": "./dist/Typo3Brand.svelte"
+    "./Typo3Brands.svelte": {
+      "types": "./dist/Typo3Brands.svelte.d.ts",
+      "svelte": "./dist/Typo3Brands.svelte"
     },
     "./USolid.svelte": {
       "types": "./dist/USolid.svelte.d.ts",
       "svelte": "./dist/USolid.svelte"
     },
-    "./UberBrand.svelte": {
-      "types": "./dist/UberBrand.svelte.d.ts",
-      "svelte": "./dist/UberBrand.svelte"
+    "./UberBrands.svelte": {
+      "types": "./dist/UberBrands.svelte.d.ts",
+      "svelte": "./dist/UberBrands.svelte"
     },
-    "./UbuntuBrand.svelte": {
-      "types": "./dist/UbuntuBrand.svelte.d.ts",
-      "svelte": "./dist/UbuntuBrand.svelte"
+    "./UbuntuBrands.svelte": {
+      "types": "./dist/UbuntuBrands.svelte.d.ts",
+      "svelte": "./dist/UbuntuBrands.svelte"
     },
-    "./UikitBrand.svelte": {
-      "types": "./dist/UikitBrand.svelte.d.ts",
-      "svelte": "./dist/UikitBrand.svelte"
+    "./UikitBrands.svelte": {
+      "types": "./dist/UikitBrands.svelte.d.ts",
+      "svelte": "./dist/UikitBrands.svelte"
     },
-    "./UmbracoBrand.svelte": {
-      "types": "./dist/UmbracoBrand.svelte.d.ts",
-      "svelte": "./dist/UmbracoBrand.svelte"
+    "./UmbracoBrands.svelte": {
+      "types": "./dist/UmbracoBrands.svelte.d.ts",
+      "svelte": "./dist/UmbracoBrands.svelte"
     },
     "./UmbrellaBeachSolid.svelte": {
       "types": "./dist/UmbrellaBeachSolid.svelte.d.ts",
@@ -7584,21 +7640,21 @@
       "types": "./dist/UmbrellaSolid.svelte.d.ts",
       "svelte": "./dist/UmbrellaSolid.svelte"
     },
-    "./UnchartedBrand.svelte": {
-      "types": "./dist/UnchartedBrand.svelte.d.ts",
-      "svelte": "./dist/UnchartedBrand.svelte"
+    "./UnchartedBrands.svelte": {
+      "types": "./dist/UnchartedBrands.svelte.d.ts",
+      "svelte": "./dist/UnchartedBrands.svelte"
     },
     "./UnderlineSolid.svelte": {
       "types": "./dist/UnderlineSolid.svelte.d.ts",
       "svelte": "./dist/UnderlineSolid.svelte"
     },
-    "./UniregistryBrand.svelte": {
-      "types": "./dist/UniregistryBrand.svelte.d.ts",
-      "svelte": "./dist/UniregistryBrand.svelte"
+    "./UniregistryBrands.svelte": {
+      "types": "./dist/UniregistryBrands.svelte.d.ts",
+      "svelte": "./dist/UniregistryBrands.svelte"
     },
-    "./UnityBrand.svelte": {
-      "types": "./dist/UnityBrand.svelte.d.ts",
-      "svelte": "./dist/UnityBrand.svelte"
+    "./UnityBrands.svelte": {
+      "types": "./dist/UnityBrands.svelte.d.ts",
+      "svelte": "./dist/UnityBrands.svelte"
     },
     "./UniversalAccessSolid.svelte": {
       "types": "./dist/UniversalAccessSolid.svelte.d.ts",
@@ -7612,13 +7668,13 @@
       "types": "./dist/UnlockSolid.svelte.d.ts",
       "svelte": "./dist/UnlockSolid.svelte"
     },
-    "./UnsplashBrand.svelte": {
-      "types": "./dist/UnsplashBrand.svelte.d.ts",
-      "svelte": "./dist/UnsplashBrand.svelte"
+    "./UnsplashBrands.svelte": {
+      "types": "./dist/UnsplashBrands.svelte.d.ts",
+      "svelte": "./dist/UnsplashBrands.svelte"
     },
-    "./UntappdBrand.svelte": {
-      "types": "./dist/UntappdBrand.svelte.d.ts",
-      "svelte": "./dist/UntappdBrand.svelte"
+    "./UntappdBrands.svelte": {
+      "types": "./dist/UntappdBrands.svelte.d.ts",
+      "svelte": "./dist/UntappdBrands.svelte"
     },
     "./UpDownLeftRightSolid.svelte": {
       "types": "./dist/UpDownLeftRightSolid.svelte.d.ts",
@@ -7644,17 +7700,17 @@
       "types": "./dist/UploadSolid.svelte.d.ts",
       "svelte": "./dist/UploadSolid.svelte"
     },
-    "./UpsBrand.svelte": {
-      "types": "./dist/UpsBrand.svelte.d.ts",
-      "svelte": "./dist/UpsBrand.svelte"
+    "./UpsBrands.svelte": {
+      "types": "./dist/UpsBrands.svelte.d.ts",
+      "svelte": "./dist/UpsBrands.svelte"
     },
-    "./UpworkBrand.svelte": {
-      "types": "./dist/UpworkBrand.svelte.d.ts",
-      "svelte": "./dist/UpworkBrand.svelte"
+    "./UpworkBrands.svelte": {
+      "types": "./dist/UpworkBrands.svelte.d.ts",
+      "svelte": "./dist/UpworkBrands.svelte"
     },
-    "./UsbBrand.svelte": {
-      "types": "./dist/UsbBrand.svelte.d.ts",
-      "svelte": "./dist/UsbBrand.svelte"
+    "./UsbBrands.svelte": {
+      "types": "./dist/UsbBrands.svelte.d.ts",
+      "svelte": "./dist/UsbBrands.svelte"
     },
     "./UserAstronautSolid.svelte": {
       "types": "./dist/UserAstronautSolid.svelte.d.ts",
@@ -7784,13 +7840,13 @@
       "types": "./dist/UsersViewfinderSolid.svelte.d.ts",
       "svelte": "./dist/UsersViewfinderSolid.svelte"
     },
-    "./UspsBrand.svelte": {
-      "types": "./dist/UspsBrand.svelte.d.ts",
-      "svelte": "./dist/UspsBrand.svelte"
+    "./UspsBrands.svelte": {
+      "types": "./dist/UspsBrands.svelte.d.ts",
+      "svelte": "./dist/UspsBrands.svelte"
     },
-    "./UssunnahBrand.svelte": {
-      "types": "./dist/UssunnahBrand.svelte.d.ts",
-      "svelte": "./dist/UssunnahBrand.svelte"
+    "./UssunnahBrands.svelte": {
+      "types": "./dist/UssunnahBrands.svelte.d.ts",
+      "svelte": "./dist/UssunnahBrands.svelte"
     },
     "./UtensilsSolid.svelte": {
       "types": "./dist/UtensilsSolid.svelte.d.ts",
@@ -7800,9 +7856,9 @@
       "types": "./dist/VSolid.svelte.d.ts",
       "svelte": "./dist/VSolid.svelte"
     },
-    "./VaadinBrand.svelte": {
-      "types": "./dist/VaadinBrand.svelte.d.ts",
-      "svelte": "./dist/VaadinBrand.svelte"
+    "./VaadinBrands.svelte": {
+      "types": "./dist/VaadinBrands.svelte.d.ts",
+      "svelte": "./dist/VaadinBrands.svelte"
     },
     "./VanShuttleSolid.svelte": {
       "types": "./dist/VanShuttleSolid.svelte.d.ts",
@@ -7836,13 +7892,13 @@
       "types": "./dist/VestSolid.svelte.d.ts",
       "svelte": "./dist/VestSolid.svelte"
     },
-    "./ViacoinBrand.svelte": {
-      "types": "./dist/ViacoinBrand.svelte.d.ts",
-      "svelte": "./dist/ViacoinBrand.svelte"
+    "./ViacoinBrands.svelte": {
+      "types": "./dist/ViacoinBrands.svelte.d.ts",
+      "svelte": "./dist/ViacoinBrands.svelte"
     },
-    "./ViadeoBrand.svelte": {
-      "types": "./dist/ViadeoBrand.svelte.d.ts",
-      "svelte": "./dist/ViadeoBrand.svelte"
+    "./ViadeoBrands.svelte": {
+      "types": "./dist/ViadeoBrands.svelte.d.ts",
+      "svelte": "./dist/ViadeoBrands.svelte"
     },
     "./VialCircleCheckSolid.svelte": {
       "types": "./dist/VialCircleCheckSolid.svelte.d.ts",
@@ -7860,9 +7916,9 @@
       "types": "./dist/VialsSolid.svelte.d.ts",
       "svelte": "./dist/VialsSolid.svelte"
     },
-    "./ViberBrand.svelte": {
-      "types": "./dist/ViberBrand.svelte.d.ts",
-      "svelte": "./dist/ViberBrand.svelte"
+    "./ViberBrands.svelte": {
+      "types": "./dist/ViberBrands.svelte.d.ts",
+      "svelte": "./dist/ViberBrands.svelte"
     },
     "./VideoSlashSolid.svelte": {
       "types": "./dist/VideoSlashSolid.svelte.d.ts",
@@ -7876,17 +7932,17 @@
       "types": "./dist/ViharaSolid.svelte.d.ts",
       "svelte": "./dist/ViharaSolid.svelte"
     },
-    "./VimeoBrand.svelte": {
-      "types": "./dist/VimeoBrand.svelte.d.ts",
-      "svelte": "./dist/VimeoBrand.svelte"
+    "./VimeoBrands.svelte": {
+      "types": "./dist/VimeoBrands.svelte.d.ts",
+      "svelte": "./dist/VimeoBrands.svelte"
     },
-    "./VimeoVBrand.svelte": {
-      "types": "./dist/VimeoVBrand.svelte.d.ts",
-      "svelte": "./dist/VimeoVBrand.svelte"
+    "./VimeoVBrands.svelte": {
+      "types": "./dist/VimeoVBrands.svelte.d.ts",
+      "svelte": "./dist/VimeoVBrands.svelte"
     },
-    "./VineBrand.svelte": {
-      "types": "./dist/VineBrand.svelte.d.ts",
-      "svelte": "./dist/VineBrand.svelte"
+    "./VineBrands.svelte": {
+      "types": "./dist/VineBrands.svelte.d.ts",
+      "svelte": "./dist/VineBrands.svelte"
     },
     "./VirusCovidSlashSolid.svelte": {
       "types": "./dist/VirusCovidSlashSolid.svelte.d.ts",
@@ -7908,13 +7964,13 @@
       "types": "./dist/VirusesSolid.svelte.d.ts",
       "svelte": "./dist/VirusesSolid.svelte"
     },
-    "./VkBrand.svelte": {
-      "types": "./dist/VkBrand.svelte.d.ts",
-      "svelte": "./dist/VkBrand.svelte"
+    "./VkBrands.svelte": {
+      "types": "./dist/VkBrands.svelte.d.ts",
+      "svelte": "./dist/VkBrands.svelte"
     },
-    "./VnvBrand.svelte": {
-      "types": "./dist/VnvBrand.svelte.d.ts",
-      "svelte": "./dist/VnvBrand.svelte"
+    "./VnvBrands.svelte": {
+      "types": "./dist/VnvBrands.svelte.d.ts",
+      "svelte": "./dist/VnvBrands.svelte"
     },
     "./VoicemailSolid.svelte": {
       "types": "./dist/VoicemailSolid.svelte.d.ts",
@@ -7948,9 +8004,9 @@
       "types": "./dist/VrCardboardSolid.svelte.d.ts",
       "svelte": "./dist/VrCardboardSolid.svelte"
     },
-    "./VuejsBrand.svelte": {
-      "types": "./dist/VuejsBrand.svelte.d.ts",
-      "svelte": "./dist/VuejsBrand.svelte"
+    "./VuejsBrands.svelte": {
+      "types": "./dist/VuejsBrands.svelte.d.ts",
+      "svelte": "./dist/VuejsBrands.svelte"
     },
     "./WSolid.svelte": {
       "types": "./dist/WSolid.svelte.d.ts",
@@ -7980,9 +8036,9 @@
       "types": "./dist/WarehouseSolid.svelte.d.ts",
       "svelte": "./dist/WarehouseSolid.svelte"
     },
-    "./WatchmanMonitoringBrand.svelte": {
-      "types": "./dist/WatchmanMonitoringBrand.svelte.d.ts",
-      "svelte": "./dist/WatchmanMonitoringBrand.svelte"
+    "./WatchmanMonitoringBrands.svelte": {
+      "types": "./dist/WatchmanMonitoringBrands.svelte.d.ts",
+      "svelte": "./dist/WatchmanMonitoringBrands.svelte"
     },
     "./WaterLadderSolid.svelte": {
       "types": "./dist/WaterLadderSolid.svelte.d.ts",
@@ -7996,21 +8052,29 @@
       "types": "./dist/WaveSquareSolid.svelte.d.ts",
       "svelte": "./dist/WaveSquareSolid.svelte"
     },
-    "./WazeBrand.svelte": {
-      "types": "./dist/WazeBrand.svelte.d.ts",
-      "svelte": "./dist/WazeBrand.svelte"
+    "./WazeBrands.svelte": {
+      "types": "./dist/WazeBrands.svelte.d.ts",
+      "svelte": "./dist/WazeBrands.svelte"
     },
-    "./WebflowBrand.svelte": {
-      "types": "./dist/WebflowBrand.svelte.d.ts",
-      "svelte": "./dist/WebflowBrand.svelte"
+    "./WebAwesomeBrands.svelte": {
+      "types": "./dist/WebAwesomeBrands.svelte.d.ts",
+      "svelte": "./dist/WebAwesomeBrands.svelte"
     },
-    "./WeeblyBrand.svelte": {
-      "types": "./dist/WeeblyBrand.svelte.d.ts",
-      "svelte": "./dist/WeeblyBrand.svelte"
+    "./WebAwesomeSolid.svelte": {
+      "types": "./dist/WebAwesomeSolid.svelte.d.ts",
+      "svelte": "./dist/WebAwesomeSolid.svelte"
     },
-    "./WeiboBrand.svelte": {
-      "types": "./dist/WeiboBrand.svelte.d.ts",
-      "svelte": "./dist/WeiboBrand.svelte"
+    "./WebflowBrands.svelte": {
+      "types": "./dist/WebflowBrands.svelte.d.ts",
+      "svelte": "./dist/WebflowBrands.svelte"
+    },
+    "./WeeblyBrands.svelte": {
+      "types": "./dist/WeeblyBrands.svelte.d.ts",
+      "svelte": "./dist/WeeblyBrands.svelte"
+    },
+    "./WeiboBrands.svelte": {
+      "types": "./dist/WeiboBrands.svelte.d.ts",
+      "svelte": "./dist/WeiboBrands.svelte"
     },
     "./WeightHangingSolid.svelte": {
       "types": "./dist/WeightHangingSolid.svelte.d.ts",
@@ -8020,13 +8084,13 @@
       "types": "./dist/WeightScaleSolid.svelte.d.ts",
       "svelte": "./dist/WeightScaleSolid.svelte"
     },
-    "./WeixinBrand.svelte": {
-      "types": "./dist/WeixinBrand.svelte.d.ts",
-      "svelte": "./dist/WeixinBrand.svelte"
+    "./WeixinBrands.svelte": {
+      "types": "./dist/WeixinBrands.svelte.d.ts",
+      "svelte": "./dist/WeixinBrands.svelte"
     },
-    "./WhatsappBrand.svelte": {
-      "types": "./dist/WhatsappBrand.svelte.d.ts",
-      "svelte": "./dist/WhatsappBrand.svelte"
+    "./WhatsappBrands.svelte": {
+      "types": "./dist/WhatsappBrands.svelte.d.ts",
+      "svelte": "./dist/WhatsappBrands.svelte"
     },
     "./WheatAwnCircleExclamationSolid.svelte": {
       "types": "./dist/WheatAwnCircleExclamationSolid.svelte.d.ts",
@@ -8048,17 +8112,17 @@
       "types": "./dist/WhiskeyGlassSolid.svelte.d.ts",
       "svelte": "./dist/WhiskeyGlassSolid.svelte"
     },
-    "./WhmcsBrand.svelte": {
-      "types": "./dist/WhmcsBrand.svelte.d.ts",
-      "svelte": "./dist/WhmcsBrand.svelte"
+    "./WhmcsBrands.svelte": {
+      "types": "./dist/WhmcsBrands.svelte.d.ts",
+      "svelte": "./dist/WhmcsBrands.svelte"
     },
     "./WifiSolid.svelte": {
       "types": "./dist/WifiSolid.svelte.d.ts",
       "svelte": "./dist/WifiSolid.svelte"
     },
-    "./WikipediaWBrand.svelte": {
-      "types": "./dist/WikipediaWBrand.svelte.d.ts",
-      "svelte": "./dist/WikipediaWBrand.svelte"
+    "./WikipediaWBrands.svelte": {
+      "types": "./dist/WikipediaWBrands.svelte.d.ts",
+      "svelte": "./dist/WikipediaWBrands.svelte"
     },
     "./WindSolid.svelte": {
       "types": "./dist/WindSolid.svelte.d.ts",
@@ -8088,9 +8152,9 @@
       "types": "./dist/WindowRestoreSolid.svelte.d.ts",
       "svelte": "./dist/WindowRestoreSolid.svelte"
     },
-    "./WindowsBrand.svelte": {
-      "types": "./dist/WindowsBrand.svelte.d.ts",
-      "svelte": "./dist/WindowsBrand.svelte"
+    "./WindowsBrands.svelte": {
+      "types": "./dist/WindowsBrands.svelte.d.ts",
+      "svelte": "./dist/WindowsBrands.svelte"
     },
     "./WineBottleSolid.svelte": {
       "types": "./dist/WineBottleSolid.svelte.d.ts",
@@ -8104,57 +8168,57 @@
       "types": "./dist/WineGlassSolid.svelte.d.ts",
       "svelte": "./dist/WineGlassSolid.svelte"
     },
-    "./WirsindhandwerkBrand.svelte": {
-      "types": "./dist/WirsindhandwerkBrand.svelte.d.ts",
-      "svelte": "./dist/WirsindhandwerkBrand.svelte"
+    "./WirsindhandwerkBrands.svelte": {
+      "types": "./dist/WirsindhandwerkBrands.svelte.d.ts",
+      "svelte": "./dist/WirsindhandwerkBrands.svelte"
     },
-    "./WixBrand.svelte": {
-      "types": "./dist/WixBrand.svelte.d.ts",
-      "svelte": "./dist/WixBrand.svelte"
+    "./WixBrands.svelte": {
+      "types": "./dist/WixBrands.svelte.d.ts",
+      "svelte": "./dist/WixBrands.svelte"
     },
-    "./WizardsOfTheCoastBrand.svelte": {
-      "types": "./dist/WizardsOfTheCoastBrand.svelte.d.ts",
-      "svelte": "./dist/WizardsOfTheCoastBrand.svelte"
+    "./WizardsOfTheCoastBrands.svelte": {
+      "types": "./dist/WizardsOfTheCoastBrands.svelte.d.ts",
+      "svelte": "./dist/WizardsOfTheCoastBrands.svelte"
     },
-    "./WoduBrand.svelte": {
-      "types": "./dist/WoduBrand.svelte.d.ts",
-      "svelte": "./dist/WoduBrand.svelte"
+    "./WoduBrands.svelte": {
+      "types": "./dist/WoduBrands.svelte.d.ts",
+      "svelte": "./dist/WoduBrands.svelte"
     },
-    "./WolfPackBattalionBrand.svelte": {
-      "types": "./dist/WolfPackBattalionBrand.svelte.d.ts",
-      "svelte": "./dist/WolfPackBattalionBrand.svelte"
+    "./WolfPackBattalionBrands.svelte": {
+      "types": "./dist/WolfPackBattalionBrands.svelte.d.ts",
+      "svelte": "./dist/WolfPackBattalionBrands.svelte"
     },
     "./WonSignSolid.svelte": {
       "types": "./dist/WonSignSolid.svelte.d.ts",
       "svelte": "./dist/WonSignSolid.svelte"
     },
-    "./WordpressBrand.svelte": {
-      "types": "./dist/WordpressBrand.svelte.d.ts",
-      "svelte": "./dist/WordpressBrand.svelte"
+    "./WordpressBrands.svelte": {
+      "types": "./dist/WordpressBrands.svelte.d.ts",
+      "svelte": "./dist/WordpressBrands.svelte"
     },
-    "./WordpressSimpleBrand.svelte": {
-      "types": "./dist/WordpressSimpleBrand.svelte.d.ts",
-      "svelte": "./dist/WordpressSimpleBrand.svelte"
+    "./WordpressSimpleBrands.svelte": {
+      "types": "./dist/WordpressSimpleBrands.svelte.d.ts",
+      "svelte": "./dist/WordpressSimpleBrands.svelte"
     },
     "./WormSolid.svelte": {
       "types": "./dist/WormSolid.svelte.d.ts",
       "svelte": "./dist/WormSolid.svelte"
     },
-    "./WpbeginnerBrand.svelte": {
-      "types": "./dist/WpbeginnerBrand.svelte.d.ts",
-      "svelte": "./dist/WpbeginnerBrand.svelte"
+    "./WpbeginnerBrands.svelte": {
+      "types": "./dist/WpbeginnerBrands.svelte.d.ts",
+      "svelte": "./dist/WpbeginnerBrands.svelte"
     },
-    "./WpexplorerBrand.svelte": {
-      "types": "./dist/WpexplorerBrand.svelte.d.ts",
-      "svelte": "./dist/WpexplorerBrand.svelte"
+    "./WpexplorerBrands.svelte": {
+      "types": "./dist/WpexplorerBrands.svelte.d.ts",
+      "svelte": "./dist/WpexplorerBrands.svelte"
     },
-    "./WpformsBrand.svelte": {
-      "types": "./dist/WpformsBrand.svelte.d.ts",
-      "svelte": "./dist/WpformsBrand.svelte"
+    "./WpformsBrands.svelte": {
+      "types": "./dist/WpformsBrands.svelte.d.ts",
+      "svelte": "./dist/WpformsBrands.svelte"
     },
-    "./WpressrBrand.svelte": {
-      "types": "./dist/WpressrBrand.svelte.d.ts",
-      "svelte": "./dist/WpressrBrand.svelte"
+    "./WpressrBrands.svelte": {
+      "types": "./dist/WpressrBrands.svelte.d.ts",
+      "svelte": "./dist/WpressrBrands.svelte"
     },
     "./WrenchSolid.svelte": {
       "types": "./dist/WrenchSolid.svelte.d.ts",
@@ -8168,17 +8232,17 @@
       "types": "./dist/XSolid.svelte.d.ts",
       "svelte": "./dist/XSolid.svelte"
     },
-    "./XTwitterBrand.svelte": {
-      "types": "./dist/XTwitterBrand.svelte.d.ts",
-      "svelte": "./dist/XTwitterBrand.svelte"
+    "./XTwitterBrands.svelte": {
+      "types": "./dist/XTwitterBrands.svelte.d.ts",
+      "svelte": "./dist/XTwitterBrands.svelte"
     },
-    "./XboxBrand.svelte": {
-      "types": "./dist/XboxBrand.svelte.d.ts",
-      "svelte": "./dist/XboxBrand.svelte"
+    "./XboxBrands.svelte": {
+      "types": "./dist/XboxBrands.svelte.d.ts",
+      "svelte": "./dist/XboxBrands.svelte"
     },
-    "./XingBrand.svelte": {
-      "types": "./dist/XingBrand.svelte.d.ts",
-      "svelte": "./dist/XingBrand.svelte"
+    "./XingBrands.svelte": {
+      "types": "./dist/XingBrands.svelte.d.ts",
+      "svelte": "./dist/XingBrands.svelte"
     },
     "./XmarkSolid.svelte": {
       "types": "./dist/XmarkSolid.svelte.d.ts",
@@ -8188,37 +8252,37 @@
       "types": "./dist/XmarksLinesSolid.svelte.d.ts",
       "svelte": "./dist/XmarksLinesSolid.svelte"
     },
-    "./YCombinatorBrand.svelte": {
-      "types": "./dist/YCombinatorBrand.svelte.d.ts",
-      "svelte": "./dist/YCombinatorBrand.svelte"
+    "./YCombinatorBrands.svelte": {
+      "types": "./dist/YCombinatorBrands.svelte.d.ts",
+      "svelte": "./dist/YCombinatorBrands.svelte"
     },
     "./YSolid.svelte": {
       "types": "./dist/YSolid.svelte.d.ts",
       "svelte": "./dist/YSolid.svelte"
     },
-    "./YahooBrand.svelte": {
-      "types": "./dist/YahooBrand.svelte.d.ts",
-      "svelte": "./dist/YahooBrand.svelte"
+    "./YahooBrands.svelte": {
+      "types": "./dist/YahooBrands.svelte.d.ts",
+      "svelte": "./dist/YahooBrands.svelte"
     },
-    "./YammerBrand.svelte": {
-      "types": "./dist/YammerBrand.svelte.d.ts",
-      "svelte": "./dist/YammerBrand.svelte"
+    "./YammerBrands.svelte": {
+      "types": "./dist/YammerBrands.svelte.d.ts",
+      "svelte": "./dist/YammerBrands.svelte"
     },
-    "./YandexBrand.svelte": {
-      "types": "./dist/YandexBrand.svelte.d.ts",
-      "svelte": "./dist/YandexBrand.svelte"
+    "./YandexBrands.svelte": {
+      "types": "./dist/YandexBrands.svelte.d.ts",
+      "svelte": "./dist/YandexBrands.svelte"
     },
-    "./YandexInternationalBrand.svelte": {
-      "types": "./dist/YandexInternationalBrand.svelte.d.ts",
-      "svelte": "./dist/YandexInternationalBrand.svelte"
+    "./YandexInternationalBrands.svelte": {
+      "types": "./dist/YandexInternationalBrands.svelte.d.ts",
+      "svelte": "./dist/YandexInternationalBrands.svelte"
     },
-    "./YarnBrand.svelte": {
-      "types": "./dist/YarnBrand.svelte.d.ts",
-      "svelte": "./dist/YarnBrand.svelte"
+    "./YarnBrands.svelte": {
+      "types": "./dist/YarnBrands.svelte.d.ts",
+      "svelte": "./dist/YarnBrands.svelte"
     },
-    "./YelpBrand.svelte": {
-      "types": "./dist/YelpBrand.svelte.d.ts",
-      "svelte": "./dist/YelpBrand.svelte"
+    "./YelpBrands.svelte": {
+      "types": "./dist/YelpBrands.svelte.d.ts",
+      "svelte": "./dist/YelpBrands.svelte"
     },
     "./YenSignSolid.svelte": {
       "types": "./dist/YenSignSolid.svelte.d.ts",
@@ -8228,21 +8292,21 @@
       "types": "./dist/YinYangSolid.svelte.d.ts",
       "svelte": "./dist/YinYangSolid.svelte"
     },
-    "./YoastBrand.svelte": {
-      "types": "./dist/YoastBrand.svelte.d.ts",
-      "svelte": "./dist/YoastBrand.svelte"
+    "./YoastBrands.svelte": {
+      "types": "./dist/YoastBrands.svelte.d.ts",
+      "svelte": "./dist/YoastBrands.svelte"
     },
-    "./YoutubeBrand.svelte": {
-      "types": "./dist/YoutubeBrand.svelte.d.ts",
-      "svelte": "./dist/YoutubeBrand.svelte"
+    "./YoutubeBrands.svelte": {
+      "types": "./dist/YoutubeBrands.svelte.d.ts",
+      "svelte": "./dist/YoutubeBrands.svelte"
     },
     "./ZSolid.svelte": {
       "types": "./dist/ZSolid.svelte.d.ts",
       "svelte": "./dist/ZSolid.svelte"
     },
-    "./ZhihuBrand.svelte": {
-      "types": "./dist/ZhihuBrand.svelte.d.ts",
-      "svelte": "./dist/ZhihuBrand.svelte"
+    "./ZhihuBrands.svelte": {
+      "types": "./dist/ZhihuBrands.svelte.d.ts",
+      "svelte": "./dist/ZhihuBrands.svelte"
     },
     "./package.json": "./package.json"
   }

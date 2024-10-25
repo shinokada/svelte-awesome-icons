@@ -1,111 +1,54 @@
 <script lang="ts">
-  interface CtxType {
-    size?: string;
-    role?: string;
-    color?: string;
-    class?: string;
-    withEvents?: boolean;
-  }
-
-  type TitleType = {
-    id?: string;
-    title?: string;
-  };
-
-  type DescType = {
-    id?: string;
-    desc?: string;
-  };
-
   import { getContext } from 'svelte';
-  const ctx: CtxType = getContext('iconCtx') ?? {};
+  import type { BaseProps, Props } from './types';
 
-  let className = ctx.class || '';
-  export { className as class };
-  export let size: string = ctx.size || '24';
-  export let role: string = ctx.role || 'img';
-  export let color: string = ctx.color || 'currentColor';
-  export let withEvents = ctx.withEvents || false;
-  export let ariaLabel: string = 'joint solid';
-  export let title: TitleType = {};
-  export let desc: DescType = {};
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let ariaDescribedby = `${title.id || ''} ${desc.id || ''}`;
-  let hasDescription = false;
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    ariaLabel = 'joint solid',
+    ...restProps
+  }: Props = $props();
 
-  $: if (title.id || desc.id) {
-    hasDescription = true;
-  } else {
-    hasDescription = false;
-  }
+  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
-{#if withEvents}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...$$restProps}
-    {role}
-    width={size}
-    height={size}
-    fill={color}
-    class={className}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 640 512"
-    on:click
-    on:keydown
-    on:keyup
-    on:focus
-    on:blur
-    on:mouseenter
-    on:mouseleave
-    on:mouseover
-    on:mouseout
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M448 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V43c0 55.2 21.9 108.1 60.9 147.1l21 21c9 9 14.1 21.2 14.1 33.9v11c0 17.7 14.3 32 32 32s32-14.3 32-32V245c0-29.7-11.8-58.2-32.8-79.2l-21-21C463.2 117.8 448 81.2 448 43V32zM576 256c0 17.7 14.3 32 32 32s32-14.3 32-32V245c0-55.2-21.9-108.1-60.9-147.1l-21-21c-9-9-14.1-21.2-14.1-33.9V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V43c0 29.7 11.8 58.2 32.8 79.2l21 21c27 27 42.2 63.6 42.2 101.8v11zM229.8 360c-4.7-2.3-10-2.7-15.2-2c-37.8 5.6-75.2 14.3-106.9 22.8C81.3 388 58.3 395.1 42 400.4c-8.2 2.7-14.7 4.9-19.2 6.5c-2.3 .8-4 1.4-5.2 1.8l-1.3 .5C6.8 412.5 0 421.4 0 432s6.8 19.5 16.3 22.7l1.3 .5c1.2 .4 3 1.1 5.2 1.8c4.5 1.6 11 3.8 19.2 6.5c16.3 5.4 39.2 12.5 65.7 19.6C160.3 497.3 228.8 512 288 512h67.3c4.1 0 6.3-5.1 3.6-8.3L256.5 380.8c-7.4-8.9-16.5-15.9-26.7-20.8zM445 512h19 51.3c4.1 0 6.3-5.1 3.6-8.3L416.5 380.8C401.3 362.5 378.8 352 355 352H336 288c-1.1 0-2.3 0-3.4 0c-4.1 0-6.2 5.1-3.5 8.3L383.5 483.2C398.7 501.5 421.2 512 445 512zm-3.9-151.7L543.5 483.2c14.6 17.5 35.9 27.9 58.6 28.7c21.1-1.1 37.9-18.6 37.9-39.9V392c0-22.1-17.9-40-40-40H444.7c-4.1 0-6.3 5.1-3.6 8.3z"
-    />
-  </svg>
-{:else}
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    {...$$restProps}
-    {role}
-    width={size}
-    height={size}
-    fill={color}
-    class={className}
-    aria-label={ariaLabel}
-    aria-describedby={hasDescription ? ariaDescribedby : undefined}
-    viewBox="0 0 640 512"
-  >
-    {#if title.id && title.title}
-      <title id={title.id}>{title.title}</title>
-    {/if}
-    {#if desc.id && desc.desc}
-      <desc id={desc.id}>{desc.desc}</desc>
-    {/if}
-    <path
-      d="M448 32c0-17.7-14.3-32-32-32s-32 14.3-32 32V43c0 55.2 21.9 108.1 60.9 147.1l21 21c9 9 14.1 21.2 14.1 33.9v11c0 17.7 14.3 32 32 32s32-14.3 32-32V245c0-29.7-11.8-58.2-32.8-79.2l-21-21C463.2 117.8 448 81.2 448 43V32zM576 256c0 17.7 14.3 32 32 32s32-14.3 32-32V245c0-55.2-21.9-108.1-60.9-147.1l-21-21c-9-9-14.1-21.2-14.1-33.9V32c0-17.7-14.3-32-32-32s-32 14.3-32 32V43c0 29.7 11.8 58.2 32.8 79.2l21 21c27 27 42.2 63.6 42.2 101.8v11zM229.8 360c-4.7-2.3-10-2.7-15.2-2c-37.8 5.6-75.2 14.3-106.9 22.8C81.3 388 58.3 395.1 42 400.4c-8.2 2.7-14.7 4.9-19.2 6.5c-2.3 .8-4 1.4-5.2 1.8l-1.3 .5C6.8 412.5 0 421.4 0 432s6.8 19.5 16.3 22.7l1.3 .5c1.2 .4 3 1.1 5.2 1.8c4.5 1.6 11 3.8 19.2 6.5c16.3 5.4 39.2 12.5 65.7 19.6C160.3 497.3 228.8 512 288 512h67.3c4.1 0 6.3-5.1 3.6-8.3L256.5 380.8c-7.4-8.9-16.5-15.9-26.7-20.8zM445 512h19 51.3c4.1 0 6.3-5.1 3.6-8.3L416.5 380.8C401.3 362.5 378.8 352 355 352H336 288c-1.1 0-2.3 0-3.4 0c-4.1 0-6.2 5.1-3.5 8.3L383.5 483.2C398.7 501.5 421.2 512 445 512zm-3.9-151.7L543.5 483.2c14.6 17.5 35.9 27.9 58.6 28.7c21.1-1.1 37.9-18.6 37.9-39.9V392c0-22.1-17.9-40-40-40H444.7c-4.1 0-6.3 5.1-3.6 8.3z"
-    />
-  </svg>
-{/if}
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  fill={color}
+  aria-label={ariaLabel}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 640 512"
+>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path
+    d="M448 32c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 11c0 55.2 21.9 108.1 60.9 147.1l21 21c9 9 14.1 21.2 14.1 33.9l0 11c0 17.7 14.3 32 32 32s32-14.3 32-32l0-11c0-29.7-11.8-58.2-32.8-79.2l-21-21C463.2 117.8 448 81.2 448 43l0-11zM576 256c0 17.7 14.3 32 32 32s32-14.3 32-32l0-11c0-55.2-21.9-108.1-60.9-147.1l-21-21c-9-9-14.1-21.2-14.1-33.9l0-11c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 11c0 29.7 11.8 58.2 32.8 79.2l21 21c27 27 42.2 63.6 42.2 101.8l0 11zM229.8 360c-4.7-2.3-10-2.7-15.2-2c-37.8 5.6-75.2 14.3-106.9 22.8C81.3 388 58.3 395.1 42 400.4c-8.2 2.7-14.7 4.9-19.2 6.5c-2.3 .8-4 1.4-5.2 1.8l-1.3 .5C6.8 412.5 0 421.4 0 432s6.8 19.5 16.3 22.7l1.3 .5c1.2 .4 3 1.1 5.2 1.8c4.5 1.6 11 3.8 19.2 6.5c16.3 5.4 39.2 12.5 65.7 19.6C160.3 497.3 228.8 512 288 512l67.3 0c4.1 0 6.3-5.1 3.6-8.3L256.5 380.8c-7.4-8.9-16.5-15.9-26.7-20.8zM445 512l19 0 51.3 0c4.1 0 6.3-5.1 3.6-8.3L416.5 380.8C401.3 362.5 378.8 352 355 352l-19 0-48 0c-1.1 0-2.3 0-3.4 0c-4.1 0-6.2 5.1-3.5 8.3L383.5 483.2C398.7 501.5 421.2 512 445 512zm-3.9-151.7L543.5 483.2c14.6 17.5 35.9 27.9 58.6 28.7c21.1-1.1 37.9-18.6 37.9-39.9l0-80c0-22.1-17.9-40-40-40l-155.3 0c-4.1 0-6.3 5.1-3.6 8.3z"
+  />
+</svg>
 
 <!--
 @component
-[Go to docs](https://svelte-awesome-icons.codewithshin.com)
+[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
 ## Props
-@prop export let size: string = ctx.size || '24';
-@prop export let role: string = ctx.role || 'img';
-@prop export let color: string = ctx.color || 'currentColor';
-@prop export let withEvents = ctx.withEvents || false;
-@prop export let ariaLabel: string = 'joint solid';
-@prop export let title: TitleType = {};
-@prop export let desc: DescType = {};
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop ariaLabel = 'joint solid'
+@prop ...restProps
 -->
