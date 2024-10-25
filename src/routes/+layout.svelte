@@ -57,7 +57,7 @@
   const hasPath = (key: string) => currentUrl.includes(key);
 
   const lis = [
-    { name: 'Guide', href: '/guide/svelte-4/getting-started' },
+    { name: 'Guide', href: '/guide/svelte-5/getting-started' },
     { name: 'Brands', href: '/brand-icons' },
     { name: 'Regular', href: '/regular-icons' },
     { name: 'Solid', href: '/solid-icons' },

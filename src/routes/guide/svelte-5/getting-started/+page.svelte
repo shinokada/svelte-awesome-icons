@@ -52,17 +52,7 @@
 
 <H2>Installation</H2>
 
-<p>Install Svelte:</p>
-
 <HighlightCompo codeLang="ts" code={modules['./md/installation.md'] as string} />
-
-<p>Install <Code>svelte-awesome-icons v2</Code>:</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/installation-2.md'] as string} />
-
-<p>Enable Runes in <Code>svelte.config.js</Code>:</p>
-
-<HighlightCompo codeLang="ts" code={modules['./md/installation-3.md'] as string} />
 
 <H2>Basic Usage</H2>
 
