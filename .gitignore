@@ -11,3 +11,4 @@ src/routes/testdir
 /dist
 /test-results
 /testdir
+/.vercel
