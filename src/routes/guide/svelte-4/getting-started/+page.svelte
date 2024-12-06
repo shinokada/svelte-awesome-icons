@@ -5,19 +5,29 @@
   const sponsor: GitHubSponsorPropsType = {
     user: 'shinokada',
     logo:'github',
+    link: ['https://github.com/sponsors/shinokada', 'https://github.com/sponsors/shinokada']
   };
   const npmversion: NpmVersionPropsType = {
     packageName: 'svelte-awesome-icons',
     tag:'v1-latest',
-    logo:'svelte'
+    logo:'svelte',
+    link: [
+      'https://www.npmjs.com/package/svelte-awesome-icons',
+      'https://www.npmjs.com/package/svelte-awesome-icons?activeTab=versions'
+    ]
   };
   const license: LicensePropsType = {
     source: 'github',
     github_user: 'shinokada',
-    github_repo: 'svelte-awesome-icons'
+    github_repo: 'svelte-awesome-icons',
+    link: [
+      'https://github.com/shinokada/svelte-awesome-icons/blob/master/LICENSE',
+      'https://github.com/shinokada/svelte-awesome-icons/blob/master/LICENSE'
+    ]
   };
   const downloads: NpmDownloadPropsType = {
-    packageName: 'svelte-awesome-icons'
+    packageName: 'svelte-awesome-icons',
+    link: ['https://www.npmjs.com/package/svelte-awesome-icons']
   };
 
   const modules = import.meta.glob('./md/*.md', {
