@@ -31,7 +31,7 @@
     SidebarItem,
     CloseButton,
     SidebarBrand
-  } from 'svelte-5-ui-lib';
+  } from 'flowbite-svelte';
   import { RunesMetaTags, deepMerge } from 'runes-meta-tags';
   import { Runatics } from 'runatics';
   import DynamicCodeBlockStyle from './utils/DynamicCodeBlockStyle.svelte';
@@ -79,7 +79,7 @@
   const siteName = removeHyphensAndCapitalize(__NAME__);
   const githubUrl = `https://github.com/shinokada/${__NAME__}`;
   const twitterUrl = 'https://twitter.com/shinokada';
-  const blueskyUrl = 'https://bsky.app/profile/shinichiokada.bsky.social';
+  const blueskyUrl = 'https://bsky.app/profile/codewithshin.com';
   // nav
   let nav = uiHelpers();
   let navStatus = $state(false);
