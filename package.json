@@ -83,6 +83,11 @@
   "peerDependencies": {
     "svelte": "^5.0.0 || ^5.0.0-next.1"
   },
+  "pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	},
   "svelte": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
