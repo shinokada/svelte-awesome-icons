@@ -88,7 +88,7 @@
   let headerCls =
     'sticky top-0 z-40 mx-auto w-full flex-none border-b border-gray-200 bg-gray-100 dark:border-gray-600 dark:bg-sky-950';
   let navClass =
-    'w-full divide-gray-200 border-gray-200 bg-gray-50 dark_bg_theme text-gray-500 dark:divide-gray-700 dark:border-gray-700 dark:transparent dark:text-gray-400 sm:px-4';
+    'w-full divide-gray-200 border-gray-200 bg-gray-50 dark:bg-stone-800 text-gray-500 dark:divide-gray-700 dark:border-gray-700 dark:transparent dark:text-gray-400 sm:px-4';
   let divClass = 'ml-auto w-full';
   let ulclass = 'dark:lg:bg-transparent lg:space-x-4';
   function isIncluded(url: string, allowedUrls: string[]): boolean {
@@ -220,8 +220,8 @@
       breakpoint="lg"
       activeClass="flex items-center p-1 text-base font-normal text-white dark:hover:text-white hover:text-gray-900 bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
       nonActiveClass="p-1 hover:bg-gray-200"
-      divClass="dark_bg_theme bg-gray-50"
-      class="dark_bg_theme h-screen border-r border-gray-50 lg:top-[58px] dark:border-gray-700"
+      divClass="dark:bg-stone-800 bg-gray-50"
+      class="dark:bg-stone-800 h-screen border-r border-gray-50 lg:top-[58px] dark:border-gray-700"
     >
       <CloseButton
         onclick={closeSidebar}

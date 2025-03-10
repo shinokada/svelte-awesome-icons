@@ -80,9 +80,6 @@
   }
 }
 
-@layer components {
-  .dark_bg_theme {
-    @apply dark:bg-stone-800;
-  }
+.dark_bg_theme {
+  @apply dark:bg-stone-800;
 }
-

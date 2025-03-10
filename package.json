@@ -96,7 +96,7 @@
 		"publint": "^0.3.9",
 		"runatics": "^0.1.4",
 		"runes-meta-tags": "^0.4.2",
-		"runes-webkit": "^0.9.52",
+		"runes-webkit": "^0.9.53",
 		"svelte": "^5.22.6",
 		"svelte-check": "^4.1.5",
 		"svelte-lib-helpers": "^0.4.16",
