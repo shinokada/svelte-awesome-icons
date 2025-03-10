@@ -1,8 +1,26 @@
-/* @import '../static/styles/runes-webkit.css'; */
-/* @import '../node_modules/runes-webkit/dist/runeswebkit.css'; */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@source "../node_modules/flowbite-svelte/dist";
+@source "../node_modules/runes-webkit/dist";
+
+@theme {
+	--z-index-100: 100;
+
+	--color-primary-50: #f0fdfa;
+	--color-primary-100: #ccfbf1;
+	--color-primary-200: #99f6e4;
+	--color-primary-300: #5eead4;
+	--color-primary-400: #2dd4bf;
+	--color-primary-500: #14b8a6;
+	--color-primary-600: #0d9488;
+	--color-primary-700: #0f766e;
+	--color-primary-800: #115e59;
+	--color-primary-900: #134e4a;
+  
+}
+
 
 @layer base {
   html {
@@ -63,8 +81,8 @@
 }
 
 @layer components {
-  /* overwrite default styles here */
   .dark_bg_theme {
-    @apply dark:bg-stone-800 !important;
+    @apply dark:bg-stone-800;
   }
 }
+
