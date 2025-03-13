@@ -1,7 +1,7 @@
 <script lang="ts">
   import { HighlightCompo, CodeWrapper, Code, H2, H3 } from 'runes-webkit';
   import { BellRegular } from '$lib';
-  import { A, P } from 'flowbite-svelte';
+  import { A, P } from 'svelte-5-ui-lib';
 
   const modules = import.meta.glob('./md/*.md', {
     query: '?raw',
