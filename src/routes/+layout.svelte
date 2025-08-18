@@ -168,7 +168,7 @@
 			{closeSidebar}
 			breakpoint="xl"
 			classes={{
-				div: 'dark-bg-theme bg-gray-50',
+				div: 'dark-bg-theme bg-white',
 				nonactive: 'p-1 hover:bg-gray-200',
 				active:
 					'flex items-center p-1 text-base font-normal text-white dark:hover:text-white hover:text-gray-900 bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700'
