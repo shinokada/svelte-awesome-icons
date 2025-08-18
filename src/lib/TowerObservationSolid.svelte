@@ -1,43 +1,43 @@
 <script lang="ts">
-  import { getContext } from 'svelte';
-  import type { BaseProps, Props } from './types';
+	import { getContext } from 'svelte';
+	import type { BaseProps, Props } from './types';
 
-  const ctx: BaseProps = getContext('iconCtx') ?? {};
+	const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    color = ctx.color || 'currentColor',
-    title,
-    desc,
-    ariaLabel = 'tower observation solid',
-    ...restProps
-  }: Props = $props();
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		color = ctx.color || 'currentColor',
+		title,
+		desc,
+		ariaLabel = 'tower observation solid',
+		...restProps
+	}: Props = $props();
 
-  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+	let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+	const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  {...restProps}
-  {role}
-  width={size}
-  height={size}
-  fill={color}
-  aria-label={ariaLabel}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 512 512"
+	xmlns="http://www.w3.org/2000/svg"
+	{...restProps}
+	{role}
+	width={size}
+	height={size}
+	fill={color}
+	aria-label={ariaLabel}
+	aria-describedby={hasDescription ? ariaDescribedby : undefined}
+	viewBox="0 0 512 512"
 >
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-  <path
-    d="M241.7 3.4c9-4.5 19.6-4.5 28.6 0l160 80c15.8 7.9 22.2 27.1 14.3 42.9C439 137.5 427.7 144 416 144l0 80c0 17.7-14.3 32-32 32l-4.9 0 32 192 68.9 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-95.5 0c-.4 0-.8 0-1.1 0l-254.8 0c-.4 0-.8 0-1.1 0L32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l68.9 0 32-192-4.9 0c-17.7 0-32-14.3-32-32l0-80c-11.7 0-23-6.5-28.6-17.7c-7.9-15.8-1.5-35 14.3-42.9l160-80zM314.5 448L256 399.2 197.5 448l117 0zM197.8 256l-4.7 28.3L256 336.8l62.9-52.5L314.2 256l-116.5 0zm-13.9 83.2l-11.2 67L218.5 368l-34.6-28.8zM293.5 368l45.8 38.1-11.2-67L293.5 368zM176 128c-8.8 0-16 7.2-16 16s7.2 16 16 16l160 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-160 0z"
-  />
+	{#if title?.id && title.title}
+		<title id={title.id}>{title.title}</title>
+	{/if}
+	{#if desc?.id && desc.desc}
+		<desc id={desc.id}>{desc.desc}</desc>
+	{/if}
+	<path
+		d="M241.7 3.4c9-4.5 19.6-4.5 28.6 0l160 80c15.8 7.9 22.2 27.1 14.3 42.9C439 137.5 427.7 144 416 144l0 80c0 17.7-14.3 32-32 32l-4.9 0 32 192 68.9 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-95.5 0c-.4 0-.8 0-1.1 0l-254.8 0c-.4 0-.8 0-1.1 0L32 512c-17.7 0-32-14.3-32-32s14.3-32 32-32l68.9 0 32-192-4.9 0c-17.7 0-32-14.3-32-32l0-80c-11.7 0-23-6.5-28.6-17.7c-7.9-15.8-1.5-35 14.3-42.9l160-80zM314.5 448L256 399.2 197.5 448l117 0zM197.8 256l-4.7 28.3L256 336.8l62.9-52.5L314.2 256l-116.5 0zm-13.9 83.2l-11.2 67L218.5 368l-34.6-28.8zM293.5 368l45.8 38.1-11.2-67L293.5 368zM176 128c-8.8 0-16 7.2-16 16s7.2 16 16 16l160 0c8.8 0 16-7.2 16-16s-7.2-16-16-16l-160 0z"
+	/>
 </svg>
 
 <!--

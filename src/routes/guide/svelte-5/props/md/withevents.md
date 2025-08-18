@@ -1,1 +1,1 @@
-<CalendarCheckRegular withEvents onclick={handleClick}/> 
+<CalendarCheckRegular withEvents onclick={handleClick}/>

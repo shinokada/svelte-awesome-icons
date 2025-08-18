@@ -1,43 +1,43 @@
 <script lang="ts">
-  import { getContext } from 'svelte';
-  import type { BaseProps, Props } from './types';
+	import { getContext } from 'svelte';
+	import type { BaseProps, Props } from './types';
 
-  const ctx: BaseProps = getContext('iconCtx') ?? {};
+	const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    color = ctx.color || 'currentColor',
-    title,
-    desc,
-    ariaLabel = 'chalkboard solid',
-    ...restProps
-  }: Props = $props();
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		color = ctx.color || 'currentColor',
+		title,
+		desc,
+		ariaLabel = 'chalkboard solid',
+		...restProps
+	}: Props = $props();
 
-  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+	let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+	const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  {...restProps}
-  {role}
-  width={size}
-  height={size}
-  fill={color}
-  aria-label={ariaLabel}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 576 512"
+	xmlns="http://www.w3.org/2000/svg"
+	{...restProps}
+	{role}
+	width={size}
+	height={size}
+	fill={color}
+	aria-label={ariaLabel}
+	aria-describedby={hasDescription ? ariaDescribedby : undefined}
+	viewBox="0 0 576 512"
 >
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-  <path
-    d="M96 32C60.7 32 32 60.7 32 96l0 288 64 0L96 96l384 0 0 288 64 0 0-288c0-35.3-28.7-64-64-64L96 32zM224 384l0 32L32 416c-17.7 0-32 14.3-32 32s14.3 32 32 32l512 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-128 0 0-32c0-17.7-14.3-32-32-32l-128 0c-17.7 0-32 14.3-32 32z"
-  />
+	{#if title?.id && title.title}
+		<title id={title.id}>{title.title}</title>
+	{/if}
+	{#if desc?.id && desc.desc}
+		<desc id={desc.id}>{desc.desc}</desc>
+	{/if}
+	<path
+		d="M96 32C60.7 32 32 60.7 32 96l0 288 64 0L96 96l384 0 0 288 64 0 0-288c0-35.3-28.7-64-64-64L96 32zM224 384l0 32L32 416c-17.7 0-32 14.3-32 32s14.3 32 32 32l512 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-128 0 0-32c0-17.7-14.3-32-32-32l-128 0c-17.7 0-32 14.3-32 32z"
+	/>
 </svg>
 
 <!--

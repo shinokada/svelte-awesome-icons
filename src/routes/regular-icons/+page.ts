@@ -6,20 +6,20 @@ const imgUrl = 'https://open-graph-vercel.vercel.app/api/svelte-awesome-icons';
 const ogUrl = 'http://localhost:4173/regular-icons';
 
 export const load = () => {
-  const pageMetaTags: MetaProps = {
-    title,
-    description,
-    og: {
-      title,
-      description,
-      image: imgUrl,
-      url: ogUrl
-    },
-    twitter: {
-      title,
-      description,
-      image: imgUrl
-    }
-  };
-  return { pageMetaTags };
+	const pageMetaTags: MetaProps = {
+		title,
+		description,
+		og: {
+			title,
+			description,
+			image: imgUrl,
+			url: ogUrl
+		},
+		twitter: {
+			title,
+			description,
+			image: imgUrl
+		}
+	};
+	return { pageMetaTags };
 };

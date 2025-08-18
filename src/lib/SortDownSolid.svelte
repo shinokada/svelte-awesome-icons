@@ -1,43 +1,43 @@
 <script lang="ts">
-  import { getContext } from 'svelte';
-  import type { BaseProps, Props } from './types';
+	import { getContext } from 'svelte';
+	import type { BaseProps, Props } from './types';
 
-  const ctx: BaseProps = getContext('iconCtx') ?? {};
+	const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-  let {
-    size = ctx.size || '24',
-    role = ctx.role || 'img',
-    color = ctx.color || 'currentColor',
-    title,
-    desc,
-    ariaLabel = 'sort down solid',
-    ...restProps
-  }: Props = $props();
+	let {
+		size = ctx.size || '24',
+		role = ctx.role || 'img',
+		color = ctx.color || 'currentColor',
+		title,
+		desc,
+		ariaLabel = 'sort down solid',
+		...restProps
+	}: Props = $props();
 
-  let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+	let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
+	const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 <svg
-  xmlns="http://www.w3.org/2000/svg"
-  {...restProps}
-  {role}
-  width={size}
-  height={size}
-  fill={color}
-  aria-label={ariaLabel}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
-  viewBox="0 0 320 512"
+	xmlns="http://www.w3.org/2000/svg"
+	{...restProps}
+	{role}
+	width={size}
+	height={size}
+	fill={color}
+	aria-label={ariaLabel}
+	aria-describedby={hasDescription ? ariaDescribedby : undefined}
+	viewBox="0 0 320 512"
 >
-  {#if title?.id && title.title}
-    <title id={title.id}>{title.title}</title>
-  {/if}
-  {#if desc?.id && desc.desc}
-    <desc id={desc.id}>{desc.desc}</desc>
-  {/if}
-  <path
-    d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8l256 0c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z"
-  />
+	{#if title?.id && title.title}
+		<title id={title.id}>{title.title}</title>
+	{/if}
+	{#if desc?.id && desc.desc}
+		<desc id={desc.id}>{desc.desc}</desc>
+	{/if}
+	<path
+		d="M182.6 470.6c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-9.2-9.2-11.9-22.9-6.9-34.9s16.6-19.8 29.6-19.8l256 0c12.9 0 24.6 7.8 29.6 19.8s2.2 25.7-6.9 34.9l-128 128z"
+	/>
 </svg>
 
 <!--
