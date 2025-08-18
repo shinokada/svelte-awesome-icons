@@ -9,5 +9,5 @@
   icons={keyIcons}
   title="Brand Icons - Svelte Awesome Icons"
   tab1Class="md:grid-cols-2 lg:grid-cols-3"
-  contentClass="rounded-lg dark_bg_theme mt-4"
+  contentClass="rounded-lg dark-bg-theme mt-4"
 />
