@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://svelte-awesome-icons.codewithshin.com/sitemap.xml
