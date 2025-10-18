@@ -1,0 +1,58 @@
+<script lang="ts">
+  import { getContext } from 'svelte';
+  import type { BaseProps, Props } from './types';
+
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
+
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    focusable = 'false',
+    ariaLabel,
+    ...restProps
+  }: Props = $props();
+
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
+  const hasDescription = $derived(!!(title?.id || desc?.id));
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  fill={color}
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 512 512"
+>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path
+    d="M402.6 50.2c-5.4 1.7-11.3 1.8-16.2-.9-5.8-3.2-11.8-6.2-17.8-8.9-10.4-4.7-13.7-18.3-4.1-24.6 15-9.9 33-15.7 52.3-15.7 52.6 0 95.2 42.6 95.2 95.2 0 13.2-2.7 25.8-7.6 37.3-4.5 10.5-18.4 9.8-24.9 .4-3.8-5.5-7.8-10.8-12-16-3.5-4.4-4.5-10.2-3.8-15.8 .2-1.9 .4-3.9 .4-5.9 0-26.1-21.2-47.2-47.2-47.2-4.9 0-9.7 .8-14.2 2.2zM32.5 132.9c-6.5 9.4-20.5 10.1-24.9-.4-4.9-11.5-7.6-24.1-7.6-37.3 0-52.6 42.6-95.2 95.2-95.2 19.3 0 37.3 5.8 52.3 15.7 9.6 6.3 6.3 19.9-4.1 24.6-6.1 2.8-12 5.7-17.8 8.9-4.9 2.7-10.9 2.6-16.2 .9-4.5-1.4-9.2-2.2-14.2-2.2-26.1 0-47.2 21.2-47.2 47.2 0 2 .1 4 .4 5.9 .7 5.6-.3 11.4-3.8 15.8-4.2 5.2-8.2 10.5-12 16zM432 288a176 176 0 1 0 -352 0 176 176 0 1 0 352 0zM396.5 462.5C358.1 493.4 309.2 512 256 512s-102.1-18.6-140.5-49.5L73 505c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l42.5-42.5C50.6 390.1 32 341.2 32 288 32 164.3 132.3 64 256 64S480 164.3 480 288c0 53.2-18.6 102.1-49.5 140.5L473 471c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-42.5-42.5zM280 184l0 94.1 41 41c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-4.5-4.5-7-10.6-7-17l0-104c0-13.3 10.7-24 24-24s24 10.7 24 24z"
+  />
+</svg>
+
+<!--
+@component
+[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop focusable = 'false'
+@prop ariaLabel
+@prop ...restProps
+-->

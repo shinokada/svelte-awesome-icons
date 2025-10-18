@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { AddressBookRegular } from '$lib';
-	import MyIcon from './MyIcon.svelte';
+  import { AddressBookRegular } from '$lib';
+  // import MyIcon from './MyIcon.svelte';
 </script>
 
-<MyIcon Icon={AddressBookRegular} />
+<AddressBookRegular size="50" />
+<AddressBookRegular color="red" size="50" />
+<AddressBookRegular color="red" size="50" />

@@ -9,16 +9,15 @@ id?: string;
 desc?: string;
 };
 
-interface BaseProps extends SVGAttributes<SVGElement> {
+export interface BaseProps extends SVGAttributes<SVGElement> {
 size?: string;
 role?: string;
 color?: string;
 }
 
-export interface CtxType extends BaseProps {}
-
 export interface Props extends BaseProps {
 title?: TitleType;
 desc?: DescType;
 ariaLabel?: string;
+focusable?: 'true' | 'false' | 'auto';
 }

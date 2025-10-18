@@ -1,43 +1,46 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
-	import type { BaseProps, Props } from './types';
+  import { getContext } from 'svelte';
+  import type { BaseProps, Props } from './types';
 
-	const ctx: BaseProps = getContext('iconCtx') ?? {};
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-	let {
-		size = ctx.size || '24',
-		role = ctx.role || 'img',
-		color = ctx.color || 'currentColor',
-		title,
-		desc,
-		ariaLabel = 'mill sign solid',
-		...restProps
-	}: Props = $props();
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    focusable = 'false',
+    ariaLabel,
+    ...restProps
+  }: Props = $props();
 
-	let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
-	const hasDescription = $derived(!!(title?.id || desc?.id));
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 <svg
-	xmlns="http://www.w3.org/2000/svg"
-	{...restProps}
-	{role}
-	width={size}
-	height={size}
-	fill={color}
-	aria-label={ariaLabel}
-	aria-describedby={hasDescription ? ariaDescribedby : undefined}
-	viewBox="0 0 384 512"
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  fill={color}
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 384 512"
 >
-	{#if title?.id && title.title}
-		<title id={title.id}>{title.title}</title>
-	{/if}
-	{#if desc?.id && desc.desc}
-		<desc id={desc.id}>{desc.desc}</desc>
-	{/if}
-	<path
-		d="M302.1 42.8c5.9-16.6-2.7-35-19.4-40.9s-35 2.7-40.9 19.4L208 116.1c-5.7 4-11.1 8.5-16 13.5C171.7 108.9 143.3 96 112 96c-19.5 0-37.8 5-53.7 13.7C52.5 101.4 42.9 96 32 96C14.3 96 0 110.3 0 128l0 80L0 416c0 17.7 14.3 32 32 32s32-14.3 32-32l0-208c0-26.5 21.5-48 48-48s48 21.5 48 48l0 42.5L81.9 469.2c-5.9 16.6 2.7 35 19.4 40.9s35-2.7 40.9-19.4l21.4-60C168.9 441 179.6 448 192 448c17.7 0 32-14.3 32-32l0-154.5 35.7-100c3.9-1 8.1-1.6 12.3-1.6c26.5 0 48 21.5 48 48l0 208c0 17.7 14.3 32 32 32s32-14.3 32-32l0-208c0-58.2-44.3-106-101.1-111.5l19.2-53.8z"
-	/>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path
+    d="M297-22.2c12.3 5 18.2 19 13.2 31.3l-29 71.3C338.8 85.1 384 133.3 384 192l0 208c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-208c0-26.5-21.5-48-48-48-6.4 0-12.5 1.2-18 3.5l-30 73.8 0 178.7c0 17.7-14.3 32-32 32s-32-14.3-32-32l0-21.2-57.8 142.2c-5 12.3-19 18.2-31.3 13.2s-18.2-19-13.2-31.3L160 251.3 160 192c0-26.5-21.5-48-48-48s-48 21.5-48 48l0 208c0 17.7-14.3 32-32 32S0 417.7 0 400L0 112c0-17.7 14.3-32 32-32 10.9 0 20.5 5.4 26.3 13.7 16-8.7 34.3-13.7 53.7-13.7 31.3 0 59.7 12.9 80 33.6 9.6-9.8 20.9-17.8 33.5-23.5L265.8-9c5-12.3 19-18.2 31.3-13.2z"
+  />
 </svg>
 
 <!--
@@ -49,6 +52,7 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel = 'mill sign solid'
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->

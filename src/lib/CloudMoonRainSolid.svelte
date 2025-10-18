@@ -1,43 +1,46 @@
 <script lang="ts">
-	import { getContext } from 'svelte';
-	import type { BaseProps, Props } from './types';
+  import { getContext } from 'svelte';
+  import type { BaseProps, Props } from './types';
 
-	const ctx: BaseProps = getContext('iconCtx') ?? {};
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
 
-	let {
-		size = ctx.size || '24',
-		role = ctx.role || 'img',
-		color = ctx.color || 'currentColor',
-		title,
-		desc,
-		ariaLabel = 'cloud moon rain solid',
-		...restProps
-	}: Props = $props();
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    focusable = 'false',
+    ariaLabel,
+    ...restProps
+  }: Props = $props();
 
-	let ariaDescribedby = `${title?.id || ''} ${desc?.id || ''}`;
-	const hasDescription = $derived(!!(title?.id || desc?.id));
+  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
+  const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
 <svg
-	xmlns="http://www.w3.org/2000/svg"
-	{...restProps}
-	{role}
-	width={size}
-	height={size}
-	fill={color}
-	aria-label={ariaLabel}
-	aria-describedby={hasDescription ? ariaDescribedby : undefined}
-	viewBox="0 0 576 512"
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  fill={color}
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
+  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  viewBox="0 0 576 512"
 >
-	{#if title?.id && title.title}
-		<title id={title.id}>{title.title}</title>
-	{/if}
-	{#if desc?.id && desc.desc}
-		<desc id={desc.id}>{desc.desc}</desc>
-	{/if}
-	<path
-		d="M481.2 0C417 0 363.5 46.5 353.7 107.6c35.4 17.6 60.2 53.3 62.1 95.1c23.2 11 42 29.7 53.1 52.7c4 .4 8.1 .6 12.3 .6c34.9 0 66.7-13.8 89.9-36.1c5.1-4.9 6.4-12.5 3.2-18.7s-10.1-9.7-17-8.6c-4.9 .8-10 1.3-15.2 1.3c-49 0-88.4-39.3-88.4-87.4c0-32.6 18-61.1 44.9-76.1c6.1-3.4 9.3-10.5 7.8-17.4s-7.3-12-14.3-12.6c-3.6-.3-7.3-.5-10.9-.5zM367.9 383.9c44.2 0 80-35.8 80-80c0-39.3-28.4-72.1-65.8-78.7c1.2-5.6 1.9-11.3 1.9-17.2c0-44.2-35.8-80-80-80c-17 0-32.8 5.3-45.8 14.4C241.3 114.6 210.8 96 176 96c-53 0-96 43-96 96l0 1.3c-45.4 7.6-80 47.1-80 94.6c0 53 43 96 96 96l271.9 0zM85.4 420.1c-11-7.4-25.9-4.4-33.3 6.7l-32 48c-7.4 11-4.4 25.9 6.7 33.3s25.9 4.4 33.3-6.7l32-48c7.4-11 4.4-25.9-6.7-33.3zm96 0c-11-7.4-25.9-4.4-33.3 6.7l-32 48c-7.4 11-4.4 25.9 6.7 33.3s25.9 4.4 33.3-6.7l32-48c7.4-11 4.4-25.9-6.7-33.3zm96 0c-11-7.4-25.9-4.4-33.3 6.7l-32 48c-7.4 11-4.4 25.9 6.7 33.3s25.9 4.4 33.3-6.7l32-48c7.4-11 4.4-25.9-6.7-33.3zm96 0c-11-7.4-25.9-4.4-33.3 6.7l-32 48c-7.4 11-4.4 25.9 6.7 33.3s25.9 4.4 33.3-6.7l32-48c7.4-11 4.4-25.9-6.7-33.3z"
-	/>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path
+    d="M448 0c-68.6 0-127.1 43.1-149.8 103.8 17.1 14.1 29.6 33.5 34.9 55.8 39.9 21.7 66.9 63.9 66.9 112.5 0 13.5-2.1 26.5-5.9 38.7 16.9 6 35 9.3 53.9 9.3 43 0 82.1-17 110.8-44.6 4.6-4.4 5.9-11.2 3.3-17s-8.6-9.3-14.9-8.8c-3 .2-6.1 .4-9.2 .4-63.5 0-115-51.5-115-115 0-45.1 26-84.2 63.8-103 5.7-2.8 9-8.9 8.2-15.2S489.6 5.3 483.4 3.9C472 1.4 460.2 0 448 0zM272 352c44.2 0 80-35.8 80-80 0-39-27.9-71.5-64.8-78.6 .5-3.1 .8-6.2 .8-9.4 0-30.9-25.1-56-56-56-12.4 0-23.9 4-33.1 10.8-13.4-25.5-40.1-42.8-70.9-42.8-44.2 0-80 35.8-80 80 0 7.4 1 14.6 2.9 21.5-29.8 11.6-50.9 40.6-50.9 74.5 0 44.2 35.8 80 80 80l192 0zM69 401.1c-12.6-4.2-26.2 2.6-30.4 15.2L17.2 480.4C13 493 19.8 506.6 32.4 510.8s26.2-2.6 30.4-15.2l21.4-64.1c4.2-12.6-2.6-26.2-15.2-30.4zm120 0c-12.6-4.2-26.2 2.6-30.4 15.2l-21.4 64.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l21.4-64.1c4.2-12.6-2.6-26.2-15.2-30.4zm120 0c-12.6-4.2-26.2 2.6-30.4 15.2l-21.4 64.1c-4.2 12.6 2.6 26.2 15.2 30.4s26.2-2.6 30.4-15.2l21.4-64.1c4.2-12.6-2.6-26.2-15.2-30.4z"
+  />
 </svg>
 
 <!--
@@ -49,6 +52,7 @@
 @prop color = ctx.color || 'currentColor'
 @prop title
 @prop desc
-@prop ariaLabel = 'cloud moon rain solid'
+@prop focusable = 'false'
+@prop ariaLabel
 @prop ...restProps
 -->
