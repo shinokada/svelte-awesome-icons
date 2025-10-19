@@ -3,7 +3,6 @@
   "version": "3.0.0",
   "description": "Font Awesome SVG Icon components for Svelte",
   "license": "MIT",
-  "fontAwesomeVersion": "7.1.0",
   "homepage": "https://svelte-awesome-icons.codewithshin.com/",
   "author": {
     "name": "Shinichi Okada",
@@ -26,7 +25,8 @@
   "contributors": [
     {
       "name": "FortAwesome/Font-Awesome",
-      "url": "https://github.com/FortAwesome/Font-Awesome/tree/6.x"
+      "url": "https://github.com/FortAwesome/Font-Awesome/",
+      "iconVersion": "7.1.0"
     }
   ],
   "scripts": {

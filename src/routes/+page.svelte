@@ -11,6 +11,8 @@
     type CardType
   } from 'runes-webkit';
 
+  let { data } = $props();
+
   const brand = {
     title: `${removeHyphensAndCapitalize(__NAME__)}`,
     description: `${__DESCRIPTION__}`,
@@ -18,19 +20,11 @@
     icon_class: 'text-blue-500'
   };
 
-  const iconVersion = {
-    title: 'Font Awesome',
-    description: `Version: ${__FONTAWESOMEVERSION__}`,
-    Icon: InfoCircleOutline,
-    href: `https://github.com/FortAwesome/Font-Awesome/releases/tag/${__FONTAWESOMEVERSION__}/`,
-    icon_class: 'text-purple-500'
-  };
-
-  const filteredCards = [iconVersion, brand, ...cards];
+  const filteredCards = [brand, ...cards];
 
   const originalSource = {
-    title: 'Original source',
-    description: `${__ORIGINAL_SOURCE_NAME__}`,
+    title: `Original source: ${__ORIGINAL_SOURCE_NAME__}`,
+    description: `Version: ${__ICONVERSION__}`,
     Icon: InfoCircleOutline,
     href: `${__ORIGINAL_SOURCE_URL__}`,
     icon_class: 'text-orange-500'

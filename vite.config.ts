@@ -16,7 +16,7 @@ import tailwindcssPackage from './node_modules/tailwindcss/package.json' with { 
 export default defineConfig({
   plugins: [sveltekit(), tailwindcss(), devtoolsJson()],
   define: {
-    __FONTAWESOMEVERSION__: JSON.stringify(pkg.fontAwesomeVersion),
+    __ICONVERSION__: JSON.stringify(pkg.contributors[0].iconVersion),
     __NAME__: JSON.stringify(pkg.name),
     __DESCRIPTION__: JSON.stringify(pkg.description),
     __VERSION__: JSON.stringify(pkg.version),

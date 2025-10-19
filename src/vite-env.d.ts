@@ -1,4 +1,4 @@
-declare const __FONTAWESOMEVERSION__: string;
+declare const __ICONVERSION__: string;
 declare const __NAME__: string;
 declare const __DESCRIPTION__: string;
 declare const __VERSION__: string;
