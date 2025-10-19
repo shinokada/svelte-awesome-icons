@@ -15,7 +15,7 @@
 
   const brand = {
     title: `${removeHyphensAndCapitalize(__NAME__)}`,
-    description: `${__DESCRIPTION__}`,
+    description: `${data.fileCount} ${__DESCRIPTION__}`,
     Icon: BellActiveAltOutline,
     icon_class: 'text-blue-500'
   };
