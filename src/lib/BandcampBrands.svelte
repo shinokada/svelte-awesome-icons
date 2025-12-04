@@ -42,3 +42,17 @@
     d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496zm48.2 326.1l-181 0 84.7-156.1 181 0-84.7 156.1z"
   />
 </svg>
+
+<!--
+@component
+[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop focusable = 'false'
+@prop ariaLabel
+@prop ...restProps
+-->
