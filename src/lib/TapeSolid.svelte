@@ -15,7 +15,7 @@
     ...restProps
   }: Props = $props();
 
-  let ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
+  const ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
   const hasDescription = $derived(!!(title?.id || desc?.id));
 </script>
 
@@ -42,17 +42,3 @@
     d="M412.8 416c41.5-40.7 67.2-97.3 67.2-160 0-123.7-100.3-224-224-224S32 132.3 32 256 132.3 480 256 480l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-131.2 0zM256 160a96 96 0 1 1 0 192 96 96 0 1 1 0-192zm48 96a48 48 0 1 0 -96 0 48 48 0 1 0 96 0z"
   />
 </svg>
-
-<!--
-@component
-[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
-## Props
-@prop size = ctx.size || '24'
-@prop role = ctx.role || 'img'
-@prop color = ctx.color || 'currentColor'
-@prop title
-@prop desc
-@prop focusable = 'false'
-@prop ariaLabel
-@prop ...restProps
--->
