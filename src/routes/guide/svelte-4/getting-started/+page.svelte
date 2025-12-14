@@ -37,7 +37,10 @@
   };
   const downloads: NpmDownloadPropsType = {
     packageName: 'svelte-awesome-icons',
-    link: ['https://www.npmjs.com/package/svelte-awesome-icons']
+    link: [
+      'https://www.npmjs.com/package/svelte-awesome-icons',
+      'https://svelte-awesome-icons.codewithshin.com'
+    ]
   };
 
   const modules = import.meta.glob('./md/*.md', {
