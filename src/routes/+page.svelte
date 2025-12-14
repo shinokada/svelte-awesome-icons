@@ -13,12 +13,12 @@
 
   let { data } = $props();
 
-  const brand = {
+  const brand = $derived({
     title: `${removeHyphensAndCapitalize(__NAME__)}`,
     description: `${data.fileCount} ${__DESCRIPTION__}`,
     Icon: BellActiveAltOutline,
     icon_class: 'text-blue-500'
-  };
+  });
 
   const filteredCards = [brand, ...cards];
 

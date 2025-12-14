@@ -14,3 +14,5 @@ coverage/
 
 # Generated files
 *.log
+
+src/routes/utils/highlight
