@@ -20,7 +20,7 @@
     icon_class: 'text-blue-500'
   });
 
-  const filteredCards = [brand, ...cards];
+  const filteredCards = $derived([brand, ...cards]);
 
   const originalSource = {
     title: `Original source: ${__ORIGINAL_SOURCE_NAME__}`,
