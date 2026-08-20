@@ -1,0 +1,57 @@
+<script lang="ts">
+  import { getContext } from 'svelte';
+  import type { BaseProps, Props } from './types';
+
+  const ctx: BaseProps = getContext('iconCtx') ?? {};
+
+  let {
+    size = ctx.size || '24',
+    role = ctx.role || 'img',
+    color = ctx.color || 'currentColor',
+    title,
+    desc,
+    focusable = 'false',
+    ariaLabel,
+    ...restProps
+  }: Props = $props();
+
+  const ariaDescribedby = $derived(desc?.id && desc.desc ? desc.id : undefined);
+</script>
+
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  {...restProps}
+  {role}
+  width={size}
+  height={size}
+  fill={color}
+  {focusable}
+  aria-label={title?.id ? undefined : ariaLabel}
+  aria-labelledby={title?.id || undefined}
+  aria-describedby={ariaDescribedby}
+  viewBox="0 0 384 512"
+>
+  {#if title?.id && title.title}
+    <title id={title.id}>{title.title}</title>
+  {/if}
+  {#if desc?.id && desc.desc}
+    <desc id={desc.id}>{desc.desc}</desc>
+  {/if}
+  <path
+    d="M336-16c17.7 0 32 14.3 32 32 0 58.5-28.6 110.3-72.5 142.3 53.2 34.1 88.5 93.8 88.5 161.7 0 106-86 192-192 192S0 426 0 320C0 252.1 35.3 192.4 88.5 158.3 44.6 126.3 16 74.5 16 16 16-1.7 30.3-16 48-16S80-1.7 80 16c0 61.9 50.1 112 112 112S304 77.9 304 16c0-17.7 14.3-32 32-32zM192 192a128 128 0 1 0 0 256 128 128 0 1 0 0-256z"
+  />
+</svg>
+
+<!--
+@component
+[Go to docs](https://svelte-awesome-icons.codewithshin.com/)
+## Props
+@prop size = ctx.size || '24'
+@prop role = ctx.role || 'img'
+@prop color = ctx.color || 'currentColor'
+@prop title
+@prop desc
+@prop focusable = 'false'
+@prop ariaLabel
+@prop ...restProps
+-->
