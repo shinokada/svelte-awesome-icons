@@ -15,8 +15,7 @@
     ...restProps
   }: Props = $props();
 
-  const ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+  const ariaDescribedby = $derived(desc?.id && desc.desc ? desc.id : undefined);
 </script>
 
 <svg
@@ -29,7 +28,7 @@
   {focusable}
   aria-label={title?.id ? undefined : ariaLabel}
   aria-labelledby={title?.id || undefined}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  aria-describedby={ariaDescribedby}
   viewBox="0 0 448 512"
 >
   {#if title?.id && title.title}
@@ -39,7 +38,7 @@
     <desc id={desc.id}>{desc.desc}</desc>
   {/if}
   <path
-    d="M32 173.4l125.8 0-89.4-85.4 49.5-51 85.2 87.8 0-124.8 73.9 0 0 124.8 85.2-87.6 49.4 50.8-89.4 85.2 125.7 0 0 70.5-126.4 0 90 87.6-49.3 49.8-122.2-123-122.2 123-49.5-49.6 90-87.6-126.4 0 0-70.5zM202.9 344.8l73.9 0 0 167.2-73.9 0 0-167.2z"
+    d="M16 173.4l125.8 0-89.4-85.4 49.5-51 85.2 87.8 0-124.8 73.9 0 0 124.8 85.2-87.6 49.4 50.8-89.4 85.2 125.7 0 0 70.5-126.4 0 90 87.6-49.3 49.8-122.2-123-122.2 123-49.5-49.6 90-87.6-126.4 0 0-70.5zM186.9 344.8l73.9 0 0 167.2-73.9 0 0-167.2z"
   />
 </svg>
 

@@ -15,8 +15,7 @@
     ...restProps
   }: Props = $props();
 
-  const ariaDescribedby = $derived(`${title?.id || ''} ${desc?.id || ''}`.trim());
-  const hasDescription = $derived(!!(title?.id || desc?.id));
+  const ariaDescribedby = $derived(desc?.id && desc.desc ? desc.id : undefined);
 </script>
 
 <svg
@@ -29,7 +28,7 @@
   {focusable}
   aria-label={title?.id ? undefined : ariaLabel}
   aria-labelledby={title?.id || undefined}
-  aria-describedby={hasDescription ? ariaDescribedby : undefined}
+  aria-describedby={ariaDescribedby}
   viewBox="0 0 576 512"
 >
   {#if title?.id && title.title}

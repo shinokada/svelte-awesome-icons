@@ -101,12 +101,12 @@
 <Navbar
   breakpoint="xl"
   fluid
-  class="dark-bg-theme fixed top-0 left-0 z-50 border-b border-gray-100 bg-white py-0 sm:px-12 xl:py-0 dark:border-gray-700"
+  class="dark-bg-theme fixed top-0 left-0 z-50 border-b border-gray-100 bg-white sm:px-12 py-2 xl:py-0 dark:border-gray-700"
   navContainerClass="xl:justify-between"
 >
   <NavBrand href="/">
     <span
-      class="text-primary-900 dark:text-primary-500 self-center text-xl font-semibold whitespace-nowrap xl:ml-8 xl:text-3xl"
+      class="text-primary-900 dark:text-primary-500 self-center text-xl font-semibold whitespace-nowrap ml-8 xl:text-3xl"
       >Svelte Awesome Icons</span
     >
   </NavBrand>
@@ -154,7 +154,7 @@
   {#if urlsToIncludeSwitcherAndSidebar.some((path) => activeUrl.startsWith(path))}
     <SidebarButton
       onclick={sidebarUi.toggle}
-      class="fixed top-3 left-0
+      class="fixed top-2 left-0
      z-100"
       breakpoint="xl"
     />
@@ -169,7 +169,7 @@
         active:
           'flex items-center p-1 text-base font-normal text-white dark:hover:text-white hover:text-gray-900 bg-primary-700 dark:bg-primary-700 rounded-lg dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700'
       }}
-      class="dark-bg-theme mt-16 h-screen border-r border-gray-100 bg-white xl:top-[74px] xl:mt-0 dark:border-gray-700"
+      class="dark-bg-theme mt-14 border h-screen border-r border-gray-100 bg-white xl:top-[74px] xl:mt-0 dark:border-gray-700"
     >
       <SidebarGroup>
         {#each newSidebarList as { name, Icon, children, href } (name)}
